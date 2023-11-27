@@ -7,8 +7,10 @@
 
 .bg-services {
   background-color: rgba(121, 155, 185, 0.8);
-  height: 90vh;
+  height: 80vh;
+  padding-top: 30px !important;
 }
+
 .home-icon {
   width: 44px;
   height: 47px;
@@ -75,11 +77,21 @@
     width: 35px;
     height: 37px;
   }
+  .bg-services{
+    height: 95vh;
+    padding: 40px !important;
+
+  }
 }
 @media only screen and (max-width: 767px) {
   .home-icon {
     width: 29px;
     height: 32px;
+  }
+  .bg-services{
+    background-color: #9c9c9c !important;
+    height: 130vh;
+    padding-top: 100px !important;
   }
 }
 .header-services {
@@ -105,11 +117,17 @@
 .col-12 .d-flex p{
     margin-bottom: 0px;
 }
-.bg-img-services{
+.bg-img-servicesWithAR{
     background-image: url(/assets/services/offers-bg.png);
     background-position: bottom left;
     
     background-repeat: no-repeat;
+}
+.servicesWithEN{
+  background-image: url(/assets/services/offers-bg.png);
+  background-position: bottom right;
+  
+  background-repeat: no-repeat;
 }
 .rtl .bg-img-services {
     background-position: bottom right;

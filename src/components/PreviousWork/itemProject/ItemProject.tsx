@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface ItemProjectProps {
     imag: string;
     title: string;
@@ -5,7 +7,7 @@ interface ItemProjectProps {
 export default function ItemProject({ imag, title }: ItemProjectProps) {
     return (
         <>
-            <div className="col-lg-4 col-sm-6 col-12 p-2 ">
+            <Link to="/" className="col-lg-4 col-sm-6 col-12 p-2 ">
                 <div className="item-border">
                     <img className="w-100" src={imag} alt="" />
                 </div>
@@ -18,7 +20,7 @@ export default function ItemProject({ imag, title }: ItemProjectProps) {
                     alt=""
                 />
                 <p className="item-header py-3 w-100 m-auto mt-3   text-center">{title}</p>
-            </div>
+            </Link>
         </>
     );
 }

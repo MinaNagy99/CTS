@@ -1,16 +1,23 @@
 import "./Services.css";
 import { Trans } from "react-i18next";
 import HeaderAndLines from "../shared/HeaderAndLines";
+import { useContext } from "react";
+import { MyContext } from "../context/LngContext";
 
 export default function Services() {
+  const { currentLng } = useContext(MyContext);
+  console.log(currentLng);
   return (
     <>
-      <div className="container-fluid">
+ 
+
+    
+      <div className="container-fluid ">
         <div className="row bg-services  ">
           <div className="col-12 col-md-7    d-sm-flex justify-content-center flex-column p-0  pt-lg-0">
             <div className="row ">
-              <div className="col-2 pt-4 p-0  text-center ">
-                <img  src="/assets/services/star-icon.png" alt="" />
+              <div className={`col-2 pt-4 p-0  ${currentLng=='ar'?'text-start':'text-end'}   `}>
+                <img src="/assets/services/star-icon.png" alt="" />
               </div>
               <div className="col-10">
                 <p className="header-services pt-4">
@@ -22,7 +29,7 @@ export default function Services() {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-5 d-flex justify-content-center align-items-center px-5">
+          <div className="col-12 col-md-5 d-flex justify-content-center align-items-center px-4">
             <img
               className="home2 p-3 img-fluid"
               src="/assets/services/webservices1.png"
@@ -32,7 +39,7 @@ export default function Services() {
         </div>
         <HeaderAndLines header={<Trans i18nKey="Offers"></Trans>} />
       </div>
-      <div className="container p-5 mb-5 rtl bg-img-services">
+      <div className={`container p-5 mb-5 rtl ${currentLng=='ar'?'bg-img-servicesWithAR':"servicesWithEN"} bg-img-services`}>
         <div className="row mt-3">
           <div className="col-md-6 col-12">
             <div className="d-flex">

@@ -12,11 +12,16 @@ type PortfolioContextProviderProps = {
 };
 
 export const PortfolioContext = createContext<PortfolioContext[]>([
+ 
   {
-    mainImg: "/assets/websites/alphaclinic-photos/alphaclinic-carasoul1.png",
-    title: "Alphaclinic-car",
-    images: ["/assets/websites/alphaclinic-photos/alphaclinic-page1.png","/assets/websites/alphaclinic-photos/alphaclinic-page2.png","/assets/websites/alphaclinic-photos/alphaclinic-page3.png"],
-    logo: "/assets/websites/alphaclinic-photos/alphaclinic-logo.png",
+    mainImg: "/assets/websites/arconswebsite-photos/alphaclinic-carasoul1.png",
+    title: "alphaclinic",
+    images: [
+      "/assets/websites/arconswebsite-photos/arcons-page1.png",
+      "/assets/websites/arconswebsite-photos/arcons-page2.png",
+      "/assets/websites/arconswebsite-photos/arcons-page3.png",
+    ],
+    logo: "/assets/websites/arconswebsite-photos/arcons-logo.png",
     link: "sss",
   },
 ]);
@@ -24,12 +29,17 @@ export const PortfolioContext = createContext<PortfolioContext[]>([
 function PortfolioContextProvider(props: PortfolioContextProviderProps) {
   let portfolioData: PortfolioContext[] = [
     {
-      mainImg: "mina",
-      title: "nagy",
-      images: [],
-      logo: "ff",
+      mainImg: "/assets/websites/alphaclinic-photos/alphaclinic-carasoul1.png",
+      title: "Alphaclinic-car",
+      images: [
+        "/assets/websites/alphaclinic-photos/alphaclinic-page1.png",
+        "/assets/websites/alphaclinic-photos/alphaclinic-page2.png",
+        "/assets/websites/alphaclinic-photos/alphaclinic-page3.png",
+      ],
+      logo: "/assets/websites/alphaclinic-photos/alphaclinic-logo.png",
       link: "sss",
     },
+
   ];
   return (
     <PortfolioContext.Provider value={portfolioData}>

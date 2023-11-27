@@ -19,6 +19,8 @@ section:first-child {
     border: 5px solid #B5B1B1;
     border-radius: 10px 10px 0px 0px;
     border-bottom: 0px solid black;
+    height:200px ;
+    overflow: hidden;
 }
 section h1 {
     color: #c7d8f9;
