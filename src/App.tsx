@@ -10,36 +10,38 @@ import FixedIcons from "./components/fixed_icons/FixedIcons";
 import Home from "./components/home/Home";
 import { useTranslation } from "react-i18next";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import WesbiteDetails from "./components/website_details/WebsiteDetails";
 function App() {
-  const { i18n } = useTranslation();
+    const { i18n } = useTranslation();
 
-  const textDirection = i18n.languages[0] === "ar" ? "rtl" : "ltr";
-  let routes = createBrowserRouter([
-    {
-      path: "/",
-      element: <MainLayout />,
-      children: [
-        { index: true, element: <Home /> },
-        { path: "/about", element: <About /> },
-        { path: "/portfolio", element: <PreviousWork /> },
-        { path: "/contact-us", element: <ContactUs /> },
-        { path: "/services", element: <Services /> },
-      ],
-    },
-  ]);
+    const textDirection = i18n.languages[0] === "ar" ? "rtl" : "ltr";
+    let routes = createBrowserRouter([
+        {
+            path: "/",
+            element: <MainLayout />,
+            children: [
+                { index: true, element: <Home /> },
+                { path: "/about", element: <About /> },
+                { path: "/portfolio", element: <PreviousWork /> },
+                { path: "/contact-us", element: <ContactUs /> },
+                { path: "/services", element: <Services /> },
+                { path: "/website", element: <WesbiteDetails /> },
+            ],
+        },
+    ]);
 
-  return (
-    <>
-      <div style={{ direction: textDirection }} className="stikcy-container">
-        <PortfolioContextProvider>
-          <MyContextProvider>
-            <RouterProvider router={routes} />
-          </MyContextProvider>
-        </PortfolioContextProvider>
-        <FixedIcons />
-      </div>
-    </>
-  );
+    return (
+        <>
+            <div style={{ direction: textDirection }} className="stikcy-container">
+                <PortfolioContextProvider>
+                    <MyContextProvider>
+                        <RouterProvider router={routes} />
+                    </MyContextProvider>
+                </PortfolioContextProvider>
+                <FixedIcons />
+            </div>
+        </>
+    );
 }
 
 export default App;
