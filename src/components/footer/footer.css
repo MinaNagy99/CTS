@@ -1,0 +1,38 @@
+footer {
+    background-color: #f3f3f3;
+    color: #05579b;
+    width: 100%;
+}
+
+.footer-logo {
+    width: 166px;
+    height: 113px;
+}
+
+.footer-icon-container {
+    width: 30px;
+}
+
+li{
+    /* background-color: #05579b; */
+    margin: 10px 0px;
+    padding: 5px 0px;
+;
+}
+.footer-icon-container img {
+    margin: auto;
+}
+
+.footer-gifs img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-lines {
+    padding: 5px 0px;
+    margin: 7px 0px
+}
+
+.a{
+    z-index: 9999999999;
+}

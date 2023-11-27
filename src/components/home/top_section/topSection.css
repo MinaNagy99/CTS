@@ -1,0 +1,65 @@
+.top-section {
+    padding: 100px 10% 15px 3%;
+    background-image: url("/assets/home/home-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-icon {
+    margin-inline-end: 30px;
+    width: 44px;
+    height: 47px;
+}
+
+.square-symbol {
+    color: #205783;
+    margin-inline-end: 20px;
+}
+
+.top-section-span {
+    color: #12367c;
+    font-size: 18px;
+}
+
+.top-section h1 {
+    color: #12367c;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 193.023%; /* 77.209px */
+}
+
+.top-section-custom-p {
+    position: relative;
+    padding-right: 25px;
+}
+
+.btn-top-section {
+    width: 175px;
+    height: 60px;
+    border-radius: 30px !important;
+    color: white !important;
+    background-color: #205783 !important;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.home2 {
+    width: 390px;
+    height: 345px;
+}
+
+@media only screen and (max-width: 1061px) {
+    .top-section h1 {
+        font-size: 26px;
+    }
+    .home-icon {
+        width: 35px;
+        height: 37px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .home-icon {
+        width: 29px;
+        height: 32px;
+    }
+}

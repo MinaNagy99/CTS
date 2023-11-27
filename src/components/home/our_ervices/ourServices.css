@@ -1,0 +1,45 @@
+.containIncon {
+    width: 48px;
+    height: 48px;
+}
+
+.serviceName {
+    font-size: 20px;
+    font-weight: 600;
+    color: #12367c;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.w-md-75 {
+    width: 75%;
+}
+@media (max-width: 768px) {
+    .w-md-75 {
+        width: 100%;
+    }
+}
+.imgService {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.imgService6 {
+    background-image: url(..//assets/home/services6.png);
+}
+.imgService5 {
+    background-image: url(..//assets/home/services5.png);
+}
+.imgService4 {
+    background-image: url(..//assets/home/services4.png);
+}
+.imgService3 {
+    background-image: url(..//assets/home/services3.png);
+}
+.imgService2 {
+    background-image: url(..//assets/home/services2.png);
+}
+.imgService1 {
+    background-image: url(..//assets/home/services1.png);
+}

@@ -1,0 +1,64 @@
+.borderOfService {
+    border: 2px;
+    border-style: solid;
+    border-color: #148cef;
+}
+.serviceName {
+    font-size: 20px;
+    font-weight: 600;
+    color: #12367c;
+    text-align: center;
+    margin-top: 20px;
+}
+.borderr {
+    border: 1px solid #d2d5da;
+}
+
+.textService {
+    color: #05579b;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+}
+.handelWidth {
+    width: 60%;
+}
+@media screen and (min-width: 1000px) {
+    .handelWidth {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 760px) {
+    .arrow1 {
+        display: none;
+    }
+    .arrow2 {
+        display: none;
+    }
+    .textService {
+        font-size: 22px;
+    }
+}
+.arrow1 {
+    position: absolute;
+    top: -100%;
+    right: 1;
+    text-align: right;
+}
+.arrow1 img {
+    width: 16%;
+}
+.arrow2 {
+    position: absolute;
+    top: -100%;
+    right: 0%;
+    padding-right: auto;
+    text-align: left;
+}
+.arrow2 img {
+    width: 16%;
+}
+
+.port-img {
+    max-height: 65px;
+}

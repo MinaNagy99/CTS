@@ -1,0 +1,88 @@
+.navbar {
+    position: sticky !important;
+    width: 100%;
+    top: 0;
+    margin-bottom: -110px;
+    padding: 0 !important;
+    z-index: 999;
+    background-color: rgba(121, 155, 185, 0.473);
+}
+
+.navbar-scrolled {
+    background-color: rgba(121, 155, 185, 1); /* Add your desired background color */
+}
+
+.flag {
+    width: 100%;
+}
+
+.navbar-brand img {
+    width: 123px;
+    height: 84px;
+    margin: 0 3vw;
+}
+
+.navbar a {
+    color: #17354e !important;
+    text-align: center;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.navbar-nav a.nav-link {
+    text-decoration: none;
+    color: black; /* Set the default text color */
+    position: relative;
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.navbar-nav a.nav-link:hover,
+.navbar-nav a.nav-link.active {
+    color: blue;
+}
+
+.navbar-nav a.nav-link::after {
+    content: "";
+    display: block;
+    width: 0; /* Initial width is 0, it will expand on hover */
+    height: 4px;
+    background-color: black; /* Underline color */
+    position: absolute;
+    bottom: -1px;
+    left: 50%; /* Center the underline initially */
+    transform: translateX(-50%);
+    transition: width 0.3s; /* Smooth transition for width change */
+}
+
+.navbar-nav a.nav-link:hover::after {
+    width: 50%; /* Expand the underline to 50% on hover */
+}
+
+.navbar-nav a.nav-link.active::after {
+    width: 50%; /* Set the underline width to 50% for the active link */
+}
+.btn-lang {
+    border: 0;
+    background-color: transparent;
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-flag {
+    width: 100%;
+}
+
+/* .show {
+} */
+
+.navbar-nav.flex-lg-row {
+    /* flex-direction: row !important;  */
+}
+
+.navbar-nav.flex-lg-row .nav-link {
+    /* margin: 0; */
+}

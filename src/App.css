@@ -1,0 +1,9 @@
+.stikcy-container {
+  /* height: 6000px; */
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
