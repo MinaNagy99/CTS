@@ -13,11 +13,10 @@ footer {
     width: 30px;
 }
 
-li{
+li {
     /* background-color: #05579b; */
     margin: 10px 0px;
     padding: 5px 0px;
-;
 }
 .footer-icon-container img {
     margin: auto;
@@ -30,9 +29,9 @@ li{
 
 .contact-lines {
     padding: 5px 0px;
-    margin: 7px 0px
+    margin: 7px 0px;
 }
 
-.a{
+/* .a{
     z-index: 9999999999;
-}
+} */

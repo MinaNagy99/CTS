@@ -140,7 +140,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/littleengineer-photos/littleegineer-carasoul2.png",
                 "/assets/websites/littleengineer-photos/littleegineer-carasoul3.png",
             ],
-            logo: "/assets/websites/littleengineer-photos/le-page3.png",
+            logo: "/assets/websites/littleengineer-photos/le-logo.png",
             link: "sss",
         },
         {
