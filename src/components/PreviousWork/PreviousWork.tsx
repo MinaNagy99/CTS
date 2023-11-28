@@ -142,7 +142,7 @@ export default function PreviousWork() {
             </section>
             <div className="container ">
                 <div className="row gy-4 mt-5">
-                    {data.map((item, index) => (
+                    {data.map((item:any, index:number) => (
                         <Link
                             className="col-lg-4 col-sm-6 col-12 p-2"
                             key={index}
