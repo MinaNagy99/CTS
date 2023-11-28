@@ -24,7 +24,7 @@ function App() {
                 { path: "/about", element: <About /> },
                 { path: "/portfolio", element: <PreviousWork /> },
                 { path: "/contact-us", element: <ContactUs /> },
-                { path: "/services", element: <Services /> },
+                { path: "/services/Web-design", element: <WebDesign /> },
                 { path: "/website/:title", element: <WesbiteDetails /> },
             ],
         },
