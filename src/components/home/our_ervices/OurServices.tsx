@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import HeaderAndLines from "../../shared/HeaderAndLines";
 import "./ourServices.css";
 import { Trans } from "react-i18next";
@@ -8,7 +9,15 @@ function OurServices() {
       <div className="container-fluid ">
         <div className="row w-md-75 mt-5 m-auto">
           <div className="col-sm-4  col-6 my-3 ">
-            <div className="imgService3 imgService p-5"></div>
+            <NavLink
+              to="/services/web-design"
+              onClick={() => {
+                window.scrollTo({ top: 0 });
+              }}
+            >
+              <div className="imgService3 imgService p-5"></div>{" "}
+            </NavLink>
+
             <p className="serviceName">
               {" "}
               <Trans i18nKey="Website design"></Trans>

@@ -1,8 +1,8 @@
 import { Trans } from "react-i18next";
 
 interface ItemProjectProps {
-    imag: string;
-    title: string;
+  imag: string;
+  title: string;
 }
 export default function ItemProject({ imag, title }: ItemProjectProps) {
     return (

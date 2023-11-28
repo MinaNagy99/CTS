@@ -2,7 +2,6 @@ import "./App.css";
 import About from "./components/About/About";
 import MainLayout from "./components/MainLayout/MainLayout";
 import PreviousWork from "./components/PreviousWork/PreviousWork";
-import Services from "./components/Services/Services";
 import ContactUs from "./components/contact_us/ContactUs";
 import MyContextProvider from "./components/context/LngContext";
 import PortfolioContextProvider from "./components/context/PortfolioContext";
@@ -11,6 +10,7 @@ import Home from "./components/home/Home";
 import { useTranslation } from "react-i18next";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import WesbiteDetails from "./components/website_details/WebsiteDetails";
+import WebDesign from "./components/Services/WebDesign/WebDesign";
 function App() {
     const { i18n } = useTranslation();
 
