@@ -5,21 +5,30 @@
 
 .logo-container {
     width: 200px;
-    height: 200 px;
+    height: 200px;
     border: 3px solid #215783;
     border-radius: 1000px;
     padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inner-logo-container {
+    width: 180px;
+    height: 180px;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 1000px;
     padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-container img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    margin: auto;
 }
 
 .project-header {
@@ -58,7 +67,7 @@
 }
 
 .ReactModal__Overlay {
-    z-index: 9999999999;
+    z-index: 999;
     padding: 0 !important;
     background-color: 000 !important;
     border: 0 !important;
