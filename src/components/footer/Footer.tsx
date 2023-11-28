@@ -3,16 +3,13 @@ import "./footer.css";
 import { Trans } from "react-i18next";
 import { Link } from "react-router-dom";
 function Footer() {
-  useEffect(() => {
-    const currentLNG = localStorage.getItem("lng");
-    console.log("Current lng:", currentLNG);
-  }, []);
+
   return (
     <footer>
       <div className=" container-fluid p-4 ">
         <div className="row p-0 ">
           <div className="col   col-md-4 col-12 d-flex align-items-center flex-column">
-            <img className="footer-logo my-1" src="/assets/logo.png" alt="" />
+            <img className="footer-logo my-1" src="/assets/logofooter.svg" alt="" />
             <div className="my-3">
               <a href="">info@cts-egy.com</a>
               <img className="me-1" src="/assets/svg/emailicon.svg" alt="" />

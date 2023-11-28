@@ -22,6 +22,18 @@ section:first-child {
     height:200px ;
     overflow: hidden;
 }
+.item-border:hover img{
+    overflow: auto;
+    transform: translateY(-86%);
+    transition: transform 5s ease;
+    overflow: auto;
+
+}
+.item-border img{
+    transition: transform 5s ease;
+
+}
+
 section h1 {
     color: #c7d8f9;
     font-size: 50px;

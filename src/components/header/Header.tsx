@@ -79,7 +79,7 @@ function Header() {
       >
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/">
-            <img src="/assets/logo.png" alt="" />
+            <img src="/assets/logonavbar.svg" alt="" />
           </NavLink>
           <button
             className="navbar-toggler"
@@ -134,16 +134,33 @@ function Header() {
                 <Trans i18nKey="About us"></Trans>
               </NavLink>
               <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <Trans i18nKey="Services"></Trans>
-          </a>
-          <ul className="dropdown-menu">
-            <li><NavLink className="dropdown-item" to="/services"><Trans i18nKey="services"></Trans> </NavLink></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
+                <a
+                  className={`nav-link `}
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <Trans i18nKey="Services"></Trans>
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <NavLink
+                      className={`dropdown-item ${
+                        location.pathname.startsWith("/services/web-design")
+                          ? "active"
+                          : ""
+                      }`}
+                      onClick={() => {
+                        window.scrollTo({ top: 0 });
+                      }}
+                      to="/services/web-design"
+                    >
+                      <Trans i18nKey="Web design"></Trans>{" "}
+                    </NavLink>
+                  </li>
+                  {/* Add other dropdown items here */}
+                </ul>
+              </li>
               <NavLink
                 onClick={() => {
                   window.scrollTo({ top: 0 });

@@ -12,7 +12,6 @@ interface PortfolioItem {
 
 export default function PreviousWork() {
   const data:any = useContext(PortfolioContext);
-  console.log(data);
   
   const { t } = useTranslation();
   useEffect(() => {
@@ -127,13 +126,13 @@ export default function PreviousWork() {
           <h1 className="my-4">
             <Trans i18nKey="Sites Design"></Trans>
           </h1>
-          <img className="mt-4" src="/assets/portfolio/titleline.png" alt="" />
+          <img className="mt-4 img-portfolio" src="/assets/portfolio/titleline.png" alt="" />
         </div>
       </section>
       <div className="container ">
         <div className="row gy-4 mt-5">
           {data.map((item:any, index:any) => (
-            <ItemProject key={index} imag={item.mainImg} title={item.title} />
+            <ItemProject  key={index} imag={item.mainImg} title={item.title} />
           ))}
         </div>
       </div>
