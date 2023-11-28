@@ -1,9 +1,10 @@
 .about-section {
-    padding: 10% 10% 5% 3%;
+    padding: 10% 10% 2% 3%;
     background-image: url("/assets/about/aboutbackground.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 
 .home-icon {
     width: 44px;
@@ -71,10 +72,18 @@
         width: 35px;
         height: 37px;
     }
+    .about-section {
+        padding: 15% 10% 2% 3%;
+    
+    }
 }
 @media only screen and (max-width: 767px) {
     .home-icon {
         width: 29px;
         height: 32px;
+    }
+    .about-section {
+        padding: 25% 10% 2% 3%;
+    
     }
 }

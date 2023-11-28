@@ -13,7 +13,7 @@ export default function WebDesign() {
   
       
         <div className="container-fluid ">
-          <div className="row bg-services  ">
+          <div className="row mt-lg-4 mt-0 bg-services  ">
             <div className="col-12 col-md-7    d-sm-flex justify-content-center flex-column p-0  pt-lg-0">
               <div className="row ">
                 <div className={`col-2 pt-4 p-0  ${currentLng=='ar'?'text-start':'text-end'}   `}>
@@ -31,7 +31,7 @@ export default function WebDesign() {
             </div>
             <div className="col-12 col-md-5 d-flex justify-content-center align-items-center px-4">
               <img
-                className="home2 p-3 img-fluid"
+                className="home2 mt-xl-5 mt-0 img-fluid"
                 src="/assets/services/webservices1.png"
                 alt=""
               />

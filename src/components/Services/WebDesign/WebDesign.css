@@ -7,7 +7,7 @@
 
 .bg-services {
     background-color: rgba(121, 155, 185, 0.8);
-    height: 80vh;
+    height: 60vh;
     padding-top: 30px !important;
   }
   
@@ -110,7 +110,7 @@
     font-weight: 500;
     line-height: 200%; /* 60px */
   }
-  .col-12 .d-flex img {
+  .mt-3 .col-12 .d-flex img {
     width: 48px;
     height: 48px;
   }

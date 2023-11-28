@@ -1,5 +1,5 @@
 .first-section {
-    height: 80vh;
+    height: 60vh;
     background-image: url("/assets/portfolio/portfoliopage-background1.png");
     background-position: center center;
     background-repeat: no-repeat;
@@ -25,12 +25,12 @@ section:first-child {
 .item-border:hover img{
     overflow: auto;
     transform: translateY(-86%);
-    transition: transform 5s ease;
+    transition: transform 7s ease;
     overflow: auto;
 
 }
 .item-border img{
-    transition: transform 5s ease;
+    transition: transform 7s ease;
 
 }
 

@@ -15,7 +15,7 @@ export default function About() {
     <>
       <div className="container-fluid">
         <div className="row about-section  ">
-          <div className="col-12 col-md-7    d-sm-flex justify-content-center flex-column p-0 px-5 pt-lg-0">
+          <div className="col-12 col-md-7    d-sm-flex justify-content-center flex-column p-0  pt-lg-0">
             <div className="row ">
               <div className="col-2 pt-4 text-center ">
                 <img src="/assets/about/about-logo.png" alt="" />

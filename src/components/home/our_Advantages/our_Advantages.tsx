@@ -33,14 +33,14 @@ export default function Our_Advantages() {
             <div className="row">
               <div className="col-md-6 p-3 col-12">
                 <div className="row my-3">
-                  <div className="col-2   d-flex justify-content-end  ">
+                  <div className="col-2    d-flex justify-content-end  ">
                     <img
                       className="w-100 "
                       src="/assets/home/features1.png"
                       alt=""
                     />
                   </div>
-                  <div className="col-9 bg-info">
+                  <div className="col-9 ">
                     <h3 className="d-flex justify-content-start">
                       <Trans i18nKey="Fast design"></Trans>
                     </h3>{" "}
