@@ -1,10 +1,11 @@
 import "./websiteDetails.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { useContext, useState } from "react";
-import Modal from "react-modal";
+import { useContext, useEffect, useState } from "react";
 import Slider from "react-slick";
 import HeaderAndLines from "../shared/HeaderAndLines";
 import { PortfolioContext } from "../context/PortfolioContext";
+import { useParams } from "react-router-dom";
+import Modal from "react-modal";
 
 interface Props {
     className?: string;
@@ -80,15 +81,24 @@ function PrevArrow(props: Props) {
 function WesbiteDetails() {
     const [showCarousel, setShowCarousel] = useState(false);
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+    const [images, setImages] = useState<string[] | undefined>([]);
+
+    const { title } = useParams<{ title: any }>();
+    console.log(title);
 
     const data = useContext(PortfolioContext);
+    const project = data.find((item) => item.title === decodeURIComponent(title));
     console.log(data);
-    const images = [data[0].carouselImages[0], data[0].carouselImages[1], data[0].carouselImages[2]];
 
     const handleClick = (index) => {
         setShowCarousel(true);
         setSelectedImageIndex(index);
     };
+
+    useEffect(() => {
+        // Update the images state when the project.carouselImages change
+        setImages(project?.carouselImages);
+    }, []);
 
     const settings = {
         // dots: true,
@@ -108,49 +118,23 @@ function WesbiteDetails() {
         <>
             <div className="top d-flex flex-column flex-lg-row justify-content-evenly align-items-center">
                 <div className="logo-container">
-                    <img className="w-100" src={data[0].logo} alt="" />
+                    <div className="inner-logo-container">
+                        <img className="w-100" src={project?.logo} alt="" />
+                    </div>
                 </div>
                 <div className="">
-                    <HeaderAndLines header="شركات المناعي للتطوير العقاري" />
+                    <HeaderAndLines header={project?.title} />
                 </div>
             </div>
             <div className="bot">
                 <div className="project-header m-auto d-flex align-items-center justify-content-center mt-5">
                     صفحات من الموقع
                 </div>
-                <div className="project-link m-auto d-flex align-items-center justify-content-center mt-5">
-                    <svg
-                        className="mx-2"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="36"
-                        height="36"
-                        viewBox="0 0 36 36"
-                        fill="none"
-                    >
-                        <path
-                            d="M11.0813 22.4999C11.025 22.4999 10.9125 22.4999 10.8562 22.4436L0.9 18.2249C0.675 18.1686 0.5625 17.9436 0.5625 17.7186C0.5625 17.4936 0.73125 17.3249 0.9 17.2124L34.7062 4.10615C34.9875 3.99365 35.2687 4.10615 35.3813 4.33115C35.4938 4.55615 35.4375 4.89365 35.2125 5.00615L11.3625 22.4436C11.3063 22.4999 11.1938 22.4999 11.0813 22.4999ZM2.475 17.7749L10.9688 21.4311L31.3313 6.58115L2.475 17.7749Z"
-                            fill="white"
-                        />
-                        <path
-                            d="M13.9496 31.8937C13.7246 31.8937 13.4996 31.7249 13.4433 31.4999L10.5183 22.1062C10.4621 21.8812 10.5183 21.6562 10.7433 21.4874L34.5933 4.16244C34.8183 3.99369 35.1558 4.04994 35.3246 4.21869C35.4933 4.44369 35.4933 4.78119 35.3246 4.94994L16.6496 24.1312L14.4558 31.5562C14.4558 31.7812 14.2308 31.8937 13.9496 31.8937ZM11.6996 22.2187L14.0058 29.5874L15.6933 23.7374C15.6933 23.6249 15.7496 23.5687 15.8058 23.5124L30.2058 8.77494L11.6996 22.2187Z"
-                            fill="white"
-                        />
-                        <path
-                            d="M29.3617 29.475C29.3055 29.475 29.2492 29.475 29.193 29.4188L16.0305 24.3563C15.8617 24.3 15.7492 24.1313 15.693 23.9625C15.6367 23.7938 15.693 23.5688 15.8617 23.4563L34.4805 4.27503C34.6492 4.10628 34.9305 4.05003 35.1555 4.16253C35.3805 4.27503 35.493 4.50003 35.4367 4.78128L29.9242 29.0813C29.868 29.25 29.8117 29.3625 29.643 29.4188C29.5305 29.4188 29.4742 29.475 29.3617 29.475ZM17.1555 23.6813L29.0242 28.2375L33.9742 6.35628L17.1555 23.6813Z"
-                            fill="white"
-                        />
-                        <path
-                            d="M13.9503 31.8939C13.894 31.8939 13.7815 31.8939 13.7253 31.8377C13.5003 31.7252 13.3878 31.4439 13.444 31.2189L15.6378 23.6814C15.694 23.5127 15.8065 23.4002 15.919 23.3439C16.0315 23.2877 16.2003 23.2877 16.369 23.3439L18.9003 24.3002C19.069 24.3564 19.1815 24.4689 19.2378 24.6377C19.294 24.8064 19.2378 24.9752 19.1815 25.0877L14.4565 31.6127C14.2878 31.8377 14.119 31.8939 13.9503 31.8939ZM16.5378 24.5252L15.3565 28.5752L17.944 25.0877L16.5378 24.5252Z"
-                            fill="white"
-                        />
-                    </svg>
-                    <a href="#">تصفح الموقع</a>
-                </div>
 
                 <div>
                     <div className="container mt-5 d-flex justify-content-center">
                         <div className="row justify-content-around">
-                            {data[0].previewImages.map((image, index) => (
+                            {project?.previewImages.map((image, index) => (
                                 <div className="col-3 p-0 project-image-container" key={index}>
                                     <img className="" src={image} alt="" onClick={() => handleClick(index)} />
                                 </div>
@@ -172,7 +156,7 @@ function WesbiteDetails() {
                             >
                                 <div className="project-slider p-0 m-0">
                                     <Slider {...settings}>
-                                        {images.map((image, index) => (
+                                        {images?.map((image, index) => (
                                             <div className="p-0 m-0" key={index}>
                                                 <img className="p-0" src={image} alt={`slide ${index + 1}`} />
                                             </div>
@@ -181,6 +165,41 @@ function WesbiteDetails() {
                                 </div>
                             </Modal>
                         </div>
+                    </div>
+                </div>
+                <div className="d-flex justify-content-center mb-4">
+                    <div className="project-link d-flex align-items-center justify-content-center mt-5 mx-3">
+                        <svg
+                            className="mx-2"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="36"
+                            height="36"
+                            viewBox="0 0 36 36"
+                            fill="none"
+                        >
+                            <path
+                                d="M11.0813 22.4999C11.025 22.4999 10.9125 22.4999 10.8562 22.4436L0.9 18.2249C0.675 18.1686 0.5625 17.9436 0.5625 17.7186C0.5625 17.4936 0.73125 17.3249 0.9 17.2124L34.7062 4.10615C34.9875 3.99365 35.2687 4.10615 35.3813 4.33115C35.4938 4.55615 35.4375 4.89365 35.2125 5.00615L11.3625 22.4436C11.3063 22.4999 11.1938 22.4999 11.0813 22.4999ZM2.475 17.7749L10.9688 21.4311L31.3313 6.58115L2.475 17.7749Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M13.9496 31.8937C13.7246 31.8937 13.4996 31.7249 13.4433 31.4999L10.5183 22.1062C10.4621 21.8812 10.5183 21.6562 10.7433 21.4874L34.5933 4.16244C34.8183 3.99369 35.1558 4.04994 35.3246 4.21869C35.4933 4.44369 35.4933 4.78119 35.3246 4.94994L16.6496 24.1312L14.4558 31.5562C14.4558 31.7812 14.2308 31.8937 13.9496 31.8937ZM11.6996 22.2187L14.0058 29.5874L15.6933 23.7374C15.6933 23.6249 15.7496 23.5687 15.8058 23.5124L30.2058 8.77494L11.6996 22.2187Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M29.3617 29.475C29.3055 29.475 29.2492 29.475 29.193 29.4188L16.0305 24.3563C15.8617 24.3 15.7492 24.1313 15.693 23.9625C15.6367 23.7938 15.693 23.5688 15.8617 23.4563L34.4805 4.27503C34.6492 4.10628 34.9305 4.05003 35.1555 4.16253C35.3805 4.27503 35.493 4.50003 35.4367 4.78128L29.9242 29.0813C29.868 29.25 29.8117 29.3625 29.643 29.4188C29.5305 29.4188 29.4742 29.475 29.3617 29.475ZM17.1555 23.6813L29.0242 28.2375L33.9742 6.35628L17.1555 23.6813Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M13.9503 31.8939C13.894 31.8939 13.7815 31.8939 13.7253 31.8377C13.5003 31.7252 13.3878 31.4439 13.444 31.2189L15.6378 23.6814C15.694 23.5127 15.8065 23.4002 15.919 23.3439C16.0315 23.2877 16.2003 23.2877 16.369 23.3439L18.9003 24.3002C19.069 24.3564 19.1815 24.4689 19.2378 24.6377C19.294 24.8064 19.2378 24.9752 19.1815 25.0877L14.4565 31.6127C14.2878 31.8377 14.119 31.8939 13.9503 31.8939ZM16.5378 24.5252L15.3565 28.5752L17.944 25.0877L16.5378 24.5252Z"
+                                fill="white"
+                            />
+                        </svg>
+                        <a href="#">تصفح الموقع</a>
+                    </div>
+                    <div className="project-link d-flex align-items-center justify-content-center mt-5 mx-3">
+                        <a className="text-decoration-none" href="#">
+                            عرض جميع الأعمال
+                        </a>
                     </div>
                 </div>
             </div>

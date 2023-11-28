@@ -1,24 +1,31 @@
 .top {
     margin-top: 150px;
+    /* height: 310px; */
 }
 
 .logo-container {
-    max-width: 310px;
-    max-height: 310px;
+    width: 200px;
+    height: 200 px;
     border: 3px solid #215783;
     border-radius: 1000px;
-    padding: 20px;
+    padding: 8px;
+}
+
+.inner-logo-container {
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 1000px;
+    padding: 30px;
 }
 
 .logo-container img {
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 1000px;
+    width: 100%;
+    height: 100%;
 }
 
 .project-header {
     max-width: 356px;
     height: 113px;
-    background: url(/assets/projects/pages_title.png);
+    background: url(/assets/websites/website-pages.svg);
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 32px;
@@ -41,9 +48,13 @@
     overflow: hidden;
     margin-bottom: 20px;
     border-radius: 20px;
+    /* position: relative; */
 }
 .project-image-container img {
+    width: 100%; /* Make the image width 100% of the container */
+    height: 100%; /* Make the image height 100% of the container */
     object-fit: cover;
+    object-position: center;
 }
 
 .ReactModal__Overlay {

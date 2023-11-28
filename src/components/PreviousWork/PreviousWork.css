@@ -16,9 +16,11 @@ section:first-child {
     height: 100%;
 }
 .item-border {
-    border: 5px solid #B5B1B1;
+    border: 5px solid #b5b1b1;
     border-radius: 10px 10px 0px 0px;
     border-bottom: 0px solid black;
+    height: 200px;
+    overflow: hidden;
 }
 section h1 {
     color: #c7d8f9;
@@ -40,7 +42,7 @@ section h1 {
 .rectangle {
     width: 100%;
     height: 21px;
-    background-color: #B5B1B1;
+    background-color: #b5b1b1;
     border-radius: 0px 0px 10px 10px;
 }
 .circle {
@@ -70,4 +72,14 @@ section h1 {
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 36px */
+}
+
+.item-border:hover img {
+    overflow: auto;
+    transform: translateY(-86%);
+    transition: transform 5s ease;
+    overflow: auto;
+}
+.item-border img {
+    transition: transform 5s ease;
 }

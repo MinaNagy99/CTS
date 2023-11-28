@@ -25,7 +25,7 @@ function App() {
                 { path: "/portfolio", element: <PreviousWork /> },
                 { path: "/contact-us", element: <ContactUs /> },
                 { path: "/services", element: <Services /> },
-                { path: "/website", element: <WesbiteDetails /> },
+                { path: "/website/:title", element: <WesbiteDetails /> },
             ],
         },
     ]);
