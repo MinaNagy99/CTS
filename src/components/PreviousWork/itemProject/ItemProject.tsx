@@ -7,7 +7,7 @@ interface ItemProjectProps {
 export default function ItemProject({ imag, title }: ItemProjectProps) {
     return (
         <>
-            <div className=""  onClick={()=>{window.scrollTo({top:0})}}>
+            <div className=""  onClick={()=>{window.scrollTo(0, 0);     }}>
                 <div className="item-border">
                     <img className="w-100" src={imag} alt="" />
                 </div>

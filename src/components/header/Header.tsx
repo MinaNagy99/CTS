@@ -6,7 +6,7 @@ import { Trans } from "react-i18next";
 import { MyContext } from "../context/LngContext";
 import { Link } from "react-router-dom";
 
-function Header() {
+function  Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isNavbarCollapsed, setNavbarCollapsed] = useState(false);
   const [nextLang, setnextLang] = useState({
