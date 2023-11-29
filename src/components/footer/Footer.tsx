@@ -111,7 +111,7 @@ function Footer() {
                             </div>
                             <span>0227634002</span>
                         </div>
-                        <div className="contact-lines d-flex align-items-center my-lg-0 my-4">
+                        <div className="contact-lines d-flex align-items-center">
                             <div className="footer-icon-container mx-2  d-inline-flex justify-content-center align-items-center">
                                 <img src="/assets/svg/location.svg" alt="" />
                             </div>
