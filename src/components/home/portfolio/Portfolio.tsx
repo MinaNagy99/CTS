@@ -16,8 +16,8 @@ export default function Portfolio() {
                             <img src="/assets/home/arrow2.png" alt="" />
                         </div>
                         <div className="col-12 p-3 col-md-4">
-                            <div className="row borderOfService py-2">
-                                <div className="col-4 d-flex justify-content-center align-items-center">
+                            <div className="row  borderOfService py-2">
+                                <div className="col-4 d-flex  justify-content-center align-items-center">
                                     <img className="port-img" src="/assets/home/webdesign.png" alt="" />
                                 </div>
                                 <div className="col-8 d-flex align-items-center">

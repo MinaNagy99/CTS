@@ -89,6 +89,7 @@
     background-color: #9c9c9c !important;
     padding-top: 100px !important;
   }
+
 }
 .header-services {
   color: #12367c;
@@ -165,8 +166,8 @@
   color: white;
   border: 0px;
 }
-.request2{
-    position: absolute;
-    bottom: -50px;
-    right: 0px;
+.request2 {
+  position: absolute;
+  bottom: -50px;
+  right: 0px;
 }
