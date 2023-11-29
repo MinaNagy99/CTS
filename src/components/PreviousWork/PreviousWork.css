@@ -72,6 +72,7 @@ section h1 {
     font-size: 15px;
 }
 .text-section {
+    margin-top: 100px;
     width: 50%;
     height: 80vh;
     margin-left: auto;

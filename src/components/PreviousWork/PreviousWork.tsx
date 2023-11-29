@@ -150,7 +150,9 @@ export default function PreviousWork() {
                                 className="col-lg-4 col-sm-6 col-12 p-2"
                                 key={index}
                                 to={`/website/${encodeURIComponent(item.title)}`}
-                                onClick={() => handleProjectClick(item.title)}
+                                onClick={() => {
+                                    window.scrollTo(0, 0);
+                                }}
                             >
                                 <ItemProject imag={item.mainImg} title={item.title} />
                             </Link>
