@@ -80,7 +80,7 @@ function Header() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className={`collapse navbar-collapse`} id="navbarNavAltMarkup">
-                        <div className="navbar-nav w-100 d-flex flex-column col-lg-5 flex-lg-row justify-content-between align-items-center">
+                        <div className="navbar-nav w-100 d-flex flex-column col-lg-5 flex-lg-row justify-content-between align-items-start ">
                             {/* {navigationLinks.map((link) =>
                 isServicesAndBlogsDisabled && link.to === "/blogs" ? null : (
                   <NavLink
@@ -115,7 +115,7 @@ function Header() {
                             >
                                 <Trans i18nKey="About us"></Trans>
                             </NavLink>
-                            <li className="nav-item dropdown">
+                            <li className="nav-item dropdown m-0 p-0">
                                 <a className={`nav-link `} role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <Trans i18nKey="Services"></Trans>
                                 </a>
@@ -155,7 +155,7 @@ function Header() {
                                 <Trans i18nKey="Contact us"></Trans>
                             </NavLink>
 
-                            <button onClick={handleLangToggle} className="btn-lang px-3 mx-3">
+                            <button onClick={handleLangToggle} className="btn-lang p-3">
                                 <img className="px-2 language-flag" src={nextLang.imgFlag} alt="" />
                                 {nextLang.languageName}
                             </button>
