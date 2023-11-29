@@ -129,7 +129,7 @@ export default function PreviousWork() {
 
     return (
         <>
-            <section className="first-section d-flex flex-column justify-content-center align-items-start ">
+            <section className="first-section p-4 d-flex flex-column justify-content-center align-items-start ">
                 <div className="text-section d-flex flex-column align-items-center justify-content-center">
                     <p className="my-4">
                         <Trans i18nKey="See our previous work from"></Trans>
