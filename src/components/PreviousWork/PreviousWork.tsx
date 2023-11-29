@@ -142,16 +142,24 @@ export default function PreviousWork() {
             </section>
             <div className="container ">
                 <div className="row gy-4 mt-5">
-                    {data.map((item, index) => (
-                        <Link
-                            className="col-lg-4 col-sm-6 col-12 p-2"
-                            key={index}
-                            to={`/website/${encodeURIComponent(item.title)}`}
-                            onClick={() => handleProjectClick(item.title)}
-                        >
-                            <ItemProject imag={item.mainImg} title={item.title} />
-                        </Link>
-                    ))}
+                    {data.map((item, index) =>
+                        // Check if the item has a link property
+                        // If it does, render a Link, otherwise render a div
+                        "link" in item ? (
+                            <Link
+                                className="col-lg-4 col-sm-6 col-12 p-2"
+                                key={index}
+                                to={`/website/${encodeURIComponent(item.title)}`}
+                                onClick={() => handleProjectClick(item.title)}
+                            >
+                                <ItemProject imag={item.mainImg} title={item.title} />
+                            </Link>
+                        ) : (
+                            <div className="col-lg-4 col-sm-6 col-12 p-2" key={index}>
+                                <ItemProject imag={item.mainImg} title={item.title} />
+                            </div>
+                        )
+                    )}
                 </div>
             </div>
         </>

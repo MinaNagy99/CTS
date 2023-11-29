@@ -194,7 +194,7 @@ function WesbiteDetails() {
                     </div>
                 </div>
                 <div className="d-flex justify-content-center mb-4">
-                    <div className="project-link d-flex align-items-center justify-content-center mt-5 mx-3">
+                    <div className="project-link d-flex align-items-center justify-content-center text-center mt-5 mx-3 py-5 py-sm-0">
                         <svg
                             className="mx-2"
                             xmlns="http://www.w3.org/2000/svg"
@@ -222,7 +222,7 @@ function WesbiteDetails() {
                         </svg>
                         <a href="#">تصفح الموقع</a>
                     </div>
-                    <div className="project-link d-flex align-items-center justify-content-center mt-5 mx-3">
+                    <div className="project-link d-flex align-items-center justify-content-center mt-5 mx-3 text-center py-5 py-sm-0">
                         <a className="text-decoration-none" href="#">
                             عرض جميع الأعمال
                         </a>
