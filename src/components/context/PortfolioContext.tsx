@@ -228,12 +228,12 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
             title: "Summit",
         },
         {
-            mainImg: "/assets/websites/static/ramsesfresh.png",
-            title: "Ramsees fresh",
-        },
-        {
             mainImg: "/assets/websites/static/helioplis.png",
             title: "Heliopolis association",
+        },
+        {
+            mainImg: "/assets/websites/static/ramsesfresh.png",
+            title: "Ramsees fresh",
         },
         {
             mainImg: "/assets/websites/static/tabibac.png",
