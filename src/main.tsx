@@ -8,6 +8,7 @@ import i18n from "../i18n.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
         <I18nextProvider i18n={i18n}>

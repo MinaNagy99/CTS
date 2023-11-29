@@ -1,11 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 import "./header.css";
 import i18next from "i18next";
 import { Trans } from "react-i18next";
 import { MyContext } from "../context/LngContext";
 
-function  Header() {
+function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isNavbarCollapsed, setNavbarCollapsed] = useState(false);
   const [nextLang, setnextLang] = useState({
@@ -57,6 +57,17 @@ function  Header() {
       });
     }
   };
+  const humburgerBtn = useRef<HTMLButtonElement>(null);
+  const fireEvent = () => {
+    console.log();
+    if (window.innerWidth<992) {
+      if (humburgerBtn.current) {
+        // Programmatically trigger a click event
+        humburgerBtn.current.click();
+      }  };
+    }
+    
+   
 
   return (
     <>
@@ -70,6 +81,7 @@ function  Header() {
             <img src="/assets/logonavbar.svg" alt="" />
           </NavLink>
           <button
+            ref={humburgerBtn}
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -82,7 +94,7 @@ function  Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className={`collapse navbar-collapse`} id="navbarNavAltMarkup">
-            <div className="navbar-nav w-100 d-flex flex-column col-lg-5 flex-lg-row justify-content-between align-items-center">
+            <div className="navbar-nav w-100 d-flex flex-column col-lg-5 flex-lg-row justify-content-between align-items-start ">
               {/* {navigationLinks.map((link) =>
                 isServicesAndBlogsDisabled && link.to === "/blogs" ? null : (
                   <NavLink
@@ -102,6 +114,7 @@ function  Header() {
               <NavLink
                 onClick={() => {
                   window.scrollTo({ top: 0 });
+                  fireEvent();
                 }}
                 className={`nav-link ${
                   location.pathname === "/" ? "active" : ""
@@ -113,6 +126,7 @@ function  Header() {
               <NavLink
                 onClick={() => {
                   window.scrollTo({ top: 0 });
+                  fireEvent();
                 }}
                 className={`nav-link ${
                   location.pathname === "/about" ? "active" : ""
@@ -121,7 +135,7 @@ function  Header() {
               >
                 <Trans i18nKey="About us"></Trans>
               </NavLink>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown m-0 p-0">
                 <a
                   className={`nav-link `}
                   role="button"
@@ -140,6 +154,7 @@ function  Header() {
                       }`}
                       onClick={() => {
                         window.scrollTo({ top: 0 });
+                        fireEvent();
                       }}
                       to="/services/web-design"
                     >
@@ -152,6 +167,7 @@ function  Header() {
               <NavLink
                 onClick={() => {
                   window.scrollTo({ top: 0 });
+                  fireEvent();
                 }}
                 className={`nav-link ${
                   location.pathname === "/portfolio" ? "active" : ""
@@ -163,6 +179,7 @@ function  Header() {
               <NavLink
                 onClick={() => {
                   window.scrollTo({ top: 0 });
+                  fireEvent();
                 }}
                 className={`nav-link ${
                   location.pathname === "/contact-us" ? "active" : ""
@@ -172,7 +189,7 @@ function  Header() {
                 <Trans i18nKey="Contact us"></Trans>
               </NavLink>
 
-              <button onClick={handleLangToggle} className="btn-lang px-3 mx-3">
+              <button onClick={handleLangToggle} className="btn-lang p-3">
                 <img
                   className="px-2 language-flag"
                   src={nextLang.imgFlag}

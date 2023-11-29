@@ -47,73 +47,73 @@ export default function WebDesign() {
         <HeaderAndLines header={<Trans i18nKey="Offers"></Trans>} />
         <div className="row  mt-5">
           <div className="col-md-6 col-12">
-            <div className="d-flex">
-              <img src="/assets/services/pin.png" alt="" />
+            <div className="d-flex  align-items-center ">
+              <img src="/assets/services/pin.png" className="pin" alt="" />
               <p className="text-services px-3 ">
                 {" "}
                 <Trans i18nKey="Free domain for one year."></Trans>
               </p>
             </div>
-            <div className="d-flex">
-              <img src="/assets/services/pin.png" alt="" />
+            <div className="d-flex  align-items-center ">
+              <img src="/assets/services/pin.png" className="pin" alt="" />
               <p className="text-services px-3">
                 <Trans i18nKey="Linking the website to social media platforms."></Trans>
               </p>
             </div>
-            <div className="d-flex">
-              <img src="/assets/services/pin.png" alt="" />
+            <div className="d-flex  align-items-center">
+              <img  src="/assets/services/pin.png" alt="" />
               <p className="text-services px-3">
                 <Trans i18nKey="Structural programming of the site at the highest level."></Trans>
               </p>
             </div>
           </div>
           <div className="col-md-6 col-12">
-            <div className="d-flex">
-              <img src="/assets/services/pin.png" alt="" />
+            <div className="d-flex  align-items-center">
+              <img src="/assets/services/pin.png" className="pin" alt="" />
               <p className="text-services px-3">
                 <Trans i18nKey="Secure product management system."></Trans>
               </p>
             </div>
-            <div className="d-flex">
-              <img src="/assets/services/pin.png" alt="" />
+            <div className="d-flex  align-items-center">
+              <img src="/assets/services/pin.png" className="pin" alt="" />
               <p className="text-services px-3">
                 <Trans i18nKey="Free technical support service for 6 months."></Trans>
               </p>
             </div>
-            <div className="d-flex">
-              <img src="/assets/services/pin.png" alt="" />
+            <div className="d-flex  align-items-center">
+              <img src="/assets/services/pin.png" className="pin" alt="" />
               <p className="text-services px-3">
                 <Trans i18nKey="A comprehensive website management control panel."></Trans>
               </p>
             </div>
           </div>
           <div className="col-12">
-            <div className="d-flex">
-              <img src="/assets/services/pin.png" alt="" />
+            <div className="d-flex  align-items-center">
+              <img src="/assets/services/pin.png" className="pin" alt="" />
               <p className="text-services px-3">
                 <Trans i18nKey="The number of emails (e-mail) reaches 100 emails."></Trans>
               </p>
             </div>
-            <div className="d-flex">
-              <img src="/assets/services/pin.png" alt="" />
+            <div className="d-flex  align-items-center">
+              <img src="/assets/services/pin.png" className="pin" alt="" />
               <p className="text-services px-3">
                 <Trans i18nKey="The possibility of paying by credit cards through your website."></Trans>
               </p>
             </div>
-            <div className="d-flex">
-              <img src="/assets/services/pin.png" alt="" />
+            <div className="d-flex  align-items-center">
+              <img src="/assets/services/pin.png" className="pin" alt="" />
               <p className="text-services px-3">
                 <Trans i18nKey="Design compatible with all devices (computer + tablet + mobile)."></Trans>
               </p>
             </div>
-            <div className="d-flex">
-              <img src="/assets/services/pin.png" alt="" />
+            <div className="d-flex  align-items-center">
+              <img src="/assets/services/pin.png" className="pin" alt="" />
               <p className="text-services px-3">
                 <Trans i18nKey="An attractive design that is appropriate to the character and field of the company and coordinated with the company logo."></Trans>
               </p>
             </div>
-            <div className="d-flex">
-              <img src="/assets/services/pin.png" alt="" />
+            <div className="d-flex  align-items-center">
+              <img src="/assets/services/pin.png" className="pin" alt="" />
               <p className="text-services px-3">
                 <Trans i18nKey="Your site will be eligible to appear on search engines."></Trans>
               </p>
@@ -219,7 +219,7 @@ export default function WebDesign() {
         <p className="text-center mb-0">
           <Trans i18nKey="Request a quote"></Trans>
         </p>
-        <div className="d-flex  p-3 justify-content-center align-items-center">
+        <div className="d-flex  align-items-center  p-3 justify-content-center align-items-center">
           <img src="/assets/services/request1.png" alt="" />
           <p className="p-0 mx-2 mb-0">
             <Trans i18nKey="If you want a price quote for website design, contact us and we will contact you as soon as possible"></Trans>
