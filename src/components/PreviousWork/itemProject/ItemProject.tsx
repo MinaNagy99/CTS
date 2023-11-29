@@ -1,13 +1,13 @@
 import { Trans } from "react-i18next";
 
 interface ItemProjectProps {
-  imag: string;
-  title: string;
+    imag: string;
+    title: string;
 }
 export default function ItemProject({ imag, title }: ItemProjectProps) {
     return (
         <>
-            <div className=""  onClick={()=>{window.scrollTo(0, 0);     }}>
+            <div>
                 <div className="item-border">
                     <img className="w-100" src={imag} alt="" />
                 </div>

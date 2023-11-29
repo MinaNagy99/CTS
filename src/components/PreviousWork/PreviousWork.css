@@ -22,16 +22,14 @@ section:first-child {
     height: 200px;
     overflow: hidden;
 }
-.item-border:hover img{
+.item-border:hover img {
     overflow: auto;
     transform: translateY(-86%);
     transition: transform 7s ease;
     overflow: auto;
-
 }
-.item-border img{
+.item-border img {
     transition: transform 7s ease;
-
 }
 
 section h1 {
@@ -74,6 +72,7 @@ section h1 {
     font-size: 15px;
 }
 .text-section {
+    margin-top: 100px;
     width: 50%;
     height: 80vh;
     margin-left: auto;
@@ -88,7 +87,7 @@ section h1 {
 
 .item-border:hover img {
     overflow: auto;
-    transform: translateY(-86%);
+    transform: translateY(-100%) translateY(200px);
     transition: transform 5s ease;
     overflow: auto;
 }

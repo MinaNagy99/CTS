@@ -129,7 +129,7 @@ export default function PreviousWork() {
 
     return (
         <>
-            <section className="first-section d-flex flex-column justify-content-center align-items-start ">
+            <section className="first-section p-4 d-flex flex-column justify-content-center align-items-start ">
                 <div className="text-section d-flex flex-column align-items-center justify-content-center">
                     <p className="my-4">
                         <Trans i18nKey="See our previous work from"></Trans>
@@ -142,16 +142,26 @@ export default function PreviousWork() {
             </section>
             <div className="container ">
                 <div className="row gy-4 mt-5">
-                    {data.map((item:any, index:number) => (
-                        <Link
-                            className="col-lg-4 col-sm-6 col-12 p-2"
-                            key={index}
-                            to={`/website/${encodeURIComponent(item.title)}`}
-                            onClick={() => handleProjectClick(item.title)}
-                        >
-                            <ItemProject imag={item.mainImg} title={item.title} />
-                        </Link>
-                    ))}
+                    {data.map((item, index) =>
+                        // Check if the item has a link property
+                        // If it does, render a Link, otherwise render a div
+                        "link" in item ? (
+                            <Link
+                                className="col-lg-4 col-sm-6 col-12 p-2"
+                                key={index}
+                                to={`/website/${encodeURIComponent(item.title)}`}
+                                onClick={() => {
+                                    window.scrollTo(0, 0);
+                                }}
+                            >
+                                <ItemProject imag={item.mainImg} title={item.title} />
+                            </Link>
+                        ) : (
+                            <div className="col-lg-4 col-sm-6 col-12 p-2" key={index}>
+                                <ItemProject imag={item.mainImg} title={item.title} />
+                            </div>
+                        )
+                    )}
                 </div>
             </div>
         </>
