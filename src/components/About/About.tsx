@@ -1,8 +1,7 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import "./About.css";
 import { Trans } from "react-i18next";
 import { useTranslation } from "react-i18next";
-import { MyContext } from "../context/LngContext";
 
 export default function About() {
   const { t } = useTranslation();
@@ -15,7 +14,7 @@ export default function About() {
     <>
       <div className="container-fluid">
         <div className="row about-section  ">
-          <div className="col-12 col-md-7    d-sm-flex justify-content-center flex-column p-0 px-5 pt-lg-0">
+          <div className="col-12 col-md-7    d-sm-flex justify-content-center flex-column p-0  pt-lg-0">
             <div className="row ">
               <div className="col-2 pt-4 text-center ">
                 <img src="/assets/about/about-logo.png" alt="" />

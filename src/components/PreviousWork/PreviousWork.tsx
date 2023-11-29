@@ -137,7 +137,7 @@ export default function PreviousWork() {
                     <h1 className="my-4">
                         <Trans i18nKey="Sites Design"></Trans>
                     </h1>
-                    <img className="mt-4" src="/assets/portfolio/titleline.png" alt="" />
+                    <img className="mt-4 img-fluid" src="/assets/portfolio/titleline.png" alt="" />
                 </div>
             </section>
             <div className="container ">

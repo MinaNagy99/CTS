@@ -6,6 +6,8 @@ import HeaderAndLines from "../shared/HeaderAndLines";
 import { PortfolioContext } from "../context/PortfolioContext";
 import { useParams } from "react-router-dom";
 import Modal from "react-modal";
+import { Trans } from "react-i18next";
+import { NavLink } from "react-router-dom";
 
 interface Props {
     className?: string;
@@ -99,7 +101,7 @@ function WesbiteDetails() {
     const project = data.find((item) => item.title === decodeURIComponent(title));
     console.log(data);
 
-    const handleClick = (index) => {
+    const handleClick = (index:number) => {
         setShowCarousel(true);
         setSelectedImageIndex(index);
     };
@@ -132,19 +134,19 @@ function WesbiteDetails() {
                     </div>
                 </div>
                 <div className="">
-                    <HeaderAndLines header={project?.title} />
+                    <HeaderAndLines header={<Trans i18nKey={project?.title}></Trans>} />
                 </div>
             </div>
             <div className="bot">
                 <div className="project-header m-auto d-flex align-items-center justify-content-center mt-5">
-                    صفحات من الموقع
+                    <Trans i18nKey="Pages from the site"></Trans>
                 </div>
 
                 <div>
                     <div className="container mt-5 d-flex justify-content-center">
                         <div className="row justify-content-around">
                             {project?.previewImages.map((image, index) => (
-                                <div className="col-3 p-0 project-image-container" key={index}>
+                                <div className="col-md-3 col-6  project-image-container" key={index}>
                                     <img className="" src={image} alt="" onClick={() => handleClick(index)} />
                                 </div>
                             ))}
@@ -220,12 +222,12 @@ function WesbiteDetails() {
                                 fill="white"
                             />
                         </svg>
-                        <a href="#">تصفح الموقع</a>
+                        <a href="#"><Trans i18nKey="Browse the site"></Trans></a>
                     </div>
-                    <div className="project-link d-flex align-items-center justify-content-center mt-5 mx-3 text-center py-5 py-sm-0">
-                        <a className="text-decoration-none" href="#">
-                            عرض جميع الأعمال
-                        </a>
+                    <div className="project-link d-flex align-items-center justify-content-center mt-5 mx-3">
+                        <NavLink className="text-decoration-none" to="/portfolio" onClick={()=>{window.scrollTo({top:0})}}>
+                            <Trans i18nKey="View all works"></Trans>
+                        </NavLink>
                     </div>
                 </div>
             </div>

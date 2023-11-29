@@ -1,6 +1,6 @@
 footer {
     background-color: #f3f3f3;
-    color: #05579b;
+    color: #05579b  !important;
     width: 100%;
 }
 

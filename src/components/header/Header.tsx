@@ -4,9 +4,8 @@ import "./header.css";
 import i18next from "i18next";
 import { Trans } from "react-i18next";
 import { MyContext } from "../context/LngContext";
-import { Link } from "react-router-dom";
 
-function Header() {
+function  Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isNavbarCollapsed, setNavbarCollapsed] = useState(false);
   const [nextLang, setnextLang] = useState({
@@ -17,17 +16,6 @@ function Header() {
   const { setcurrentLng } = useContext(MyContext);
 
   const location = useLocation();
-
-  const navigationLinks = [
-    { to: "/", textKey: "Home" },
-    { to: "/about", textKey: "About us" },
-    { to: "/services", textKey: "Services" },
-    { to: "/portfolio", textKey: "Portfolio" },
-    { to: "/blogs", textKey: "Blogs" },
-    { to: "/contact-us", textKey: "Contact us" },
-  ];
-
-  const isServicesAndBlogsDisabled = true;
 
   useEffect(() => {
     const handleScroll = () => {
