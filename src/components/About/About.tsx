@@ -1,8 +1,7 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import "./About.css";
 import { Trans } from "react-i18next";
 import { useTranslation } from "react-i18next";
-import { MyContext } from "../context/LngContext";
 
 export default function About() {
   const { t } = useTranslation();

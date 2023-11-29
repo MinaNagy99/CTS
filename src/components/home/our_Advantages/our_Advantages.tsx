@@ -1,4 +1,3 @@
-import { useState } from "react";
 import HeaderAndLines from "../../shared/HeaderAndLines";
 import "./our_Advantages.css";
 import { Trans } from "react-i18next";
