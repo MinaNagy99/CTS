@@ -8,8 +8,6 @@ import { MyContext } from "../context/LngContext";
 function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [isNavbarCollapsed, setNavbarCollapsed] = useState(false);
-    const [isTogglerCollapsed, setTogglerCollapsed] = useState(true); // New state variable
-
     const [nextLang, setnextLang] = useState({
         languageName: "English",
         imgFlag: "/assets//home/american-flag.png",
@@ -63,16 +61,14 @@ function Header() {
     return (
         <>
             <nav
-                className={`navbar navbar-expand-lg ${isTogglerCollapsed ? "" : "collapsed"} ${
-                    isNavbarCollapsed ? "m-0" : ""
-                }`}
+                className={`navbar navbar-expand-lg ${scrolled ? "navbar-scrolled" : ""} ${isNavbarCollapsed ? "m-0" : ""}`}
             >
                 <div className="container-fluid">
                     <NavLink className="navbar-brand" to="/">
                         <img src="/assets/logonavbar.svg" alt="" />
                     </NavLink>
                     <button
-                        className={`navbar-toggler ${scrolled ? "navbar-scrolled" : ""}`}
+                        className="navbar-toggler"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup"
@@ -83,7 +79,7 @@ function Header() {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className={`collapse navbar-collapse ${isTogglerCollapsed ? "show" : ""}`} id="navbarNavAltMarkup">
+                    <div className={`collapse navbar-collapse`} id="navbarNavAltMarkup">
                         <div className="navbar-nav w-100 d-flex flex-column col-lg-5 flex-lg-row justify-content-between align-items-start ">
                             {/* {navigationLinks.map((link) =>
                 isServicesAndBlogsDisabled && link.to === "/blogs" ? null : (
@@ -103,7 +99,6 @@ function Header() {
               )} */}
                             <NavLink
                                 onClick={() => {
-                                    setTogglerCollapsed(true);
                                     window.scrollTo({ top: 0 });
                                 }}
                                 className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
@@ -113,7 +108,6 @@ function Header() {
                             </NavLink>
                             <NavLink
                                 onClick={() => {
-                                    setTogglerCollapsed(true);
                                     window.scrollTo({ top: 0 });
                                 }}
                                 className={`nav-link ${location.pathname === "/about" ? "active" : ""}`}
@@ -132,7 +126,6 @@ function Header() {
                                                 location.pathname.startsWith("/services/web-design") ? "active" : ""
                                             }`}
                                             onClick={() => {
-                                                setTogglerCollapsed(true);
                                                 window.scrollTo({ top: 0 });
                                             }}
                                             to="/services/web-design"
@@ -145,7 +138,6 @@ function Header() {
                             </li>
                             <NavLink
                                 onClick={() => {
-                                    setTogglerCollapsed(true);
                                     window.scrollTo({ top: 0 });
                                 }}
                                 className={`nav-link ${location.pathname === "/portfolio" ? "active" : ""}`}
@@ -155,7 +147,6 @@ function Header() {
                             </NavLink>
                             <NavLink
                                 onClick={() => {
-                                    setTogglerCollapsed(true);
                                     window.scrollTo({ top: 0 });
                                 }}
                                 className={`nav-link ${location.pathname === "/contact-us" ? "active" : ""}`}
