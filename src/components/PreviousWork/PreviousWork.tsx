@@ -4,31 +4,19 @@ import ItemProject from "./itemProject/ItemProject";
 import { Trans, useTranslation } from "react-i18next";
 import { useEffect, useContext } from "react";
 import { PortfolioContext } from "../context/PortfolioContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-// interface PortfolioItem {
-//     imag: string;
-//     title: React.ReactNode | any;
-// }
 
 export default function PreviousWork() {
     const data: any = useContext(PortfolioContext);
-    const navigate = useNavigate();
 
     const { t } = useTranslation();
     useEffect(() => {
         document.title = t("CTS | Portfolio");
     });
 
-    const handleProjectClick = (title: string) => {
-        // Navigate to the "/website" route with the selected project's title as a parameter
-        // You need to set up your routes in your main application component
-        // e.g., <Route path="/website/:title" component={WebsiteDetail} />
-        // where WebsiteDetail is the component to display details of a website
-        navigate(`/website/${encodeURIComponent(title)}`);
-    };
 
-    // const arrOfItem: PortfolioItem[] = [
+
     //     {
     //         imag: "/assets/portfolio/1.png",
     //         title: <Trans i18nKey="Al Mannai Real Estate Development"></Trans>,
@@ -142,7 +130,7 @@ export default function PreviousWork() {
             </section>
             <div className="container ">
                 <div className="row gy-4 mt-5">
-                    {data.map((item, index) =>
+                    {data.map((item:any, index:number) =>
                         // Check if the item has a link property
                         // If it does, render a Link, otherwise render a div
                         "link" in item ? (

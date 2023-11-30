@@ -5,10 +5,7 @@ import { useState } from "react";
 function FixedIcons() {
     const [showPhoneNumbers, setShowPhoneNumbers] = useState(false);
 
-    const dialNumber = () => {
-        // Replace with the logic to initiate a call to the specified number
-        window.location.href = "tel:+201201117955";
-    };
+
 
     const togglePhoneNumbers = () => {
         setShowPhoneNumbers(!showPhoneNumbers);
@@ -30,7 +27,7 @@ function FixedIcons() {
             >
                 {showPhoneNumbers && (
                     <div className="phone-numbers">
-                        <a target="_blank" href="https://wa.me/01201117955?text=Hello%20from%20your%20website">
+                        <a target="_blank" href="https://wa.me/+201201117955?text=Hello%20from%20your%20website">
                             <div className="eg d-flex align-items-center ">
                                 <img className="" src="assets/fixedIcon/eg.svg" alt="" />
                                 <p className="m-0">
