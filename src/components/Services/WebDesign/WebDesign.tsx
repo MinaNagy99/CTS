@@ -128,7 +128,7 @@ export default function WebDesign() {
         />
         <div className="container  my-5">
           <div className="row mt-5 gy-5">
-            <div className=" col-sm-6 col-lg-3  text-center ">
+            <div className=" col-6 col-lg-3  text-center ">
               <img
                 className="text-center m-auto  "
                 src="../assets/services/features1.png"
@@ -138,7 +138,7 @@ export default function WebDesign() {
                 <Trans i18nKey="speed"></Trans>
               </p>
             </div>
-            <div className=" col-sm-6 col-lg-3  text-center ">
+            <div className=" col-6 col-lg-3  text-center ">
               <img
                 className="text-center  m-auto  "
                 src="../assets/services/features2.png"
@@ -148,7 +148,7 @@ export default function WebDesign() {
                 <Trans i18nKey="design"></Trans>
               </p>
             </div>
-            <div className=" col-sm-6 col-lg-3  text-center ">
+            <div className=" col-6 col-lg-3  text-center ">
               <img
                 className="text-center m-auto  "
                 src="../assets/services/features3.png"
@@ -158,7 +158,7 @@ export default function WebDesign() {
                 <Trans i18nKey="Safety"></Trans>
               </p>
             </div>
-            <div className=" col-sm-6 col-lg-3  text-center ">
+            <div className=" col-6 col-lg-3  text-center ">
               <img
                 className="text-center m-auto  "
                 src="../assets/services/features4.png"
@@ -168,7 +168,7 @@ export default function WebDesign() {
                 <Trans i18nKey="Compatible with search engines"></Trans>
               </p>
             </div>
-            <div className=" col-sm-6 col-lg-3  text-center ">
+            <div className=" col-6 col-lg-3  text-center ">
               <img
                 className="text-center m-auto  "
                 src="../assets/services/features4.png"
@@ -178,7 +178,7 @@ export default function WebDesign() {
                 <Trans i18nKey="cost"></Trans>
               </p>
             </div>
-            <div className=" col-sm-6 col-lg-3  text-center ">
+            <div className=" col-6 col-lg-3  text-center ">
               <img
                 className="text-center m-auto  "
                 src="../assets/services/features5.png"
@@ -188,7 +188,7 @@ export default function WebDesign() {
                 <Trans i18nKey="Ease of modification"></Trans>
               </p>
             </div>
-            <div className=" col-sm-6 col-lg-3  text-center ">
+            <div className=" col-6 col-lg-3  text-center ">
               <img
                 className="text-center m-auto  "
                 src="../assets/services/features6.png"
@@ -198,7 +198,7 @@ export default function WebDesign() {
                 <Trans i18nKey="Easy control"></Trans>
               </p>
             </div>
-            <div className=" col-sm-6 col-lg-3  text-center ">
+            <div className=" col-6 col-lg-3  text-center ">
               <img
                 className="text-center m-auto  "
                 src="../assets/services/features7.png"

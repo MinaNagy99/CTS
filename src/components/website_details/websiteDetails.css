@@ -32,24 +32,27 @@
 }
 
 .project-header {
-    max-width: 356px;
-    height: 113px;
     background: url(/assets/websites/website-pages.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center center;
+    padding: 20px 20px ;
+    background-size: contain;
     font-size: 32px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-link {
-    width: 224px;
-    height: 60px;
+
     background-color: #215783;
 }
 
 .project-link a {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
+    padding: 10px 20px;
 }
 
 .project-image-container {
@@ -125,3 +128,9 @@
     z-index: 99;
 }
 
+@media  (max-width: 768px) {
+    .btn-link{
+        font-size: 12px !important;
+        color: white !important;
+    }
+}

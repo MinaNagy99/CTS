@@ -196,7 +196,7 @@ function WesbiteDetails() {
                     </div>
                 </div>
                 <div className="d-flex justify-content-center mb-4">
-                    <div className="project-link d-flex align-items-center justify-content-center text-center mt-5 mx-3 py-5 py-sm-0">
+                    <div className="project-link d-flex align-items-center justify-content-center text-center mt-5 mx-3 ">
                         <svg
                             className="mx-2"
                             xmlns="http://www.w3.org/2000/svg"
@@ -222,13 +222,13 @@ function WesbiteDetails() {
                                 fill="white"
                             />
                         </svg>
-                        <a href="#">
+                        <a className="btn-link nav-link" href="#">
                             <Trans i18nKey="Browse the site"></Trans>
                         </a>
                     </div>
-                    <div className="project-link d-flex align-items-center justify-content-center text-center mt-5 mx-3 py-5 py-sm-0">
+                    <div className="project-link d-flex align-items-center justify-content-center text-center  mt-5 mx-3 ">
                         <NavLink
-                            className="text-decoration-none"
+                            className="text-decoration-none nav-link btn-link"
                             to="/portfolio"
                             onClick={() => {
                                 window.scrollTo({ top: 0 });
