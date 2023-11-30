@@ -27,7 +27,7 @@ export const PortfolioContext = createContext<PortfolioContext[]>([
             "/assets/websites/alphaclinic-photos/alphaclinic-carasoul3.png",
         ],
         logo: "/assets/websites/alphaclinic-photos/alphaclinic-logo.png",
-        link: "sss",
+        link: "dental-clinic",
     },
 ]);
 
@@ -47,7 +47,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/littleengineer-photos/littleegineer-carasoul3.png",
             ],
             logo: "/assets/websites/littleengineer-photos/le-logo.png",
-            link: "sss",
+            link: "https://le-academy.com/",
         },
         {
             mainImg: "/assets/websites/ebdaa-photos/ebdaa-carasoul1.png",
@@ -61,7 +61,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/ebdaa-photos/ebdaa-carasoul2.png",
             ],
             logo: "/assets/websites/ebdaa-photos/ebdaa-logo.png",
-            link: "sss",
+            link: "https://ebdaa-saudi.com/",
         },
         {
             mainImg: "/assets/websites/mannaie-photos/mannaie-carasoul1.png",
@@ -77,7 +77,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/mannaie-photos/mannaie-carasoul3.png",
             ],
             logo: "/assets/websites/mannaie-photos/mannaie-logo.png",
-            link: "sss",
+            link: "https://www.mannaie-group-development.com/",
         },
         {
             mainImg: "/assets/websites/kider-photos/kider-carasoul1.png",
@@ -93,7 +93,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/kider-photos/kider-carasoul3.png",
             ],
             logo: "/assets/websites/kider-photos/kider-logo.png",
-            link: "sss",
+            link: "demo/kinderGarten",
         },
         {
             mainImg: "/assets/websites/cleaned-photos/cleaned-carasoul1.png",
@@ -109,7 +109,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/cleaned-photos/cleaned-carasoul3.png",
             ],
             logo: "/assets/websites/cleaned-photos/cleaned-logo.png",
-            link: "sss",
+            link: "demo/Cleaned",
         },
         {
             mainImg: "/assets/websites/alphaclinic-photos/alphaclinic-carasoul1.png",
@@ -125,7 +125,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/alphaclinic-photos/alphaclinic-carasoul3.png",
             ],
             logo: "/assets/websites/alphaclinic-photos/alphaclinic-logo.png",
-            link: "sss",
+            link: "demo/dental-clinic",
         },
         {
             mainImg: "/assets/websites/motormenders-photos/motormenders-carasoul1.png",
@@ -141,7 +141,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/motormenders-photos/motormenders-carasoul3.png",
             ],
             logo: "/assets/websites/motormenders-photos/motor-logo.png",
-            link: "sss",
+            link: "demo/MotorMenders",
         },
         {
             mainImg: "/assets/websites/tournest-photos/tournest-carasoul1.png",
@@ -155,7 +155,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/tournest-photos/tournest-carasoul2.png",
             ],
             logo: "/assets/websites/tournest-photos/tournest-logo.png",
-            link: "sss",
+            link: "demo/TourNest",
         },
         {
             mainImg: "/assets/websites/educap-photos/educap-carasoul1.png",
@@ -171,7 +171,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/educap-photos/educap-carasoul3.png",
             ],
             logo: "/assets/websites/educap-photos/educap-logo.png",
-            link: "sss",
+            link: "https://www.educap.ae/",
         },
         {
             mainImg: "/assets/websites/arconswebsite-photos/arconswebsite-carasoul1.png",
@@ -188,7 +188,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/arconswebsite-photos/arconswebsite-carasoul3.png",
             ],
             logo: "/assets/websites/arconswebsite-photos/arcons-logo.png",
-            link: "sss",
+            link: "https://arconsegypt.com/",
         },
         {
             mainImg: "/assets/websites/masdar-photos/masdar-carasoul1.png",
@@ -204,7 +204,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/masdar-photos/masdar-carasoul3.png",
             ],
             logo: "/assets/websites/masdar-photos/masdar-logo.png",
-            link: "sss",
+            link: "https://masdar.co/",
         },
         {
             mainImg: "/assets/websites/prestige-photos/prestige-carasoul1.png",
@@ -220,7 +220,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/prestige-photos/prestige-carasoul3.png",
             ],
             logo: "/assets/websites/prestige-photos/prestige-logo.png",
-            link: "sss",
+            link: "https://prestige.co.ae/",
         },
 
         {

@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 import Modal from "react-modal";
 import { Trans } from "react-i18next";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface Props {
     className?: string;
@@ -222,9 +223,9 @@ function WesbiteDetails() {
                                 fill="white"
                             />
                         </svg>
-                        <a href="#">
+                        <Link target="_blank" to={`${project?.link}`}>
                             <Trans i18nKey="Browse the site"></Trans>
-                        </a>
+                        </Link>
                     </div>
                     <div className="project-link d-flex align-items-center justify-content-center text-center mt-5 mx-3 py-5 py-sm-0">
                         <NavLink
