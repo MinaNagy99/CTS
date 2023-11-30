@@ -10,7 +10,7 @@ function Footer() {
                     <div className="col-md-4 col-12 d-flex align-items-center flex-column">
                         <img className="footer-logo my-1" src="/assets/logofooter.svg" alt="" />
                         <div className="my-3">
-                            <a href="">info@cts-egy.com</a>
+                            <Link to="">info@cts-egy.com</Link>
                             <img className="me-1" src="/assets/svg/emailicon.svg" alt="" />
                         </div>
                         <Link to="/contact-us">
@@ -23,13 +23,13 @@ function Footer() {
                         <h5 className="mb-2">
                             <Trans i18nKey="Services"></Trans>
                         </h5>
-                        <ul className="list-unstyled  px-0">
+                        <ul className="list-unstyled px-3">
                             <li className="text-decoration-underline">
                                 <NavLink
                                     onClick={() => {
                                         window.scrollTo({ top: 0 });
                                     }}
-                                    className="nav-link"
+                                    className="nav-Link"
                                     to="/services/web-design"
                                 >
                                     <Trans i18nKey="Website design"></Trans>
@@ -38,7 +38,7 @@ function Footer() {
 
                             <li className="text-decoration-underline">
                                 <NavLink
-                                    className="nav-link"
+                                    className="nav-Link"
                                     onClick={() => {
                                         window.scrollTo({ top: 0 });
                                     }}
@@ -52,7 +52,7 @@ function Footer() {
                                     onClick={() => {
                                         window.scrollTo({ top: 0 });
                                     }}
-                                    className="nav-link"
+                                    className="nav-Link"
                                     to="/"
                                 >
                                     <Trans i18nKey="WordPress programming and website design"></Trans>
@@ -63,7 +63,7 @@ function Footer() {
                                     onClick={() => {
                                         window.scrollTo({ top: 0 });
                                     }}
-                                    className="nav-link"
+                                    className="nav-Link"
                                     to="/portfolio"
                                 >
                                     <Trans i18nKey="portfolio"></Trans>
@@ -74,7 +74,7 @@ function Footer() {
                                     onClick={() => {
                                         window.scrollTo({ top: 0 });
                                     }}
-                                    className="nav-link"
+                                    className="nav-Link"
                                     to="/"
                                 >
                                     <Trans i18nKey="IT Services"></Trans>
@@ -130,32 +130,38 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className="row      mb-2  mx-5">
-                    <div className="a col-12   col-md-6 footer-gifs d-flex justify-content-center mb-4 ps-5">
-                        <a
-                            href="https://www.snapchat.com/add/coretechnology?share_id=zOFk_Vu0-k0&locale=en-GB"
+                <div className="row mb-2  mx-5">
+                    <div className="col-12 col-md-6 footer-gifs d-flex justify-content-center">
+                        <Link
+                            to="https://www.snapchat.com/add/coretechnology?share_id=zOFk_Vu0-k0&locale=en-GB"
                             target="_blank"
+                            className="ms-3"
                         >
-                            <img className="ms-3 " src="/assets/gif/snapchat.gif" alt="" />
-                        </a>
-                        <a
+                            <img className="" src="/assets/gif/snapchat.gif" alt="" />
+                        </Link>
+                        <Link
                             target="_blank"
-                            href="https://www.facebook.com/CoreTechnologySolutions022/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0 "
+                            className="ms-3"
+                            to="https://www.facebook.com/CoreTechnologySolutions022/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0 "
                         >
-                            <img className="ms-3 " src="/assets/gif/facebook.gif" alt="" />
-                        </a>
-                        <a target="_blank" href="https://wa.me/01201117955?text=Hello%20from%20your%20website">
-                            <img className="ms-3" src="/assets/gif/whatsapp.gif" alt="" />
-                        </a>
-                        <a href="https://www.linkedin.com/company/cts-eg/">
-                            <img className="ms-3" src="/assets/gif/in.gif" alt="" />
-                        </a>
-                        <Link target="_blank" to="https://www.instagram.com/core_technology24/">
-                            <img className="ms-3 " src="/assets/gif/instegram.gif" alt="" />
+                            <img className="" src="/assets/gif/facebook.gif" alt="" />
+                        </Link>
+                        <Link
+                            className="ms-3"
+                            target="_blank"
+                            to="https://wa.me/01201117955?text=Hello%20from%20your%20website"
+                        >
+                            <img className="" src="/assets/gif/whatsapp.gif" alt="" />
+                        </Link>
+                        <Link className="ms-3" target="_blank" to="https://www.Linkedin.com/company/cts-eg/">
+                            <img className="" src="/assets/gif/in.gif" alt="" />
+                        </Link>
+                        <Link className="ms-3" target="_blank" to="https://www.instagram.com/core_technology24/">
+                            <img className="" src="/assets/gif/instegram.gif" alt="" />
                         </Link>
                     </div>
                     <div className="col-12 mb-4 col-md-6 d-flex justify-content-center align-items-center ">
-                        <p className="p-0 m-0">
+                        <p className="p-0 m-0 text-center">
                             <Trans i18nKey="All rights reserved to © Core Technology Solutions"></Trans>
                         </p>
                     </div>

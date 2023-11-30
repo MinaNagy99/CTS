@@ -101,7 +101,7 @@ function WesbiteDetails() {
     const project = data.find((item) => item.title === decodeURIComponent(title));
     console.log(data);
 
-    const handleClick = (index:number) => {
+    const handleClick = (index: number) => {
         setShowCarousel(true);
         setSelectedImageIndex(index);
     };
@@ -222,10 +222,18 @@ function WesbiteDetails() {
                                 fill="white"
                             />
                         </svg>
-                        <a href="#"><Trans i18nKey="Browse the site"></Trans></a>
+                        <a href="#">
+                            <Trans i18nKey="Browse the site"></Trans>
+                        </a>
                     </div>
-                    <div className="project-link d-flex align-items-center justify-content-center mt-5 mx-3">
-                        <NavLink className="text-decoration-none" to="/portfolio" onClick={()=>{window.scrollTo({top:0})}}>
+                    <div className="project-link d-flex align-items-center justify-content-center text-center mt-5 mx-3 py-5 py-sm-0">
+                        <NavLink
+                            className="text-decoration-none"
+                            to="/portfolio"
+                            onClick={() => {
+                                window.scrollTo({ top: 0 });
+                            }}
+                        >
                             <Trans i18nKey="View all works"></Trans>
                         </NavLink>
                     </div>
