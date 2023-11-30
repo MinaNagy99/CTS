@@ -5,10 +5,7 @@ import { useState } from "react";
 function FixedIcons() {
     const [showPhoneNumbers, setShowPhoneNumbers] = useState(false);
 
-    const dialNumber = () => {
-        // Replace with the logic to initiate a call to the specified number
-        window.location.href = "tel:+201201117955";
-    };
+
 
     const togglePhoneNumbers = () => {
         setShowPhoneNumbers(!showPhoneNumbers);
