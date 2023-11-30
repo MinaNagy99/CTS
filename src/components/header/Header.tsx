@@ -145,7 +145,7 @@ function Header() {
                   <Trans i18nKey="Services"></Trans>
                 </a>
                 <ul className="dropdown-menu">
-                  <li>
+                  <li className="m-0 p-0">
                     <NavLink
                       className={`dropdown-item ${
                         location.pathname.startsWith("/services/web-design")

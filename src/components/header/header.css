@@ -76,13 +76,4 @@
     width: 100%;
 }
 
-/* .show {
-} */
 
-.navbar-nav.flex-lg-row {
-    /* flex-direction: row !important;  */
-}
-
-.navbar-nav.flex-lg-row .nav-link {
-    /* margin: 0; */
-}
