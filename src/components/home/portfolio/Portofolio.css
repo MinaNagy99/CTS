@@ -3,6 +3,9 @@
     border-style: solid;
     border-color: #148cef;
 }
+.portfolio-title {
+    z-index: 2;
+}
 .serviceName {
     font-size: 20px;
     font-weight: 600;

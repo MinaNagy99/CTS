@@ -1,6 +1,7 @@
 import "./Portofolio.css";
 import HeaderAndLines from "../../shared/HeaderAndLines";
 import { Trans } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function Portfolio() {
     return (
@@ -12,11 +13,17 @@ export default function Portfolio() {
                         <div className="arrow1 d-lg-block d-none">
                             <img src="/assets/home/arrow1.png" alt="" />
                         </div>
-                        <div className="arrow2   d-lg-block d-none">
+                        <div className="arrow2 d-lg-block d-none">
                             <img src="/assets/home/arrow2.png" alt="" />
                         </div>
-                        <div className="col-12 p-3 col-md-4">
-                            <div className="row  borderOfService py-2">
+                        <div className="col-12 p-3 col-md-4 portfolio-title">
+                            <Link
+                                className="row borderOfService py-2"
+                                to={"/Portfolio"}
+                                onClick={() => {
+                                    window.scrollTo(0, 0);
+                                }}
+                            >
                                 <div className="col-4 d-flex  justify-content-center align-items-center">
                                     <img className="port-img" src="/assets/home/webdesign.png" alt="" />
                                 </div>
@@ -25,7 +32,7 @@ export default function Portfolio() {
                                         <Trans i18nKey="Websites"></Trans>
                                     </p>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                         <div className="col-12 p-3 col-md-4">
                             <div className="row borderOfService py-2">
