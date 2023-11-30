@@ -21,6 +21,7 @@ function App() {
             element: <MainLayout />,
             children: [
                 { index: true, element: <Home /> },
+                { path:"/CTS", element: <Home /> },
                 { path: "/about", element: <About /> },
                 { path: "/portfolio", element: <PreviousWork /> },
                 { path: "/contact-us", element: <ContactUs /> },
