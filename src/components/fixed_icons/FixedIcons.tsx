@@ -30,7 +30,7 @@ function FixedIcons() {
             >
                 {showPhoneNumbers && (
                     <div className="phone-numbers">
-                        <a target="_blank" href="https://wa.me/01201117955?text=Hello%20from%20your%20website">
+                        <a target="_blank" href="https://wa.me/+201201117955?text=Hello%20from%20your%20website">
                             <div className="eg d-flex align-items-center ">
                                 <img className="" src="assets/fixedIcon/eg.svg" alt="" />
                                 <p className="m-0">
