@@ -3,10 +3,12 @@ import HeaderAndLines from "../../shared/HeaderAndLines";
 import OnlineStoreFeatures from "./OnlineStoreFeatures/OnlineStoreFeatures";
 import "./onlineStoreDesign.css";
 import { Link } from "react-router-dom";
+import TopSecServices from "../Top-sec-Service/TopSecServices";
 
 function OnlineStoreDesign() {
     return (
         <>
+        <TopSecServices title="Why is designing an online store an important step?" desc="We live in the era of digital development and technology, and designing an online store has become an indispensable thing for any business owner, which helps him promote and spread well in front of competitors in the field." img="./assets/onlineStoreDesignImages/e-commerce1.png"/>
             <div className="container-fluid p-0">
                 <HeaderAndLines
                     header={<Trans i18nKey="What distinguishes our e-commerce websites"></Trans>}

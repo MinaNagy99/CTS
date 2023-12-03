@@ -13,6 +13,7 @@ import WesbiteDetails from "./components/website_details/WebsiteDetails";
 import WebDesign from "./components/Services/WebDesign/WebDesign";
 import OnlineStoreDesign from "./components/Services/OnlineStoreDesign/OnlineStoreDesign";
 import Seo from "./components/Services/SEO/SEO";
+import MobilApp from "./components/Services/MobilApp/MobilApp";
 
 function App() {
     const { i18n } = useTranslation();
@@ -27,6 +28,7 @@ function App() {
                 { path: "/portfolio", element: <PreviousWork /> },
                 { path: "/contact-us", element: <ContactUs /> },
                 { path: "/services/web-design", element: <WebDesign /> },
+                { path: "/services/mobile-app", element: <MobilApp /> },
                 { path: "/services/online-store-design", element: <OnlineStoreDesign /> },
                 { path: "/services/seo", element: <Seo /> },
                 { path: "/website/:title", element: <WesbiteDetails /> },

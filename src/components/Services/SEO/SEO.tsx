@@ -1,9 +1,11 @@
 import { Trans } from "react-i18next";
 import "./SEO.css";
 import { Link } from "react-router-dom";
+import TopSecServices from "../Top-sec-Service/TopSecServices";
 function Seo() {
     return (
         <>
+        <TopSecServices title="SEO" desc="We have a research team of specialists in on-page and off-page SEO, as well as PPC, i.e. payment for clicks in sponsored advertising campaigns such as Facebook and Google. We have a proven track record in increasing our clients’ search engine rankings." img="./assets/seo/seo1.png"/>
             <div className="container-fluid p-0 seo">
                 <div className="position-relative ice1">
                     <img src="/assets/seo/ice1.png" alt="" />
@@ -31,7 +33,7 @@ function Seo() {
                     <h2>
                         <Trans i18nKey="Preparing websites for search engines (SEO)."></Trans>
                     </h2>
-                    <p>
+                    <p className="my-4">
                         <Trans i18nKey="SEO is considered the most important source in attracting targeted visitors. We study your field, the market, and competitors, in order to develop the appropriate marketing plan that saves a lot of money and time and ensures that your site is prepared and appears in the first results. The appearance of your site in the first results of search engines is a great success, because This means that thousands of visitors and therefore customers will reach your site, which is what any company seeks."></Trans>
                     </p>
                     <Link
