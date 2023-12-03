@@ -61,7 +61,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/ebdaa-photos/ebdaa-carasoul2.png",
             ],
             logo: "/assets/websites/ebdaa-photos/ebdaa-logo.png",
-            link: "https://ebdaa-saudi.com/",
+            link: "http://ebdaa-saudi.com/",
         },
         {
             mainImg: "/assets/websites/mannaie-photos/mannaie-carasoul1.png",
@@ -93,7 +93,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/kider-photos/kider-carasoul3.png",
             ],
             logo: "/assets/websites/kider-photos/kider-logo.png",
-            link: "demo/kinderGarten",
+            link: "/demo/kinderGarten",
         },
         {
             mainImg: "/assets/websites/cleaned-photos/cleaned-carasoul1.png",
@@ -109,7 +109,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/cleaned-photos/cleaned-carasoul3.png",
             ],
             logo: "/assets/websites/cleaned-photos/cleaned-logo.png",
-            link: "demo/Cleaned",
+            link: "/demo/Cleaned",
         },
         {
             mainImg: "/assets/websites/alphaclinic-photos/alphaclinic-carasoul1.png",
@@ -125,7 +125,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/alphaclinic-photos/alphaclinic-carasoul3.png",
             ],
             logo: "/assets/websites/alphaclinic-photos/alphaclinic-logo.png",
-            link: "demo/dental-clinic",
+            link: "/demo/dental-clinic",
         },
         {
             mainImg: "/assets/websites/motormenders-photos/motormenders-carasoul1.png",
@@ -141,7 +141,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/motormenders-photos/motormenders-carasoul3.png",
             ],
             logo: "/assets/websites/motormenders-photos/motor-logo.png",
-            link: "demo/MotorMenders",
+            link: "/demo/MotorMenders",
         },
         {
             mainImg: "/assets/websites/tournest-photos/tournest-carasoul1.png",
@@ -155,7 +155,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/tournest-photos/tournest-carasoul2.png",
             ],
             logo: "/assets/websites/tournest-photos/tournest-logo.png",
-            link: "demo/TourNest",
+            link: "/demo/TourNest",
         },
         {
             mainImg: "/assets/websites/educap-photos/educap-carasoul1.png",
@@ -176,7 +176,6 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
         {
             mainImg: "/assets/websites/arconswebsite-photos/arconswebsite-carasoul1.png",
             title: "Arcons Industrial Services",
-
             previewImages: [
                 "/assets/websites/arconswebsite-photos/arcons-page1.png",
                 "/assets/websites/arconswebsite-photos/arcons-page2.png",
@@ -222,6 +221,22 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
             logo: "/assets/websites/prestige-photos/prestige-logo.png",
             link: "https://prestige.co.ae/",
         },
+        {
+            mainImg: "/assets/websites/zein-photos/zein-homepage.png",
+            title: "Zein real estate",
+            previewImages: [
+                "/assets/websites/zein-photos/zein-homepage.png",
+                "/assets/websites/zein-photos/zein-page2.png",
+                "/assets/websites/zein-photos/zein-page3.png",
+            ],
+            carouselImages: [
+                "/assets/websites/zein-photos/zein-homepage (Custom).png",
+                "/assets/websites/zein-photos/zein-page2 (Custom).png",
+                "/assets/websites/zein-photos/zein-page3 (Custom).png",
+            ],
+            logo: "/assets/websites/zein-photos/zein-logo.png",
+            link: "https://zeindevelopment.com/",
+        },
 
         {
             mainImg: "/assets/websites/static/summit.png",
@@ -266,10 +281,6 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
         {
             mainImg: "/assets/websites/static/realestate.png",
             title: "Dwelling real estate",
-        },
-        {
-            mainImg: "/assets/websites/static/zeinrealestate.png",
-            title: "Zein real estate",
         },
         {
             mainImg: "/assets/websites/static/chat.png",

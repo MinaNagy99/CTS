@@ -60,14 +60,13 @@ function Header() {
   const humburgerBtn = useRef<HTMLButtonElement>(null);
   const fireEvent = () => {
     console.log();
-    if (window.innerWidth<992) {
+    if (window.innerWidth < 992) {
       if (humburgerBtn.current) {
         // Programmatically trigger a click event
         humburgerBtn.current.click();
-      }  };
+      }
     }
-    
-   
+  };
 
   return (
     <>
@@ -145,7 +144,7 @@ function Header() {
                   <Trans i18nKey="Services"></Trans>
                 </a>
                 <ul className="dropdown-menu">
-                  <li className="m-0 p-0  ">
+                  <li className="m-0 p-0">
                     <NavLink
                       className={`dropdown-item ${
                         location.pathname.startsWith("/services/web-design")
@@ -161,7 +160,7 @@ function Header() {
                       <Trans i18nKey="Web design"></Trans>{" "}
                     </NavLink>
                   </li>
-                  <li className="m-0 p-0  ">
+                  <li className="m-0 p-0">
                     <NavLink
                       className={`dropdown-item ${
                         location.pathname.startsWith("/services/mobile-app")
@@ -177,6 +176,43 @@ function Header() {
                       <Trans i18nKey="Mobile App"></Trans>{" "}
                     </NavLink>
                   </li>
+                  <li className="m-0 p-0">
+                    <NavLink
+                      className={`dropdown-item ${
+                        location.pathname.startsWith(
+                          "/services/online-store-design"
+                        )
+                          ? "active"
+                          : ""
+                      }`}
+                      onClick={() => {
+                        window.scrollTo({ top: 0 });
+                        fireEvent();
+                      }}
+                      to="/services/online-store-design"
+                    >
+                      <Trans i18nKey="Online store design"></Trans>{" "}
+                    </NavLink>
+                  </li>
+                  <li className="m-0 p-0">
+                    <NavLink
+                      className={`dropdown-item ${
+                        location.pathname.startsWith(
+                          "/services/seo"
+                        )
+                          ? "active"
+                          : ""
+                      }`}
+                      onClick={() => {
+                        window.scrollTo({ top: 0 });
+                        fireEvent();
+                      }}
+                      to="/services/seo"
+                    >
+                      <Trans i18nKey="SEO"></Trans>{" "}
+                    </NavLink>
+                  </li>
+                  {/* Add other dropdown items here */}
                 </ul>
               </li>
               <NavLink

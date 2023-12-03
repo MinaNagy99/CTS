@@ -1,0 +1,38 @@
+.seo h2 {
+    color: #05579b;
+    font-size: 28px;
+}
+
+.list-square {
+    list-style-type: square;
+    /* list-style-position: inside; */
+    color: #12367c;
+}
+
+.list-square::marker {
+    color: #05579b; /* Change this to your desired color */
+}
+
+.seo-bot-section {
+    background: url("/assets/seo/seo-bg.png");
+    background-size: contain;
+    padding: 60px 8%;
+}
+
+.seo-bot-section p{
+    text-align: justify;
+}
+
+.ice1 {
+    text-align: right;
+}
+.ice2 {
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    #sec4 .text-sec4 {
+        font-size: 16px !important;
+    }
+}

@@ -1,0 +1,25 @@
+.online-ftore-features-svg {
+    margin-inline-end: 9px;
+    max-width: 66px;
+    max-height: 66px;
+}
+.online-ftore-features-svg img {
+    max-width: 66px;
+    max-height: 66px;
+}
+.online-ftore-features-svg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.online-ftore-features-title {
+    color: #05579b;
+    font-size: 20px;
+}
+
+.online-ftore-features-text {
+    color: #12367c;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+}
