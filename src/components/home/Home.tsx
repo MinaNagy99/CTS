@@ -8,23 +8,27 @@ import ClientsSlider from "./clients_slider/ClientsSlider";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
+// ... rest of your code
+
 function Home() {
-    const { t } = useTranslation();
-    useEffect(() => {
-        document.title = t("CTS | Home");
-    });
-    return (
-        <>
-            <div className="container-fluid p-0 ">
-                <TopSection />
-                <OurServices />
-                <Portfolio />
-                <PartnersSlider />
-                <Our_Advantages />
-                <ClientsSlider />
-            </div>
-        </>
-    );
+  const { t } = useTranslation();
+  useEffect(() => {
+    document.title = t("CTS | Home");
+  });
+  return (
+    <>
+      <div className="container-fluid p-0 ">
+    
+        <TopSection />
+
+        <OurServices />
+        <Portfolio />
+        <PartnersSlider />
+        <Our_Advantages />
+        <ClientsSlider />
+      </div>
+    </>
+  );
 }
 
 export default Home;

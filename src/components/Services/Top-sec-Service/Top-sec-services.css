@@ -1,0 +1,26 @@
+#tob-section-services .mobile-header {
+    color: #12367c;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 48px */
+  }
+  #tob-section-services .mobile-text {
+    color: #12367c;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+  }
+  .bg-tob-sectionSercices {
+    background: rgba(121, 155, 185, 0.8) !important;
+    min-height: 55vh;
+  }
+  @media (max-width: 768px) {
+    .bg-tob-sectionSercices {
+      background: rgba(121, 155, 185, 0.8) !important;
+      min-height: 100vh;
+    }
+  }

@@ -145,7 +145,7 @@ function Header() {
                   <Trans i18nKey="Services"></Trans>
                 </a>
                 <ul className="dropdown-menu">
-                  <li className="m-0 p-0">
+                  <li className="m-0 p-0  ">
                     <NavLink
                       className={`dropdown-item ${
                         location.pathname.startsWith("/services/web-design")
@@ -161,7 +161,22 @@ function Header() {
                       <Trans i18nKey="Web design"></Trans>{" "}
                     </NavLink>
                   </li>
-                  {/* Add other dropdown items here */}
+                  <li className="m-0 p-0  ">
+                    <NavLink
+                      className={`dropdown-item ${
+                        location.pathname.startsWith("/services/mobile-app")
+                          ? "active"
+                          : ""
+                      }`}
+                      onClick={() => {
+                        window.scrollTo({ top: 0 });
+                        fireEvent();
+                      }}
+                      to="/services/mobile-app"
+                    >
+                      <Trans i18nKey="Mobile App"></Trans>{" "}
+                    </NavLink>
+                  </li>
                 </ul>
               </li>
               <NavLink
