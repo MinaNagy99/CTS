@@ -9,32 +9,32 @@ export default function Portfolio() {
             <section>
                 <HeaderAndLines header={<Trans i18nKey="Portfolio"></Trans>} />
                 <div className="container">
-                    <div className="row position-relative mt-5 justify-content-evenly">
-                        <div className="arrow1 d-lg-block d-none">
+                    <div className="row d-flex position-relative mt-5 justify-content-evenly">
+                        <span className="arrow1 d-md-inline d-none">
                             <img src="/assets/home/arrow1.png" alt="" />
-                        </div>
-                        <div className="arrow2 d-lg-block d-none">
+                        </span>
+                        <span className="arrow2 d-md-inline d-none">
                             <img src="/assets/home/arrow2.png" alt="" />
-                        </div>
-                        <div className="col-12 p-3 col-md-4 portfolio-title">
+                        </span>
+                        <div className="d-flex justify-content-center align-items-center  p-3 portfolio-title">
                             <Link
-                                className="row borderOfService py-2"
+                                className="d-flex borderOfService px-5 py-2"
                                 to={"/Portfolio"}
                                 onClick={() => {
                                     window.scrollTo(0, 0);
                                 }}
                             >
-                                <div className="col-4 d-flex  justify-content-center align-items-center">
+                                <div className=" d-flex mx-2 justify-content-center align-items-center">
                                     <img className="port-img" src="/assets/home/webdesign.png" alt="" />
                                 </div>
-                                <div className="col-8 d-flex align-items-center">
+                                <div className=" d-flex mx-2 align-items-center">
                                     <p className="textService mb-0">
                                         <Trans i18nKey="Websites"></Trans>
                                     </p>
                                 </div>
                             </Link>
                         </div>
-                        <div className="col-12 p-3 col-md-4">
+                        {/* <div className="col-12 p-3 col-md-4">
                             <div className="row borderOfService py-2">
                                 <div className="col-4 d-flex justify-content-center align-items-center">
                                     <img className="port-img" src="/assets/home/itservices.png" alt="" />
@@ -45,10 +45,10 @@ export default function Portfolio() {
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
-                    <div className="row  mt-3 m-auto">
+                    <div className="row mt-3 m-auto">
                         <div className="col-sm-4  col-12 my-3 ">
                             <img className="w-100 border border-2 p-3" src="/assets/home/mannaiewebsite.png" alt="" />
 
