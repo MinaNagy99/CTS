@@ -11,6 +11,8 @@ import { useTranslation } from "react-i18next";
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import WesbiteDetails from "./components/website_details/WebsiteDetails";
 import WebDesign from "./components/Services/WebDesign/WebDesign";
+import OnlineStoreDesign from "./components/Services/OnlineStoreDesign/OnlineStoreDesign";
+import Seo from "./components/Services/SEO/SEO";
 
 function App() {
     const { i18n } = useTranslation();
@@ -24,7 +26,9 @@ function App() {
                 { path: "/about", element: <About /> },
                 { path: "/portfolio", element: <PreviousWork /> },
                 { path: "/contact-us", element: <ContactUs /> },
-                { path: "/services/Web-design", element: <WebDesign /> },
+                { path: "/services/web-design", element: <WebDesign /> },
+                { path: "/services/online-store-design", element: <OnlineStoreDesign /> },
+                { path: "/services/seo", element: <Seo /> },
                 { path: "/website/:title", element: <WesbiteDetails /> },
             ],
         },

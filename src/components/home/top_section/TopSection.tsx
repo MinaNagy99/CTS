@@ -2,9 +2,7 @@ import "./topSection.css";
 import { Trans } from "react-i18next";
 import { Link } from "react-router-dom";
 
-
 function TopSection() {
-
     return (
         <div className="container-fluid">
             <div className="row top-section ">
@@ -25,12 +23,14 @@ function TopSection() {
                         <span className="top-section-span">
                             <Trans i18nKey="We provide various web services and offers suitable for all individuals and companies with the latest technologies, the best quality and the fastest time"></Trans>
                         </span>
-                    </div><div className=" d-flex justify-content-md-start  justify-content-center">
-                    <Link  to="/contact-us">
-                        <button className="btn text-center btn-top-section mt-3">
-                            <Trans i18nKey="Contact us"></Trans>
-                        </button>
-                    </Link></div>
+                    </div>
+                    <div className=" d-flex justify-content-md-start  justify-content-center">
+                        <Link to="/contact-us">
+                            <button className="btn text-center btn-top-section mt-3">
+                                <Trans i18nKey="Contact us"></Trans>
+                            </button>
+                        </Link>
+                    </div>
                 </div>
                 <div className="col-12 col-lg-5 d-flex justify-content-center align-items-center px-5">
                     <img className="home2 p-xl-4 d-none d-lg-block img-fluid" src="/assets/home/home2.png" alt="" />

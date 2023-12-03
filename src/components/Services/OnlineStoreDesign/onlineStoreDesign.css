@@ -1,0 +1,22 @@
+.online-store-design-bot-section {
+    background: url("/assets/onlineStoreDesignImages/store-bg.png");
+    background-size: contain;
+    padding: 60px 8%;
+}
+.online-store-design-bot-section h2 {
+    font-size: 24px;
+    color: #05579b;
+    font-weight: 600;
+}
+.online-store-design-bot-section p {
+    color: #12367c;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .online-store-design-bot-section p {
+        font-size: 16px !important;
+    }
+}
