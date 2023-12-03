@@ -8,6 +8,13 @@ import i18n from "../i18n.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 
+const urls = ["/#/demo/TourNest", "/#/demo/MotorMenders", "/#/demo/dental-clinic", "/#/demo/Cleaned"];
+
+// console.log(urls.some((url) => window.location.href.includes(url)));
+
+if (window.location.hash && urls.some((url) => window.location.href.includes(url))) {
+    window.location.href = window.location.href.replace(/#\/?/, "");
+}
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>

@@ -37,7 +37,7 @@ function ContactUs() {
     const handleSubmit = async (values: FormValues) => {
         setSubmitting(true);
         try {
-            const response = await fetch("http://localhost:3001/submit", {
+            const response = await fetch("https://cts.onrender.com/submit", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

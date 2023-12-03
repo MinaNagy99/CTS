@@ -7,7 +7,6 @@ import { PortfolioContext } from "../context/PortfolioContext";
 import { useParams } from "react-router-dom";
 import Modal from "react-modal";
 import { Trans } from "react-i18next";
-import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 interface Props {
@@ -147,8 +146,10 @@ function WesbiteDetails() {
                     <div className="container mt-5 d-flex justify-content-center">
                         <div className="row justify-content-around">
                             {project?.previewImages?.map((image, index) => (
-                                <div className="col-md-3 col-6  project-image-container" key={index}>
-                                    <img className="" src={image} alt="" onClick={() => handleClick(index)} />
+                                <div className="col-md-3 col-6 px-3" key={index}>
+                                    <div className="project-image-container">
+                                        <img className="" src={image} alt="" onClick={() => handleClick(index)} />
+                                    </div>
                                 </div>
                             ))}
 
@@ -223,20 +224,20 @@ function WesbiteDetails() {
                                 fill="white"
                             />
                         </svg>
-                        <Link target="_blank" to={`${project?.link}`}>
+                        <Link className="website-btn" target="_blank" to={`${project?.link}`}>
                             <Trans i18nKey="Browse the site"></Trans>
                         </Link>
                     </div>
-                    <div className="project-link d-flex align-items-center justify-content-center text-center  mt-5 mx-3 ">
-                        <NavLink
-                            className="text-decoration-none nav-link btn-link"
+                    <div className="project-link d-flex align-items-center justify-content-center text-center mt-5 mx-3 ">
+                        <Link
+                            className="text-decoration-none website-btn"
                             to="/portfolio"
                             onClick={() => {
                                 window.scrollTo({ top: 0 });
                             }}
                         >
                             <Trans i18nKey="View all works"></Trans>
-                        </NavLink>
+                        </Link>
                     </div>
                 </div>
             </div>
