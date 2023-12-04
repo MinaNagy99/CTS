@@ -33,6 +33,22 @@
 .handelWidth {
     width: 60%;
 }
+.portfolio-section-button {
+    background-color: white;
+    color: #05579b;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    text-decoration: underline;
+    padding: 5px;
+}
+.portfolio-section-button span {
+    padding: 0 5px;
+}
+.portfolio-section-button img {
+    width: 30px;
+    height: 30px;
+}
 @media screen and (min-width: 1000px) {
     .handelWidth {
         width: 50%;

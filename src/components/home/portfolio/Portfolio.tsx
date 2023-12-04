@@ -102,9 +102,19 @@ export default function Portfolio() {
                         ))}
                     </div>
                     <div>
-                        <button>
-                            <Trans i18nKey="See more.." />
-                        </button>
+                        <Link
+                            to={"/portfolio"}
+                            onClick={() => {
+                                window.scrollTo({ top: 0 });
+                            }}
+                        >
+                            <button className="portfolio-section-button">
+                                <img src="/assets/home/seemore.png" alt="" />
+                                <span>
+                                    <Trans i18nKey="See more" />
+                                </span>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </section>
