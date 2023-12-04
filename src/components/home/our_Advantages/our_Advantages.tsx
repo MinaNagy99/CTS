@@ -25,7 +25,7 @@ export default function Our_Advantages() {
   return (
     <>
       <div className="bg-image">
-        <div className="container  pt-4">
+        <div className="container   pt-4">
           <HeaderAndLines
             header={<Trans i18nKey="Our website design features"></Trans>}
           />

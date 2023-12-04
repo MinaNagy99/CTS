@@ -16,4 +16,5 @@ p {
 .bg-image {
     background-image: url(/assets/home/features-background.png);
     margin: 0;
+    overflow: hidden;
 }
