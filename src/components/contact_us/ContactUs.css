@@ -3,13 +3,13 @@
   border-radius: 50px 10px 50px 10px;
 }
 form {
-  background: #ebf0f4;
+  background: #c8cacc;
   padding: 40px;
   border-radius: 50px 0px 50px 0px;
   margin: auto;
 }
 .handelVH-form {
-  height: 133vh;
+  height: 120vh;
 }
 .handelVH-submited {
   height: 133vh;
@@ -31,7 +31,7 @@ form {
 .name-input-with-icon {
   box-sizing: border-box;
   background: url("/assets/svg/name.svg") no-repeat center right 15px;
-  background-position: ;
+
   background-size: 18px; /* Adjust as needed based on your icon size */
   padding-right: 45px !important;
 }

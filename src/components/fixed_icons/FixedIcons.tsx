@@ -45,7 +45,8 @@ function FixedIcons() {
                         </a>
                     </div>
                 )}
-                <img className="w-100" src="/assets/home/whatsappimage.png" alt="" />
+                <div className="bg-danger"></div>
+                <img className="w-100 whatsApp" src="/assets/home/whatsappimage.png" alt="" />
             </div>
         </div>
     );
