@@ -14,6 +14,7 @@ const urls = ["/#/demo/TourNest", "/#/demo/MotorMenders", "/#/demo/dental-clinic
 
 if (window.location.hash && urls.some((url) => window.location.href.includes(url))) {
     window.location.href = window.location.href.replace(/#\/?/, "");
+    window.location.reload()
 }
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

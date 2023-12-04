@@ -20,7 +20,6 @@ function Home() {
       <div className="container-fluid p-0 ">
     
         <TopSection />
-
         <OurServices />
         <Portfolio />
         <PartnersSlider />

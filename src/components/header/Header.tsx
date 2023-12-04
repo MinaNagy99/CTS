@@ -122,6 +122,7 @@ function Header() {
               >
                 <Trans i18nKey="Home"></Trans>
               </NavLink>
+              
               <NavLink
                 onClick={() => {
                   window.scrollTo({ top: 0 });
@@ -143,10 +144,10 @@ function Header() {
                 >
                   <Trans i18nKey="Services"></Trans>
                 </a>
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu ">
                   <li className="m-0 p-0">
                     <NavLink
-                      className={`dropdown-item ${
+                      className={`dropdown-item  ${
                         location.pathname.startsWith("/services/web-design")
                           ? "active"
                           : ""
