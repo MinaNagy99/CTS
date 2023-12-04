@@ -8,7 +8,13 @@ import i18n from "../i18n.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 
-const urls = ["/#/demo/TourNest", "/#/demo/MotorMenders", "/#/demo/dental-clinic", "/#/demo/Cleaned"];
+const urls = [
+    "/#/demo/TourNest",
+    "/#/demo/MotorMenders",
+    "/#/demo/dental-clinic",
+    "/#/demo/Cleaned",
+    "/#/demo/kinderGarten",
+];
 
 // console.log(urls.some((url) => window.location.href.includes(url)));
 

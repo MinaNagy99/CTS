@@ -6,6 +6,13 @@
 .portfolio-title {
     z-index: 2;
 }
+.portfolio-section-container {
+    height: 240px;
+    /* overflow: hidden; */
+}
+.portfolio-section-img-container {
+    max-height: 205px;
+}
 .serviceName {
     font-size: 20px;
     font-weight: 600;
