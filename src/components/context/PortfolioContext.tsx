@@ -93,7 +93,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 "/assets/websites/kider-photos/kider-carasoul3.png",
             ],
             logo: "/assets/websites/kider-photos/kider-logo.png",
-            link: "/demo/kinderGarten",
+            link: "demo/kinderGarten",
         },
         {
             mainImg: "/assets/websites/cleaned-photos/cleaned-carasoul1.png",
