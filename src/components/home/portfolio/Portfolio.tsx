@@ -88,7 +88,7 @@ export default function Portfolio() {
                     </div>
                     <div className="row mt-3 m-auto">
                         {portfolioArray.map((item, index) => (
-                            <Link to={item.link} className="col-lg-4 col-sm-6 col-12 text-decoration-none">
+                            <Link to={item.link} target="_blank" className="col-lg-4 col-sm-6 col-12 text-decoration-none">
                                 <div
                                     className=" portfolio-section-container border border-2 p-3 overflow-hidden"
                                     key={index}
@@ -100,6 +100,11 @@ export default function Portfolio() {
                                 <p className="serviceName">{item.title}</p>
                             </Link>
                         ))}
+                    </div>
+                    <div>
+                        <button>
+                            <Trans i18nKey="See more.." />
+                        </button>
                     </div>
                 </div>
             </section>
