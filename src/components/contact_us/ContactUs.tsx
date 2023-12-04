@@ -120,13 +120,14 @@ function ContactUs() {
                             validationSchema={validationSchema}
                             onSubmit={handleSubmit}
                         >
-                            <Form className="w-md-75  p-5 ">
-                                <h1 className="text-center">
+                            <Form className="w-md-50   p-5 py-4  ">
+                                <div className="d-flex justify-content-between align-items-center">
+                               <h1 className="text-center fs-3">
                                     <Trans i18nKey="call us"></Trans>
                                 </h1>
-                                <p className="text-center">
+                                  <p className="text-center mb-0">
                                     <Trans i18nKey="Response will be made within 24 hours"></Trans>
-                                </p>
+                                </p> </div>
                                 <div className="mb-3">
                                     <label htmlFor="service" className="form-label">
                                         <Trans i18nKey="the service"></Trans>

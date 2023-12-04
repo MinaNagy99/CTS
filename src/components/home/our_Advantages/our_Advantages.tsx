@@ -1,6 +1,7 @@
 import HeaderAndLines from "../../shared/HeaderAndLines";
 import "./our_Advantages.css";
 import { Trans } from "react-i18next";
+import {motion} from "framer-motion"
 export default function Our_Advantages() {
 //   type ourAdvantages = {
 //     title: string;
@@ -30,7 +31,7 @@ export default function Our_Advantages() {
           />
           <div className=" p-3 my-5">
             <div className="row">
-              <div className="col-lg-6 p-3 col-12">
+              <motion.div initial={{x:300}} whileInView={{x:0}} transition={{duration:1.5}}  className="col-lg-6 p-3 col-12">
                 <div className="row my-3">
                   <div className="col-2 d-flex align-items-start    ">
                     <img
@@ -102,8 +103,8 @@ export default function Our_Advantages() {
                     </p>
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-6 p-3 col-12">
+              </motion.div>
+              <motion.div initial={{x:-300}} whileInView={{x:0}} transition={{duration:1.5}} className="col-lg-6 p-3 col-12">
                 <div className="row my-3">
                   <div className="col-2 d-flex align-items-start  d-flex justify-content-end   text-start">
                     <img
@@ -175,7 +176,7 @@ export default function Our_Advantages() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

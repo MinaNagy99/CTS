@@ -63,3 +63,20 @@
         height: 32px;
     }
 }
+.home2{
+    animation: translateYAnimation 5s infinite 
+}
+
+
+@keyframes translateYAnimation {
+    0% {
+      transform: translateY(-8%);
+    }
+    50% {
+      transform: translateY(10%);
+    }
+    100% {
+      transform: translateY(-8%);
+    }
+  }
+  
