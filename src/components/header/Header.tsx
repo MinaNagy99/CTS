@@ -144,7 +144,7 @@ function Header() {
                 >
                   <Trans i18nKey="Services"></Trans>
                 </a>
-                <ul className="dropdown-menu ">
+                <ul className="dropdown-menu bg-primary text-light">
                   <li className="m-0 p-0">
                     <NavLink
                       className={`dropdown-item  ${
@@ -160,7 +160,7 @@ function Header() {
                     >
                       <Trans i18nKey="Web design"></Trans>{" "}
                     </NavLink>
-                  </li>
+                  </li><hr />
                   <li className="m-0 p-0">
                     <NavLink
                       className={`dropdown-item ${
@@ -176,7 +176,7 @@ function Header() {
                     >
                       <Trans i18nKey="Mobile App"></Trans>{" "}
                     </NavLink>
-                  </li>
+                  </li><hr />
                   <li className="m-0 p-0">
                     <NavLink
                       className={`dropdown-item ${
@@ -194,7 +194,7 @@ function Header() {
                     >
                       <Trans i18nKey="Online store design"></Trans>{" "}
                     </NavLink>
-                  </li>
+                  </li><hr />
                   <li className="m-0 p-0">
                     <NavLink
                       className={`dropdown-item ${
@@ -212,7 +212,7 @@ function Header() {
                     >
                       <Trans i18nKey="SEO"></Trans>{" "}
                     </NavLink>
-                  </li>
+                  </li><hr />
                   {/* Add other dropdown items here */}
                 </ul>
               </li>

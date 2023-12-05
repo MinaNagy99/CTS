@@ -1,12 +1,11 @@
 import "./topSection.css";
 import { Trans } from "react-i18next";
 import { Link } from "react-router-dom";
-import { motion, spring } from "framer-motion";
+import { motion } from "framer-motion";
 import { useContext } from "react";
 import { MyContext } from "../../context/LngContext";
 function TopSection() {
-  let { currentLng } = useContext(MyContext);
-  console.log(currentLng);
+  const { currentLng } = useContext(MyContext);
   let text: string;
   if (currentLng == "en") {
     text = "We provide integrated web services";
