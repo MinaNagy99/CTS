@@ -4,7 +4,7 @@ import { Trans } from "react-i18next";
 import { Link } from "react-router-dom";
 
 interface DataItem {
-    title: JSX.Element; // Assuming you're using JSX for translations
+    title: string; // Assuming you're using JSX for translations
     image: string;
     link: string;
 }
@@ -12,32 +12,32 @@ interface DataItem {
 export default function Portfolio() {
     const portfolioArray: DataItem[] = [
         {
-            title: <Trans i18nKey="Al Mannai Real Estate Development" />,
+            title: "Mannaie for real state",
             image: "/assets/websites/mannaie-photos/mannaie-carasoul1.png",
             link: "https://www.mannaie-group-development.com/",
         },
         {
-            title: <Trans i18nKey="The Junior engineer platform" />,
+            title: "Little engineer",
             image: "/assets/websites/littleengineer-photos/littleegineer-carasoul1.png",
             link: "https://le-academy.com/",
         },
         {
-            title: <Trans i18nKey="Creativity of engineering consulting" />,
+            title: "Ebdaa for engineering consultancy",
             image: "/assets/websites/ebdaa-photos/ebdaa-carasoul1.png",
             link: "http://ebdaa-saudi.com/",
         },
         {
-            title: <Trans i18nKey="Car maintenance website" />,
+            title: "MotorMenders for cars",
             image: "/assets/websites/motormenders-photos/motormenders-carasoul1.png",
             link: "/demo/MotorMenders",
         },
         {
-            title: <Trans i18nKey="Masdar for building products" />,
+            title: "Masdar for building products",
             image: "/assets/websites/masdar-photos/masdar-page1.png",
             link: "https://masdar.co/",
         },
         {
-            title: <Trans i18nKey="Prestige web store" />,
+            title: "Prestige web store",
             image: "/assets/websites/prestige-photos/prestige-carasoul1.png",
             link: "https://prestige.co.ae/",
         },
@@ -88,7 +88,7 @@ export default function Portfolio() {
                     </div>
                     <div className="row mt-3 m-auto">
                         {portfolioArray.map((item, index) => (
-                            <Link to={item.link} target="_blank" className="col-lg-4 col-sm-6 col-12 text-decoration-none">
+                            <Link to={`/website/${item.title}`} className="col-lg-4 col-sm-6 col-12 text-decoration-none">
                                 <div
                                     className=" portfolio-section-container border border-2 p-3 overflow-hidden"
                                     key={index}
@@ -97,7 +97,7 @@ export default function Portfolio() {
                                         <img className="w-100 portfolio-section-image" src={item.image} alt="" />
                                     </div>
                                 </div>
-                                <p className="serviceName">{item.title}</p>
+                                <p className="serviceName"><Trans i18nKey={item.title}></Trans></p>
                             </Link>
                         ))}
                     </div>

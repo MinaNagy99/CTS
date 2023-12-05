@@ -1,16 +1,21 @@
 import "./MobilApp.css";
 import HeaderAndLines from "../../shared/HeaderAndLines";
 import { Trans } from "react-i18next";
-import { Link } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import TopSecServices from "../Top-sec-Service/TopSecServices";
 export default function MobilApp() {
+  const navigate = useNavigate();
+  const handelNavigate = () => {
+    
+    navigate("/contact-us", { state: { id: 1, name: "mobileApp" } });
+  };
   type OurAdvantageType = {
     title: React.ReactNode;
     description: React.ReactNode;
     img: string;
   };
 
-  let OurAdvantage: OurAdvantageType[] = [
+  const OurAdvantage: OurAdvantageType[] = [
     {
       title: <Trans i18nKey="Easy to navigate"></Trans>,
       description: (
@@ -117,16 +122,16 @@ export default function MobilApp() {
             <Trans i18nKey="We have a work team with extensive experience in the field of designing mobile applications for both the Android or IOS operating systems that is able to help you transform your vision into a tangible reality that will be the beginning of amazing success."></Trans>
           </p>
           <div className="d-flex justify-content-center">
-            <Link
-              to="/contact-us"
+            <a
               onClick={() => {
+                handelNavigate();
                 window.scrollTo({ top: 0 });
               }}
             >
               <button className="btn text-center  btn-top-section  ">
                 <Trans i18nKey="Request for a quote"></Trans>
               </button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
