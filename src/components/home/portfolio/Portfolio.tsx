@@ -107,12 +107,13 @@ export default function Portfolio() {
                             onClick={() => {
                                 window.scrollTo({ top: 0 });
                             }}
+                            className="d-flex justify-content-end"
                         >
-                            <button className="portfolio-section-button">
-                                <img src="/assets/home/seemore.png" alt="" />
+                            <button className="portfolio-section-button ">
                                 <span>
                                     <Trans i18nKey="See more" />
                                 </span>
+                                <img src="/assets/home/seemore.png" alt="" />
                             </button>
                         </Link>
                     </div>
