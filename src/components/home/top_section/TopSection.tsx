@@ -5,22 +5,21 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import { MyContext } from "../../context/LngContext";
 function TopSection() {
-    const { currentLng } = useContext(MyContext);
-    console.log(currentLng);
-    let text: string;
-    if (currentLng == "en") {
-        text = "We provide integrated web services";
-    } else {
-        text = "نقدم خدمات تصميم مواقع إلكترونية";
-    }
-    const h1Variants = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { staggerChildren: 0.05 } },
-    };
-    const SpanVariants = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-    };
+  const { currentLng } = useContext(MyContext);
+  let text: string;
+  if (currentLng == "en") {
+    text = "We provide integrated web services";
+  } else {
+    text = "نقدم خدمات تصميم مواقع إلكترونية";
+  }
+  const h1Variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.05 } },
+  };
+  const SpanVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
     return (
         <div className="container-fluid">
             <div className="row top-section ">

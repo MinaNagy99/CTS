@@ -127,18 +127,18 @@ function WesbiteDetails() {
 
     return (
         <>
-            <div className="top d-flex flex-column flex-lg-row justify-content-evenly align-items-center">
-                <div className="logo-container">
+            <div className="top   d-flex flex-md-row flex-column  w-75  mx-auto justify-content-evenly align-items-center">
+                <div className="logo-container ">
                     <div className="inner-logo-container">
                         <img className="w-100" src={project?.logo} alt="" />
                     </div>
                 </div>
-                <div className="">
+                <div className="mb-3">
                     <HeaderAndLines header={<Trans i18nKey={project?.title}></Trans>} />
                 </div>
             </div>
             <div className="bot">
-                <div className="project-header m-auto d-flex align-items-center justify-content-center mt-5">
+                <div className="project-header m-auto d-flex align-items-center justify-content-center mt-4">
                     <Trans i18nKey="Pages from the site"></Trans>
                 </div>
 

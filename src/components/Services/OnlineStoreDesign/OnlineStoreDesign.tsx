@@ -161,11 +161,12 @@ function OnlineStoreDesign() {
                     </p>
                     <Link
                         to="/contact-us"
+                        state="onlineStore"
                         onClick={() => {
                             window.scrollTo({ top: 0 });
                         }}
                     >
-                        <button className="btn text-center btn-top-section mt-3">
+                        <button className="btn text-center  btn-top-section mt-3">
                             <Trans i18nKey="Request for a quote"></Trans>
                         </button>
                     </Link>

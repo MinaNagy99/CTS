@@ -77,5 +77,18 @@
 }
 
 .dropdown-item.active{
-    background-color: rgba(121, 155, 185, 0.473) !important;
+    background-color: rgba(121, 155, 185, 0.8) !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+hr{
+    margin: 2px 0px   !important;
+}
+.navbar .dropdown-menu a{
+    color: white !important;
+}
+.navbar .dropdown-menu a:hover{
+    color: rgb(10, 10, 10) !important;
 }
