@@ -124,7 +124,7 @@ function Footer() {
                                 <img src="/assets/svg/phone.svg" alt="" />
                             </div>
                             <span>
-                                <Trans i18nKey="(+966)54003824"></Trans>
+                                <Trans i18nKey="(+966)542714543"></Trans>
                             </span>
                         </div>
                     </div>
