@@ -1,7 +1,7 @@
 .top-section {
     padding: 100px 10% 15px 3%;
     background-image: url("/assets/home/home-background.png");
-    
+
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -64,20 +64,18 @@
         height: 32px;
     }
 }
-.home2{
-    animation: translateYAnimation 5s infinite 
+.home2 {
+    animation: translateYAnimation 5s infinite;
 }
-
 
 @keyframes translateYAnimation {
     0% {
-      transform: translateY(-8%);
+        transform: translateY(-8%);
     }
     50% {
-      transform: translateY(10%);
+        transform: translateY(10%);
     }
     100% {
-      transform: translateY(-8%);
+        transform: translateY(-8%);
     }
-  }
-  
+}

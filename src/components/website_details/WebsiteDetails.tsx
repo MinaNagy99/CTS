@@ -4,10 +4,9 @@ import { useContext, useEffect, useState } from "react";
 import Slider from "react-slick";
 import HeaderAndLines from "../shared/HeaderAndLines";
 import { PortfolioContext } from "../context/PortfolioContext";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Modal from "react-modal";
 import { Trans } from "react-i18next";
-import { Link } from "react-router-dom";
 
 interface Props {
     className?: string;
@@ -94,12 +93,40 @@ function WesbiteDetails() {
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const [images, setImages] = useState<string[] | undefined>([]);
 
+    const navigate = useNavigate();
     const { title } = useParams<{ title: any }>();
-    console.log(title);
 
     const data = useContext(PortfolioContext);
     const project = data.find((item) => item.title === decodeURIComponent(title));
-    console.log(data);
+    const currentIndex = data.findIndex((item) => item.title === decodeURIComponent(title));
+
+    const goToPreviousPage = () => {
+        const previousIndex = (currentIndex - 1 + data.length) % data.length;
+        const previousTitle = data[previousIndex].title;
+
+        // Check if the previous index is within the desired range (0 to 13)
+        if (previousIndex >= 0 && previousIndex <= 12) {
+            navigate(`/website/${encodeURIComponent(previousTitle)}`);
+        } else {
+            // Loop back to the last page when on the first page
+            const loopBackTitle = data[data.length - 15].title;
+            navigate(`/website/${encodeURIComponent(loopBackTitle)}`);
+        }
+    };
+
+    const goToNextPage = () => {
+        const nextIndex = (currentIndex + 1) % data.length;
+        const nextTitle = data[nextIndex].title;
+
+        // Check if the next index is within the desired range (0 to 13)
+        if (nextIndex >= 0 && nextIndex <= 12) {
+            navigate(`/website/${encodeURIComponent(nextTitle)}`);
+        } else {
+            // Loop back to the first page when on the last page
+            const loopBackTitle = data[0].title;
+            navigate(`/website/${encodeURIComponent(loopBackTitle)}`);
+        }
+    };
 
     const handleClick = (index: number) => {
         setShowCarousel(true);
@@ -127,117 +154,141 @@ function WesbiteDetails() {
 
     return (
         <>
-            <div className="top   d-flex flex-md-row flex-column  w-75  mx-auto justify-content-evenly align-items-center">
-                <div className="logo-container ">
-                    <div className="inner-logo-container">
-                        <img className="w-100" src={project?.logo} alt="" />
-                    </div>
-                </div>
-                <div className="mb-3">
-                    <HeaderAndLines header={<Trans i18nKey={project?.title}></Trans>} />
-                </div>
-            </div>
-            <div className="bot">
-                <div className="project-header m-auto d-flex align-items-center justify-content-center mt-4">
-                    <Trans i18nKey="Pages from the site"></Trans>
-                </div>
-
-                <div>
-                    <div className="container mt-5 d-flex justify-content-center">
-                        <div className="row justify-content-around">
-                            {project?.previewImages?.map((image, index) => (
-                                <div className="col-md-3 col-6 px-3" key={index}>
-                                    <div className="project-image-container">
-                                        <img className="" src={image} alt="" onClick={() => handleClick(index)} />
-                                    </div>
-                                </div>
-                            ))}
-
-                            <Modal
-                                isOpen={showCarousel}
-                                onRequestClose={() => setShowCarousel(false)}
-                                className="m-auto slideshow-modal"
-                                style={{
-                                    overlay: {
-                                        backgroundColor: "rgba(0, 0, 0, 0.5)",
-                                    },
-                                    content: {
-                                        background: "transparent",
-                                        border: "none",
-                                        position: "relative", // Ensure relative positioning
-                                    },
-                                }}
-                            >
-                                {/* Close button */}
-                                <button
-                                    className="close-button"
-                                    onClick={() => setShowCarousel(false)}
-                                    style={{
-                                        position: "absolute",
-                                        top: "10px",
-                                        left: "10px",
-                                        background: "none",
-                                        border: "none",
-                                        cursor: "pointer",
-                                        zIndex: "9",
-                                    }}
-                                >
-                                    {CloseButton}
-                                </button>
-                                <div className="project-slider p-0 m-0">
-                                    <Slider {...settings}>
-                                        {images?.map((image, index) => (
-                                            <div className="p-0 m-0" key={index}>
-                                                <img className="p-0" src={image} alt={`slide ${index + 1}`} />
-                                            </div>
-                                        ))}
-                                    </Slider>
-                                </div>
-                            </Modal>
+            <div className="website-details-container position-relative">
+                <div className="top   d-flex flex-md-row flex-column  w-75  mx-auto justify-content-evenly align-items-center">
+                    <div className="logo-container ">
+                        <div className="inner-logo-container">
+                            <img className="w-100" src={project?.logo} alt="" />
                         </div>
                     </div>
-                </div>
-                <div className="d-flex justify-content-center mb-4">
-                    <div className="project-link d-flex align-items-center justify-content-center text-center mt-5 mx-3 ">
-                        <svg
-                            className="mx-2"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="36"
-                            height="36"
-                            viewBox="0 0 36 36"
-                            fill="none"
-                        >
-                            <path
-                                d="M11.0813 22.4999C11.025 22.4999 10.9125 22.4999 10.8562 22.4436L0.9 18.2249C0.675 18.1686 0.5625 17.9436 0.5625 17.7186C0.5625 17.4936 0.73125 17.3249 0.9 17.2124L34.7062 4.10615C34.9875 3.99365 35.2687 4.10615 35.3813 4.33115C35.4938 4.55615 35.4375 4.89365 35.2125 5.00615L11.3625 22.4436C11.3063 22.4999 11.1938 22.4999 11.0813 22.4999ZM2.475 17.7749L10.9688 21.4311L31.3313 6.58115L2.475 17.7749Z"
-                                fill="white"
-                            />
-                            <path
-                                d="M13.9496 31.8937C13.7246 31.8937 13.4996 31.7249 13.4433 31.4999L10.5183 22.1062C10.4621 21.8812 10.5183 21.6562 10.7433 21.4874L34.5933 4.16244C34.8183 3.99369 35.1558 4.04994 35.3246 4.21869C35.4933 4.44369 35.4933 4.78119 35.3246 4.94994L16.6496 24.1312L14.4558 31.5562C14.4558 31.7812 14.2308 31.8937 13.9496 31.8937ZM11.6996 22.2187L14.0058 29.5874L15.6933 23.7374C15.6933 23.6249 15.7496 23.5687 15.8058 23.5124L30.2058 8.77494L11.6996 22.2187Z"
-                                fill="white"
-                            />
-                            <path
-                                d="M29.3617 29.475C29.3055 29.475 29.2492 29.475 29.193 29.4188L16.0305 24.3563C15.8617 24.3 15.7492 24.1313 15.693 23.9625C15.6367 23.7938 15.693 23.5688 15.8617 23.4563L34.4805 4.27503C34.6492 4.10628 34.9305 4.05003 35.1555 4.16253C35.3805 4.27503 35.493 4.50003 35.4367 4.78128L29.9242 29.0813C29.868 29.25 29.8117 29.3625 29.643 29.4188C29.5305 29.4188 29.4742 29.475 29.3617 29.475ZM17.1555 23.6813L29.0242 28.2375L33.9742 6.35628L17.1555 23.6813Z"
-                                fill="white"
-                            />
-                            <path
-                                d="M13.9503 31.8939C13.894 31.8939 13.7815 31.8939 13.7253 31.8377C13.5003 31.7252 13.3878 31.4439 13.444 31.2189L15.6378 23.6814C15.694 23.5127 15.8065 23.4002 15.919 23.3439C16.0315 23.2877 16.2003 23.2877 16.369 23.3439L18.9003 24.3002C19.069 24.3564 19.1815 24.4689 19.2378 24.6377C19.294 24.8064 19.2378 24.9752 19.1815 25.0877L14.4565 31.6127C14.2878 31.8377 14.119 31.8939 13.9503 31.8939ZM16.5378 24.5252L15.3565 28.5752L17.944 25.0877L16.5378 24.5252Z"
-                                fill="white"
-                            />
-                        </svg>
-                        <Link className="website-btn" target="_blank" to={`${project?.link}`}>
-                            <Trans i18nKey="Browse the site"></Trans>
-                        </Link>
+                    <div className="mb-3">
+                        <HeaderAndLines header={<Trans i18nKey={project?.title}></Trans>} />
                     </div>
-                    <div className="project-link d-flex align-items-center justify-content-center text-center mt-5 mx-3 ">
-                        <Link
-                            className="text-decoration-none website-btn"
-                            to="/portfolio"
-                            onClick={() => {
-                                window.scrollTo({ top: 0 });
-                            }}
-                        >
-                            <Trans i18nKey="View all works"></Trans>
-                        </Link>
+                </div>
+                <div className="bot">
+                    <div className="project-header m-auto d-flex align-items-center justify-content-center mt-4">
+                        <Trans i18nKey="Pages from the site"></Trans>
+                    </div>
+
+                    <div>
+                        <div className="container mt-5 d-flex justify-content-center">
+                            <div className="row justify-content-around px-5">
+                                {project?.previewImages?.map((image, index) => (
+                                    <div className="col-lg-4 col-md-6 col-12 p-3" key={index}>
+                                        <div className="project-image-container">
+                                            <img className="" src={image} alt="" onClick={() => handleClick(index)} />
+                                        </div>
+                                    </div>
+                                ))}
+
+                                <Modal
+                                    isOpen={showCarousel}
+                                    onRequestClose={() => setShowCarousel(false)}
+                                    className="m-auto slideshow-modal"
+                                    style={{
+                                        overlay: {
+                                            backgroundColor: "rgba(0, 0, 0, 0.5)",
+                                        },
+                                        content: {
+                                            background: "transparent",
+                                            border: "none",
+                                            position: "relative", // Ensure relative positioning
+                                        },
+                                    }}
+                                >
+                                    {/* Close button */}
+                                    <button
+                                        className="close-button"
+                                        onClick={() => setShowCarousel(false)}
+                                        style={{
+                                            position: "absolute",
+                                            top: "10px",
+                                            left: "10px",
+                                            background: "none",
+                                            border: "none",
+                                            cursor: "pointer",
+                                            zIndex: "9",
+                                        }}
+                                    >
+                                        {CloseButton}
+                                    </button>
+                                    <div className="project-slider p-0 m-0">
+                                        <Slider {...settings}>
+                                            {images?.map((image, index) => (
+                                                <div className="p-0 m-0" key={index}>
+                                                    <img className="p-0" src={image} alt={`slide ${index + 1}`} />
+                                                </div>
+                                            ))}
+                                        </Slider>
+                                    </div>
+                                </Modal>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="d-flex flex-column justify-content-between align-items-center">
+                        <div className="d-flex justify-content-center mb-4">
+                            <div className="project-link d-flex align-items-center justify-content-center text-center mt-5 mx-2">
+                                <svg
+                                    className="mx-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="36"
+                                    height="36"
+                                    viewBox="0 0 36 36"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M11.0813 22.4999C11.025 22.4999 10.9125 22.4999 10.8562 22.4436L0.9 18.2249C0.675 18.1686 0.5625 17.9436 0.5625 17.7186C0.5625 17.4936 0.73125 17.3249 0.9 17.2124L34.7062 4.10615C34.9875 3.99365 35.2687 4.10615 35.3813 4.33115C35.4938 4.55615 35.4375 4.89365 35.2125 5.00615L11.3625 22.4436C11.3063 22.4999 11.1938 22.4999 11.0813 22.4999ZM2.475 17.7749L10.9688 21.4311L31.3313 6.58115L2.475 17.7749Z"
+                                        fill="white"
+                                    />
+                                    <path
+                                        d="M13.9496 31.8937C13.7246 31.8937 13.4996 31.7249 13.4433 31.4999L10.5183 22.1062C10.4621 21.8812 10.5183 21.6562 10.7433 21.4874L34.5933 4.16244C34.8183 3.99369 35.1558 4.04994 35.3246 4.21869C35.4933 4.44369 35.4933 4.78119 35.3246 4.94994L16.6496 24.1312L14.4558 31.5562C14.4558 31.7812 14.2308 31.8937 13.9496 31.8937ZM11.6996 22.2187L14.0058 29.5874L15.6933 23.7374C15.6933 23.6249 15.7496 23.5687 15.8058 23.5124L30.2058 8.77494L11.6996 22.2187Z"
+                                        fill="white"
+                                    />
+                                    <path
+                                        d="M29.3617 29.475C29.3055 29.475 29.2492 29.475 29.193 29.4188L16.0305 24.3563C15.8617 24.3 15.7492 24.1313 15.693 23.9625C15.6367 23.7938 15.693 23.5688 15.8617 23.4563L34.4805 4.27503C34.6492 4.10628 34.9305 4.05003 35.1555 4.16253C35.3805 4.27503 35.493 4.50003 35.4367 4.78128L29.9242 29.0813C29.868 29.25 29.8117 29.3625 29.643 29.4188C29.5305 29.4188 29.4742 29.475 29.3617 29.475ZM17.1555 23.6813L29.0242 28.2375L33.9742 6.35628L17.1555 23.6813Z"
+                                        fill="white"
+                                    />
+                                    <path
+                                        d="M13.9503 31.8939C13.894 31.8939 13.7815 31.8939 13.7253 31.8377C13.5003 31.7252 13.3878 31.4439 13.444 31.2189L15.6378 23.6814C15.694 23.5127 15.8065 23.4002 15.919 23.3439C16.0315 23.2877 16.2003 23.2877 16.369 23.3439L18.9003 24.3002C19.069 24.3564 19.1815 24.4689 19.2378 24.6377C19.294 24.8064 19.2378 24.9752 19.1815 25.0877L14.4565 31.6127C14.2878 31.8377 14.119 31.8939 13.9503 31.8939ZM16.5378 24.5252L15.3565 28.5752L17.944 25.0877L16.5378 24.5252Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                                <Link className="website-btn" target="_blank" to={`${project?.link}`}>
+                                    <Trans i18nKey="Browse the site"></Trans>
+                                </Link>
+                            </div>
+                            <div className="project-link d-flex align-items-center justify-content-center text-center mt-5 mx-2">
+                                <Link
+                                    className="text-decoration-none website-btn"
+                                    to="/portfolio"
+                                    onClick={() => {
+                                        window.scrollTo({ top: 0 });
+                                    }}
+                                >
+                                    <Trans i18nKey="View all works"></Trans>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="d-flex justify-content-center">
+                            <button
+                                onClick={goToNextPage}
+                                className="btn btn-primary d-flex justify-content-center align-items-center mx-2"
+                            >
+                                <img className="website-details-next " src="assets/websites/arrow.svg" alt="" />
+                                <span className="mx-2">
+                                    <Trans i18nKey="Next website"></Trans>
+                                </span>
+                            </button>
+                            <button
+                                onClick={goToPreviousPage}
+                                className="btn btn-primary d-flex justify-content-center align-items-center mx-2"
+                            >
+                                <span className="mx-2">
+                                    <Trans i18nKey="Previous website"></Trans>
+                                </span>
+                                <img className="website-details-prev" src="assets/websites/arrow.svg" alt="" />
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
