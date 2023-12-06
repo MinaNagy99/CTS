@@ -88,7 +88,13 @@ export default function Portfolio() {
                     </div>
                     <div className="row mt-3 m-auto">
                         {portfolioArray.map((item, index) => (
-                            <Link to={`/website/${item.title}`} className="col-lg-4 col-sm-6 col-12 text-decoration-none">
+                            <Link
+                                to={`/website/${item.title}`}
+                                className="col-lg-4 col-sm-6 col-12 text-decoration-none"
+                                onClick={() => {
+                                    window.scrollTo({ top: 0 });
+                                }}
+                            >
                                 <div
                                     className=" portfolio-section-container border border-2 p-3 overflow-hidden"
                                     key={index}
@@ -97,7 +103,9 @@ export default function Portfolio() {
                                         <img className="w-100 portfolio-section-image" src={item.image} alt="" />
                                     </div>
                                 </div>
-                                <p className="serviceName"><Trans i18nKey={item.title}></Trans></p>
+                                <p className="serviceName">
+                                    <Trans i18nKey={item.title}></Trans>
+                                </p>
                             </Link>
                         ))}
                     </div>
