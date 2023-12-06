@@ -213,6 +213,42 @@ function Header() {
                       <Trans i18nKey="SEO"></Trans>{" "}
                     </NavLink>
                   </li><hr />
+                  <li className="m-0 p-0">
+                    <NavLink
+                      className={`dropdown-item ${
+                        location.pathname.startsWith(
+                          "/services/web-hosting"
+                        )
+                          ? "active"
+                          : ""
+                      }`}
+                      onClick={() => {
+                        window.scrollTo({ top: 0 });
+                        fireEvent();
+                      }}
+                      to="/services/web-hosting"
+                    >
+                      <Trans i18nKey="Web Hosting"></Trans>{" "}
+                    </NavLink>
+                  </li><hr />
+                  <li className="m-0 p-0">
+                    <NavLink
+                      className={`dropdown-item ${
+                        location.pathname.startsWith(
+                          "/services/wordpress"
+                        )
+                          ? "active"
+                          : ""
+                      }`}
+                      onClick={() => {
+                        window.scrollTo({ top: 0 });
+                        fireEvent();
+                      }}
+                      to="/services/wordpress"
+                    >
+                      <Trans i18nKey="WordPress"></Trans>{" "}
+                    </NavLink>
+                  </li><hr />
                   {/* Add other dropdown items here */}
                 </ul>
               </li>

@@ -1,0 +1,42 @@
+#webhosting #section2 p:first-child{
+    color: var(--light-blue, #05579B);
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 200%; /* 40px */
+}
+#webhosting #section2 p:last-child{
+    color: var(--dark-blue, #12367C);
+text-align: center;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 24px */
+}
+.bg-section3AR{
+    background-image: url(./assets/services/hosting/web-hosting-2.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+
+}
+.bg-section3EN{
+    background-image: url(./assets/services/hosting/web-hosting-2.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+
+}
+#webhosting #section4 p:first-child{
+    color: var(--light-blue, #05579B);
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 42px */
+}
+#webhosting #section4{
+    background-image: url(./assets/services/hosting/bg-req-hosting.png);
+}

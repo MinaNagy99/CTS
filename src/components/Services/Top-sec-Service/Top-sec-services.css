@@ -16,11 +16,13 @@
   }
   .bg-tob-sectionSercices {
     background: rgba(121, 155, 185, 0.8) !important;
-    min-height: 55vh;
+      padding-top: 12%;
+      /* min-height: vh; */
   }
   @media (max-width: 768px) {
     .bg-tob-sectionSercices {
       background: rgba(121, 155, 185, 0.8) !important;
-      min-height: 100vh;
+      min-height: 80vh;
+      padding-top: 20%;
     }
   }

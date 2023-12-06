@@ -2,11 +2,14 @@
   background-color: #1767a9;
   border-radius: 50px 10px 50px 10px;
 }
-form {
+.bg-contact-gray{
   background: #c8cacc;
+
+}
+form {
   padding: 40px;
   border-radius: 50px 0px 50px 0px;
-  margin: auto;
+  /* margin: auto; */
 }
 .handelVH-form {
   height: 120vh;

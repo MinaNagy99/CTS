@@ -15,11 +15,11 @@ export default function TopSecServices({ title, desc, img }:topSecData) {
       >
         <div className="container">
           <div className="row ">
-            <div className="col-md-9 pb-5">
+            <div className="col-md-8   pb-5">
               <h1 className="mobile-header"><Trans i18nKey={title}></Trans></h1>
-              <p className="mobile-text"><Trans i18nKey={desc}></Trans></p>
+              <p className="mobile-text mt-4 w-md-75"><Trans i18nKey={desc}></Trans></p>
             </div>
-            <div className="col-md-3 d-flex align-self-end">
+            <div className="col-md-3 d-flex  align-self-end">
               <img
                 className="w-100"
                 src={img}
