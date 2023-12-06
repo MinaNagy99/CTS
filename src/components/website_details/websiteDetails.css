@@ -1,5 +1,5 @@
 .top {
-    margin-top: 150px!important;
+    margin-top: 150px !important;
     /* height: 310px; */
 }
 
@@ -35,9 +35,9 @@
     background: url(/assets/websites/website-pages.svg);
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 20px 20px;
+    padding: 30px;
     background-size: contain;
-    font-size: 32px;
+    font-size: 28px;
     color: white;
     display: flex;
     justify-content: center;
@@ -58,6 +58,7 @@
     height: 356px;
     overflow: hidden;
     border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.367);
     /* position: relative; */
 }
 .project-image-container img {
@@ -128,6 +129,17 @@
     right: 30px;
     width: 30px;
     z-index: 99;
+}
+
+.website-details-navigation-btns {
+}
+
+.website-details-next {
+    width: 17px;
+}
+.website-details-prev {
+    width: 17px;
+    transform: rotate(180deg);
 }
 
 @media (max-width: 768px) {

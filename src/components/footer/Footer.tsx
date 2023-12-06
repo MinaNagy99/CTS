@@ -149,7 +149,7 @@ function Footer() {
                         <Link
                             className="ms-3"
                             target="_blank"
-                            to="https://wa.me/01201117955?text=Hello%20from%20your%20website"
+                            to="https://wa.me/+201201117955?text=Hello%20from%20your%20website"
                         >
                             <img className="" src="/assets/gif/whatsapp.gif" alt="" />
                         </Link>
