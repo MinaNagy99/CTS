@@ -222,17 +222,17 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
             link: "https://prestige.co.ae/",
         },
         {
-            mainImg: "/assets/websites/zein-photos/zein-homepage.png",
+            mainImg: "/assets/websites/zein-photos/zein-page1.png",
             title: "Zein real estate",
             previewImages: [
-                "/assets/websites/zein-photos/zein-homepage.png",
+                "/assets/websites/zein-photos/zein-page1.png",
                 "/assets/websites/zein-photos/zein-page2.png",
                 "/assets/websites/zein-photos/zein-page3.png",
             ],
             carouselImages: [
-                "/assets/websites/zein-photos/zein-homepage (Custom).png",
-                "/assets/websites/zein-photos/zein-page2 (Custom).png",
-                "/assets/websites/zein-photos/zein-page3 (Custom).png",
+                "/assets/websites/zein-photos/zein-page1.png",
+                "/assets/websites/zein-photos/zein-page2.png",
+                "/assets/websites/zein-photos/zein-page3.png",
             ],
             logo: "/assets/websites/zein-photos/zein-logo.png",
             link: "https://zeindevelopment.com/",

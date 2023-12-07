@@ -271,7 +271,10 @@ function WesbiteDetails() {
                         </div>
                         <div className="d-flex justify-content-center">
                             <button
-                                onClick={goToNextPage}
+                                onClick={() => {
+                                    goToNextPage();
+                                    window.scrollTo(0, 0);
+                                }}
                                 className="btn btn-primary d-flex justify-content-center align-items-center mx-2"
                             >
                                 <img className="website-details-next " src="assets/websites/arrow.svg" alt="" />
@@ -280,7 +283,10 @@ function WesbiteDetails() {
                                 </span>
                             </button>
                             <button
-                                onClick={goToPreviousPage}
+                                onClick={() => {
+                                    window.scrollTo(0, 0);
+                                    goToPreviousPage;
+                                }}
                                 className="btn btn-primary d-flex justify-content-center align-items-center mx-2"
                             >
                                 <span className="mx-2">
