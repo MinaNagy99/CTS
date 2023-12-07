@@ -154,23 +154,7 @@ function WesbiteDetails() {
 
     return (
         <>
-            <div
-                className="website-details-container position-relative"
-                initial={{
-                    y: "100vh",
-                    opacity: 0,
-                }}
-                animate={{
-                    y: 0,
-                    opacity: 1,
-                }}
-                transition={{
-                    duration: 1,
-                }}
-                exit={{
-                    y: "-100vh",
-                }}
-            >
+            <div className="website-details-container position-relative">
                 <div className="top   d-flex flex-md-row flex-column  w-75  mx-auto justify-content-evenly align-items-center">
                     <div className="logo-container ">
                         <div className="inner-logo-container">
