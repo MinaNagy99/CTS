@@ -11,11 +11,13 @@ form {
     /* margin: auto; */
 }
 .handelVH-form {
-    max-height: max-content ;
+    max-height: 133vh ;
     padding-top: 8%;
 }
 .handelVH-submited {
-    height: 133vh;
+  min-height: 100vh;
+  padding-top: 8%;
+    
 }
 .containForm {
     display: flex;
@@ -32,6 +34,11 @@ form {
         max-height: max-content ;
         padding-top: 25%;
     }
+    .handelVH-submited {
+        min-height: 100vh;
+        padding-top: 20%;
+          
+      }
 }
 
 /* Your CSS file or inline styles */
