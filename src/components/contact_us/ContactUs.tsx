@@ -41,6 +41,7 @@ function ContactUs() {
   });
 
   const handleSubmit = async (values: FormValues) => {
+    
     setSubmitting(true);
     try {
       const response = await fetch("https://cts.onrender.com/submit", {
@@ -56,8 +57,11 @@ function ContactUs() {
       }
       setSubmitted(true);
     } catch (error) {
+
       setError(t("Failed to submit form. Please try again.")); // Set the error message
     } finally {
+      alert('ff')
+      
       setSubmitting(false);
     }
   };
@@ -130,9 +134,16 @@ function ContactUs() {
                     message: "",
                   }}
                   validationSchema={validationSchema}
-                  onSubmit={handleSubmit}
+                  onSubmit={()=>{
+                    handleSubmit
+                    console.log('asdasd');
+                    
+                  }}
                 >
-                  <Form className="w-100 m-auto  py-4  ">
+                  <Form
+  
+                    className="w-100 m-auto  py-4  "
+                  >
                     <div className="d-flex justify-content-between align-items-center">
                       <h1 className="text-center fs-3">
                         <Trans i18nKey="Call us"></Trans>
@@ -268,6 +279,7 @@ function ContactUs() {
 
                     <button
                       type="submit"
+                   
                       className="btn btn-submit d-flex w-75 rounded-5  m-auto"
                       disabled={isSubmitting}
                     >
@@ -303,7 +315,11 @@ function ContactUs() {
                   </span>
                 </div>{" "}
                 <div className=" mx-2    d-inline-flex justify-content-center align-items-center">
-                  <img className="mx-3" src="/assets/svg/telephone.svg" alt="" />
+                  <img
+                    className="mx-3"
+                    src="/assets/svg/telephone.svg"
+                    alt=""
+                  />
 
                   <span>
                     <Trans i18nKey="0227634002"></Trans>
@@ -317,12 +333,12 @@ function ContactUs() {
                 </span>{" "}
               </div>
               <div className=" mx-2    d-inline-flex justify-content-center align-items-center">
-                  <img className="mx-3" src="/assets/svg/phone.svg" alt="" />
+                <img className="mx-3" src="/assets/svg/phone.svg" alt="" />
 
-                  <span>
-                    <Trans i18nKey="(+966)542714543"></Trans>
-                  </span>
-                </div>{" "}
+                <span>
+                  <Trans i18nKey="(+966)542714543"></Trans>
+                </span>
+              </div>{" "}
             </div>
             <div className=" w-100 m-auto ">
               <GoogleMap />
