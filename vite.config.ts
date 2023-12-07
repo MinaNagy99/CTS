@@ -11,6 +11,11 @@ export default defineConfig({
                 // https://sharp.pixelplumbing.com/api-output#png
                 quality: 30,
             },
+            webp: {
+                // https://sharp.pixelplumbing.com/api-output#webp
+                quality: 30,
+                // lossless: true,
+            },
         }),
     ],
 });
