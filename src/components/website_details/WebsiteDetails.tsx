@@ -212,8 +212,8 @@ function WesbiteDetails() {
                                     >
                                         {CloseButton}
                                     </button>
-                                    <div className="project-slider p-0 m-0">
-                                        <Slider {...settings}>
+                                    <div className="  p-0 m-0">
+                                        <Slider className="project-slider" {...settings}>
                                             {images?.map((image, index) => (
                                                 <div className="p-0 m-0" key={index}>
                                                     <img className="p-0" src={image} alt={`slide ${index + 1}`} />
