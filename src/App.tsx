@@ -14,6 +14,8 @@ import WebDesign from "./components/Services/WebDesign/WebDesign";
 import OnlineStoreDesign from "./components/Services/OnlineStoreDesign/OnlineStoreDesign";
 import Seo from "./components/Services/SEO/SEO";
 import MobilApp from "./components/Services/MobilApp/MobilApp";
+import WebHosting from "./components/Services/WebHosting/WebHosting";
+import Wordpress from "./components/Services/WordPress/Wordpress";
 
 function App() {
     const { i18n } = useTranslation();
@@ -30,6 +32,8 @@ function App() {
                 { path: "/services/web-design", element: <WebDesign /> },
                 { path: "/services/mobile-app", element: <MobilApp /> },
                 { path: "/services/online-store-design", element: <OnlineStoreDesign /> },
+                { path: "/services/web-hosting", element: <WebHosting /> },
+                { path: "/services/wordpress", element: <Wordpress /> },
                 { path: "/services/seo", element: <Seo /> },
                 { path: "/website/:title", element: <WesbiteDetails /> },
             ],

@@ -3,10 +3,13 @@ import { useContext } from "react";
 import { MyContext } from "../../context/LngContext";
 import HeaderAndLines from "../../shared/HeaderAndLines";
 import "./WebDesign.css";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export default function WebDesign() {
+  const navigate = useNavigate();
+  const handelNavigate = () => {
+    navigate("/contact-us", { state: { id: 1, name: "webdesign" } });
+  };
   const { currentLng } = useContext(MyContext);
-  console.log(currentLng);
   return (
     <>
       <div className="container-fluid bg-services">
@@ -225,16 +228,16 @@ export default function WebDesign() {
             <Trans i18nKey="If you want a price quote for website design, contact us and we will contact you as soon as possible"></Trans>
           </p>
         </div>
-        <NavLink
-          onClick={() => {
-            window.scrollTo({ top: 0 });
-          }}
-          to="/contact-us"
-        >
+        <a
+            onClick={() => {
+              handelNavigate();
+              window.scrollTo({ top: 0 });
+            }}
+          >
           <button>
             <Trans i18nKey="Request your service now"></Trans>
           </button>
-        </NavLink>
+        </a>
       </section>
     </>
   );

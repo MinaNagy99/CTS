@@ -70,28 +70,28 @@ function OurServices() {
                             </p>
                         </NavLink>
                     </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        whileHover={{ scale: 1.1, transition: { duration: 1 } }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 2.5 }}
-                        className="col-sm-4 col-6 my-3"
-                    >
-                        <div>
+                    <motion.div initial={{opacity:0}}  whileHover={{scale:1.1 ,transition:{duration:1}}} whileInView={{opacity:1}} transition={{duration:2.5}} className="col-sm-4 col-6 my-3">
+                        <NavLink
+                            to="services/web-hosting"
+                            onClick={() => {
+                                window.scrollTo({ top: 0 });
+                            }}
+                        >
                             <div className="imgService6 imgService p-5"></div>
-                        </div>
+                        </NavLink>
                         <p className="serviceName">
                             <Trans i18nKey="Website hosting"></Trans>
                         </p>
                     </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        whileHover={{ scale: 1.1, transition: { duration: 1 } }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 3 }}
-                        className="col-sm-4 col-6 my-3"
-                    >
+                    <motion.div initial={{opacity:0}}  whileHover={{scale:1.1 ,transition:{duration:1}}} whileInView={{opacity:1}} transition={{duration:3}} className="col-sm-4 col-6 my-3">
+                    <NavLink
+                            to="services/wordpress"
+                            onClick={() => {
+                                window.scrollTo({ top: 0 });
+                            }}
+                        >
                         <div className="imgService5  imgService p-5"></div>
+                        </NavLink>
                         <p className="serviceName">
                             <Trans i18nKey="WordPress programming and website design"></Trans>
                         </p>

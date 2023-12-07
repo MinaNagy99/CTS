@@ -1,0 +1,22 @@
+#wdSec2 p:first-child {
+  color: var(--light-blue, #05579b);
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 200%; /* 40px */
+}
+#wdSec2 p:last-child {
+    color: var(--dark-blue, #12367C);
+    
+    /* 16-medium */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+  }
+  #wordpress #section4{
+    background-image: url(./assets/services/wordpress/wordpress-bg.png);
+}
