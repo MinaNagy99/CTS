@@ -43,22 +43,22 @@ function PrevArrow(props: Props) {
 
 function ClientsSlider() {
     const clientsLogos = [
-        "/assets/clients/abgad-logo.png",
-        "/assets/clients/abu-auf-logo.png",
-        "/assets/clients/ahramgroup-logo.png",
-        "/assets/clients/dar-el-mona-logo.png",
-        "/assets/clients/darelfouad-logo.png",
-        "/assets/clients/delta-galil-logo.png",
-        "/assets/clients/ecs-logo.png",
-        "/assets/clients/egemac-logo.png",
-        "/assets/clients/evapharma-logo.png",
-        "/assets/clients/gapplymer-logo.png",
-        "/assets/clients/mobica-logo.png",
-        "/assets/clients/redcone-logo.png",
-        "/assets/clients/rowad-logo.png",
-        "/assets/clients/semak-logo.png",
-        "/assets/clients/sews-eg-logo.png",
-        "/assets/clients/solera-logo.png",
+        "/assets/clients/abgad-logo.webp",
+        "/assets/clients/abu-auf-logo.webp",
+        "/assets/clients/ahramgroup-logo.webp",
+        "/assets/clients/dar-el-mona-logo.webp",
+        "/assets/clients/darelfouad-logo.webp",
+        "/assets/clients/delta-galil-logo.webp",
+        "/assets/clients/ecs-logo.webp",
+        "/assets/clients/egemac-logo.webp",
+        "/assets/clients/evapharma-logo.webp",
+        "/assets/clients/gapplymer-logo.webp",
+        "/assets/clients/mobica-logo.webp",
+        "/assets/clients/redcone-logo.webp",
+        "/assets/clients/rowad-logo.webp",
+        "/assets/clients/semak-logo.webp",
+        "/assets/clients/sews-eg-logo.webp",
+        "/assets/clients/solera-logo.webp",
     ];
 
     const settings = {

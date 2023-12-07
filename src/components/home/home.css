@@ -1,11 +1,9 @@
-
-.borderOfService{
+.borderOfService {
     border: 2px;
     border-style: solid;
-    border-color: #148CEF;
-
+    border-color: #148cef;
 }
-.w-20{
+.w-20 {
     width: 20%;
 }
 .serviceName2 {
@@ -15,6 +13,6 @@
     text-align: center;
     background-color: aqua;
 }
-.website1{
-    background-image: url(../../assets/home/ebdaawebsite1.png);
+.website1 {
+    background-image: url(../../assets/home/ebdaawebsite1.webp);
 }

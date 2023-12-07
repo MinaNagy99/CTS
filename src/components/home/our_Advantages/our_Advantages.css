@@ -14,7 +14,7 @@ p {
     line-height: 150%; /* 24px */
 }
 .bg-image {
-    background-image: url(/assets/home/features-background.png);
+    background-image: url(/assets/home/features-background.webp);
     margin: 0;
     overflow: hidden;
 }

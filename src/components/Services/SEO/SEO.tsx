@@ -1,19 +1,22 @@
 import { Trans } from "react-i18next";
 import "./SEO.css";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import TopSecServices from "../Top-sec-Service/TopSecServices";
 function Seo() {
     const navigate = useNavigate();
     const handelNavigate = () => {
-      
-      navigate("/contact-us", { state: { id: 1, name: "SEO" } });
+        navigate("/contact-us", { state: { id: 1, name: "SEO" } });
     };
     return (
         <>
-        <TopSecServices title="SEO" desc="We have a research team of specialists in on-page and off-page SEO, as well as PPC, i.e. payment for clicks in sponsored advertising campaigns such as Facebook and Google. We have a proven track record in increasing our clients’ search engine rankings." img="./assets/seo/seo1.png"/>
+            <TopSecServices
+                title="SEO"
+                desc="We have a research team of specialists in on-page and off-page SEO, as well as PPC, i.e. payment for clicks in sponsored advertising campaigns such as Facebook and Google. We have a proven track record in increasing our clients’ search engine rankings."
+                img="./assets/seo/seo1.webp"
+            />
             <div className="container-fluid p-0 seo">
                 <div className="position-relative ice1">
-                    <img src="/assets/seo/ice1.png" alt="" />
+                    <img src="/assets/seo/ice1.webp" alt="" />
                 </div>
                 <div className="px-5">
                     <h2>
@@ -32,7 +35,7 @@ function Seo() {
                     </ul>
                 </div>
                 <div className="ice2">
-                    <img src="/assets/seo/ice2.png" alt="" />
+                    <img src="/assets/seo/ice2.webp" alt="" />
                 </div>
                 <div className="seo-bot-section text-center p-5 mt-5">
                     <h2>
@@ -43,7 +46,7 @@ function Seo() {
                     </p>
                     <a
                         onClick={() => {
-                            handelNavigate()
+                            handelNavigate();
                             window.scrollTo({ top: 0 });
                         }}
                     >

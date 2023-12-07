@@ -16,7 +16,7 @@ export default function ItemProject({ imag, title }: ItemProjectProps) {
                 </div>
                 <img
                     className=" d-flex justify-content-center align-items-center m-auto"
-                    src="/assets/portfolio/Frame.png"
+                    src="/assets/portfolio/Frame.webp"
                     alt=""
                 />
                 <p className="item-header py-3 w-100 m-auto mt-3 text-center">{<Trans i18nKey={title}></Trans>}</p>

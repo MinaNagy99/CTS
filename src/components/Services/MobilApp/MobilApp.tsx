@@ -20,63 +20,63 @@ export default function MobilApp() {
             description: (
                 <Trans i18nKey="By providing a navigation bar that links important pages in your application, making it easier for users to navigate the application and easily access what they want."></Trans>
             ),
-            img: "./assets/services/mobile/1.png",
+            img: "./assets/services/mobile/1.webp",
         },
         {
             title: <Trans i18nKey="Usability"></Trans>,
             description: (
                 <Trans i18nKey="We design your application with the appropriate specifications for the target customer. We study this customer first in order to improve the user experience and then apply the appropriate specifications for him."></Trans>
             ),
-            img: "./assets/services/mobile/2.png",
+            img: "./assets/services/mobile/2.webp",
         },
         {
             title: <Trans i18nKey="programming"></Trans>,
             description: (
                 <Trans i18nKey="The appropriate programming language is used, and programming is done according to the latest international standards, with further experiments being conducted on different types of mobile devices, in order to ensure their compatibility with all operating systems."></Trans>
             ),
-            img: "./assets/services/mobile/3.png",
+            img: "./assets/services/mobile/3.webp",
         },
         {
             title: <Trans i18nKey="Publishing on app stores"></Trans>,
             description: (
                 <Trans i18nKey="Once the application is finalized, its sections are complete, and all necessary operating tests are conducted, the application is released on application stores, such as Google Play and the App Store."></Trans>
             ),
-            img: "./assets/services/mobile/4.png",
+            img: "./assets/services/mobile/4.webp",
         },
         {
             title: <Trans i18nKey="Modern and innovative design"></Trans>,
             description: (
                 <Trans i18nKey="We have designers who specialize in creating the best designs that are compatible with the type of activity, whether service or commercial, so that it completely succeeds in achieving the purpose of its design and provides the best customer experience."></Trans>
             ),
-            img: "./assets/services/mobile/5.png",
+            img: "./assets/services/mobile/5.webp",
         },
         {
             title: <Trans i18nKey="Continuous technical support"></Trans>,
             description: (
                 <Trans i18nKey="The company does not stop providing technical support to its customers, as it has a professional team trained to provide service around the clock."></Trans>
             ),
-            img: "./assets/services/mobile/6.png",
+            img: "./assets/services/mobile/6.webp",
         },
         {
             title: <Trans i18nKey="Search feature"></Trans>,
             description: (
                 <Trans i18nKey="Another feature that we provide is one of the most important factors that make the application successful, as it makes it easier for the customer to access what he wants easily. When the application is the easiest for the customer, he will repeat the purchase process."></Trans>
             ),
-            img: "./assets/services/mobile/7.png",
+            img: "./assets/services/mobile/7.webp",
         },
         {
             title: <Trans i18nKey="Continuous Improvement"></Trans>,
             description: (
                 <Trans i18nKey="All mobile applications designed by Core Technology Solutions are subject to continuous development and improvements to keep pace with the best global developments."></Trans>
             ),
-            img: "./assets/services/mobile/8.png",
+            img: "./assets/services/mobile/8.webp",
         },
         {
             title: <Trans i18nKey="Evaluation system"></Trans>,
             description: (
                 <Trans i18nKey="We are working to provide a rating system feature so that users can evaluate your application across all application stores. They can also write a quick review based on their experience, and based on it, they will know what the customer needs and improve the user experience."></Trans>
             ),
-            img: "./assets/services/mobile/9.png",
+            img: "./assets/services/mobile/9.webp",
         },
     ];
 
@@ -85,7 +85,7 @@ export default function MobilApp() {
             <TopSecServices
                 title="Mobile applications"
                 desc="At Core Technology Solutions, we provide the service of designing and programming smart mobile applications for Android and iPhone for companies, individuals, and institutions with high quality and a control panel for each application according to need. We also create professional mobile applications for systems and companies, starting with the distinguished design appropriate to the idea and ending with strong programming and high performance, with attention to continuous updates to maintain success. The application after uploading it to Google Market or Father Story."
-                img="./assets/services/mobile/Frame.png"
+                img="./assets/services/mobile/Frame.webp"
             />
             <section id="sec2">
                 <HeaderAndLines

@@ -5,8 +5,6 @@ import { useState } from "react";
 function FixedIcons() {
     const [showPhoneNumbers, setShowPhoneNumbers] = useState(false);
 
-
-
     const togglePhoneNumbers = () => {
         setShowPhoneNumbers(!showPhoneNumbers);
     };
@@ -19,7 +17,7 @@ function FixedIcons() {
     return (
         <div className=" ">
             <div className="containIcon btn-top" onClick={goToTop}>
-                <img className="w-100" src="/assets/home/Frame 50.png" alt="" />
+                <img className="w-100" src="/assets/home/Frame 50.webp" alt="" />
             </div>
             <div
                 className={`containIcon btn-whatsapp whats ${showPhoneNumbers ? "show-phone-numbers" : ""}`}
@@ -46,7 +44,7 @@ function FixedIcons() {
                     </div>
                 )}
                 <div className="bg-danger"></div>
-                <img className="w-100 whatsApp" src="/assets/home/whatsappimage.png" alt="" />
+                <img className="w-100 whatsApp" src="/assets/home/whatsappimage.webp" alt="" />
             </div>
         </div>
     );

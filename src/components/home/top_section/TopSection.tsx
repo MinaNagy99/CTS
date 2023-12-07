@@ -5,21 +5,21 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import { MyContext } from "../../context/LngContext";
 function TopSection() {
-  const { currentLng } = useContext(MyContext);
-  let text: string;
-  if (currentLng == "en") {
-    text = "We provide integrated web services";
-  } else {
-    text = "نقدم خدمات تصميم مواقع إلكترونية";
-  }
-  const h1Variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.05 } },
-  };
-  const SpanVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
+    const { currentLng } = useContext(MyContext);
+    let text: string;
+    if (currentLng == "en") {
+        text = "We provide integrated web services";
+    } else {
+        text = "نقدم خدمات تصميم مواقع إلكترونية";
+    }
+    const h1Variants = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { staggerChildren: 0.05 } },
+    };
+    const SpanVariants = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+    };
     return (
         <div className="container-fluid">
             <div className="row top-section ">
@@ -30,7 +30,7 @@ function TopSection() {
                         </span>
                     </div>
                     <div className="d-flex align-items-center">
-                        <img className="home-icon" src="/assets/home/home1.png" alt="" />
+                        <img className="home-icon" src="/assets/home/home1.webp" alt="" />
                         <motion.h1 variants={h1Variants} initial="hidden" whileInView="visible" className="">
                             {text.split("").map((char: string, index: number) => {
                                 return (
@@ -56,7 +56,7 @@ function TopSection() {
                     </div>
                 </div>
                 <div className="col-12 col-lg-5 d-flex justify-content-center align-items-center px-5">
-                    <img className="home2 p-xl-4 d-none d-lg-block img-fluid" src="/assets/home/home2.png" alt="" />
+                    <img className="home2 p-xl-4 d-none d-lg-block img-fluid" src="/assets/home/home2.webp" alt="" />
                 </div>
             </div>
         </div>

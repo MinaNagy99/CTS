@@ -13,32 +13,32 @@ export default function Portfolio() {
     const portfolioArray: DataItem[] = [
         {
             title: "Mannaie for real state",
-            image: "/assets/websites/mannaie-photos/mannaie-carasoul1.png",
+            image: "/assets/websites/mannaie-photos/mannaie-carasoul1.webp",
             link: "https://www.mannaie-group-development.com/",
         },
         {
             title: "Little engineer",
-            image: "/assets/websites/littleengineer-photos/littleegineer-carasoul1.png",
+            image: "/assets/websites/littleengineer-photos/littleegineer-carasoul1.webp",
             link: "https://le-academy.com/",
         },
         {
             title: "Ebdaa for engineering consultancy",
-            image: "/assets/websites/ebdaa-photos/ebdaa-carasoul1.png",
+            image: "/assets/websites/ebdaa-photos/ebdaa-carasoul1.webp",
             link: "http://ebdaa-saudi.com/",
         },
         {
             title: "MotorMenders for cars",
-            image: "/assets/websites/motormenders-photos/motormenders-carasoul1.png",
+            image: "/assets/websites/motormenders-photos/motormenders-carasoul1.webp",
             link: "/demo/MotorMenders",
         },
         {
             title: "Masdar for building products",
-            image: "/assets/websites/masdar-photos/masdar-page1.png",
+            image: "/assets/websites/masdar-photos/masdar-page1.webp",
             link: "https://masdar.co/",
         },
         {
             title: "Prestige web store",
-            image: "/assets/websites/prestige-photos/prestige-carasoul1.png",
+            image: "/assets/websites/prestige-photos/prestige-carasoul1.webp",
             link: "https://prestige.co.ae/",
         },
     ];
@@ -50,10 +50,10 @@ export default function Portfolio() {
                 <div className="container">
                     <div className="row d-flex position-relative mt-5 justify-content-evenly">
                         <span className="arrow1 d-md-inline d-none">
-                            <img src="/assets/home/arrow1.png" alt="" />
+                            <img src="/assets/home/arrow1.webp" alt="" />
                         </span>
                         <span className="arrow2 d-md-inline d-none">
-                            <img src="/assets/home/arrow2.png" alt="" />
+                            <img src="/assets/home/arrow2.webp" alt="" />
                         </span>
                         <div className="d-flex justify-content-center align-items-center  p-3 portfolio-title">
                             <Link
@@ -64,7 +64,7 @@ export default function Portfolio() {
                                 }}
                             >
                                 <div className=" d-flex mx-2 justify-content-center align-items-center">
-                                    <img className="port-img" src="/assets/home/webdesign.png" alt="" />
+                                    <img className="port-img" src="/assets/home/webdesign.webp" alt="" />
                                 </div>
                                 <div className=" d-flex mx-2 align-items-center">
                                     <p className="textService mb-0">
@@ -76,7 +76,7 @@ export default function Portfolio() {
                         {/* <div className="col-12 p-3 col-md-4">
                             <div className="row borderOfService py-2">
                                 <div className="col-4 d-flex justify-content-center align-items-center">
-                                    <img className="port-img" src="/assets/home/itservices.png" alt="" />
+                                    <img className="port-img" src="/assets/home/itservices.webp" alt="" />
                                 </div>
                                 <div className="col-8 d-flex align-items-center">
                                     <p className="textService mb-0">
@@ -121,7 +121,7 @@ export default function Portfolio() {
                                 <span>
                                     <Trans i18nKey="See more" />
                                 </span>
-                                <img src="/assets/home/seemore.png" alt="" />
+                                <img src="/assets/home/seemore.webp" alt="" />
                             </button>
                         </Link>
                     </div>
