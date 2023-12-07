@@ -101,11 +101,11 @@ export default function WebHosting() {
             <Trans i18nKey="Hosting features from Core Technology Solutions"></Trans>
           }
         />
-        <div id="section2" className="container mt-5 ">
+        <div id="section2" className="container  mt-5 ">
           <div className="row">
             {arrayOfAdvHosting.map((item, index) => {
               return (
-                <div key={index} className="col-4 py-4 border border-2">
+                <div key={index} className="col-md-4 col-12 py-4 border border-2">
                   <p>{item.title}</p>
                   <p>{item.desc}</p>
                 </div>
@@ -115,7 +115,7 @@ export default function WebHosting() {
         </div>
         <div id="section3" className="container ">
           <div className="row mb-5">
-            <div className="col-10">
+            <div className="col-md-10 col-12">
               <HeaderAndLines
                 header={
                   <Trans i18nKey="Why do customers prefer hosting with Core Technology Solutions?"></Trans>

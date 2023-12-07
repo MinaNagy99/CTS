@@ -11,7 +11,8 @@ form {
     /* margin: auto; */
 }
 .handelVH-form {
-    height: 120vh;
+    max-height: max-content ;
+    padding-top: 8%;
 }
 .handelVH-submited {
     height: 133vh;
@@ -26,6 +27,10 @@ form {
 @media (max-width: 768px) {
     .w-md-75 {
         width: 100%;
+    }
+    .handelVH-form {
+        max-height: max-content ;
+        padding-top: 25%;
     }
 }
 

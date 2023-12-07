@@ -52,8 +52,8 @@ function Header() {
       setcurrentLng("en");
       i18next.changeLanguage("en");
       setnextLang({
-        languageName: "العربية",
-        imgFlag: "/assets/svg/arabic_flag.svg",
+        languageName: "Arabic",
+        imgFlag: "/assets/home/arabic-flag.jpg",
       });
     }
   };
@@ -71,12 +71,12 @@ function Header() {
   return (
     <>
       <nav
-        className={`navbar navbar-expand-lg ${
+        className={`navbar px-4  navbar-expand-lg ${
           scrolled ? "navbar-scrolled" : ""
         } ${isNavbarCollapsed ? "m-0" : ""}`}
       >
         <div className="container-fluid">
-          <NavLink className="navbar-brand" to="/">
+          <NavLink className="navbar-brand text-start" to="/">
             <img src="/assets/logonavbar.svg" alt="" />
           </NavLink>
           <button
@@ -93,7 +93,7 @@ function Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className={`collapse navbar-collapse`} id="navbarNavAltMarkup">
-            <div className="navbar-nav w-100 d-flex flex-column col-lg-5 flex-lg-row justify-content-between align-items-start ">
+            <div className="navbar-nav w-100 d-flex flex-column  col-lg-5 flex-lg-row justify-content-between align-items-center ">
               {/* {navigationLinks.map((link) =>
                 isServicesAndBlogsDisabled && link.to === "/blogs" ? null : (
                   <NavLink

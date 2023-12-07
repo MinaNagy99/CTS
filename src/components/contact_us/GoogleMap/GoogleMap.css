@@ -1,5 +1,5 @@
 .border-map {
-    box-shadow: 3px 3px 3px;
+    box-shadow: 5px 5px 16px -1px rgba(103, 103, 103, 0.55);
     border-radius: 10px;
     overflow: hidden;
 }
