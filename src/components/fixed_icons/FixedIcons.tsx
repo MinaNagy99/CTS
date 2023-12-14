@@ -27,7 +27,7 @@ function FixedIcons() {
                     <div className="phone-numbers">
                         <a target="_blank" href="https://wa.me/+201201117955?text=Hello%20from%20your%20website">
                             <div className="eg d-flex align-items-center ">
-                                <img className="" src="assets/fixedIcon/eg.svg" alt="" />
+                                <img className="" src="assets/fixedIcon/eg.webp" alt="" />
                                 <p className="m-0">
                                     <Trans i18nKey="egypt"></Trans>{" "}
                                 </p>
@@ -35,7 +35,7 @@ function FixedIcons() {
                         </a>
                         <a target="_blank" href="https://wa.me/966540038724?text=Hello%20from%20your%20website">
                             <div className="sa d-flex align-items-center ">
-                                <img className="" src="assets/fixedIcon/sa.svg" alt="" />
+                                <img className="" src="assets/fixedIcon/sa.webp" alt="" />
                                 <p className="m-0">
                                     <Trans i18nKey="saudi"></Trans>{" "}
                                 </p>

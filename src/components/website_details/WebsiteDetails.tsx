@@ -277,7 +277,7 @@ function WesbiteDetails() {
                                 }}
                                 className="btn btn-primary d-flex justify-content-center align-items-center mx-2"
                             >
-                                <img className="website-details-next " src="assets/websites/arrow.svg" alt="" />
+                                <img className="website-details-next " src="assets/websites/arrow.webp" alt="" />
                                 <span className="mx-2">
                                     <Trans i18nKey="Next website"></Trans>
                                 </span>
@@ -292,7 +292,7 @@ function WesbiteDetails() {
                                 <span className="mx-2">
                                     <Trans i18nKey="Previous website"></Trans>
                                 </span>
-                                <img className="website-details-prev" src="assets/websites/arrow.svg" alt="" />
+                                <img className="website-details-prev" src="assets/websites/arrow.webp" alt="" />
                             </button>
                         </div>
                     </div>

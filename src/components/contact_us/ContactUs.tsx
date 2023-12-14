@@ -62,9 +62,9 @@ function ContactUs() {
     return (
         <>
             <div className="container-fluid">
-                <div className={`bg-contact-gray   ${!submitted ? `handelVH-submited` : "handelVH-form"} row`}>
+                <div className={`bg-contact-gray   ${submitted ? `handelVH-submited` : "handelVH-form"} row`}>
                     <div className={`  col-lg-6 col-12 d-flex align-items-center justify-content-center  containForm `}>
-                        {!submitted ? (
+                        {submitted ? (
                             <div className="thank-you-message ">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -249,21 +249,21 @@ function ContactUs() {
                     <div className="col-lg-6 col-12 d-flex align-items-end flex-column  justify-content-between">
                         <div className=" fs-6  d-flex flex-column justify-content-evenly align-items-start h-50 w-100">
                             <div className=" mx-2 py-lg-0 py-3  d-inline-flex justify-content-center align-items-center">
-                                <img className="mx-3" src="/assets/svg/location.svg" alt="" />
+                                <img className="mx-3" src="/assets/svg/location.webp" alt="" />
                                 <span>
                                     <Trans i18nKey="Cairo, Maadi Corniche St. Police Information Institute"></Trans>
                                 </span>{" "}
                             </div>
                             <div className="d-flex  py-lg-0 pb-3 justify-content-between">
                                 <div className=" mx-2    d-inline-flex justify-content-center align-items-center">
-                                    <img className="mx-3" src="/assets/svg/phone.svg" alt="" />
+                                    <img className="mx-3" src="/assets/svg/phone.webp" alt="" />
 
                                     <span>
                                         <Trans i18nKey="(+20)1201117955"></Trans>
                                     </span>
                                 </div>{" "}
                                 <div className=" mx-2   d-inline-flex justify-content-center align-items-center">
-                                    <img className="mx-3" src="/assets/svg/telephone.svg" alt="" />
+                                    <img className="mx-3" src="/assets/svg/telephone.webp" alt="" />
 
                                     <span>
                                         <Trans i18nKey="0227634002"></Trans>
@@ -271,13 +271,13 @@ function ContactUs() {
                                 </div>{" "}
                             </div>
                             <div className=" mx-2  py-lg-0 pb-3  d-inline-flex justify-content-center align-items-center">
-                                <img className="mx-3" src="/assets/svg/location.svg" alt="" />
+                                <img className="mx-3" src="/assets/svg/location.webp" alt="" />
                                 <span>
                                     <Trans i18nKey="Jeddah, King Fahd Road, Al Jazeera Building, Building 3"></Trans>
                                 </span>{" "}
                             </div>
                             <div className=" mx-2    d-inline-flex justify-content-center align-items-center">
-                                <img className="mx-3" src="/assets/svg/phone.svg" alt="" />
+                                <img className="mx-3" src="/assets/svg/phone.webp" alt="" />
 
                                 <span>
                                     <Trans i18nKey="(+966)542714543"></Trans>

@@ -32,7 +32,7 @@
 }
 
 .project-header {
-    background: url(/assets/websites/website-pages.svg);
+    background: url(/assets/websites/website-pages.webp);
     background-repeat: no-repeat;
     background-position: center center;
     padding: 30px;
@@ -138,8 +138,6 @@
     z-index: 99;
 }
 
-
-
 .website-details-next {
     width: 17px;
 }
@@ -154,5 +152,3 @@
         color: white !important;
     }
 }
-
-

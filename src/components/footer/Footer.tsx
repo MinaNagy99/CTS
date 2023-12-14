@@ -8,10 +8,10 @@ function Footer() {
             <div className=" container-fluid p-4 ">
                 <div className="row p-0 ">
                     <div className="col-md-4 col-12 d-flex align-items-center flex-column">
-                        <img className="footer-logo my-1" src="/assets/logofooter.svg" alt="" />
+                        <img className="footer-logo my-1" src="/assets/logofooter.webp" alt="" />
                         <div className="my-3">
                             <Link to="">info@cts-egy.com</Link>
-                            <img className="me-1" src="/assets/svg/emailicon.svg" alt="" />
+                            <img className="me-1" src="/assets/svg/emailicon.webp" alt="" />
                         </div>
                         <Link to="/contact-us">
                             <button className="btn mb-4  btn-top-section">
@@ -89,7 +89,7 @@ function Footer() {
                         </h5>
                         <div className="contact-lines d-flex align-items-center">
                             <div className="footer-icon-container mx-2   d-inline-flex justify-content-center align-items-center">
-                                <img src="/assets/svg/location.svg" alt="" />
+                                <img src="/assets/svg/location.webp" alt="" />
                             </div>
                             <span>
                                 <Trans i18nKey="Cairo, Maadi Corniche St. Police Information Institute"></Trans>
@@ -97,7 +97,7 @@ function Footer() {
                         </div>
                         <div className="contact-lines d-flex align-items-center">
                             <div className="footer-icon-container mx-2   d-inline-flex justify-content-center align-items-center">
-                                <img src="/assets/svg/phone.svg" alt="" />
+                                <img src="/assets/svg/phone.webp" alt="" />
                             </div>
                             <div>
                                 <span>
@@ -107,13 +107,13 @@ function Footer() {
                         </div>
                         <div className="contact-lines d-flex align-items-center">
                             <div className="footer-icon-container mx-2   d-inline-flex justify-content-center align-items-center">
-                                <img src="/assets/svg/telephone.svg" alt="" />
+                                <img src="/assets/svg/telephone.webp" alt="" />
                             </div>
                             <span>0227634002</span>
                         </div>
                         <div className="contact-lines d-flex align-items-center">
                             <div className="footer-icon-container mx-2  d-inline-flex justify-content-center align-items-center">
-                                <img src="/assets/svg/location.svg" alt="" />
+                                <img src="/assets/svg/location.webp" alt="" />
                             </div>
                             <span>
                                 <Trans i18nKey="Jeddah, King Fahd Road, Al Jazeera Building, Building 3"></Trans>
@@ -121,7 +121,7 @@ function Footer() {
                         </div>
                         <div className="contact-lines d-flex align-items-center">
                             <div className="footer-icon-container mx-2    d-inline-flex justify-content-center align-items-center">
-                                <img src="/assets/svg/phone.svg" alt="" />
+                                <img src="/assets/svg/phone.webp" alt="" />
                             </div>
                             <span>
                                 <Trans i18nKey="(+966)542714543"></Trans>
