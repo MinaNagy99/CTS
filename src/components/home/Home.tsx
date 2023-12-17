@@ -5,15 +5,11 @@ import OurServices from './our_ervices/OurServices';
 import Portfolio from './portfolio/Portfolio';
 import TopSection from './top_section/TopSection';
 import ClientsSlider from './clients_slider/ClientsSlider';
-import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 // ... rest of your code
 
 function Home() {
-    useEffect(() => {}, []);
-
-    window.addEventListener('beforeunload', (e) => e.preventDefault());
     return (
         <>
             <Helmet>

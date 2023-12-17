@@ -1,12 +1,10 @@
 import { useContext, useEffect } from 'react';
 import './About.css';
 import { Trans } from 'react-i18next';
-import { useTranslation } from 'react-i18next';
 import { MyContext } from '../context/LngContext';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 export default function About() {
-    const { t } = useTranslation();
     const { currentLng } = useContext(MyContext);
     let text1: string;
     if (currentLng == 'en') {
@@ -24,25 +22,11 @@ export default function About() {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
     };
-    useEffect(() => {
-        document.title = t('CTS | About Us');
-    });
-    const onUnload = (event: Event) => {
-        event.preventDefault();
-    };
-    useEffect(() => {
-        window.addEventListener('beforeunload', onUnload);
 
-        return () => {
-            window.removeEventListener('beforeunload', onUnload);
-        };
-    });
     return (
         <>
             <Helmet>
-                <title>
-                    CTS | About Us
-                </title>
+                <title>"CTS | About Us</title>
                 <meta
                     name="keywords"
                     content="web development, buy Cisco switch CBS350-24 eg-tech,buy Cisco switch , Cisco switch CBS350-24 eg-tech , IT services, custom software development, website design, technology solutions, responsive web design, mobile app development, software consulting, IT support, digital solutions, e-commerce websites, content management systems, SEO, integrated services, web hosting, business identities, Light Current Solutions, Optical Fiber, Cabling Networks, Voice systems, Call Center systems, CCTV systems, online presence, tailored solutions, technological landscape, drive success forward"
@@ -59,7 +43,7 @@ export default function About() {
                     content="Welcome to Core Technology Solutions, the leading provider of comprehensive web development and IT services. With a dedicated team of experts."
                 />
                 <meta property="og:image" content="https://www.cts-egy.com/assets/logonavbar.svg" />
-                <meta property="og:url" content="https://cts-egy.com/about" />
+                <meta property="og:url" content="https://www.cts-egy.com" />
             </Helmet>
             <div className="container-fluid">
                 <div className="row about-section  ">
