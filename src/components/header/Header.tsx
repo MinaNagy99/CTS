@@ -77,7 +77,7 @@ function Header() {
             >
                 <div className="container-fluid">
                     <NavLink className="navbar-brand text-start" to="/">
-                        <img src="/assets/logonavbar.webp" alt="" />
+                        <img src="/assets/logonavbar.svg" alt="" />
                     </NavLink>
                     <button
                         ref={humburgerBtn}

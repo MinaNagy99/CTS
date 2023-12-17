@@ -18,40 +18,43 @@ import WebHosting from "./components/Services/WebHosting/WebHosting";
 import Wordpress from "./components/Services/WordPress/Wordpress";
 
 function App() {
-    const { i18n } = useTranslation();
-    const textDirection = i18n.languages[0] === "ar" ? "rtl" : "ltr";
-    const router = createHashRouter([
+  const { i18n } = useTranslation();
+  const textDirection = i18n.languages[0] === "ar" ? "rtl" : "ltr";
+  const router = createHashRouter([
+    {
+      path: "/",
+      element: <MainLayout />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: "/about", element: <About /> },
+        { path: "/portfolio", element: <PreviousWork /> },
+        { path: "/contact-us", element: <ContactUs /> },
+        { path: "/services/web-design", element: <WebDesign /> },
+        { path: "/services/mobile-app", element: <MobilApp /> },
         {
-            path: "/",
-            element: <MainLayout />,
-            children: [
-                { index: true, element: <Home /> },
-                { path: "/about", element: <About /> },
-                { path: "/portfolio", element: <PreviousWork /> },
-                { path: "/contact-us", element: <ContactUs /> },
-                { path: "/services/web-design", element: <WebDesign /> },
-                { path: "/services/mobile-app", element: <MobilApp /> },
-                { path: "/services/online-store-design", element: <OnlineStoreDesign /> },
-                { path: "/services/web-hosting", element: <WebHosting /> },
-                { path: "/services/wordpress", element: <Wordpress /> },
-                { path: "/services/seo", element: <Seo /> },
-                { path: "/website/:title", element: <WesbiteDetails /> },
-            ],
+          path: "/services/online-store-design",
+          element: <OnlineStoreDesign />,
         },
-    ]);
+        { path: "/services/web-hosting", element: <WebHosting /> },
+        { path: "/services/wordpress", element: <Wordpress /> },
+        { path: "/services/seo", element: <Seo /> },
+        { path: "/website/:title", element: <WesbiteDetails /> },
+      ],
+    },
+  ]);
 
-    return (
-        <>
-            <div style={{ direction: textDirection }} className="stikcy-container">
-                <PortfolioContextProvider>
-                    <MyContextProvider>
-                        <RouterProvider router={router}></RouterProvider>
-                    </MyContextProvider>
-                </PortfolioContextProvider>
-                <FixedIcons />
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div style={{ direction: textDirection }} className="stikcy-container">
+        <PortfolioContextProvider>
+          <MyContextProvider>
+            <RouterProvider router={router}></RouterProvider>
+          </MyContextProvider>
+        </PortfolioContextProvider>
+        <FixedIcons />
+      </div>
+    </>
+  );
 }
 
 export default App;

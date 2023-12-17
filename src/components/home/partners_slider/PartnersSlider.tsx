@@ -42,14 +42,14 @@ function PrevArrow(props: Props) {
 
 function PartnersSlider() {
     const partnersLogos = [
-        "/assets/parteners/google.jpeg",
-        "/assets/parteners/wordpress.jpeg",
-        "/assets/parteners/hostinger.jpeg",
-        "/assets/parteners/goDaddy.jpeg",
-        "/assets/parteners/digitalClean.jpeg",
-        "/assets/parteners/cPanel.jpeg",
-        "/assets/parteners/contabo.jpeg",
-        "/assets/parteners/blueHost.jpeg",
+        "/assets/parteners/google.webp",
+        "/assets/parteners/wordpress.webp",
+        "/assets/parteners/hostinger.webp",
+        "/assets/parteners/goDaddy.webp",
+        "/assets/parteners/digitalClean.webp",
+        "/assets/parteners/cPanel.webp",
+        "/assets/parteners/contabo.webp",
+        "/assets/parteners/blueHost.webp",
         "/assets/parteners/alhua-logo.webp",
         "/assets/parteners/asus-logo.webp",
         "/assets/parteners/axis-logo.webp",

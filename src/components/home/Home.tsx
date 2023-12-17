@@ -11,6 +11,10 @@ import { useTranslation } from "react-i18next";
 // ... rest of your code
 
 function Home() {
+  useEffect(() => {
+  }, []);
+  
+  window.addEventListener("beforeunload", (e) => e.preventDefault());
   const { t } = useTranslation();
   useEffect(() => {
     document.title = t("CTS | Home");
@@ -18,7 +22,6 @@ function Home() {
   return (
     <>
       <div className="container-fluid p-0 ">
-    
         <TopSection />
         <OurServices />
         <Portfolio />

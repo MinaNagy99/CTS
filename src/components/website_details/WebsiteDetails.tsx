@@ -174,7 +174,7 @@ function WesbiteDetails() {
                         <div className="container mt-5 d-flex justify-content-center">
                             <div className="row justify-content-around px-5">
                                 {project?.previewImages?.map((image, index) => (
-                                    <div className="col-lg-4 col-md-6 col-12 p-3" key={index}>
+                                    <div className={`col-12 p-3 ${project.previewImages?.length==2?'col-md-6  ':'col-lg-4  col-md-6'}`} key={index}>
                                         <div className="project-image-container">
                                             <img className="" src={image} alt="" onClick={() => handleClick(index)} />
                                         </div>

@@ -8,7 +8,7 @@ function Footer() {
             <div className=" container-fluid p-4 ">
                 <div className="row p-0 ">
                     <div className="col-md-4 col-12 d-flex align-items-center flex-column">
-                        <img className="footer-logo my-1" src="/assets/logofooter.webp" alt="" />
+                        <img className="footer-logo my-1" src="/assets/logofooter.svg" alt="" />
                         <div className="my-3">
                             <Link to="">info@cts-egy.com</Link>
                             <img className="me-1" src="/assets/svg/emailicon.webp" alt="" />

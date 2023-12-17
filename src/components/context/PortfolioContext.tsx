@@ -50,6 +50,20 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
             link: "https://le-academy.com/",
         },
         {
+            mainImg: "/assets/websites/africa-queen/africa-queen.webp",
+            title: "Africa Queen",
+            previewImages: [
+                "/assets/websites/africa-queen/africa-queen-coursol1.webp",
+                "/assets/websites/africa-queen/africa-queen-coursol2.webp",
+            ],
+            carouselImages: [
+                "/assets/websites/africa-queen/africa-queen-coursol1.webp",
+                "/assets/websites/africa-queen/africa-queen-coursol2.webp",
+            ],
+            logo: "/assets/websites/africa-queen/logo.webp",
+            link: "https://africa-queen.com/",
+        },
+        {
             mainImg: "/assets/websites/ebdaa-photos/ebdaa-carasoul1.webp",
             title: "Ebdaa for engineering consultancy",
             previewImages: [
