@@ -8,7 +8,7 @@ import PortfolioContextProvider from "./components/context/PortfolioContext";
 import FixedIcons from "./components/fixed_icons/FixedIcons";
 import Home from "./components/home/Home";
 import { useTranslation } from "react-i18next";
-import { RouterProvider, createHashRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import WesbiteDetails from "./components/website_details/WebsiteDetails";
 import WebDesign from "./components/Services/WebDesign/WebDesign";
 import OnlineStoreDesign from "./components/Services/OnlineStoreDesign/OnlineStoreDesign";
@@ -20,7 +20,7 @@ import Wordpress from "./components/Services/WordPress/Wordpress";
 function App() {
   const { i18n } = useTranslation();
   const textDirection = i18n.languages[0] === "ar" ? "rtl" : "ltr";
-  const router = createHashRouter([
+  const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout />,

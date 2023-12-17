@@ -14,7 +14,6 @@ function Home() {
   useEffect(() => {
   }, []);
   
-  window.addEventListener("beforeunload", (e) => e.preventDefault());
   const { t } = useTranslation();
   useEffect(() => {
     document.title = t("CTS | Home");

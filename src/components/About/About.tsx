@@ -26,17 +26,7 @@ export default function About() {
   useEffect(() => {
     document.title = t("CTS | About Us");
   });
-  const onUnload = (event: Event) => {    
-    event.preventDefault();
-  };
-  useEffect(()=>{
-    window.addEventListener("beforeunload", onUnload)
 
-    return ()=>{
-        window.removeEventListener("beforeunload",onUnload)
-
-    }
-  })
   return (
     <>
       <div className="container-fluid">
