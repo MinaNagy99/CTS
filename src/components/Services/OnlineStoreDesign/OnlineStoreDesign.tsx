@@ -36,7 +36,7 @@ function OnlineStoreDesign() {
             <TopSecServices
                 title="Why is designing an online store an important step?"
                 desc="We live in the era of digital development and technology, and designing an online store has become an indispensable thing for any business owner, which helps him promote and spread well in front of competitors in the field."
-                img="./assets/onlineStoreDesignImages/e-commerce1.webp"
+                img="/assets/onlineStoreDesignImages/e-commerce1.webp"
             />
             <div className="container-fluid p-0">
                 <HeaderAndLines

@@ -33,7 +33,7 @@ function Seo() {
             <TopSecServices
                 title="SEO"
                 desc="We have a research team of specialists in on-page and off-page SEO, as well as PPC, i.e. payment for clicks in sponsored advertising campaigns such as Facebook and Google. We have a proven track record in increasing our clients’ search engine rankings."
-                img="./assets/seo/seo1.webp"
+                img="/assets/seo/seo1.webp"
             />
             <div className="container-fluid p-0 seo">
                 <div className="position-relative ice1">

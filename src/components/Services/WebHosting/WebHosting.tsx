@@ -113,7 +113,7 @@ export default function WebHosting() {
                 <TopSecServices
                     title="The best web hosting and email services"
                     desc="Website hosting is one of the things that many business owners who want to start their business on the Internet are interested in, and it is one of the most important things that must be obtained when creating your website or online store."
-                    img="./assets/services/hosting/bg-webhosting.webp"
+                    img="/assets/services/hosting/bg-webhosting.webp"
                 ></TopSecServices>
                 <HeaderAndLines header={<Trans i18nKey="Hosting features from Core Technology Solutions"></Trans>} />
                 <div id="section2" className="container  mt-5 ">
@@ -143,7 +143,7 @@ export default function WebHosting() {
                             return (
                                 <p key={index}>
                                     <span>
-                                        <img src="./assets/services/hosting/star.webp" alt="" />
+                                        <img src="/assets/services/hosting/star.webp" alt="" />
                                     </span>{' '}
                                     {item.text}
                                 </p>

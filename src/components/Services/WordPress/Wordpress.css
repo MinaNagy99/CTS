@@ -18,5 +18,5 @@
     line-height: 150%; /* 24px */
 }
 #wordpress #section4 {
-    background-image: url(./assets/services/wordpress/wordpress-bg.webp);
+    background-image: url(/assets/services/wordpress/wordpress-bg.webp);
 }

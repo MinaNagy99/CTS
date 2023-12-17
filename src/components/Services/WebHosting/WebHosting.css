@@ -17,12 +17,12 @@
     line-height: 150%; /* 24px */
 }
 .bg-section3AR {
-    background-image: url(./assets/services/hosting/web-hosting-2.webp);
+    background-image: url(/assets/services/hosting/web-hosting-2.webp);
     background-repeat: no-repeat;
     background-position: top left;
 }
 .bg-section3EN {
-    background-image: url(./assets/services/hosting/web-hosting-2.webp);
+    background-image: url(/assets/services/hosting/web-hosting-2.webp);
     background-repeat: no-repeat;
     background-position: top right;
 }
@@ -36,5 +36,5 @@
     line-height: 150%; /* 42px */
 }
 #webhosting #section4 {
-    background-image: url(./assets/services/hosting/bg-req-hosting.webp);
+    background-image: url(/assets/services/hosting/bg-req-hosting.webp);
 }
