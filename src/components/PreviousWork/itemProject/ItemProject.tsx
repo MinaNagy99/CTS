@@ -1,4 +1,4 @@
-import { Trans } from "react-i18next";
+import { Trans } from 'react-i18next';
 
 interface ItemProjectProps {
     imag: string;

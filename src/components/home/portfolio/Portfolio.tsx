@@ -1,7 +1,7 @@
-import "./Portofolio.css";
-import HeaderAndLines from "../../shared/HeaderAndLines";
-import { Trans } from "react-i18next";
-import { Link } from "react-router-dom";
+import './Portofolio.css';
+import HeaderAndLines from '../../shared/HeaderAndLines';
+import { Trans } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 interface DataItem {
     title: string; // Assuming you're using JSX for translations
@@ -12,34 +12,34 @@ interface DataItem {
 export default function Portfolio() {
     const portfolioArray: DataItem[] = [
         {
-            title: "Mannaie for real state",
-            image: "/assets/websites/mannaie-photos/mannaie-carasoul1.webp",
-            link: "https://www.mannaie-group-development.com/",
+            title: 'Mannaie for real state',
+            image: '/assets/websites/mannaie-photos/mannaie-carasoul1.webp',
+            link: 'https://www.mannaie-group-development.com/',
         },
         {
-            title: "Little engineer",
-            image: "/assets/websites/littleengineer-photos/littleegineer-carasoul1.webp",
-            link: "https://le-academy.com/",
+            title: 'Little engineer',
+            image: '/assets/websites/littleengineer-photos/littleegineer-carasoul1.webp',
+            link: 'https://le-academy.com/',
         },
         {
-            title: "Ebdaa for engineering consultancy",
-            image: "/assets/websites/ebdaa-photos/ebdaa-carasoul1.webp",
-            link: "http://ebdaa-saudi.com/",
+            title: 'Ebdaa for engineering consultancy',
+            image: '/assets/websites/ebdaa-photos/ebdaa-carasoul1.webp',
+            link: 'http://ebdaa-saudi.com/',
         },
         {
-            title: "MotorMenders for cars",
-            image: "/assets/websites/motormenders-photos/motormenders-carasoul1.webp",
-            link: "/demo/MotorMenders",
+            title: 'MotorMenders for cars',
+            image: '/assets/websites/motormenders-photos/motormenders-carasoul1.webp',
+            link: '/demo/MotorMenders',
         },
         {
-            title: "Masdar for building products",
-            image: "/assets/websites/masdar-photos/masdar-page1.webp",
-            link: "https://masdar.co/",
+            title: 'Masdar for building products',
+            image: '/assets/websites/masdar-photos/masdar-page1.webp',
+            link: 'https://masdar.co/',
         },
         {
-            title: "Prestige web store",
-            image: "/assets/websites/prestige-photos/prestige-carasoul1.webp",
-            link: "https://prestige.co.ae/",
+            title: 'Prestige web store',
+            image: '/assets/websites/prestige-photos/prestige-carasoul1.webp',
+            link: 'https://prestige.co.ae/',
         },
     ];
 
@@ -58,7 +58,7 @@ export default function Portfolio() {
                         <div className="d-flex justify-content-center align-items-center  p-3 portfolio-title">
                             <Link
                                 className="d-flex borderOfService px-5 py-2"
-                                to={"/Portfolio"}
+                                to={'/Portfolio'}
                                 onClick={() => {
                                     window.scrollTo(0, 0);
                                 }}
@@ -111,7 +111,7 @@ export default function Portfolio() {
                     </div>
                     <div>
                         <Link
-                            to={"/portfolio"}
+                            to={'/portfolio'}
                             onClick={() => {
                                 window.scrollTo({ top: 0 });
                             }}

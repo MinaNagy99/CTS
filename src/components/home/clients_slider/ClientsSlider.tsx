@@ -1,9 +1,9 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./clientsSlider.css";
-import HeaderAndLines from "../../shared/HeaderAndLines";
-import { Trans } from "react-i18next";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './clientsSlider.css';
+import HeaderAndLines from '../../shared/HeaderAndLines';
+import { Trans } from 'react-i18next';
 
 interface Props {
     className?: string;
@@ -43,32 +43,32 @@ function PrevArrow(props: Props) {
 
 function ClientsSlider() {
     const clientsLogos = [
-        "/assets/clients/abgad-logo.webp",
-        "/assets/clients/abu-auf-logo.webp",
-        "/assets/clients/ahramgroup-logo.webp",
-        "/assets/clients/dar-el-mona-logo.webp",
-        "/assets/clients/darelfouad-logo.webp",
-        "/assets/clients/delta-galil-logo.webp",
-        "/assets/clients/ecs-logo.webp",
-        "/assets/clients/egemac-logo.webp",
-        "/assets/clients/evapharma-logo.webp",
-        "/assets/clients/gapplymer-logo.webp",
-        "/assets/clients/mobica-logo.webp",
-        "/assets/clients/redcone-logo.webp",
-        "/assets/clients/rowad-logo.webp",
-        "/assets/clients/semak-logo.webp",
-        "/assets/clients/sews-eg-logo.webp",
-        "/assets/clients/solera-logo.webp",
+        '/assets/clients/abgad-logo.webp',
+        '/assets/clients/abu-auf-logo.webp',
+        '/assets/clients/ahramgroup-logo.webp',
+        '/assets/clients/dar-el-mona-logo.webp',
+        '/assets/clients/darelfouad-logo.webp',
+        '/assets/clients/delta-galil-logo.webp',
+        '/assets/clients/ecs-logo.webp',
+        '/assets/clients/egemac-logo.webp',
+        '/assets/clients/evapharma-logo.webp',
+        '/assets/clients/gapplymer-logo.webp',
+        '/assets/clients/mobica-logo.webp',
+        '/assets/clients/redcone-logo.webp',
+        '/assets/clients/rowad-logo.webp',
+        '/assets/clients/semak-logo.webp',
+        '/assets/clients/sews-eg-logo.webp',
+        '/assets/clients/solera-logo.webp',
     ];
 
     const settings = {
         autoplay: true,
         speed: 300,
         autoplaySpeed: 2000,
-        cssEase: "linear",
-        className: "center",
+        cssEase: 'linear',
+        className: 'center',
         infinite: true,
-        centerPadding: "60px",
+        centerPadding: '60px',
         slidesToShow: 5,
         swipeToSlide: true,
         prevArrow: <PrevArrow />,

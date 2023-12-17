@@ -1,32 +1,28 @@
-import { createContext, useState, ReactNode, Dispatch, SetStateAction } from "react";
+import { createContext, useState, ReactNode, Dispatch, SetStateAction } from 'react';
 
 type MyContextType = {
-  currentLng: string;
-  setcurrentLng: Dispatch<SetStateAction<string>>;
+    currentLng: string;
+    setcurrentLng: Dispatch<SetStateAction<string>>;
 };
 
 export const MyContext = createContext<MyContextType>({
-  currentLng: 'ar',
-  setcurrentLng: () => {},
+    currentLng: 'ar',
+    setcurrentLng: () => {},
 });
 
 type MyContextProviderProps = {
-  children: ReactNode;
+    children: ReactNode;
 };
 
 function MyContextProvider(props: MyContextProviderProps) {
-  const [currentLng, setcurrentLng] = useState<string>('ar');
+    const [currentLng, setcurrentLng] = useState<string>('ar');
 
-  const contextValue: MyContextType = {
-    currentLng,
-    setcurrentLng,
-  };
+    const contextValue: MyContextType = {
+        currentLng,
+        setcurrentLng,
+    };
 
-  return (
-    <MyContext.Provider value={contextValue}>
-      {props.children}
-    </MyContext.Provider>
-  );
+    return <MyContext.Provider value={contextValue}>{props.children}</MyContext.Provider>;
 }
 
 export default MyContextProvider;

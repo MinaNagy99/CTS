@@ -1,71 +1,72 @@
 .btn-top {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
 }
 .btn-whatsapp {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
 }
 .containIcon {
-  cursor: pointer;
-  width: 60px;
-  margin: 20px;
-  z-index: 99;
+    cursor: pointer;
+    width: 60px;
+    margin: 20px;
+    z-index: 99;
 }
 
 .phone-numbers {
-  background-color: aquamarine;
-  width: 130px;
-  height: 80px;
-  position: absolute;
-  bottom: 70px;
-  left: 30px;
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  justify-content: center;
-  border: 1px solid black;
-  border-radius: 10px;
+    background-color: aquamarine;
+    width: 130px;
+    height: 80px;
+    position: absolute;
+    bottom: 70px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 .eg img {
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
 }
 
 .sa img {
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
 }
 
 @media only screen and (max-width: 768px) {
-  .containIcon {
-    width: 40px;
-  }
+    .containIcon {
+        width: 40px;
+    }
 }
 .whatsApp {
-  border-radius: 50%;
-  box-shadow: 0px 0px 0px 0px gray;
-  border: 0px solid rgb(158, 158, 158);
-  /* box-sizing: padding-box; */
-  transition: all  1s;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px gray;
+    border: 0px solid rgb(158, 158, 158);
+    /* box-sizing: padding-box; */
+    transition: all 1s;
 }
 @keyframes hoverEffect {
-    0%, 100% {
-      box-shadow: 0px 0px 3px 10px rgb(200, 196, 186);
-      border-width: 0px;
+    0%,
+    100% {
+        box-shadow: 0px 0px 3px 10px rgb(200, 196, 186);
+        border-width: 0px;
     }
     50% {
-      box-shadow: 0px 0px 5px 7px rgb(221, 204, 204);
-      border-width: 10px;
+        box-shadow: 0px 0px 5px 7px rgb(221, 204, 204);
+        border-width: 10px;
     }
-  }
+}
 .whatsApp:hover {
-  box-shadow: 0px 0px 7px 7px gray;
-  border: 7px solid rgba(158, 158, 158, 0.445);
-  animation: hoverEffect 1.8s infinite;
+    box-shadow: 0px 0px 7px 7px gray;
+    border: 7px solid rgba(158, 158, 158, 0.445);
+    animation: hoverEffect 1.8s infinite;
 }

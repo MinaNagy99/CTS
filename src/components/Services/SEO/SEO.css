@@ -14,7 +14,7 @@
 }
 
 .seo-bot-section {
-    background: url("/assets/seo/seo-bg.webp");
+    background: url('/assets/seo/seo-bg.webp');
     background-size: contain;
     padding: 60px 8%;
 }

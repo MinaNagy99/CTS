@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import "./ContactUs.css";
-import { Trans, useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom";
-import GoogleMap from "./GoogleMap/GoogleMap";
+import { useEffect, useState } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import './ContactUs.css';
+import { Trans, useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
+import GoogleMap from './GoogleMap/GoogleMap';
+import { Helmet } from 'react-helmet-async';
 
 interface FormValues {
     service: string;
@@ -19,50 +20,70 @@ function ContactUs() {
 
     const { t } = useTranslation();
     useEffect(() => {
-        document.title = t("CTS | Contact Us");
+        document.title = t('CTS | Contact Us');
     });
 
     const [isSubmitting, setSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
-    const [error, setError] = useState(""); // New state for error
+    const [error, setError] = useState(''); // New state for error
 
     const validationSchema = Yup.object().shape({
-        service: Yup.string().required(t("Please select a")),
+        service: Yup.string().required(t('Please select a')),
         name: Yup.string()
-            .matches(/^[\u0600-\u06FF\sA-Za-z]+$/, t("Please enter a valid name"))
-            .required(t("Please enter your name")),
+            .matches(/^[\u0600-\u06FF\sA-Za-z]+$/, t('Please enter a valid name'))
+            .required(t('Please enter your name')),
         phone: Yup.string()
-            .matches(/^\+?[0-9]+$/, t("Please enter a valid phone number"))
-            .required(t("Please enter your phone number")),
-        email: Yup.string().email(t("Please enter a valid email")).required(t("Please enter your email")),
-        message: Yup.string().required(t("Please enter your message")),
+            .matches(/^\+?[0-9]+$/, t('Please enter a valid phone number'))
+            .required(t('Please enter your phone number')),
+        email: Yup.string().email(t('Please enter a valid email')).required(t('Please enter your email')),
+        message: Yup.string().required(t('Please enter your message')),
     });
 
     const handleSubmit = async (values: FormValues) => {
         setSubmitting(true);
         try {
-            const response = await fetch("https://cts.onrender.com/submit", {
-                method: "POST",
+            const response = await fetch('https://cts.onrender.com/submit', {
+                method: 'POST',
                 headers: {
-                    "Content-Type": "application/json",
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(values),
             });
 
             if (!response.ok) {
-                throw new Error("Failed to submit form");
+                throw new Error('Failed to submit form');
             }
             setSubmitted(true);
         } catch (error) {
-            setError(t("Failed to submit form. Please try again.")); // Set the error message
+            setError(t('Failed to submit form. Please try again.')); // Set the error message
         } finally {
             setSubmitting(false);
         }
     };
     return (
         <>
+            <Helmet>
+                <title>CTS | Contact Us</title>
+                <meta
+                    name="keywords"
+                    content="web development, buy Cisco switch CBS350-24 eg-tech,buy Cisco switch , Cisco switch CBS350-24 eg-tech , IT services, custom software development, website design, technology solutions, responsive web design, mobile app development, software consulting, IT support, digital solutions, e-commerce websites, content management systems, SEO, integrated services, web hosting, business identities, Light Current Solutions, Optical Fiber, Cabling Networks, Voice systems, Call Center systems, CCTV systems, online presence, tailored solutions, technological landscape, drive success forward"
+                />
+                <meta name="author" content="Core Technology Solutions" />
+                <meta
+                    name="description"
+                    content="Welcome to Core Technology Solutions, the leading provider of comprehensive web development and IT services. With a dedicated team of experts, we specialize in delivering cutting-edge solutions tailored to your unique business needs. From custom software development and innovative website designs to responsive user interfaces and mobile app development, we offer a full spectrum of technology services. Our seasoned consultants provide strategic IT support and guidance, ensuring your digital solutions are aligned with your business goals. Explore how we can enhance your online presence and streamline your operations. Partner with us for unmatched expertise in e-commerce websites, content management systems, and search engine optimization (SEO). Join hands with Core Technology Solutions to embark on a journey of digital excellence and success."
+                />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <meta property="og:title" content="Core Technology Solutions" />
+                <meta
+                    property="og:description"
+                    content="Welcome to Core Technology Solutions, the leading provider of comprehensive web development and IT services. With a dedicated team of experts."
+                />
+                <meta property="og:image" content="https://www.cts-egy.com/assets/logonavbar.svg" />
+                <meta property="og:url" content="https://cts-egy.com/contact-us" />
+            </Helmet>
             <div className="container-fluid">
-                <div className={`bg-contact-gray   ${submitted ? `handelVH-submited` : "handelVH-form"} row`}>
+                <div className={`bg-contact-gray   ${submitted ? `handelVH-submited` : 'handelVH-form'} row`}>
                     <div className={`  col-lg-6 col-12 d-flex align-items-center justify-content-center  containForm `}>
                         {submitted ? (
                             <div className="thank-you-message ">
@@ -117,11 +138,11 @@ function ContactUs() {
                             <>
                                 <Formik
                                     initialValues={{
-                                        service: "",
-                                        name: "",
-                                        phone: "",
-                                        email: "",
-                                        message: "",
+                                        service: '',
+                                        name: '',
+                                        phone: '',
+                                        email: '',
+                                        message: '',
                                     }}
                                     validationSchema={validationSchema}
                                     onSubmit={handleSubmit}
@@ -133,7 +154,7 @@ function ContactUs() {
                                             </h1>
                                             <p className="text-center mb-0">
                                                 <Trans i18nKey="Response will be made within 24 hours"></Trans>
-                                            </p>{" "}
+                                            </p>{' '}
                                         </div>
                                         <div className="mb-3">
                                             <label htmlFor="service" className="form-label">
@@ -147,7 +168,7 @@ function ContactUs() {
                                                     <Trans i18nKey="Request a website design"></Trans>
                                                 </option>
                                                 <option
-                                                    selected={state?.name == "webdesign" ? true : false}
+                                                    selected={state?.name == 'webdesign' ? true : false}
                                                     value="تصميم موقع شركة"
                                                 >
                                                     <Trans i18nKey="Request a Company Website design"></Trans>
@@ -156,30 +177,30 @@ function ContactUs() {
                                                     <Trans i18nKey="Request a Landing Page design"></Trans>
                                                 </option>
                                                 <option
-                                                    selected={state?.name == "onlineStore" ? true : false}
+                                                    selected={state?.name == 'onlineStore' ? true : false}
                                                     value="تصميم متجر الكترونى"
                                                 >
                                                     <Trans i18nKey="Request an online store design"></Trans>
                                                 </option>
                                                 <option
-                                                    selected={state?.name == "mobileApp" ? true : false}
+                                                    selected={state?.name == 'mobileApp' ? true : false}
                                                     value="برمجة تطبيقات الجوال"
                                                 >
                                                     <Trans i18nKey="Mobile application programming"></Trans>
                                                 </option>
                                                 <option
-                                                    selected={state?.name == "wordpress" ? true : false}
+                                                    selected={state?.name == 'wordpress' ? true : false}
                                                     value="برمجة مواقع ووردبريس WordPress"
                                                 >
                                                     <Trans i18nKey="WordPress website programming"></Trans>
                                                 </option>
                                                 <option
-                                                    selected={state?.name == "hosting" ? true : false}
+                                                    selected={state?.name == 'hosting' ? true : false}
                                                     value="استضافة موقع"
                                                 >
                                                     <Trans i18nKey="Website hosting"></Trans>
                                                 </option>
-                                                <option selected={state?.name == "SEO" ? true : false} value="SEO">
+                                                <option selected={state?.name == 'SEO' ? true : false} value="SEO">
                                                     <Trans i18nKey="SEO"></Trans>
                                                 </option>
                                                 <option value="تصميم وتركيب البنية التحتية لأنظمة التكنولوجيا">
@@ -252,7 +273,7 @@ function ContactUs() {
                                 <img className="mx-3" src="/assets/svg/location.webp" alt="" />
                                 <span>
                                     <Trans i18nKey="Cairo, Maadi Corniche St. Police Information Institute"></Trans>
-                                </span>{" "}
+                                </span>{' '}
                             </div>
                             <div className="d-flex  py-lg-0 pb-3 justify-content-between">
                                 <div className=" mx-2    d-inline-flex justify-content-center align-items-center">
@@ -261,20 +282,20 @@ function ContactUs() {
                                     <span>
                                         <Trans i18nKey="(+20)1201117955"></Trans>
                                     </span>
-                                </div>{" "}
+                                </div>{' '}
                                 <div className=" mx-2   d-inline-flex justify-content-center align-items-center">
                                     <img className="mx-3" src="/assets/svg/telephone.webp" alt="" />
 
                                     <span>
                                         <Trans i18nKey="0227634002"></Trans>
                                     </span>
-                                </div>{" "}
+                                </div>{' '}
                             </div>
                             <div className=" mx-2  py-lg-0 pb-3  d-inline-flex justify-content-center align-items-center">
                                 <img className="mx-3" src="/assets/svg/location.webp" alt="" />
                                 <span>
                                     <Trans i18nKey="Jeddah, King Fahd Road, Al Jazeera Building, Building 3"></Trans>
-                                </span>{" "}
+                                </span>{' '}
                             </div>
                             <div className=" mx-2    d-inline-flex justify-content-center align-items-center">
                                 <img className="mx-3" src="/assets/svg/phone.webp" alt="" />
@@ -282,7 +303,7 @@ function ContactUs() {
                                 <span>
                                     <Trans i18nKey="(+966)542714543"></Trans>
                                 </span>
-                            </div>{" "}
+                            </div>{' '}
                         </div>
                         <div className=" w-100 m-auto ">
                             <GoogleMap />

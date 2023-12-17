@@ -1,16 +1,16 @@
-import "./topSection.css";
-import { Trans } from "react-i18next";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useContext } from "react";
-import { MyContext } from "../../context/LngContext";
+import './topSection.css';
+import { Trans } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { useContext } from 'react';
+import { MyContext } from '../../context/LngContext';
 function TopSection() {
     const { currentLng } = useContext(MyContext);
     let text: string;
-    if (currentLng == "en") {
-        text = "We provide integrated web services";
+    if (currentLng == 'en') {
+        text = 'We provide integrated web services';
     } else {
-        text = "نقدم خدمات تصميم مواقع إلكترونية";
+        text = 'نقدم خدمات تصميم مواقع إلكترونية';
     }
     const h1Variants = {
         hidden: { opacity: 0 },
@@ -32,7 +32,7 @@ function TopSection() {
                     <div className="d-flex align-items-center">
                         <img className="home-icon" src="/assets/home/home1.webp" alt="" />
                         <motion.h1 variants={h1Variants} initial="hidden" whileInView="visible" className="">
-                            {text.split("").map((char: string, index: number) => {
+                            {text.split('').map((char: string, index: number) => {
                                 return (
                                     <motion.span variants={SpanVariants} key={index}>
                                         {char}

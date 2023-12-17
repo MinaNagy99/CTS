@@ -1,17 +1,38 @@
-import { Trans } from "react-i18next";
-import HeaderAndLines from "../../shared/HeaderAndLines";
-import OnlineStoreFeatures from "./OnlineStoreFeatures/OnlineStoreFeatures";
-import "./onlineStoreDesign.css";
-import { useNavigate } from "react-router-dom";
-import TopSecServices from "../Top-sec-Service/TopSecServices";
+import { Trans } from 'react-i18next';
+import HeaderAndLines from '../../shared/HeaderAndLines';
+import OnlineStoreFeatures from './OnlineStoreFeatures/OnlineStoreFeatures';
+import './onlineStoreDesign.css';
+import { useNavigate } from 'react-router-dom';
+import TopSecServices from '../Top-sec-Service/TopSecServices';
+import { Helmet } from 'react-helmet-async';
 
 function OnlineStoreDesign() {
     const navigate = useNavigate();
     const handelNavigate = () => {
-        navigate("/contact-us", { state: { id: 1, name: "onlineStore" } });
+        navigate('/contact-us', { state: { id: 1, name: 'onlineStore' } });
     };
     return (
         <>
+            <Helmet>
+                <title>Online store design</title>
+                <meta
+                    name="keywords"
+                    content="web development, buy Cisco switch CBS350-24 eg-tech,buy Cisco switch , Cisco switch CBS350-24 eg-tech , IT services, custom software development, website design, technology solutions, responsive web design, mobile app development, software consulting, IT support, digital solutions, e-commerce websites, content management systems, SEO, integrated services, web hosting, business identities, Light Current Solutions, Optical Fiber, Cabling Networks, Voice systems, Call Center systems, CCTV systems, online presence, tailored solutions, technological landscape, drive success forward"
+                />
+                <meta name="author" content="Core Technology Solutions" />
+                <meta
+                    name="description"
+                    content="Welcome to Core Technology Solutions, the leading provider of comprehensive web development and IT services. With a dedicated team of experts, we specialize in delivering cutting-edge solutions tailored to your unique business needs. From custom software development and innovative website designs to responsive user interfaces and mobile app development, we offer a full spectrum of technology services. Our seasoned consultants provide strategic IT support and guidance, ensuring your digital solutions are aligned with your business goals. Explore how we can enhance your online presence and streamline your operations. Partner with us for unmatched expertise in e-commerce websites, content management systems, and search engine optimization (SEO). Join hands with Core Technology Solutions to embark on a journey of digital excellence and success."
+                />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <meta property="og:title" content="Core Technology Solutions" />
+                <meta
+                    property="og:description"
+                    content="Welcome to Core Technology Solutions, the leading provider of comprehensive web development and IT services. With a dedicated team of experts."
+                />
+                <meta property="og:image" content="https://www.cts-egy.com/assets/logonavbar.svg" />
+                <meta property="og:url" content="https://cts-egy.com/services/online-store-design" />
+            </Helmet>
             <TopSecServices
                 title="Why is designing an online store an important step?"
                 desc="We live in the era of digital development and technology, and designing an online store has become an indispensable thing for any business owner, which helps him promote and spread well in front of competitors in the field."
@@ -85,70 +106,70 @@ function OnlineStoreDesign() {
                         </div>
                         <div className="col-12 col-md-6">
                             <OnlineStoreFeatures
-                                imageOrSvg={"/assets/onlineStoreDesignImages/hosting.webp"}
+                                imageOrSvg={'/assets/onlineStoreDesignImages/hosting.webp'}
                                 title="Distinctive hosting and domain"
                                 text="The best fast hosting protected with the highest levels of security and protection on our servers, and also a domain of your choice that is easy and expressive of the store’s activity for a year for free, within the cost."
                             />
                         </div>
                         <div className="col-12 col-md-6">
                             <OnlineStoreFeatures
-                                imageOrSvg={"/assets/onlineStoreDesignImages/transaction.webp"}
+                                imageOrSvg={'/assets/onlineStoreDesignImages/transaction.webp'}
                                 title="Different payment methods"
                                 text="Your store contains different payment methods to facilitate payment methods for the customer"
                             />
                         </div>
                         <div className="col-12 col-md-6">
                             <OnlineStoreFeatures
-                                imageOrSvg={"/assets/onlineStoreDesignImages/question.webp"}
+                                imageOrSvg={'/assets/onlineStoreDesignImages/question.webp'}
                                 title="Live chat"
                                 text="The Live Chat feature is added to your online store to facilitate the process of your customers reaching your sales team online and immediately and to facilitate communication processes."
                             />
                         </div>
                         <div className="col-12 col-md-6">
                             <OnlineStoreFeatures
-                                imageOrSvg={"/assets/onlineStoreDesignImages/translation.webp"}
+                                imageOrSvg={'/assets/onlineStoreDesignImages/translation.webp'}
                                 title="Multilanguage"
                                 text="We offer your online store to the whole world so that it can spread throughout it, by adding more than one language to your store to expand the circle of your customers interested in your activity in all parts of the world."
                             />
                         </div>
                         <div className="col-12 col-md-6">
                             <OnlineStoreFeatures
-                                imageOrSvg={"/assets/onlineStoreDesignImages/shopping-cart.webp"}
+                                imageOrSvg={'/assets/onlineStoreDesignImages/shopping-cart.webp'}
                                 title="shopping cart"
                                 text="The shopping cart is the most important addition to the online store, as online stores are similar to supermarkets"
                             />
                         </div>
                         <div className="col-12 col-md-6">
                             <OnlineStoreFeatures
-                                imageOrSvg={"/assets/onlineStoreDesignImages/trade.webp"}
+                                imageOrSvg={'/assets/onlineStoreDesignImages/trade.webp'}
                                 title="Product comparison system"
                                 text="The online store has a comparison system between products to find out which is better. When you get the online store, you will enjoy the best additional services."
                             />
                         </div>
                         <div className="col-12 col-md-6">
                             <OnlineStoreFeatures
-                                imageOrSvg={"/assets/onlineStoreDesignImages/ad.webp"}
+                                imageOrSvg={'/assets/onlineStoreDesignImages/ad.webp'}
                                 title="Advertising banners"
                                 text="Spaces suitable for advertising banners of various sizes in a distinctive way that increases the customer’s desire to shop in your store"
                             />
                         </div>
                         <div className="col-12 col-md-6">
                             <OnlineStoreFeatures
-                                imageOrSvg={"/assets/onlineStoreDesignImages/wishlist.webp"}
+                                imageOrSvg={'/assets/onlineStoreDesignImages/wishlist.webp'}
                                 title="Wishlist"
                                 text="Wish lists are available in your online store, and there is also a special account for each customer with a system of best wishes and favorites and a rating system for all products to improve your store’s sales."
                             />
                         </div>
                         <div className="col-12 col-md-6">
                             <OnlineStoreFeatures
-                                imageOrSvg={"/assets/onlineStoreDesignImages/certificate.webp"}
+                                imageOrSvg={'/assets/onlineStoreDesignImages/certificate.webp'}
                                 title="SSL certificate"
                                 text="Elevate trust and security! Our SSL certificates ensure encrypted connections for safeguarding sensitive data on your website."
                             />
                         </div>
                         <div className="col-12 col-md-6">
                             <OnlineStoreFeatures
-                                imageOrSvg={"/assets/onlineStoreDesignImages/email.webp"}
+                                imageOrSvg={'/assets/onlineStoreDesignImages/email.webp'}
                                 title="Official emails"
                                 text="We provide you with official emails in the name of your business that you can use for your supervisors to facilitate the communication process"
                             />

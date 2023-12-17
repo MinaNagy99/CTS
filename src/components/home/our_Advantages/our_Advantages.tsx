@@ -1,7 +1,7 @@
-import HeaderAndLines from "../../shared/HeaderAndLines";
-import "./our_Advantages.css";
-import { Trans } from "react-i18next";
-import { motion } from "framer-motion";
+import HeaderAndLines from '../../shared/HeaderAndLines';
+import './our_Advantages.css';
+import { Trans } from 'react-i18next';
+import { motion } from 'framer-motion';
 export default function Our_Advantages() {
     //   type ourAdvantages = {
     //     title: string;
@@ -42,7 +42,7 @@ export default function Our_Advantages() {
                                     <div className="col-9 ">
                                         <p className="d-flex titleOfAdvanded justify-content-start">
                                             <Trans i18nKey="Fast design"></Trans>
-                                        </p>{" "}
+                                        </p>{' '}
                                         <p className="d-flex justify-content-start">
                                             <Trans i18nKey="We provide fast designs that are compatible with search engines so that your site appears quickly in search engines and all browsers"></Trans>
                                         </p>
@@ -54,7 +54,7 @@ export default function Our_Advantages() {
                                     </div>
                                     <div className="col-9">
                                         <p className="d-flex titleOfAdvanded justify-content-start">
-                                            {" "}
+                                            {' '}
                                             <Trans i18nKey="Official emails"></Trans>
                                         </p>
                                         <p className="d-flex justify-content-start">
@@ -68,8 +68,8 @@ export default function Our_Advantages() {
                                     </div>
                                     <div className="col-9">
                                         <p className="d-flex titleOfAdvanded justify-content-start">
-                                            {" "}
-                                            <Trans i18nKey="Control your site easily"></Trans>{" "}
+                                            {' '}
+                                            <Trans i18nKey="Control your site easily"></Trans>{' '}
                                         </p>
                                         <p className="d-flex justify-content-start">
                                             <Trans i18nKey="We offer an easy-to-use control panel. Manage your site's contents with ease at any time"></Trans>
@@ -82,8 +82,8 @@ export default function Our_Advantages() {
                                     </div>
                                     <div className="col-9">
                                         <p className="d-flex titleOfAdvanded justify-content-start">
-                                            {" "}
-                                            <Trans i18nKey="Professional design"></Trans>{" "}
+                                            {' '}
+                                            <Trans i18nKey="Professional design"></Trans>{' '}
                                         </p>
                                         <p className="d-flex justify-content-start">
                                             <Trans i18nKey="We are distinguished by simple, exclusive and professional designs with the intersection of different ideas that express you and your identity"></Trans>
@@ -116,8 +116,8 @@ export default function Our_Advantages() {
                                     </div>
                                     <div className="col-9">
                                         <p className="d-flex titleOfAdvanded justify-content-start">
-                                            {" "}
-                                            <Trans i18nKey="multi languages"></Trans>{" "}
+                                            {' '}
+                                            <Trans i18nKey="multi languages"></Trans>{' '}
                                         </p>
                                         <p className="d-flex justify-content-start">
                                             <Trans i18nKey="We offer several language options for your site. It is possible for your site to be displayed in one language or displayed in more than one language, depending on your choice"></Trans>
@@ -130,7 +130,7 @@ export default function Our_Advantages() {
                                     </div>
                                     <div className="col-9">
                                         <p className="d-flex titleOfAdvanded justify-content-start">
-                                            {" "}
+                                            {' '}
                                             <Trans i18nKey="Professional slide show"></Trans>
                                         </p>
                                         <p className="d-flex justify-content-start">
@@ -144,7 +144,7 @@ export default function Our_Advantages() {
                                     </div>
                                     <div className="col-9">
                                         <p className="d-flex titleOfAdvanded justify-content-start">
-                                            {" "}
+                                            {' '}
                                             <Trans i18nKey="Search engine friendly site"></Trans>
                                         </p>
                                         <p className="d-flex justify-content-start">

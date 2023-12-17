@@ -1,12 +1,12 @@
-import "./websiteDetails.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { useContext, useEffect, useState } from "react";
-import Slider from "react-slick";
-import HeaderAndLines from "../shared/HeaderAndLines";
-import { PortfolioContext } from "../context/PortfolioContext";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import Modal from "react-modal";
-import { Trans } from "react-i18next";
+import './websiteDetails.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { useContext, useEffect, useState } from 'react';
+import Slider from 'react-slick';
+import HeaderAndLines from '../shared/HeaderAndLines';
+import { PortfolioContext } from '../context/PortfolioContext';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import Modal from 'react-modal';
+import { Trans } from 'react-i18next';
 
 interface Props {
     className?: string;
@@ -174,7 +174,12 @@ function WesbiteDetails() {
                         <div className="container mt-5 d-flex justify-content-center">
                             <div className="row justify-content-around px-5">
                                 {project?.previewImages?.map((image, index) => (
-                                    <div className={`col-12 p-3 ${project.previewImages?.length==2?'col-md-6  ':'col-lg-4  col-md-6'}`} key={index}>
+                                    <div
+                                        className={`col-12 p-3 ${
+                                            project.previewImages?.length == 2 ? 'col-md-6  ' : 'col-lg-4  col-md-6'
+                                        }`}
+                                        key={index}
+                                    >
                                         <div className="project-image-container">
                                             <img className="" src={image} alt="" onClick={() => handleClick(index)} />
                                         </div>
@@ -187,12 +192,12 @@ function WesbiteDetails() {
                                     className="m-auto slideshow-modal"
                                     style={{
                                         overlay: {
-                                            backgroundColor: "rgba(0, 0, 0, 0.5)",
+                                            backgroundColor: 'rgba(0, 0, 0, 0.5)',
                                         },
                                         content: {
-                                            background: "transparent",
-                                            border: "none",
-                                            position: "relative", // Ensure relative positioning
+                                            background: 'transparent',
+                                            border: 'none',
+                                            position: 'relative', // Ensure relative positioning
                                         },
                                     }}
                                 >
@@ -201,13 +206,13 @@ function WesbiteDetails() {
                                         className="close-button"
                                         onClick={() => setShowCarousel(false)}
                                         style={{
-                                            position: "absolute",
-                                            top: "10px",
-                                            left: "10px",
-                                            background: "none",
-                                            border: "none",
-                                            cursor: "pointer",
-                                            zIndex: "9",
+                                            position: 'absolute',
+                                            top: '10px',
+                                            left: '10px',
+                                            background: 'none',
+                                            border: 'none',
+                                            cursor: 'pointer',
+                                            zIndex: '9',
                                         }}
                                     >
                                         {CloseButton}
