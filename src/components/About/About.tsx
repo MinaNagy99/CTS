@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import './About.css';
 import { Trans } from 'react-i18next';
 import { MyContext } from '../context/LngContext';
@@ -26,7 +26,7 @@ export default function About() {
     return (
         <>
             <Helmet>
-                <title>"CTS | About Us</title>
+                <title>CTS | About Us</title>
                 <meta
                     name="keywords"
                     content="web development, buy Cisco switch CBS350-24 eg-tech,buy Cisco switch , Cisco switch CBS350-24 eg-tech , IT services, custom software development, website design, technology solutions, responsive web design, mobile app development, software consulting, IT support, digital solutions, e-commerce websites, content management systems, SEO, integrated services, web hosting, business identities, Light Current Solutions, Optical Fiber, Cabling Networks, Voice systems, Call Center systems, CCTV systems, online presence, tailored solutions, technological landscape, drive success forward"
