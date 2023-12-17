@@ -64,6 +64,22 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
             link: "https://africa-queen.com/",
         },
         {
+            mainImg: "/assets/websites/el-masria-kitchens/el-masria-kitchens1.webp",
+            title: "El Masria Kitchens",
+            previewImages: [
+                "/assets/websites/el-masria-kitchens/el-masria-kitchens-c1.webp",
+                "/assets/websites/el-masria-kitchens/el-masria-kitchens-c2.webp",
+                "/assets/websites/el-masria-kitchens/el-masria-kitchens-c3.webp",
+            ],
+            carouselImages: [
+                "/assets/websites/el-masria-kitchens/el-masria-kitchens-c1.webp",
+                "/assets/websites/el-masria-kitchens/el-masria-kitchens-c2.webp",
+                "/assets/websites/el-masria-kitchens/el-masria-kitchens-c3.webp",
+            ],
+            logo: "/assets/websites/el-masria-kitchens/logo.webp",
+            link: "https://dev-dahab-kitchens.pantheonsite.io/",
+        },
+        {
             mainImg: "/assets/websites/ebdaa-photos/ebdaa-carasoul1.webp",
             title: "Ebdaa for engineering consultancy",
             previewImages: [
