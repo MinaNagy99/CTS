@@ -1,6 +1,6 @@
-import { Trans } from "react-i18next";
-import "./fixedIcons.css";
-import { useState } from "react";
+import { Trans } from 'react-i18next';
+import './fixedIcons.css';
+import { useState } from 'react';
 
 function FixedIcons() {
     const [showPhoneNumbers, setShowPhoneNumbers] = useState(false);
@@ -20,7 +20,7 @@ function FixedIcons() {
                 <img className="w-100" src="/assets/home/Frame 50.webp" alt="" />
             </div>
             <div
-                className={`containIcon btn-whatsapp whats ${showPhoneNumbers ? "show-phone-numbers" : ""}`}
+                className={`containIcon btn-whatsapp whats ${showPhoneNumbers ? 'show-phone-numbers' : ''}`}
                 onClick={togglePhoneNumbers}
             >
                 {showPhoneNumbers && (
@@ -29,7 +29,7 @@ function FixedIcons() {
                             <div className="eg d-flex align-items-center ">
                                 <img className="" src="assets/fixedIcon/eg.webp" alt="" />
                                 <p className="m-0">
-                                    <Trans i18nKey="egypt"></Trans>{" "}
+                                    <Trans i18nKey="egypt"></Trans>{' '}
                                 </p>
                             </div>
                         </a>
@@ -37,7 +37,7 @@ function FixedIcons() {
                             <div className="sa d-flex align-items-center ">
                                 <img className="" src="assets/fixedIcon/sa.webp" alt="" />
                                 <p className="m-0">
-                                    <Trans i18nKey="saudi"></Trans>{" "}
+                                    <Trans i18nKey="saudi"></Trans>{' '}
                                 </p>
                             </div>
                         </a>

@@ -1,6 +1,6 @@
 .about-section {
     padding: 10% 10% 2% 3%;
-    background-image: url("/assets/about/aboutbackground.webp");
+    background-image: url('/assets/about/aboutbackground.webp');
     background-size: cover;
     background-repeat: no-repeat;
 }

@@ -19,7 +19,7 @@
     line-height: 200%; /* 40px */
 }
 .online-store-design-bot-section {
-    background: url("/assets/onlineStoreDesignImages/store-bg.webp");
+    background: url('/assets/onlineStoreDesignImages/store-bg.webp');
     background-size: contain;
 }
 .online-store-design-bot-section h2 {
@@ -42,7 +42,7 @@
     line-height: 150%; /* 24px */
 }
 .bg-sec4 {
-    background-image: url(./assets/services/mobile/bg-sec4.webp);
+    background-image: url(/assets/services/mobile/bg-sec4.webp);
 }
 @media (max-width: 768px) {
     #sec4 .text-sec4 {

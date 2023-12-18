@@ -1,14 +1,15 @@
-import { Trans } from "react-i18next";
-import HeaderAndLines from "../../shared/HeaderAndLines";
-import TopSecServices from "../Top-sec-Service/TopSecServices";
-import "./WebHosting.css";
-import { useContext } from "react";
-import { MyContext } from "../../context/LngContext";
-import { useNavigate } from "react-router-dom";
+import { Trans } from 'react-i18next';
+import HeaderAndLines from '../../shared/HeaderAndLines';
+import TopSecServices from '../Top-sec-Service/TopSecServices';
+import './WebHosting.css';
+import { useContext } from 'react';
+import { MyContext } from '../../context/LngContext';
+import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 export default function WebHosting() {
     const navigate = useNavigate();
     const handelNavigate = () => {
-        navigate("/contact-us", { state: { id: 1, name: "hosting" } });
+        navigate('/contact-us', { state: { id: 1, name: 'hosting' } });
     };
     const { currentLng } = useContext(MyContext);
     type arrayOfAdvHosting = {
@@ -88,11 +89,31 @@ export default function WebHosting() {
     ];
     return (
         <>
+            <Helmet>
+                <title>Web hosting</title>
+                <meta
+                    name="keywords"
+                    content="web development, buy Cisco switch CBS350-24 eg-tech,buy Cisco switch , Cisco switch CBS350-24 eg-tech , IT services, custom software development, website design, technology solutions, responsive web design, mobile app development, software consulting, IT support, digital solutions, e-commerce websites, content management systems, SEO, integrated services, web hosting, business identities, Light Current Solutions, Optical Fiber, Cabling Networks, Voice systems, Call Center systems, CCTV systems, online presence, tailored solutions, technological landscape, drive success forward"
+                />
+                <meta name="author" content="Core Technology Solutions" />
+                <meta
+                    name="description"
+                    content="Welcome to Core Technology Solutions, the leading provider of comprehensive web development and IT services. With a dedicated team of experts, we specialize in delivering cutting-edge solutions tailored to your unique business needs. From custom software development and innovative website designs to responsive user interfaces and mobile app development, we offer a full spectrum of technology services. Our seasoned consultants provide strategic IT support and guidance, ensuring your digital solutions are aligned with your business goals. Explore how we can enhance your online presence and streamline your operations. Partner with us for unmatched expertise in e-commerce websites, content management systems, and search engine optimization (SEO). Join hands with Core Technology Solutions to embark on a journey of digital excellence and success."
+                />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <meta property="og:title" content="Core Technology Solutions" />
+                <meta
+                    property="og:description"
+                    content="Welcome to Core Technology Solutions, the leading provider of comprehensive web development and IT services. With a dedicated team of experts."
+                />
+                <meta property="og:image" content="https://www.cts-egy.com/assets/logonavbar.svg" />
+                <meta property="og:url" content="https://cts-egy.com/services/web-hosting" />
+            </Helmet>
             <div id="webhosting">
                 <TopSecServices
                     title="The best web hosting and email services"
                     desc="Website hosting is one of the things that many business owners who want to start their business on the Internet are interested in, and it is one of the most important things that must be obtained when creating your website or online store."
-                    img="./assets/services/hosting/bg-webhosting.webp"
+                    img="/assets/services/hosting/bg-webhosting.webp"
                 ></TopSecServices>
                 <HeaderAndLines header={<Trans i18nKey="Hosting features from Core Technology Solutions"></Trans>} />
                 <div id="section2" className="container  mt-5 ">
@@ -117,13 +138,13 @@ export default function WebHosting() {
                             />
                         </div>
                     </div>
-                    <div className={`${currentLng == "ar" ? "bg-section3AR" : "bg-section3EN"}`}>
+                    <div className={`${currentLng == 'ar' ? 'bg-section3AR' : 'bg-section3EN'}`}>
                         {arrayOfWhy.map((item, index) => {
                             return (
                                 <p key={index}>
                                     <span>
-                                        <img src="./assets/services/hosting/star.webp" alt="" />
-                                    </span>{" "}
+                                        <img src="/assets/services/hosting/star.webp" alt="" />
+                                    </span>{' '}
                                     {item.text}
                                 </p>
                             );
@@ -143,7 +164,7 @@ export default function WebHosting() {
                         <button className="btn text-center btn-top-section mt-3">
                             <Trans i18nKey="Request for a quote"></Trans>
                         </button>
-                    </a>{" "}
+                    </a>{' '}
                 </div>
             </div>
         </>

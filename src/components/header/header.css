@@ -44,7 +44,7 @@
 }
 
 .navbar-nav a.nav-link::after {
-    content: "";
+    content: '';
     display: block;
     width: 0; /* Initial width is 0, it will expand on hover */
     height: 4px;
@@ -76,19 +76,19 @@
     width: 100%;
 }
 
-.dropdown-item.active{
+.dropdown-item.active {
     background-color: rgba(121, 155, 185, 0.8) !important;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-hr{
-    margin: 2px 0px   !important;
+hr {
+    margin: 2px 0px !important;
 }
-.navbar .dropdown-menu a{
+.navbar .dropdown-menu a {
     color: white !important;
 }
-.navbar .dropdown-menu a:hover{
+.navbar .dropdown-menu a:hover {
     color: rgb(10, 10, 10) !important;
 }

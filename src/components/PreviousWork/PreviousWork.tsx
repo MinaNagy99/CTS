@@ -1,17 +1,18 @@
 // PreviousWork.tsx
-import "./PreviousWork.css";
-import ItemProject from "./itemProject/ItemProject";
-import { Trans, useTranslation } from "react-i18next";
-import { useEffect, useContext } from "react";
-import { PortfolioContext } from "../context/PortfolioContext";
-import { Link } from "react-router-dom";
+import './PreviousWork.css';
+import ItemProject from './itemProject/ItemProject';
+import { Trans, useTranslation } from 'react-i18next';
+import { useEffect, useContext } from 'react';
+import { PortfolioContext } from '../context/PortfolioContext';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export default function PreviousWork() {
     const data: any = useContext(PortfolioContext);
 
     const { t } = useTranslation();
     useEffect(() => {
-        document.title = t("CTS | Portfolio");
+        document.title = t('CTS | Portfolio');
     });
 
     //     {
@@ -114,6 +115,26 @@ export default function PreviousWork() {
 
     return (
         <>
+            <Helmet>
+                <title>CTS | Portfolio</title>
+                <meta
+                    name="keywords"
+                    content="web development, buy Cisco switch CBS350-24 eg-tech,buy Cisco switch , Cisco switch CBS350-24 eg-tech , IT services, custom software development, website design, technology solutions, responsive web design, mobile app development, software consulting, IT support, digital solutions, e-commerce websites, content management systems, SEO, integrated services, web hosting, business identities, Light Current Solutions, Optical Fiber, Cabling Networks, Voice systems, Call Center systems, CCTV systems, online presence, tailored solutions, technological landscape, drive success forward"
+                />
+                <meta name="author" content="Core Technology Solutions" />
+                <meta
+                    name="description"
+                    content="Welcome to Core Technology Solutions, the leading provider of comprehensive web development and IT services. With a dedicated team of experts, we specialize in delivering cutting-edge solutions tailored to your unique business needs. From custom software development and innovative website designs to responsive user interfaces and mobile app development, we offer a full spectrum of technology services. Our seasoned consultants provide strategic IT support and guidance, ensuring your digital solutions are aligned with your business goals. Explore how we can enhance your online presence and streamline your operations. Partner with us for unmatched expertise in e-commerce websites, content management systems, and search engine optimization (SEO). Join hands with Core Technology Solutions to embark on a journey of digital excellence and success."
+                />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <meta property="og:title" content="Core Technology Solutions" />
+                <meta
+                    property="og:description"
+                    content="Welcome to Core Technology Solutions, the leading provider of comprehensive web development and IT services. With a dedicated team of experts."
+                />
+                <meta property="og:image" content="https://www.cts-egy.com/assets/logonavbar.svg" />
+                <meta property="og:url" content="https://cts-egy.com/portfolio" />
+            </Helmet>
             <section className="first-section p-4 d-flex flex-column justify-content-center align-items-start ">
                 <div className="text-section d-flex flex-column align-items-center justify-content-center">
                     <p className="my-4">
@@ -130,7 +151,7 @@ export default function PreviousWork() {
                     {data.map((item: any, index: number) =>
                         // Check if the item has a link property
                         // If it does, render a Link, otherwise render a div
-                        "link" in item ? (
+                        'link' in item ? (
                             <Link
                                 className="col-lg-4 col-sm-6 col-12 p-2"
                                 key={index}

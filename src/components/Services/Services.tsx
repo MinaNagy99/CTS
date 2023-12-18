@@ -1,19 +1,40 @@
-import "./Services.css";
-import { Trans } from "react-i18next";
-import HeaderAndLines from "../shared/HeaderAndLines";
-import { useContext } from "react";
-import { MyContext } from "../context/LngContext";
+import './Services.css';
+import { Trans } from 'react-i18next';
+import HeaderAndLines from '../shared/HeaderAndLines';
+import { useContext } from 'react';
+import { MyContext } from '../context/LngContext';
+import { Helmet } from 'react-helmet-async';
 
 export default function Services() {
     const { currentLng } = useContext(MyContext);
     console.log(currentLng);
     return (
         <>
+            <Helmet>
+                <title>CTS | Our services</title>
+                <meta
+                    name="keywords"
+                    content="web development, buy Cisco switch CBS350-24 eg-tech,buy Cisco switch , Cisco switch CBS350-24 eg-tech , IT services, custom software development, website design, technology solutions, responsive web design, mobile app development, software consulting, IT support, digital solutions, e-commerce websites, content management systems, SEO, integrated services, web hosting, business identities, Light Current Solutions, Optical Fiber, Cabling Networks, Voice systems, Call Center systems, CCTV systems, online presence, tailored solutions, technological landscape, drive success forward"
+                />
+                <meta name="author" content="Core Technology Solutions" />
+                <meta
+                    name="description"
+                    content="Welcome to Core Technology Solutions, the leading provider of comprehensive web development and IT services. With a dedicated team of experts, we specialize in delivering cutting-edge solutions tailored to your unique business needs. From custom software development and innovative website designs to responsive user interfaces and mobile app development, we offer a full spectrum of technology services. Our seasoned consultants provide strategic IT support and guidance, ensuring your digital solutions are aligned with your business goals. Explore how we can enhance your online presence and streamline your operations. Partner with us for unmatched expertise in e-commerce websites, content management systems, and search engine optimization (SEO). Join hands with Core Technology Solutions to embark on a journey of digital excellence and success."
+                />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <meta property="og:title" content="Core Technology Solutions" />
+                <meta
+                    property="og:description"
+                    content="Welcome to Core Technology Solutions, the leading provider of comprehensive web development and IT services. With a dedicated team of experts."
+                />
+                <meta property="og:image" content="https://www.cts-egy.com/assets/logonavbar.svg" />
+                <meta property="og:url" content="https://www.cts-egy.com" />
+            </Helmet>
             <div className="container-fluid ">
                 <div className="row bg-services  ">
                     <div className="col-12 col-md-7    d-sm-flex justify-content-center flex-column p-0  pt-lg-0">
                         <div className="row ">
-                            <div className={`col-2 pt-4 p-0  ${currentLng == "ar" ? "text-start" : "text-end"}   `}>
+                            <div className={`col-2 pt-4 p-0  ${currentLng == 'ar' ? 'text-start' : 'text-end'}   `}>
                                 <img src="/assets/services/star-icon.webp" alt="" />
                             </div>
                             <div className="col-10">
@@ -34,7 +55,7 @@ export default function Services() {
             </div>
             <div
                 className={`container p-5 mb-5 rtl ${
-                    currentLng == "ar" ? "bg-img-servicesWithAR" : "servicesWithEN"
+                    currentLng == 'ar' ? 'bg-img-servicesWithAR' : 'servicesWithEN'
                 } bg-img-services`}
             >
                 <div className="row mt-3">
@@ -42,7 +63,7 @@ export default function Services() {
                         <div className="d-flex">
                             <img src="/assets/services/pin.webp" alt="" />
                             <p className="text-services px-3 ">
-                                {" "}
+                                {' '}
                                 <Trans i18nKey="Free domain for one year."></Trans>
                             </p>
                         </div>
@@ -119,49 +140,49 @@ export default function Services() {
                 <div className="container  my-5">
                     <div className="row mt-5 gy-5">
                         <div className=" col-sm-6 col-lg-3  text-center ">
-                            <img className="text-center m-auto  " src="./assets/services/features1.webp" alt="" />
+                            <img className="text-center m-auto  " src="/assets/services/features1.webp" alt="" />
                             <p className="text-services2">
                                 <Trans i18nKey="speed"></Trans>
                             </p>
                         </div>
                         <div className=" col-sm-6 col-lg-3  text-center ">
-                            <img className="text-center m-auto  " src="./assets/services/features2.webp" alt="" />
+                            <img className="text-center m-auto  " src="/assets/services/features2.webp" alt="" />
                             <p className="text-services2">
                                 <Trans i18nKey="design"></Trans>
                             </p>
                         </div>
                         <div className=" col-sm-6 col-lg-3  text-center ">
-                            <img className="text-center m-auto  " src="./assets/services/features3.webp" alt="" />
+                            <img className="text-center m-auto  " src="/assets/services/features3.webp" alt="" />
                             <p className="text-services2">
                                 <Trans i18nKey="Safety"></Trans>
                             </p>
                         </div>
                         <div className=" col-sm-6 col-lg-3  text-center ">
-                            <img className="text-center m-auto  " src="./assets/services/features4.webp" alt="" />
+                            <img className="text-center m-auto  " src="/assets/services/features4.webp" alt="" />
                             <p className="text-services2">
                                 <Trans i18nKey="Compatible with search engines"></Trans>
                             </p>
                         </div>
                         <div className=" col-sm-6 col-lg-3  text-center ">
-                            <img className="text-center m-auto  " src="./assets/services/features4.webp" alt="" />
+                            <img className="text-center m-auto  " src="/assets/services/features4.webp" alt="" />
                             <p className="text-services2">
                                 <Trans i18nKey="cost"></Trans>
                             </p>
                         </div>
                         <div className=" col-sm-6 col-lg-3  text-center ">
-                            <img className="text-center m-auto  " src="./assets/services/features5.webp" alt="" />
+                            <img className="text-center m-auto  " src="/assets/services/features5.webp" alt="" />
                             <p className="text-services2">
                                 <Trans i18nKey="Ease of modification"></Trans>
                             </p>
                         </div>
                         <div className=" col-sm-6 col-lg-3  text-center ">
-                            <img className="text-center m-auto  " src="./assets/services/features6.webp" alt="" />
+                            <img className="text-center m-auto  " src="/assets/services/features6.webp" alt="" />
                             <p className="text-services2">
                                 <Trans i18nKey="Easy control"></Trans>
                             </p>
                         </div>
                         <div className=" col-sm-6 col-lg-3  text-center ">
-                            <img className="text-center m-auto  " src="./assets/services/features7.webp" alt="" />
+                            <img className="text-center m-auto  " src="/assets/services/features7.webp" alt="" />
                             <p className="text-services2">
                                 <Trans i18nKey="execution time"></Trans>
                             </p>

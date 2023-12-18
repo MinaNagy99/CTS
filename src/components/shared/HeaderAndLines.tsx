@@ -1,4 +1,4 @@
-import "./HeaderAndLines.css";
+import './HeaderAndLines.css';
 
 interface Props {
     header: React.ReactNode | string;

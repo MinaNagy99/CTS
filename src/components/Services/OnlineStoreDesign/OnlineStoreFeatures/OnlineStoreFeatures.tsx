@@ -1,5 +1,5 @@
-import { Trans } from "react-i18next";
-import "./onlineStoreFeatures.css";
+import { Trans } from 'react-i18next';
+import './onlineStoreFeatures.css';
 
 interface OnlineStoreFeaturesProps {
     imageOrSvg: JSX.Element | string;
@@ -12,7 +12,7 @@ export default function OnlineStoreFeatures({ imageOrSvg, title, text }: OnlineS
         <>
             <div className="d-flex align-items-center">
                 <div className="online-ftore-features-svg">
-                    {typeof imageOrSvg === "string" ? <img src={imageOrSvg} alt="" /> : imageOrSvg}
+                    {typeof imageOrSvg === 'string' ? <img src={imageOrSvg} alt="" /> : imageOrSvg}
                 </div>
                 <div>
                     <h2 className="online-ftore-features-title">

@@ -42,14 +42,14 @@ form {
 /* Your CSS file or inline styles */
 .name-input-with-icon {
     box-sizing: border-box;
-    background: url("/assets/svg/name.webp") no-repeat center right 15px;
+    background: url('/assets/svg/name.webp') no-repeat center right 15px;
 
     background-size: 18px; /* Adjust as needed based on your icon size */
     padding-right: 45px !important;
 }
 .email-input-with-icon {
     box-sizing: border-box;
-    background: url("/assets/svg/email.webp") no-repeat center right 15px;
+    background: url('/assets/svg/email.webp') no-repeat center right 15px;
     background-size: 18px; /* Adjust as needed based on your icon size */
     padding-right: 45px !important;
 }

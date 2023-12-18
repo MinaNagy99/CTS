@@ -1,7 +1,7 @@
-import "./footer.css";
-import { Trans } from "react-i18next";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
+import './footer.css';
+import { Trans } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function Footer() {
     return (
         <footer>
@@ -84,8 +84,8 @@ function Footer() {
                     </div>
                     <div className="col-md-4 col-12 px-0">
                         <h5 className="mb-2  ">
-                            {" "}
-                            <Trans i18nKey="Contact us"></Trans>{" "}
+                            {' '}
+                            <Trans i18nKey="Contact us"></Trans>{' '}
                         </h5>
                         <div className="contact-lines d-flex align-items-center">
                             <div className="footer-icon-container mx-2   d-inline-flex justify-content-center align-items-center">

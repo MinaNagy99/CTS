@@ -1,9 +1,9 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./partnersSlider.css";
-import HeaderAndLines from "../../shared/HeaderAndLines";
-import { Trans } from "react-i18next";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './partnersSlider.css';
+import HeaderAndLines from '../../shared/HeaderAndLines';
+import { Trans } from 'react-i18next';
 
 interface Props {
     className?: string;
@@ -42,44 +42,44 @@ function PrevArrow(props: Props) {
 
 function PartnersSlider() {
     const partnersLogos = [
-        "/assets/parteners/google.webp",
-        "/assets/parteners/wordpress.webp",
-        "/assets/parteners/hostinger.webp",
-        "/assets/parteners/goDaddy.webp",
-        "/assets/parteners/digitalClean.webp",
-        "/assets/parteners/cPanel.webp",
-        "/assets/parteners/contabo.webp",
-        "/assets/parteners/blueHost.webp",
-        "/assets/parteners/alhua-logo.webp",
-        "/assets/parteners/asus-logo.webp",
-        "/assets/parteners/axis-logo.webp",
-        "/assets/parteners/bosch.webp",
-        "/assets/parteners/cisco-logo.webp",
-        "/assets/parteners/d-link.webp",
-        "/assets/parteners/dell-logo.webp",
-        "/assets/parteners/hikvision.webp",
-        "/assets/parteners/hp-logo.webp",
-        "/assets/parteners/huawei-logo.webp",
-        "/assets/parteners/Kaspersky-Logo.webp",
-        "/assets/parteners/lenovo-logo.webp",
-        "/assets/parteners/leviton.webp",
-        "/assets/parteners/Microsoft-logo.webp",
-        "/assets/parteners/panduit-vector-logo.webp",
-        "/assets/parteners/prem line.webp",
-        "/assets/parteners/QNAP-logo.webp",
-        "/assets/parteners/sopho-logo.webp",
-        "/assets/parteners/Syno-logo.webp",
-        "/assets/parteners/yealink-logo.webp",
+        '/assets/parteners/google.webp',
+        '/assets/parteners/wordpress.webp',
+        '/assets/parteners/hostinger.webp',
+        '/assets/parteners/goDaddy.webp',
+        '/assets/parteners/digitalClean.webp',
+        '/assets/parteners/cPanel.webp',
+        '/assets/parteners/contabo.webp',
+        '/assets/parteners/blueHost.webp',
+        '/assets/parteners/alhua-logo.webp',
+        '/assets/parteners/asus-logo.webp',
+        '/assets/parteners/axis-logo.webp',
+        '/assets/parteners/bosch.webp',
+        '/assets/parteners/cisco-logo.webp',
+        '/assets/parteners/d-link.webp',
+        '/assets/parteners/dell-logo.webp',
+        '/assets/parteners/hikvision.webp',
+        '/assets/parteners/hp-logo.webp',
+        '/assets/parteners/huawei-logo.webp',
+        '/assets/parteners/Kaspersky-Logo.webp',
+        '/assets/parteners/lenovo-logo.webp',
+        '/assets/parteners/leviton.webp',
+        '/assets/parteners/Microsoft-logo.webp',
+        '/assets/parteners/panduit-vector-logo.webp',
+        '/assets/parteners/prem line.webp',
+        '/assets/parteners/QNAP-logo.webp',
+        '/assets/parteners/sopho-logo.webp',
+        '/assets/parteners/Syno-logo.webp',
+        '/assets/parteners/yealink-logo.webp',
     ];
 
     const settings = {
         autoplay: true,
         speed: 300,
         autoplaySpeed: 2000,
-        cssEase: "linear",
-        className: "center",
+        cssEase: 'linear',
+        className: 'center',
         infinite: true,
-        centerPadding: "60px",
+        centerPadding: '60px',
         slidesToShow: 5,
         swipeToSlide: true,
         prevArrow: <PrevArrow />,

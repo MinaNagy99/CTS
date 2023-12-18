@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom";
-import HeaderAndLines from "../../shared/HeaderAndLines";
-import "./ourServices.css";
-import { Trans } from "react-i18next";
-import { motion } from "framer-motion";
+import { NavLink } from 'react-router-dom';
+import HeaderAndLines from '../../shared/HeaderAndLines';
+import './ourServices.css';
+import { Trans } from 'react-i18next';
+import { motion } from 'framer-motion';
 function OurServices() {
     return (
         <section>
@@ -17,7 +17,7 @@ function OurServices() {
                         className="col-sm-4  col-6 my-3 "
                     >
                         <NavLink
-                            className={"text-decoration-none"}
+                            className={'text-decoration-none'}
                             to="/services/web-design"
                             onClick={() => {
                                 window.scrollTo({ top: 0 });
@@ -38,7 +38,7 @@ function OurServices() {
                         className="col-sm-4 col-6 my-3"
                     >
                         <NavLink
-                            className={"text-decoration-none"}
+                            className={'text-decoration-none'}
                             to="/services/online-store-design"
                             onClick={() => {
                                 window.scrollTo({ top: 0 });
@@ -58,7 +58,7 @@ function OurServices() {
                         className="col-sm-4 col-6 my-3"
                     >
                         <NavLink
-                            className={"text-decoration-none"}
+                            className={'text-decoration-none'}
                             to="/services/mobile-app"
                             onClick={() => {
                                 window.scrollTo({ top: 0 });
@@ -70,7 +70,13 @@ function OurServices() {
                             </p>
                         </NavLink>
                     </motion.div>
-                    <motion.div initial={{opacity:0}}  whileHover={{scale:1.1 ,transition:{duration:1}}} whileInView={{opacity:1}} transition={{duration:2.5}} className="col-sm-4 col-6 my-3">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileHover={{ scale: 1.1, transition: { duration: 1 } }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 2.5 }}
+                        className="col-sm-4 col-6 my-3"
+                    >
                         <NavLink
                             to="services/web-hosting"
                             onClick={() => {
@@ -83,14 +89,20 @@ function OurServices() {
                             <Trans i18nKey="Website hosting"></Trans>
                         </p>
                     </motion.div>
-                    <motion.div initial={{opacity:0}}  whileHover={{scale:1.1 ,transition:{duration:1}}} whileInView={{opacity:1}} transition={{duration:3}} className="col-sm-4 col-6 my-3">
-                    <NavLink
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileHover={{ scale: 1.1, transition: { duration: 1 } }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 3 }}
+                        className="col-sm-4 col-6 my-3"
+                    >
+                        <NavLink
                             to="services/wordpress"
                             onClick={() => {
                                 window.scrollTo({ top: 0 });
                             }}
                         >
-                        <div className="imgService5  imgService p-5"></div>
+                            <div className="imgService5  imgService p-5"></div>
                         </NavLink>
                         <p className="serviceName">
                             <Trans i18nKey="WordPress programming and website design"></Trans>
@@ -104,7 +116,7 @@ function OurServices() {
                         className="col-sm-4 col-6 my-3"
                     >
                         <NavLink
-                            className={"text-decoration-none"}
+                            className={'text-decoration-none'}
                             to="/services/seo"
                             onClick={() => {
                                 window.scrollTo({ top: 0 });

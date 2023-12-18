@@ -1,18 +1,18 @@
-import { useContext, useEffect, useRef, useState } from "react";
-import { useLocation, NavLink } from "react-router-dom";
-import "./header.css";
-import i18next from "i18next";
-import { Trans } from "react-i18next";
-import { MyContext } from "../context/LngContext";
+import { useContext, useEffect, useRef, useState } from 'react';
+import { useLocation, NavLink } from 'react-router-dom';
+import './header.css';
+import i18next from 'i18next';
+import { Trans } from 'react-i18next';
+import { MyContext } from '../context/LngContext';
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [isNavbarCollapsed, setNavbarCollapsed] = useState(false);
     const [nextLang, setnextLang] = useState({
-        languageName: "English",
-        imgFlag: "/assets//home/american-flag.webp",
+        languageName: 'English',
+        imgFlag: '/assets//home/american-flag.webp',
     });
-    const [currentLang, setCurrentLand] = useState("");
+    const [currentLang, setCurrentLand] = useState('');
     const { setcurrentLng } = useContext(MyContext);
 
     const location = useLocation();
@@ -23,15 +23,15 @@ function Header() {
             setScrolled(isScrolled);
         };
 
-        document.addEventListener("scroll", handleScroll);
+        document.addEventListener('scroll', handleScroll);
 
         return () => {
-            document.removeEventListener("scroll", handleScroll);
+            document.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     useEffect(() => {
-        setCurrentLand(localStorage.getItem("lng") || "ar");
+        setCurrentLand(localStorage.getItem('lng') || 'ar');
     }, [nextLang]);
 
     const handleNavbarToggle = () => {
@@ -39,21 +39,21 @@ function Header() {
     };
 
     const handleLangToggle = () => {
-        if (currentLang === "en") {
-            localStorage.setItem("lng", "ar");
-            setcurrentLng("ar");
-            i18next.changeLanguage("ar");
+        if (currentLang === 'en') {
+            localStorage.setItem('lng', 'ar');
+            setcurrentLng('ar');
+            i18next.changeLanguage('ar');
             setnextLang({
-                languageName: "English",
-                imgFlag: "/assets//home/american-flag.webp",
+                languageName: 'English',
+                imgFlag: '/assets//home/american-flag.webp',
             });
         } else {
-            localStorage.setItem("lng", "en");
-            setcurrentLng("en");
-            i18next.changeLanguage("en");
+            localStorage.setItem('lng', 'en');
+            setcurrentLng('en');
+            i18next.changeLanguage('en');
             setnextLang({
-                languageName: "Arabic",
-                imgFlag: "/assets/home/arabic-flag.jpg",
+                languageName: 'Arabic',
+                imgFlag: '/assets/home/arabic-flag.jpg',
             });
         }
     };
@@ -71,8 +71,8 @@ function Header() {
     return (
         <>
             <nav
-                className={`navbar px-4  navbar-expand-lg ${scrolled ? "navbar-scrolled" : ""} ${
-                    isNavbarCollapsed ? "m-0" : ""
+                className={`navbar px-4  navbar-expand-lg ${scrolled ? 'navbar-scrolled' : ''} ${
+                    isNavbarCollapsed ? 'm-0' : ''
                 }`}
             >
                 <div className="container-fluid">
@@ -115,7 +115,7 @@ function Header() {
                                     window.scrollTo({ top: 0 });
                                     fireEvent();
                                 }}
-                                className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
+                                className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
                                 to="/"
                             >
                                 <Trans i18nKey="Home"></Trans>
@@ -126,7 +126,7 @@ function Header() {
                                     window.scrollTo({ top: 0 });
                                     fireEvent();
                                 }}
-                                className={`nav-link ${location.pathname === "/about" ? "active" : ""}`}
+                                className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
                                 to="/about"
                             >
                                 <Trans i18nKey="About us"></Trans>
@@ -139,7 +139,7 @@ function Header() {
                                     <li className="m-0 p-0">
                                         <NavLink
                                             className={`dropdown-item  ${
-                                                location.pathname.startsWith("/services/web-design") ? "active" : ""
+                                                location.pathname.startsWith('/services/web-design') ? 'active' : ''
                                             }`}
                                             onClick={() => {
                                                 window.scrollTo({ top: 0 });
@@ -147,14 +147,14 @@ function Header() {
                                             }}
                                             to="/services/web-design"
                                         >
-                                            <Trans i18nKey="Web design"></Trans>{" "}
+                                            <Trans i18nKey="Web design"></Trans>{' '}
                                         </NavLink>
                                     </li>
                                     <hr />
                                     <li className="m-0 p-0">
                                         <NavLink
                                             className={`dropdown-item ${
-                                                location.pathname.startsWith("/services/mobile-app") ? "active" : ""
+                                                location.pathname.startsWith('/services/mobile-app') ? 'active' : ''
                                             }`}
                                             onClick={() => {
                                                 window.scrollTo({ top: 0 });
@@ -162,14 +162,14 @@ function Header() {
                                             }}
                                             to="/services/mobile-app"
                                         >
-                                            <Trans i18nKey="Mobile App"></Trans>{" "}
+                                            <Trans i18nKey="Mobile App"></Trans>{' '}
                                         </NavLink>
                                     </li>
                                     <hr />
                                     <li className="m-0 p-0">
                                         <NavLink
                                             className={`dropdown-item ${
-                                                location.pathname.startsWith("/services/online-store-design") ? "active" : ""
+                                                location.pathname.startsWith('/services/online-store-design') ? 'active' : ''
                                             }`}
                                             onClick={() => {
                                                 window.scrollTo({ top: 0 });
@@ -177,14 +177,14 @@ function Header() {
                                             }}
                                             to="/services/online-store-design"
                                         >
-                                            <Trans i18nKey="Online store design"></Trans>{" "}
+                                            <Trans i18nKey="Online store design"></Trans>{' '}
                                         </NavLink>
                                     </li>
                                     <hr />
                                     <li className="m-0 p-0">
                                         <NavLink
                                             className={`dropdown-item ${
-                                                location.pathname.startsWith("/services/seo") ? "active" : ""
+                                                location.pathname.startsWith('/services/seo') ? 'active' : ''
                                             }`}
                                             onClick={() => {
                                                 window.scrollTo({ top: 0 });
@@ -192,14 +192,14 @@ function Header() {
                                             }}
                                             to="/services/seo"
                                         >
-                                            <Trans i18nKey="SEO"></Trans>{" "}
+                                            <Trans i18nKey="SEO"></Trans>{' '}
                                         </NavLink>
                                     </li>
                                     <hr />
                                     <li className="m-0 p-0">
                                         <NavLink
                                             className={`dropdown-item ${
-                                                location.pathname.startsWith("/services/web-hosting") ? "active" : ""
+                                                location.pathname.startsWith('/services/web-hosting') ? 'active' : ''
                                             }`}
                                             onClick={() => {
                                                 window.scrollTo({ top: 0 });
@@ -207,14 +207,14 @@ function Header() {
                                             }}
                                             to="/services/web-hosting"
                                         >
-                                            <Trans i18nKey="Web Hosting"></Trans>{" "}
+                                            <Trans i18nKey="Web Hosting"></Trans>{' '}
                                         </NavLink>
                                     </li>
                                     <hr />
                                     <li className="m-0 p-0">
                                         <NavLink
                                             className={`dropdown-item ${
-                                                location.pathname.startsWith("/services/wordpress") ? "active" : ""
+                                                location.pathname.startsWith('/services/wordpress') ? 'active' : ''
                                             }`}
                                             onClick={() => {
                                                 window.scrollTo({ top: 0 });
@@ -222,7 +222,7 @@ function Header() {
                                             }}
                                             to="/services/wordpress"
                                         >
-                                            <Trans i18nKey="WordPress"></Trans>{" "}
+                                            <Trans i18nKey="WordPress"></Trans>{' '}
                                         </NavLink>
                                     </li>
                                     <hr />
@@ -234,7 +234,7 @@ function Header() {
                                     window.scrollTo({ top: 0 });
                                     fireEvent();
                                 }}
-                                className={`nav-link ${location.pathname === "/portfolio" ? "active" : ""}`}
+                                className={`nav-link ${location.pathname === '/portfolio' ? 'active' : ''}`}
                                 to="/portfolio"
                             >
                                 <Trans i18nKey="Portfolio"></Trans>
@@ -244,7 +244,7 @@ function Header() {
                                     window.scrollTo({ top: 0 });
                                     fireEvent();
                                 }}
-                                className={`nav-link ${location.pathname === "/contact-us" ? "active" : ""}`}
+                                className={`nav-link ${location.pathname === '/contact-us' ? 'active' : ''}`}
                                 to="/contact-us"
                             >
                                 <Trans i18nKey="Contact us"></Trans>
