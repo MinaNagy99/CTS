@@ -42,7 +42,7 @@ function ContactUs() {
     const handleSubmit = async (values: FormValues) => {
         setSubmitting(true);
         try {
-            const response = await fetch('http://localhost/backend/', {
+            const response = await fetch('server/index.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

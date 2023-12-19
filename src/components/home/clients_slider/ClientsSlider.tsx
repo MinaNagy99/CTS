@@ -59,6 +59,10 @@ function ClientsSlider() {
         '/assets/clients/semak-logo.webp',
         '/assets/clients/sews-eg-logo.webp',
         '/assets/clients/solera-logo.webp',
+        '/assets/clients/mannaie-logo.webp',
+        '/assets/clients/AlmasryaKitchens-logo.webp',
+        '/assets/clients/RamseesFresh-logo.webp',
+        '/assets/clients/AfricaQueen-logo.webp',
     ];
 
     const settings = {

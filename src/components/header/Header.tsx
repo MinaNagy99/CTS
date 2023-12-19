@@ -53,7 +53,7 @@ function Header() {
             i18next.changeLanguage('en');
             setnextLang({
                 languageName: 'Arabic',
-                imgFlag: '/assets/home/arabic-flag.jpg',
+                imgFlag: '/assets/home/arabic-flag.webp',
             });
         }
     };
@@ -94,22 +94,6 @@ function Header() {
                     </button>
                     <div className={`collapse navbar-collapse`} id="navbarNavAltMarkup">
                         <div className="navbar-nav w-100 d-flex flex-column  col-lg-5 flex-lg-row justify-content-between align-items-center ">
-                            {/* {navigationLinks.map((link) =>
-                isServicesAndBlogsDisabled && link.to === "/blogs" ? null : (
-                  <NavLink
-                    onClick={() => {
-                      window.scrollTo({ top: 0 });
-                    }}
-                    key={link.to}
-                    className={`nav-link ${
-                      location.pathname === link.to ? "active" : ""
-                    }`}
-                    to={link.to}
-                  >
-                    <Trans i18nKey={link.textKey}></Trans>
-                  </NavLink>
-                )
-              )} */}
                             <NavLink
                                 onClick={() => {
                                     window.scrollTo({ top: 0 });
