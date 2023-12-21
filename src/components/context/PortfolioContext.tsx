@@ -77,7 +77,7 @@ function PortfolioContextProvider(props: PortfolioContextProviderProps) {
                 '/assets/websites/el-masria-kitchens/el-masria-kitchens-c3.webp',
             ],
             logo: '/assets/websites/el-masria-kitchens/logo.webp',
-            link: 'https://dev-dahab-kitchens.pantheonsite.io/',
+            link: 'https://wa-masria-kitchens.com/',
         },
         {
             mainImg: '/assets/websites/ebdaa-photos/ebdaa-carasoul1.webp',
