@@ -20,7 +20,7 @@ export default function Login(): JSX.Element {
     setIsLoading(true);
     try {
       const { data } = await axios.post(
-        "https://cts.onrender.com/user",
+        "http://localhost:3003/user",
         values
       );
 

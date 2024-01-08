@@ -8,6 +8,7 @@ export interface ImageType {
 
 export interface WebsiteType {
   title: string;
+  titleInArabic: string;
   link?: string;
   previewImgs?: FileList;
   logo?: FileList;
@@ -17,6 +18,7 @@ export interface WebsiteType {
 
 export type SiteType = {
   title: string;
+  titleInArabic: string;
   link: string;
   previewImgs?: ImageType[];
   mainImg: ImageType;
@@ -35,6 +37,7 @@ export interface PortfolioContextValue {
   IsLoading: boolean;
   getSiteById: (id: string) => SiteType | undefined;
   updateWebsite: (id: string, formData: FormData) => Promise<void>;
+  getData: () => Promise<void>;
 }
 
 export const PortfolioContext = createContext<PortfolioContextValue | null>(
@@ -48,8 +51,18 @@ const WebsiteProvider: React.FC<PropsOfProvider> = ({ children }) => {
   const token = localStorage.getItem("token");
 
   const getData = async () => {
-    const { data } = await axios.get("https://cts.onrender.com/website");
-    setWebsites(data.data);
+    try {
+      const { data } = await axios.get("http://localhost:3003/website");
+      setWebsites(data.data);
+      return data.data;
+    } catch (error) {
+      if ((error as AxiosError)?.response) {
+        const axiosError = error as AxiosError;
+        console.error("Response Data:", axiosError.response?.data);
+        console.error("Response Status:", axiosError.response?.status);
+        console.error("Response Headers:", axiosError.response?.headers);
+      }
+    }
   };
 
   const getSiteById = (id: string) => {
@@ -58,9 +71,10 @@ const WebsiteProvider: React.FC<PropsOfProvider> = ({ children }) => {
 
   const createWebsite = async (data: WebsiteType) => {
     setIsLoading(true);
-    const { title, link, logo, mainImg, previewImgs } = data;
+    const { title, titleInArabic, link, logo, mainImg, previewImgs } = data;
     const formData = new FormData();
     formData.append("title", title);
+    formData.append("titleInArabic", titleInArabic);
     if (link) {
       formData.append("link", link);
     }
@@ -78,8 +92,10 @@ const WebsiteProvider: React.FC<PropsOfProvider> = ({ children }) => {
     }
 
     try {
+      console.log("add website from frontend");
+
       const { data } = await axios.post(
-        "https://cts.onrender.com/website",
+        "http://localhost:3003/website",
         formData,
         {
           headers: {
@@ -103,19 +119,27 @@ const WebsiteProvider: React.FC<PropsOfProvider> = ({ children }) => {
   };
 
   const handleDelete = async (id: string) => {
-    await axios.delete(`https://cts.onrender.com/website/${id}`);
+    if (token) {
+      console.log(token + " deleted");
+      
+      await axios.delete(`http://localhost:3003/website/${id}`, {
+        headers: { token },
+      });
 
-    // Wait for the state updateWebsite to complete
-    await setWebsites((prevWebsites) =>
-      prevWebsites.filter((website) => website._id !== id)
-    );
-    // Fetch updateWebsited data
-    await getData();
+      // Wait for the state updateWebsite to complete
+      await setWebsites((prevWebsites) =>
+        prevWebsites.filter((website) => website._id !== id)
+      );
+      // Fetch updateWebsited data
+      await getData();
+    }
   };
 
-  const updateWebsite = async (id :string, formData: FormData) => {
+  const updateWebsite = async (id: string, formData: FormData) => {
     try {
-      await axios.put(`https://cts.onrender.com/website/${id}`, formData);
+      await axios.put(`http://localhost:3003/website/${id}`, formData, {
+        headers: { token },
+      });
     } catch (error) {
       if ((error as AxiosError)?.response) {
         const axiosError = error as AxiosError;
@@ -138,6 +162,7 @@ const WebsiteProvider: React.FC<PropsOfProvider> = ({ children }) => {
     IsLoading,
     getSiteById,
     updateWebsite,
+    getData,
   };
 
   return (

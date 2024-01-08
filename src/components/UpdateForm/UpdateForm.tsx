@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import { useContext, useEffect, useState } from "react";
+import * as Yup from "yup";
 import {
   PortfolioContext,
   PortfolioContextValue,
@@ -17,6 +18,7 @@ export const UpdateForm: React.FC = () => {
   const navigator = useNavigate();
   interface FormDataValues {
     title?: string;
+    titleInArabic?: string;
     link?: string;
     logo?: FileList;
     mainImg?: FileList;
@@ -25,71 +27,84 @@ export const UpdateForm: React.FC = () => {
   const websiteFormik = useFormik({
     initialValues: {
       title: "",
+      titleInArabic: "",
       link: "",
       logo: undefined as FileList | undefined,
       mainImg: undefined as FileList | undefined,
       previewImgs: undefined as FileList | undefined,
     },
-    // validationSchema: Yup.object({
-    //   title: Yup.string()
-    //     .max(50, "The title must not exceed 50 characters")
-    //     .min(3, "The name must be at least 3 letters long"),
-    //   link: Yup.string()
-    //     .min(3, "The link must be at least 3 characters long")
-    //     .matches(
-    //       /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w.-]*)*\/?$/,
-    //       "Invalid link format. Please enter a valid URL."
-    //     ),
-    //   mainImg: Yup.mixed().test("fileType", "image only", (file) => {
-    //     if (file) {
-    //       return [
-    //         "image/jpeg",
-    //         "image/jpg",
-    //         "image/png",
-    //         "image/svg+xml",
-    //         "image/webp",
-    //       ].includes((file as FileList)[0].type);
-    //     }
-    //     return true; // No file selected, so no type to check
-    //   }),
-    //   logo: Yup.mixed().test("fileType", "images only", (file) => {
-    //     if (file) {
-    //       // Allow any image MIME type
-    //       return [
-    //         "image/jpeg",
-    //         "image/jpg",
-    //         "image/png",
-    //         "image/svg+xml",
-    //         "image/webp",
-    //       ].includes((file as FileList)[0].type);
-    //     }
-    //     return true; // No file selected, so no type to check
-    //   }),
-    //   previewImgs: Yup.array().test({
-    //     name: "fileType",
-    //     message: "All files must be images",
-    //     test: (files) =>
-    //       files &&
-    //       Array.from(files).every(
-    //         (file) =>
-    //           file &&
-    //           [
-    //             "image/jpeg",
-    //             "image/jpg",
-    //             "image/png",
-    //             "image/svg+xml",
-    //             "image/webp",
-    //           ].includes(file.type)
-    //       ),
-    //   }),
-    // }),
+    validationSchema: Yup.object({
+      title: Yup.string()
+        .max(50, "The title must not exceed 50 characters")
+        .min(3, "The name must be at least 3 letters long"),
+      titleInArabic: Yup.string()
+        .max(50, "The title must not exceed 50 characters")
+        .min(3, "The name must be at least 3 letters long"),
+      link: Yup.string()
+        .min(3, "The link must be at least 3 characters long")
+        .matches(
+          /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w.-]*)*\/?$/,
+          "Invalid link format. Please enter a valid URL."
+        ),
+      mainImg: Yup.mixed().test("fileType", "image only", (file) => {
+        if (file) {
+          return [
+            "image/jpeg",
+            "image/jpg",
+            "image/png",
+            "image/svg+xml",
+            "image/webp",
+          ].includes((file as FileList)[0].type);
+        }
+        return true; // No file selected, so no type to check
+      }),
+      logo: Yup.mixed().test("fileType", "images only", (file) => {
+        if (file) {
+          // Allow any image MIME type
+          return [
+            "image/jpeg",
+            "image/jpg",
+            "image/png",
+            "image/svg+xml",
+            "image/webp",
+          ].includes((file as FileList)[0].type);
+        }
+        return true; // No file selected, so no type to check
+      }),
+      previewImgs: Yup.array().test({
+        name: "fileType",
+        message: "All files must be images",
+        test: (files) => {
+          if (!files) {
+            return true; // No files, so nothing to check
+          }
+
+          return Array.from(files).every((file) => {
+            if (!file) {
+              return true; // Skip null/undefined files
+            }
+
+            return [
+              "image/jpeg",
+              "image/jpg",
+              "image/png",
+              "image/svg+xml",
+              "image/webp",
+            ].includes(file.type);
+          });
+        },
+      }),
+    }),
     onSubmit: async (values: FormDataValues) => {
       setIsLoading(true);
-      const { title, mainImg, logo, link, previewImgs } = values;
+      const { title, mainImg, titleInArabic, logo, link, previewImgs } = values;
 
       const formData = new FormData();
       if (title) {
         formData.append("title", title);
+      }
+      if (titleInArabic) {
+        formData.append("titleInArabic", titleInArabic);
       }
       if (logo) {
         formData.append("logo", logo[0]);
@@ -105,8 +120,7 @@ export const UpdateForm: React.FC = () => {
       if (mainImg) {
         formData.append("mainImg", mainImg[0]);
       }
-      if(id){
-
+      if (id) {
         await updateWebsite(id, formData);
       }
       setIsLoading(false);
@@ -160,26 +174,34 @@ export const UpdateForm: React.FC = () => {
             </div>
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                link
+                titleInArabic
               </label>
               <input
                 className={`${
-                  websiteFormik.errors.title && websiteFormik.touched.title
+                  websiteFormik.errors.titleInArabic &&
+                  websiteFormik.touched.titleInArabic
                     ? "border-red-500"
                     : "border-gray-200"
                 } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
                 id="grid-first-name"
                 type="text"
-                name="link"
-                onChange={websiteFormik.handleChange}
+                name="titleInArabic"
+                // value={Site?.title}
+                onChange={(event) => {
+                  websiteFormik.setFieldValue(
+                    "titleInArabic",
+                    event.currentTarget.value
+                  );
+                }}
                 onBlur={websiteFormik.handleBlur}
-                placeholder={Site?.link}
+                placeholder={Site?.titleInArabic}
               />
-              {websiteFormik.errors.link && websiteFormik.touched.link && (
-                <p className="text-red-500 text-xs italic">
-                  {websiteFormik.errors.link}
-                </p>
-              )}
+              {websiteFormik.errors.titleInArabic &&
+                websiteFormik.touched.titleInArabic && (
+                  <p className="text-red-500 text-xs italic">
+                    {websiteFormik.errors.titleInArabic}
+                  </p>
+                )}
             </div>
           </div>
           <div className="w-full px-3">
@@ -275,6 +297,29 @@ export const UpdateForm: React.FC = () => {
                     `${websiteFormik.errors.previewImgs}`}
                 </p>
               )}
+          </div>
+          <div className="w-full px-3">
+            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+              link
+            </label>
+            <input
+              className={`${
+                websiteFormik.errors.title && websiteFormik.touched.title
+                  ? "border-red-500"
+                  : "border-gray-200"
+              } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+              id="grid-first-name"
+              type="text"
+              name="link"
+              onChange={websiteFormik.handleChange}
+              onBlur={websiteFormik.handleBlur}
+              placeholder={Site?.link}
+            />
+            {websiteFormik.errors.link && websiteFormik.touched.link && (
+              <p className="text-red-500 text-xs italic">
+                {websiteFormik.errors.link}
+              </p>
+            )}
           </div>
 
           <div className="flex justify-center">

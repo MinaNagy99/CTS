@@ -15,14 +15,19 @@ export default function Form() {
   const websiteFormik = useFormik({
     initialValues: {
       title: "",
+      titleInArabic: "",
       link: undefined, // Assuming link is optional
       previewImgs: undefined, // Assuming previewImgs is optional
       logo: undefined, // Assuming logo is optional
-      mainImg:undefined, // Creating an empty FileList
+      mainImg: undefined, // Creating an empty FileList
       _id: undefined,
     },
     validationSchema: Yup.object({
       title: Yup.string()
+        .max(50, "The title must not exceed 50 characters")
+        .min(3, "The name must be at least 3 letters long")
+        .required("Title is required"),
+      titleInArabic: Yup.string()
         .max(50, "The title must not exceed 50 characters")
         .min(3, "The name must be at least 3 letters long")
         .required("Title is required"),
@@ -63,19 +68,25 @@ export default function Form() {
       previewImgs: Yup.array().test({
         name: "fileType",
         message: "All files must be images",
-        test: (files) =>
-          files &&
-          Array.from(files).every(
-            (file) =>
-              file &&
-              [
-                "image/jpeg",
-                "image/jpg",
-                "image/png",
-                "image/svg+xml",
-                "image/webp",
-              ].includes(file.type)
-          ),
+        test: (files) => {
+          if (!files) {
+            return true; // No files, so nothing to check
+          }
+
+          return Array.from(files).every((file) => {
+            if (!file) {
+              return true; // Skip null/undefined files
+            }
+
+            return [
+              "image/jpeg",
+              "image/jpg",
+              "image/png",
+              "image/svg+xml",
+              "image/webp",
+            ].includes(file.type);
+          });
+        },
       }),
     }),
     onSubmit: async (values) => {
@@ -86,7 +97,6 @@ export default function Form() {
 
   return (
     <>
-      {console.log(websiteFormik.errors)}
       <div className="w-screen h-screen bg-gray-200 flex justify-center  items-center">
         <form
           encType="multipart/form-data"
@@ -125,34 +135,35 @@ export default function Form() {
             </div>
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                link
+                Title in Ar
               </label>
               <input
                 className={`${
-                  websiteFormik.errors.title && websiteFormik.touched.title
+                  websiteFormik.errors.titleInArabic && websiteFormik.touched.titleInArabic
                     ? "border-red-500"
                     : "border-gray-200"
                 } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
                 id="grid-first-name"
                 type="text"
-                name="link"
+                name="titleInArabic"
                 onChange={(event) => {
                   websiteFormik.setFieldValue(
-                    "link",
+                    "titleInArabic",
                     event.currentTarget.value
                   );
                 }}
                 onBlur={websiteFormik.handleBlur}
-                value={websiteFormik.values.link}
-                placeholder="Web site link"
+                value={websiteFormik.values.titleInArabic}
+                placeholder="Web site name"
               />
-              {websiteFormik.errors.link && websiteFormik.touched.link && (
+              {websiteFormik.errors.titleInArabic && websiteFormik.touched.titleInArabic && (
                 <p className="text-red-500 text-xs italic">
-                  {websiteFormik.errors.link}
+                  {websiteFormik.errors.titleInArabic}
                 </p>
               )}
             </div>
           </div>
+
           <div className="w-full px-3">
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
               Main Img
@@ -244,7 +255,32 @@ export default function Form() {
                 </p>
               )}
           </div>
-
+          <div className="w-full px-3">
+            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+              link
+            </label>
+            <input
+              className={`${
+                websiteFormik.errors.link && websiteFormik.touched.link
+                  ? "border-red-500"
+                  : "border-gray-200"
+              } appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+              id="grid-first-name"
+              type="text"
+              name="link"
+              onChange={(event) => {
+                websiteFormik.setFieldValue("link", event.currentTarget.value);
+              }}
+              onBlur={websiteFormik.handleBlur}
+              value={websiteFormik.values.link}
+              placeholder="Web site link"
+            />
+            {websiteFormik.errors.link && websiteFormik.touched.link && (
+              <p className="text-red-500 text-xs italic">
+                {websiteFormik.errors.link}
+              </p>
+            )}
+          </div>
           <div className="flex justify-center">
             <button
               type="submit"

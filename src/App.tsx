@@ -7,6 +7,7 @@ import DashBoard from "./components/Dashboard/Dashboard";
 import Form from "./components/Form/Form";
 import View from "./components/View/View";
 import { UpdateForm } from "./components/UpdateForm/UpdateForm";
+import ProtectedRoute from "./components/ProtectRoute/ProtectRoute";
 
 function App() {
   const router = createBrowserRouter([
@@ -15,7 +16,15 @@ function App() {
       element: <MailLayout />,
       children: [
         { index: true, element: <Login /> },
-        { path: "dashboard", element: <DashBoard /> },
+        {
+          path: "dashboard",
+
+          element: (
+            <ProtectedRoute>
+              <DashBoard />
+            </ProtectedRoute>
+          ),
+        },
         { path: "AddWebsite", element: <Form /> },
         { path: "view/:id", element: <View /> },
         { path: "update/:id", element: <UpdateForm /> },

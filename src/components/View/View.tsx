@@ -34,16 +34,19 @@ export default function View() {
 
       <div className="grid grid-cols-2 py-5  w-1/2 m-auto">
         <div className="col-span-1   ">
-          <img
-            className="m-auto  p-10 "
-            src={Website?.logo.url}
-            alt=""
-          />
+          <img className="m-auto  p-10 " src={Website?.logo.url} alt="" />
         </div>
-        <div className="col-span-1 flex justify-center items-center">
-          <h1 className="text-5xl text-slate-300 font-serif">
+        <div className="col-span-1  flex flex-col items-center justify-evenly">
+          <h1 className="text-4xl text-slate-300 font-serif">
             {Website?.title}
           </h1>
+       <h1 className="text-4xl text-slate-300 font-serif">
+            {Website?.titleInArabic}
+          </h1>
+        </div>
+        <div className="col-span-1  flex justify-center items-center">
+          
+       
         </div>
       </div>
       <div

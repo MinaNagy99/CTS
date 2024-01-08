@@ -23,54 +23,55 @@ const MediaCard: React.FC<MediaCardProps> = ({ site }) => {
 
   return (
     <>
-    <div className="shadow-lg shadow-orange-300 p-5 ">
-      <Card sx={{ maxWidth: 500 }}>
-        {site.link && (
-          <Link to={`/view/${site._id}`}>
-            {site.mainImg && (
-              <CardMedia
-                sx={{ height: 400 }}
-                image={site.mainImg.url}
-                title="green iguana"
-              />
-            )}
-          </Link>
-        )}
-        {!site.link && (
-          <CardMedia
-            sx={{ height: 400 }}
-            image={site.mainImg.url}
-            title="green iguana"
-          />
-        )}
+      <div className="shadow-lg shadow-orange-300 p-5 ">
+        <Card sx={{ maxWidth: 500 }}>
+          {site.link && site.logo && site.previewImgs && (
+            <Link to={`/view/${site._id}`}>
+              {site?.mainImg && (
+                <CardMedia
+                  sx={{ height: 400 }}
+                  image={site?.mainImg?.url}
+                  title="green iguana"
+                />
+              )}
+            </Link>
+          )}
+          {!site.link && (
+            <CardMedia
+              sx={{ height: 400 }}
+              image={site?.mainImg?.url}
+              title="green iguana"
+            />
+          )}
 
-        <CardContent>
-          <Typography
-            className="text-center"
-            gutterBottom
-            variant="h5"
-            component="div"
-          >
-            {site.title}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button
-            onClick={() => {
-              if (site._id) {
-                handleDelete(site._id);
-              }
-            }}
-            variant="outlined"
-            color="secondary"
-          >
-            Delete
-          </Button>
-          <Link to={`/update/${site._id}`}>
-            <Button size="small">Update</Button>
-          </Link>
-        </CardActions>
-      </Card></div>
+          <CardContent>
+            <Typography
+              className="text-center"
+              gutterBottom
+              variant="h5"
+              component="div"
+            >
+              {site.title}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button
+              onClick={() => {
+                if (site._id) {
+                  handleDelete(site._id);
+                }
+              }}
+              variant="outlined"
+              color="secondary"
+            >
+              Delete
+            </Button>
+            <Link to={`/update/${site._id}`}>
+              <Button size="small">Update</Button>
+            </Link>
+          </CardActions>
+        </Card>
+      </div>
     </>
   );
 };
