@@ -32,6 +32,3 @@ function App() {
       </WebsiteProvider>
     </>
   );
-}
-
-export default App;
