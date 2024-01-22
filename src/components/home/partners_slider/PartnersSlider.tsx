@@ -119,8 +119,8 @@ function PartnersSlider() {
                 </div>
                 <Slider {...settings}>
                     {partnersLogos.map((source, index) => (
-                        <div className="">
-                            <div className="image-container" key={index}>
+                        <div className="" key={index}>
+                            <div className="image-container">
                                 <img className="logo-image" src={source} alt={`Image ${index + 1}`} />
                             </div>
                         </div>
