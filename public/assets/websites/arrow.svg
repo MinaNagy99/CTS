@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 <svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -18,3 +19,8 @@
 		c9.059,0,16.406,7.345,16.406,16.406S234.166,272.406,225.107,272.406z"/>
 </g>
 </svg>
+=======
+<svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="13.968" height="19.908" viewBox="0 0 13.968 19.908">
+  <path d="M0,11.908v6a2,2,0,0,0,2,2h9.968a2,2,0,0,0,2-2V2a2,2,0,0,0-2-2H2A2,2,0,0,0,0,2V7.908H6.008V5.914l4.041,4.043L6.008,14V11.908Z"/>
+</svg>
+>>>>>>> 60399e3bcbfe7550a59e5ff0a43aef92863711b3

@@ -1,25 +1,11 @@
 import './topSection.css';
-import { Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { useContext } from 'react';
-import { MyContext } from '../../context/LngContext';
+import { Typewriter } from 'react-simple-typewriter';
 function TopSection() {
-    const { currentLng } = useContext(MyContext);
-    let text: string;
-    if (currentLng == 'en') {
-        text = 'We provide integrated web services';
-    } else {
-        text = 'نقدم خدمات تصميم مواقع إلكترونية';
-    }
-    const h1Variants = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { staggerChildren: 0.05 } },
-    };
-    const SpanVariants = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-    };
+    const { t } = useTranslation();
+    const words = ['Websites design', 'Online store design', 'Wordpress websites', 'Website hosting'];
+
     return (
         <div className="container-fluid">
             <div className="row top-section ">
@@ -31,15 +17,16 @@ function TopSection() {
                     </div>
                     <div className="d-flex align-items-center">
                         <img className="home-icon" src="/assets/home/home1.webp" alt="" />
-                        <motion.h1 variants={h1Variants} initial="hidden" whileInView="visible" className="">
-                            {text.split('').map((char: string, index: number) => {
-                                return (
-                                    <motion.span variants={SpanVariants} key={index}>
-                                        {char}
-                                    </motion.span>
-                                );
-                            })}
-                        </motion.h1>
+                        <h1>
+                            <Trans i18nKey="We provide"></Trans>{' '}
+                            <Typewriter
+                                words={words.map((word) => t(word))}
+                                loop={false}
+                                cursor
+                                typeSpeed={70}
+                                deleteSpeed={30}
+                            />
+                        </h1>
                     </div>
                     <div className="d-flex align-align-items-center">
                         <span className="square-symbol">&#9632;</span>

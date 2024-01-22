@@ -53,7 +53,7 @@ function Header() {
             i18next.changeLanguage('en');
             setnextLang({
                 languageName: 'Arabic',
-                imgFlag: '/assets/home/arabic-flag.jpg',
+                imgFlag: '/assets/home/arabic-flag.webp',
             });
         }
     };
@@ -92,29 +92,13 @@ function Header() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className={`collapse navbar-collapse`} id="navbarNavAltMarkup">
-                        <div className="navbar-nav w-100 d-flex flex-column  col-lg-5 flex-lg-row justify-content-between align-items-center ">
-                            {/* {navigationLinks.map((link) =>
-                isServicesAndBlogsDisabled && link.to === "/blogs" ? null : (
-                  <NavLink
-                    onClick={() => {
-                      window.scrollTo({ top: 0 });
-                    }}
-                    key={link.to}
-                    className={`nav-link ${
-                      location.pathname === link.to ? "active" : ""
-                    }`}
-                    to={link.to}
-                  >
-                    <Trans i18nKey={link.textKey}></Trans>
-                  </NavLink>
-                )
-              )} */}
+                        <div className="navbar-nav  justify-content-between align-items-center ">
                             <NavLink
                                 onClick={() => {
                                     window.scrollTo({ top: 0 });
                                     fireEvent();
                                 }}
-                                className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+                                className={`nav-link mx-3 ${location.pathname === '/' ? 'active' : ''}`}
                                 to="/"
                             >
                                 <Trans i18nKey="Home"></Trans>
@@ -125,7 +109,7 @@ function Header() {
                                     window.scrollTo({ top: 0 });
                                     fireEvent();
                                 }}
-                                className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
+                                className={`nav-link mx-3 ${location.pathname === '/about' ? 'active' : ''}`}
                                 to="/about"
                             >
                                 <Trans i18nKey="About us"></Trans>
@@ -182,7 +166,7 @@ function Header() {
                                     <hr />
                                     <li className="m-0 p-0">
                                         <NavLink
-                                            className={`dropdown-item ${
+                                            className={`dropdown-item mx-3 ${
                                                 location.pathname.startsWith('/services/seo') ? 'active' : ''
                                             }`}
                                             onClick={() => {
@@ -197,7 +181,7 @@ function Header() {
                                     <hr />
                                     <li className="m-0 p-0">
                                         <NavLink
-                                            className={`dropdown-item ${
+                                            className={`dropdown-item mx-3 ${
                                                 location.pathname.startsWith('/services/web-hosting') ? 'active' : ''
                                             }`}
                                             onClick={() => {
@@ -212,7 +196,7 @@ function Header() {
                                     <hr />
                                     <li className="m-0 p-0">
                                         <NavLink
-                                            className={`dropdown-item ${
+                                            className={`dropdown-item mx-3 ${
                                                 location.pathname.startsWith('/services/wordpress') ? 'active' : ''
                                             }`}
                                             onClick={() => {
@@ -233,7 +217,7 @@ function Header() {
                                     window.scrollTo({ top: 0 });
                                     fireEvent();
                                 }}
-                                className={`nav-link ${location.pathname === '/portfolio' ? 'active' : ''}`}
+                                className={`nav-link mx-3 ${location.pathname === '/portfolio' ? 'active' : ''}`}
                                 to="/portfolio"
                             >
                                 <Trans i18nKey="Portfolio"></Trans>
@@ -243,17 +227,16 @@ function Header() {
                                     window.scrollTo({ top: 0 });
                                     fireEvent();
                                 }}
-                                className={`nav-link ${location.pathname === '/contact-us' ? 'active' : ''}`}
+                                className={`nav-link mx-3 ${location.pathname === '/contact-us' ? 'active' : ''}`}
                                 to="/contact-us"
                             >
                                 <Trans i18nKey="Contact us"></Trans>
                             </NavLink>
-
-                            <button onClick={handleLangToggle} className="btn-lang p-3">
-                                <img className="px-2 language-flag" src={nextLang.imgFlag} alt="" />
-                                {nextLang.languageName}
-                            </button>
                         </div>
+                        <button onClick={handleLangToggle} className="btn-lang p-3">
+                            <img className="px-2 language-flag" src={nextLang.imgFlag} alt="" />
+                            {nextLang.languageName}
+                        </button>
                     </div>
                 </div>
             </nav>

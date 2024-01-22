@@ -68,23 +68,83 @@
 .arrow1 {
     position: absolute;
     top: -100%;
-    right: 1;
-    text-align: right;
+    right: 0;
+    /* text-align: right; */
+    width: 200px !important;
+    height: 200px !important;
+    overflow: hidden;
+    animation: translateXYAnimation 4s infinite;
 }
 .arrow1 img {
-    width: 16%;
+    width: 100%;
 }
 .arrow2 {
     position: absolute;
     top: -100%;
-    right: 0%;
-    padding-right: auto;
-    text-align: left;
+    left: 0%;
+    /* text-align: left; */
+    width: 200px !important;
+    height: 200px !important;
+    animation: translateXXYYAnimation 4s infinite;
+    overflow: hidden;
 }
 .arrow2 img {
-    width: 16%;
+    width: 100%;
 }
 
 .port-img {
     max-height: 65px;
+}
+
+@keyframes translateXYAnimation {
+    0% {
+        transform: translate(0%, -20%);
+    }
+    50% {
+        transform: translate(-70%, 10%);
+    }
+    100% {
+        transform: translate(0%, -20%);
+    }
+}
+@keyframes translateXXYYAnimation {
+    0% {
+        transform: translate(0%, -20%);
+    }
+    50% {
+        transform: translate(70%, 10%);
+    }
+    100% {
+        transform: translate(0%, -20%);
+    }
+}
+
+/* Apply the animation to an element */
+.element {
+    animation: translateAnimation 2s ease infinite;
+}
+
+@media only screen and (max-width: 992px) {
+    @keyframes translateXYAnimation {
+        0% {
+            transform: translate(0%, 0%);
+        }
+        50% {
+            transform: translate(-20%, 10%);
+        }
+        100% {
+            transform: translate(0%, 0%);
+        }
+    }
+    @keyframes translateXXYYAnimation {
+        0% {
+            transform: translate(0%, 0%);
+        }
+        50% {
+            transform: translate(20%, 10%);
+        }
+        100% {
+            transform: translate(0%, 0%);
+        }
+    }
 }
