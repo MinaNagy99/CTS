@@ -1,6 +1,6 @@
 import './websiteDetails.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import Slider from 'react-slick';
 import HeaderAndLines from '../shared/HeaderAndLines';
 import { PortfolioContext } from '../context/PortfolioContext';
@@ -14,7 +14,10 @@ interface Props {
     onClick?: () => void;
     header?: React.ReactNode | string;
 }
-
+interface ImageType {
+    url?: string;
+    public_id?: string;
+}
 function NextArrow(props: Props) {
     const { onClick } = props;
     return (
@@ -91,14 +94,13 @@ const CloseButton = (
 function WesbiteDetails() {
     const [showCarousel, setShowCarousel] = useState(false);
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-    const [images, setImages] = useState<string[] | undefined>([]);
 
     const navigate = useNavigate();
-    const { title } = useParams<{ title: any }>();
+    const { title } = useParams<{ title: string }>();
 
     const data = useContext(PortfolioContext);
-    const project = data.find((item) => item.title === decodeURIComponent(title));
-    const currentIndex = data.findIndex((item) => item.title === decodeURIComponent(title));
+    const project = data.find((item) => item.title === title);
+    const currentIndex = data.findIndex((item) => item.title === title);
 
     const goToPreviousPage = () => {
         const previousIndex = (currentIndex - 1 + data.length) % data.length;
@@ -133,11 +135,6 @@ function WesbiteDetails() {
         setSelectedImageIndex(index);
     };
 
-    useEffect(() => {
-        // Update the images state when the project.carouselImages change
-        setImages(project?.carouselImages);
-    }, []);
-
     const settings = {
         // dots: true,
         infinite: true,
@@ -158,7 +155,8 @@ function WesbiteDetails() {
                 <div className="top   d-flex flex-md-row flex-column  w-75  mx-auto justify-content-evenly align-items-center">
                     <div className="logo-container ">
                         <div className="inner-logo-container">
-                            <img className="w-100" src={project?.logo} alt="" />
+                            
+                            <img className="w-100" src={project?.logo?.url} alt="" />
                         </div>
                     </div>
                     <div className="mb-3">
@@ -172,16 +170,21 @@ function WesbiteDetails() {
 
                     <div>
                         <div className="container mt-5 d-flex justify-content-center">
-                            <div className="row justify-content-around px-5">
-                                {project?.previewImages?.map((image, index) => (
+                            <div className="row  justify-content-around px-5">
+                                {project?.previewImgs?.map((image: any, index: number) => (
                                     <div
                                         className={`col-12 p-3 ${
-                                            project.previewImages?.length == 2 ? 'col-md-6  ' : 'col-lg-4  col-md-6'
+                                            project.previewImgs?.length == 2 ? 'col-md-6  ' : 'col-lg-4  col-md-6'
                                         }`}
                                         key={index}
                                     >
                                         <div className="project-image-container">
-                                            <img className="" src={image} alt="" onClick={() => handleClick(index)} />
+                                            <img
+                                                className=""
+                                                src={image.url as string}
+                                                alt=""
+                                                onClick={() => handleClick(index)}
+                                            />
                                         </div>
                                     </div>
                                 ))}
@@ -218,10 +221,10 @@ function WesbiteDetails() {
                                         {CloseButton}
                                     </button>
                                     <div className="  p-0 m-0">
-                                        <Slider className="project-slider" {...settings}>
-                                            {images?.map((image, index) => (
+                                        <Slider className="project-slider " {...settings}>
+                                            {project?.previewImgs?.map((image: any, index) => (
                                                 <div className="p-0 m-0" key={index}>
-                                                    <img className="p-0" src={image} alt={`slide ${index + 1}`} />
+                                                    <img className="p-0" src={image.url} alt={`slide ${index + 1}`} />
                                                 </div>
                                             ))}
                                         </Slider>

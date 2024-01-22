@@ -1,29 +1,41 @@
-// i18n.js
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import arTranslate from './src/languages/resources/ar.json';
-import enTranslate from './src/languages/resources/ar.json';
+import axios from 'axios';
 
 i18n.use(initReactI18next).init({
-    resources: {
-        en: {
-            translation: {
-                greeting: 'Hello!',
-                welcome: 'Welcome to our website.',
-            },
-        },
-        es: {
-            translation: enTranslate,
-        },
-        ar: {
-            translation: arTranslate,
-        },
-    },
-    lng: 'ar', // Set the default language
-    fallbackLng: 'en', // Fallback language in case the requested language is not available
+    resources: {},
+    lng: 'ar', 
+    fallbackLng: 'en', 
     interpolation: {
-        escapeValue: false, // React already does escaping
+        escapeValue: false, 
     },
 });
+
+const fetchTranslations = async (language:string) => {
+    try {
+        const response = await axios.get(`https://cts.onrender.com/lang/${language}`);
+        return { [language]: { translation: response.data } };
+    } catch (error) {
+        console.error('Error fetching translations:', error);
+        return null;
+    }
+};
+
+const loadTranslations = async () => {
+    const enTranslations = await fetchTranslations('en');
+    const arTranslations = await fetchTranslations('ar');
+
+    if (enTranslations) {
+        i18n.addResourceBundle('en', 'translation', enTranslations.en.translation);
+    }
+
+    if (arTranslations) {
+        i18n.addResourceBundle('ar', 'translation', arTranslations.ar.translation);
+    }
+
+    i18n.changeLanguage('ar');
+};
+
+loadTranslations();
 
 export default i18n;

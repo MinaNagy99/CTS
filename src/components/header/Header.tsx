@@ -59,7 +59,6 @@ function Header() {
     };
     const humburgerBtn = useRef<HTMLButtonElement>(null);
     const fireEvent = () => {
-        console.log();
         if (window.innerWidth < 992) {
             if (humburgerBtn.current) {
                 // Programmatically trigger a click event
