@@ -9,6 +9,8 @@ import { UpdateForm } from './components/UpdateForm/UpdateForm';
 import ProtectedRoute from './components/ProtectRoute/ProtectRoute';
 import Dashboard from './components/Dashboard/Dashboard';
 import Portfolio from './components/Portfolio/Portfolio';
+import Blogs from './components/Blogs/Blogs';
+import BlogContextProvider from './components/Context/BlogsContext';
 
 function App() {
     const router = createBrowserRouter([
@@ -31,7 +33,7 @@ function App() {
                 },
                 {
                     path: 'dashboard/blog',
-                    element: <Dashboard />,
+                    element: <Blogs />,
                 },
                 { path: 'AddWebsite', element: <Form /> },
                 { path: 'view/:id', element: <View /> },
@@ -42,11 +44,13 @@ function App() {
 
     return (
         <>
-            <WebsiteProvider>
-                <div className="min-h-screen bg-teal-950">
-                    <RouterProvider router={router}></RouterProvider>
-                </div>
-            </WebsiteProvider>
+            <BlogContextProvider>
+                <WebsiteProvider>
+                    <div className="min-h-screen bg-teal-950">
+                        <RouterProvider router={router}></RouterProvider>
+                    </div>
+                </WebsiteProvider>
+            </BlogContextProvider>
         </>
     );
 }
