@@ -21,24 +21,7 @@ type PortfolioContextProviderProps = {
     children: ReactNode;
 };
 
-export const PortfolioContext = createContext<PortfolioContext[]>([
-    {
-        mainImg: '/assets/websites/alphaclinic-photos/alphaclinic-carasoul1.webp',
-        title: 'Alphaclinic-car',
-        previewImages: [
-            '/assets/websites/alphaclinic-photos/alphaclinic-page1.webp',
-            '/assets/websites/alphaclinic-photos/alphaclinic-page2.webp',
-            '/assets/websites/alphaclinic-photos/alphaclinic-page3.webp',
-        ],
-        carouselImages: [
-            '/assets/websites/alphaclinic-photos/alphaclinic-carasoul1.webp',
-            '/assets/websites/alphaclinic-photos/alphaclinic-carasoul2.webp',
-            '/assets/websites/alphaclinic-photos/alphaclinic-carasoul3.webp',
-        ],
-        logo: '/assets/websites/alphaclinic-photos/alphaclinic-logo.webp',
-        link: 'dental-clinic',
-    },
-]);
+export const PortfolioContext = createContext<WebsiteType[]>([]);
 
 function PortfolioContextProvider(props: PortfolioContextProviderProps) {
     const [portfolioData, setPortfolioData] = useState<WebsiteType[]>([]);
