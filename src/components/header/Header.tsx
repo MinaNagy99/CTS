@@ -232,6 +232,16 @@ function Header() {
                             >
                                 <Trans i18nKey="Contact us"></Trans>
                             </NavLink>
+                            <NavLink
+                                onClick={() => {
+                                    window.scrollTo({ top: 0 });
+                                    fireEvent();
+                                }}
+                                className={`nav-link mx-3 ${location.pathname === '/blogs' ? 'active' : ''}`}
+                                to="/blog/1"
+                            >
+                                <Trans i18nKey="Blog"></Trans>
+                            </NavLink>
                         </div>
                         <button onClick={handleLangToggle} className="btn-lang p-3">
                             <img className="px-2 language-flag" src={nextLang.imgFlag} alt="" />

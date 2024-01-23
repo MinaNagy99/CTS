@@ -94,11 +94,9 @@ export default function Portfolio() {
                                 onClick={() => {
                                     window.scrollTo({ top: 0 });
                                 }}
+                                key={index}
                             >
-                                <div
-                                    className=" portfolio-section-container border border-2 p-3 overflow-hidden"
-                                    key={index}
-                                >
+                                <div className=" portfolio-section-container border border-2 p-3 overflow-hidden">
                                     <div className="portfolio-section-img-container overflow-hidden rounded-4 item-border border-0">
                                         <img className="w-100 portfolio-section-image" src={item.image} alt="" />
                                     </div>
