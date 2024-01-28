@@ -1,5 +1,5 @@
 import axios, { AxiosError } from 'axios';
-import { ReactNode, createContext, useEffect, useState } from 'react';
+import { ReactNode, createContext, useState, useEffect } from 'react';
 
 export interface ImageType {
     url: string;
@@ -42,7 +42,7 @@ export interface PortfolioContextValue {
 
 export const PortfolioContext = createContext<PortfolioContextValue | null>(null);
 
-const WebsiteProvider: React.FC<PropsOfProvider> = ({ children }) => {
+const WebsiteProvider = ({ children }: PropsOfProvider) => {
     const [websites, setWebsites] = useState<SiteType[]>([]);
     const [IsLoading, setIsLoading] = useState(false);
 

@@ -11,6 +11,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Portfolio from './components/Portfolio/Portfolio';
 import Blogs from './components/Blogs/Blogs';
 import BlogContextProvider from './components/Context/BlogsContext';
+import CreateBlog from './components/Blogs/CreateBlog/CreateBlog';
 
 function App() {
     const router = createBrowserRouter([
@@ -36,6 +37,7 @@ function App() {
                     element: <Blogs />,
                 },
                 { path: 'AddWebsite', element: <Form /> },
+                { path: 'addBlog', element: <CreateBlog /> },
                 { path: 'view/:id', element: <View /> },
                 { path: 'update/:id', element: <UpdateForm /> },
             ],
