@@ -238,7 +238,7 @@ function Header() {
                                     fireEvent();
                                 }}
                                 className={`nav-link mx-3 ${location.pathname === '/blogs' ? 'active' : ''}`}
-                                to="/blog/1"
+                                to="/blogs"
                             >
                                 <Trans i18nKey="Blog"></Trans>
                             </NavLink>

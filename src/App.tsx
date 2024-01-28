@@ -9,14 +9,15 @@ import FixedIcons from './components/fixed_icons/FixedIcons';
 import Home from './components/home/Home';
 import { useTranslation } from 'react-i18next';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import WesbiteDetails from './components/website_details/WebsiteDetails';
 import WebDesign from './components/Services/WebDesign/WebDesign';
 import OnlineStoreDesign from './components/Services/OnlineStoreDesign/OnlineStoreDesign';
 import Seo from './components/Services/SEO/SEO';
 import MobilApp from './components/Services/MobilApp/MobilApp';
 import WebHosting from './components/Services/WebHosting/WebHosting';
 import Wordpress from './components/Services/WordPress/Wordpress';
-import Blog from './components/Blog/Blog';
+import BlogContextProvider from './components/context/BlogContext';
+import BlogDetails from './components/Blog/BlogDetails';
+import AllBlogs from './components/Blog/AllBlogs';
 
 function App() {
     const { i18n } = useTranslation();
@@ -39,7 +40,8 @@ function App() {
                 { path: '/services/web-hosting', element: <WebHosting /> },
                 { path: '/services/wordpress', element: <Wordpress /> },
                 { path: '/services/seo', element: <Seo /> },
-                { path: '/blog/:id', element: <Blog /> },
+                { path: '/blogs', element: <AllBlogs /> },
+                { path: '/blog/:id', element: <BlogDetails /> },
             ],
         },
     ]);
@@ -47,11 +49,13 @@ function App() {
     return (
         <>
             <div style={{ direction: textDirection }} className="stikcy-container">
-                <PortfolioContextProvider>
-                    <MyContextProvider>
-                        <RouterProvider router={router}></RouterProvider>
-                    </MyContextProvider>
-                </PortfolioContextProvider>
+                <BlogContextProvider>
+                    <PortfolioContextProvider>
+                        <MyContextProvider>
+                            <RouterProvider router={router}></RouterProvider>
+                        </MyContextProvider>
+                    </PortfolioContextProvider>
+                </BlogContextProvider>
                 <FixedIcons />
             </div>
         </>

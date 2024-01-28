@@ -8,6 +8,7 @@ import { HelmetProvider } from 'react-helmet-async';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
+import '@fortawesome/fontawesome-free/css/all.css';
 import { Provider } from 'react-redux';
 import store from './store';
 
