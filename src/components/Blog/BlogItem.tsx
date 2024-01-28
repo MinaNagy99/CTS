@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { blogType } from '../../types/BlogsTypes';
 
 export default function BlogItem({ blog }: { blog: blogType }) {
-    const { mainImg, title, caption, createdBy, createdAt, _id } = blog;
+    const { mainImg, title, caption, createdBy, createdAt, slug } = blog;
     const formatDate = (createdAt: string) => {
         const formattedDate = new Date(createdAt).toLocaleDateString('en-US', {
             year: 'numeric',
@@ -14,7 +14,7 @@ export default function BlogItem({ blog }: { blog: blogType }) {
     return (
         <>
             <>
-                <Link className="col-sm-12 col-md-6 col-lg-4 mb-4" to={`/blog/${_id}`}>
+                <Link className="col-sm-12 col-md-6 col-lg-4 mb-4" to={`/blog/${slug}`}>
                     <div className="card text-dark card-has-bg click-col" style={{ backgroundImage: `url(${mainImg.url})` }}>
                         <img
                             className="card-img d-none"

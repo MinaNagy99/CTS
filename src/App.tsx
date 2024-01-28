@@ -41,7 +41,7 @@ function App() {
                 { path: '/services/wordpress', element: <Wordpress /> },
                 { path: '/services/seo', element: <Seo /> },
                 { path: '/blogs', element: <AllBlogs /> },
-                { path: '/blog/:id', element: <BlogDetails /> },
+                { path: '/blog/:slug', element: <BlogDetails /> },
             ],
         },
     ]);

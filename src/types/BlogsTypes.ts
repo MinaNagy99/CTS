@@ -14,7 +14,7 @@ export interface blogType {
 
 interface categoryType {
     _id: string;
-    name:string;
+    name: string;
 }
 export interface imageType {
     url: string;
@@ -25,10 +25,19 @@ export interface userType {
     name: string;
     email: string;
     avatar: imageType;
+    _id: string;
 }
 export interface commentType {
     _id: string;
     text: string;
     createdBy: userType;
     parent: null | commentType;
+}
+
+export interface suggestedPost {
+    title: string;
+    mainImg: imageType;
+    createdAt: string;
+    _id: string;
+    slug: string;
 }

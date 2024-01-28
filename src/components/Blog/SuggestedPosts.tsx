@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { blogType } from '../../types/BlogsTypes';
+import { suggestedPost } from '../../types/BlogsTypes';
 interface props {
     className: string;
     header: string;
-    tags: string[];
-    posts: blogType[];
+    tags: string[] | undefined;
+    posts: suggestedPost[];
 }
 
 function SuggestedPosts({ className, header, posts, tags }: props) {
@@ -16,7 +16,7 @@ function SuggestedPosts({ className, header, posts, tags }: props) {
                     {posts.map((item) => (
                         <Link
                             key={item._id}
-                            to={`/blog/${item._id}`}
+                            to={`/blog/${item.slug}`}
                             className="align-items-center text-decoration-none flex-nowrap col-12 my-2 col-md-2 d-flex col-lg-12"
                         >
                             <img className="object-fit-cover rounded w-25 m-md-2" src={item.mainImg.url} alt={item.title} />

@@ -8,14 +8,20 @@ import SocialShareButtons from './SocialShareButtons';
 import { useContext, useEffect, useMemo, useState } from 'react';
 import { blogContext, valueOfContextType } from '../context/BlogContext';
 import { blogType } from '../../types/BlogsTypes';
-const getBlogById = (Blogs: blogType[], id: string): blogType => {
-    return Blogs.find((blog: blogType) => blog._id === id);
+const getBlogBySlug = (Blogs: blogType[], slug: string): blogType | undefined => {
+    if (Blogs) {
+        return Blogs.find((blog: blogType) => blog.slug === slug);
+    }
 };
 function BlogDetails() {
     const { Blogs } = useContext(blogContext) as valueOfContextType;
-    const { id } = useParams();
+    const { slug } = useParams();
 
-    const memoizedGetBlogById = useMemo(() => getBlogById(Blogs, id), [Blogs, id]);
+    const memoizedGetBlogBySlug = useMemo(() => {
+        if (slug) {
+            return getBlogBySlug(Blogs, slug);
+        }
+    }, [Blogs, slug]);
 
     const [Blog, setBlog] = useState<blogType>();
     const [Tags, setTags] = useState<string[]>();
@@ -27,18 +33,18 @@ function BlogDetails() {
     ];
 
     useEffect(() => {
-        if (id) {
-            setBlog(memoizedGetBlogById);
+        if (slug) {
+            setBlog(memoizedGetBlogBySlug);
         }
-    }, [memoizedGetBlogById, id]);
+    }, [memoizedGetBlogBySlug, slug]);
     useEffect(() => {
         if (Blog) {
             setTags(Blog.tags);
         }
     }, [Blog]);
 
-    const data = Blogs.map(({ title, mainImg, _id, createdAt }) => {
-        return { title, mainImg, createdAt, _id };
+    const data = Blogs.map(({ title, mainImg, _id, slug, createdAt }) => {
+        return { title, mainImg, createdAt, _id, slug };
     });
 
     return (
@@ -51,16 +57,7 @@ function BlogDetails() {
                         <Link to={'/'} className="text-primary text-decoration-none d-inline-block mt-3">
                             {Blog?.category.name}
                         </Link>
-                        <div className="">
-                            {/* {data?.categories.map((category) => (
-                            <Link
-                                to={`/blog?category=${category.name}`}
-                                className="text-primary text-sm font-roboto inline-block md:text-base"
-                            >
-                                {category.name}
-                            </Link>
-                        ))} */}
-                        </div>
+
                         <h2 className="article-heading ">{Blog?.title}</h2>
                         <div className="mt-2">
                             <p className="article-p text">{Blog?.body}</p>
