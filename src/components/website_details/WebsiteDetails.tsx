@@ -14,10 +14,7 @@ interface Props {
     onClick?: () => void;
     header?: React.ReactNode | string;
 }
-interface ImageType {
-    url?: string;
-    public_id?: string;
-}
+
 function NextArrow(props: Props) {
     const { onClick } = props;
     return (
@@ -100,6 +97,8 @@ function WesbiteDetails() {
 
     const data = useContext(PortfolioContext);
     const project = data.find((item) => item.title === title);
+    console.log(project);
+    
     const currentIndex = data.findIndex((item) => item.title === title);
 
     const goToPreviousPage = () => {
@@ -155,8 +154,7 @@ function WesbiteDetails() {
                 <div className="top   d-flex flex-md-row flex-column  w-75  mx-auto justify-content-evenly align-items-center">
                     <div className="logo-container ">
                         <div className="inner-logo-container">
-                            
-                            <img className="w-100" src={project?.logo?.url} alt="" />
+                            <img className="w-100" src={project?.logo} alt="" />
                         </div>
                     </div>
                     <div className="mb-3">
@@ -171,17 +169,17 @@ function WesbiteDetails() {
                     <div>
                         <div className="container mt-5 d-flex justify-content-center">
                             <div className="row  justify-content-around px-5">
-                                {project?.previewImgs?.map((image: any, index: number) => (
+                                {project?.previewImages?.map((image: string, index: number) => (
                                     <div
                                         className={`col-12 p-3 ${
-                                            project.previewImgs?.length == 2 ? 'col-md-6  ' : 'col-lg-4  col-md-6'
+                                            project.previewImages?.length == 2 ? 'col-md-6  ' : 'col-lg-4  col-md-6'
                                         }`}
                                         key={index}
                                     >
                                         <div className="project-image-container">
                                             <img
                                                 className=""
-                                                src={image.url as string}
+                                                src={image as string}
                                                 alt=""
                                                 onClick={() => handleClick(index)}
                                             />
@@ -222,9 +220,9 @@ function WesbiteDetails() {
                                     </button>
                                     <div className="  p-0 m-0">
                                         <Slider className="project-slider " {...settings}>
-                                            {project?.previewImgs?.map((image: any, index) => (
+                                            {project?.previewImages?.map((image: string, index) => (
                                                 <div className="p-0 m-0" key={index}>
-                                                    <img className="p-0" src={image.url} alt={`slide ${index + 1}`} />
+                                                    <img className="p-0" src={image} alt={`slide ${index + 1}`} />
                                                 </div>
                                             ))}
                                         </Slider>

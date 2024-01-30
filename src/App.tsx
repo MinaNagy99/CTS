@@ -18,6 +18,7 @@ import Wordpress from './components/Services/WordPress/Wordpress';
 import BlogContextProvider from './components/context/BlogContext';
 import BlogDetails from './components/Blog/BlogDetails';
 import AllBlogs from './components/Blog/AllBlogs';
+import WesbiteDetails from './components/website_details/WebsiteDetails';
 
 function App() {
     const { i18n } = useTranslation();
@@ -30,6 +31,7 @@ function App() {
                 { index: true, element: <Home /> },
                 { path: '/about', element: <About /> },
                 { path: '/portfolio', element: <PreviousWork /> },
+                { path: '/website/:title', element: <WesbiteDetails /> },
                 { path: '/contact-us', element: <ContactUs /> },
                 { path: '/services/web-design', element: <WebDesign /> },
                 { path: '/services/mobile-app', element: <MobilApp /> },

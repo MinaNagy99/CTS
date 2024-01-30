@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 export default function PreviousWork() {
-    const data: any = useContext(PortfolioContext);
+    const data = useContext(PortfolioContext);
 
     const { t } = useTranslation();
     useEffect(() => {
@@ -146,10 +146,9 @@ export default function PreviousWork() {
                     <img className="mt-4 img-fluid" src="/assets/portfolio/titleline.webp" alt="" />
                 </div>
             </section>
-            <div className="container ">
-                <div className="row gy-4 mt-5">
-                    
-                    {data.map((item: any, index: number) =>
+            <div className="container">
+                <div className="row gy-4 mt-5 ">
+                    {data.map((item: PortfolioContext, index: number) =>
                         // Check if the item has a link property
                         // If it does, render a Link, otherwise render a div
                         'link' in item ? (
@@ -161,7 +160,7 @@ export default function PreviousWork() {
                                     window.scrollTo(0, 0);
                                 }}
                             >
-                                <ItemProject imag={item.mainImg.url} title={item.title} />
+                                <ItemProject imag={item.mainImg} title={item.title} />
                             </Link>
                         ) : (
                             <div className="col-lg-4 col-sm-6 col-12 p-2" key={index}>

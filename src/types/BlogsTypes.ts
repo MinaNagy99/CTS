@@ -1,21 +1,31 @@
+
+
+export interface sectionsType{
+    title:string;
+    caption:string;
+    body:string | {title:string; list:string[]}[];
+    image:string;
+}
+export interface userType {
+    name: string;
+    email?: string;
+    avatar: string;
+    _id?: string;
+}
 export interface blogType {
-    mainImg: imageType;
-    createdBy: userType;
-    createdAt: string;
+    mainImg: string;
+    timeOfHour: string;
+    timeOfDay: string;
     tags: string[];
     title: string;
-    caption: string;
-    slug: string;
-    body: string;
-    category: categoryType;
-    comments: commentType[];
-    _id: string;
+    category: string;
+    sections: sectionsType[],
+    slug:string,
+    createdBy:userType
 }
 
-interface categoryType {
-    _id: string;
-    name: string;
-}
+
+
 export interface imageType {
     url: string;
     public_id: string;
@@ -23,9 +33,9 @@ export interface imageType {
 
 export interface userType {
     name: string;
-    email: string;
-    avatar: imageType;
-    _id: string;
+    email?: string;
+    avatar: string;
+    _id?: string;
 }
 export interface commentType {
     _id: string;
@@ -36,8 +46,8 @@ export interface commentType {
 
 export interface suggestedPost {
     title: string;
-    mainImg: imageType;
-    createdAt: string;
-    _id: string;
+    mainImg: string;
+    timeOfDay: string;
+    timeOfHour: string;
     slug: string;
 }
