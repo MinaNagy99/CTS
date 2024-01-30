@@ -22,8 +22,9 @@ export interface blogType {
     timeOfDay: string;
     tags: string[];
     title: string;
+    caption: string;
     category: string;
-    mainText: string;
+    mainText?: string;
     sections: sectionsType[];
     slug: string;
     createdBy: userType;

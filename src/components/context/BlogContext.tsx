@@ -19,6 +19,7 @@ function BlogContextProvider({ children }: propsType) {
             timeOfHour: '11:45 Pm',
             category: 'Articles',
             title: 'Designing a hotel and airline reservation website, such as Booking, according to the latest updates for the year 2024',
+            caption: 'Designing a hotel and airline reservation website',
             createdBy: { name: 'Kamel Mamdouh' },
             tags: ['Reservation System Design', 'Hotel and Airline Booking', 'Web Design Trends 2024'],
             mainText:
@@ -44,7 +45,7 @@ function BlogContextProvider({ children }: propsType) {
                                 ],
                                 orderedList: true,
                             },
-                            // order: ['para', 'list'],
+                            order: ['para', 'list'],
                         },
                     ],
                 },
@@ -152,6 +153,34 @@ function BlogContextProvider({ children }: propsType) {
                                 ],
                                 orderedList: true,
                             },
+                            // order: ['para', 'list'],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            slug: slugify('Website programming and development'),
+            mainImg: '/assets/blogs/Website programming and development/main.webp',
+            timeOfDay: 'Jan 7, 2024',
+            timeOfHour: '11:45 Pm',
+            category: 'Articles',
+            title: 'Website programming and development - programming, design and development of websites',
+            caption: 'Website programming and development',
+            createdBy: { name: 'Kamel Mamdouh' },
+            tags: ['website'],
+            sections: [
+                {
+                    title: 'Programming, design and development of websites',
+                    caption: 'Programming, design and development of websites',
+                    image: '/assets/blogs/Design of a hotel and airline reservation website/sec1.webp',
+                    body: [
+                        {
+                            paragraphs: [
+                                'Website design from AST Solutions is more than just designing a website on the Internet, because the digital world is governed by first impressions, and we work to make an impressive impression from the beginning and designing a distinctive website is the key to success in light of the Internet era that we live in now, where We start working directly with you to transform your ideas into a successful and inspiring website. Website programming and development - programming, design and development of websites.',
+                                'If you are looking to design a new website for your company project, you can browse our previous work. We work from a standpoint of innovation and experience, as we help companies develop their work by designing a website that presents what they have professionally to reflect the extent of their uniqueness in providing their services and products. We are able to do this through Your site, God willing. Our approach to website design begins with placing your activity and business on the Internet, earning more sales, and discovering more opportunities in this distinguished, fast-paced market.',
+                                'We offer a wide range of different services and options that include website design, electronic marketing, mobile application programming, and online store design. With AST Solutions, you will gain your place in the online and mobile world and build a personality for your brand that will have a long-term impact on your customers. We believe that design makes a difference because the first impression lasts. At EST Solutions, websites must undergo rigorous testing for all types of devices, as well as different browsers and operating systems, before we launch your new website. User tests are conducted periodically to ensure the site is up to date and responsive. Our team develops effective content strategies, and we have a proven track record of success partners that is constantly increasing. We have previous work in Kuwait, Saudi Arabia and Egypt.',
+                            ],
                             // order: ['para', 'list'],
                         },
                     ],
