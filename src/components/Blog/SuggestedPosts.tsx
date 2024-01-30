@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { suggestedPost } from '../../types/BlogsTypes';
+import './AllBlogs.css'
 interface props {
     className: string;
     header: string;
@@ -10,27 +11,19 @@ interface props {
 function SuggestedPosts({ className, header, posts, tags }: props) {
     return (
         <>
-            <div className={`w-100 shadow-sm rounded p-2 ${className}`}>
+            <div id='suggestedPost' className={`w-100 shadow-sm rounded p-2 ${className}`}>
                 <h4>{header}</h4>
                 <div className="row gap-3">
-                    {posts.map((item,index:number) => (
+                    {posts.map((item, index: number) => (
                         <Link
                             key={index}
                             to={`/blog/${item.slug}`}
-                            className="align-items-center text-decoration-none flex-nowrap col-12 my-2 col-md-2 d-flex col-lg-12"
+                            className="  text-decoration-none   flex-nowrap align-items-center col-12 my-2  d-flex "
                         >
-                            <img className="object-fit-cover rounded w-25 m-md-2" src={item?.mainImg} alt={item.title} />
+                            <img className="object-fit-fill rounded w-25 m-md-2" src={item?.mainImg} alt={item.title} />
                             <div className="fs-6">
-                                <h3 className="text-sm text-decoration-none font-roboto text-dark-hard font-medium md:text-base lg:text-lg">
-                                    <p className="text-decoration-none fs-6 text-black">{item.title}</p>
-                                </h3>
-                                <span className="opacity-60">
-                                    {new Date(item.timeOfDay).toLocaleDateString('en-US', {
-                                        day: 'numeric',
-                                        month: 'short',
-                                        year: 'numeric',
-                                    })}
-                                </span>
+                                <p id='title' className="text-decoration-none fs-6 px-2 text-black">{item.title}</p>
+                                <p id='date' className="text-decoration-none   px-2 ">{item.timeOfDay}</p>
                             </div>
                         </Link>
                     ))}
