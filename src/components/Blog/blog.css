@@ -11,3 +11,12 @@
     font-weight: 200;
     text-align: justify;
 }
+.image-blog{
+    max-height: 60vh;
+    background-image: url(Blog?.mainImg);
+    background-color: blue;
+}
+
+#blogDetails li{
+    margin: 0px 0px;
+}

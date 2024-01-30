@@ -9,7 +9,6 @@ import FixedIcons from './components/fixed_icons/FixedIcons';
 import Home from './components/home/Home';
 import { useTranslation } from 'react-i18next';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import WesbiteDetails from './components/website_details/WebsiteDetails';
 import WebDesign from './components/Services/WebDesign/WebDesign';
 import OnlineStoreDesign from './components/Services/OnlineStoreDesign/OnlineStoreDesign';
 import Seo from './components/Services/SEO/SEO';
@@ -18,6 +17,10 @@ import WebHosting from './components/Services/WebHosting/WebHosting';
 import Wordpress from './components/Services/WordPress/Wordpress';
 import Blog from './components/Blog/Blog';
 import Register from './components/register/Register';
+import BlogContextProvider from './components/context/BlogContext';
+import BlogDetails from './components/Blog/BlogDetails';
+import AllBlogs from './components/Blog/AllBlogs';
+import WesbiteDetails from './components/website_details/WebsiteDetails';
 
 function App() {
     const { i18n } = useTranslation();
@@ -30,6 +33,7 @@ function App() {
                 { index: true, element: <Home /> },
                 { path: '/about', element: <About /> },
                 { path: '/portfolio', element: <PreviousWork /> },
+                { path: '/website/:title', element: <WesbiteDetails /> },
                 { path: '/contact-us', element: <ContactUs /> },
                 { path: '/services/web-design', element: <WebDesign /> },
                 { path: '/services/mobile-app', element: <MobilApp /> },
@@ -42,6 +46,8 @@ function App() {
                 { path: '/services/seo', element: <Seo /> },
                 { path: '/blog/:id', element: <Blog /> },
                 { path: '/register', element: <Register /> },
+                { path: '/blogs', element: <AllBlogs /> },
+                { path: '/blog/:slug', element: <BlogDetails /> },
             ],
         },
     ]);
@@ -49,11 +55,13 @@ function App() {
     return (
         <>
             <div style={{ direction: textDirection }} className="stikcy-container">
-                <PortfolioContextProvider>
-                    <MyContextProvider>
-                        <RouterProvider router={router}></RouterProvider>
-                    </MyContextProvider>
-                </PortfolioContextProvider>
+                <BlogContextProvider>
+                    <PortfolioContextProvider>
+                        <MyContextProvider>
+                            <RouterProvider router={router}></RouterProvider>
+                        </MyContextProvider>
+                    </PortfolioContextProvider>
+                </BlogContextProvider>
                 <FixedIcons />
             </div>
         </>
