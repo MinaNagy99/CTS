@@ -50,7 +50,7 @@ function Blog() {
 
     return (
         <>
-            <section className="container-fluid blog-page mx-auto py-5  px-md-5 d-lg-flex gap-4">
+            <section className="container-fluid blog-page mx-auto py-5 px-md-5 d-lg-flex gap-4">
                 <article className="">
                     <BreadCrumbs data={BreadCrumbsData} />
                     <img className="w-100 rounded" src="/assets/portfolio/1.webp" alt="main image" />

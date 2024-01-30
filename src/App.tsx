@@ -17,6 +17,7 @@ import MobilApp from './components/Services/MobilApp/MobilApp';
 import WebHosting from './components/Services/WebHosting/WebHosting';
 import Wordpress from './components/Services/WordPress/Wordpress';
 import Blog from './components/Blog/Blog';
+import Register from './components/register/Register';
 
 function App() {
     const { i18n } = useTranslation();
@@ -40,6 +41,7 @@ function App() {
                 { path: '/services/wordpress', element: <Wordpress /> },
                 { path: '/services/seo', element: <Seo /> },
                 { path: '/blog/:id', element: <Blog /> },
+                { path: '/register', element: <Register /> },
             ],
         },
     ]);

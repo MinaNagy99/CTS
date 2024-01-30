@@ -1,0 +1,22 @@
+.sign-up-form-container {
+    padding-top: 10%;
+}
+.register-btn:disabled {
+    opacity: 70%;
+    cursor: not-allowed !important;
+}
+@media screen and (max-width: 1024px) {
+    .sign-up-form-container {
+        padding-top: 12%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .sign-up-form-container {
+        padding-top: 20%;
+    }
+}
+@media screen and (max-width: 555px) {
+    .sign-up-form-container {
+        padding-top: 35%;
+    }
+}
