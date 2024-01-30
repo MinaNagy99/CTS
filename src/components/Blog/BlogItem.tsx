@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { blogType } from '../../types/BlogsTypes';
+import { FaRegUserCircle } from 'react-icons/fa';
 
 export default function BlogItem({ blog }: { blog: blogType }) {
-    const { mainImg, title, createdBy, slug ,timeOfHour,timeOfDay } = blog;
-    
+    const { mainImg, title, createdBy, slug, timeOfHour, timeOfDay } = blog;
+
     // const formatDate = (createdAt: string) => {
     //     const formattedDate = new Date(createdAt).toLocaleDateString('en-US', {
     //         year: 'numeric',
@@ -35,13 +36,8 @@ export default function BlogItem({ blog }: { blog: blogType }) {
                                 </small>
                             </div>
                             <div className="card-footer">
-                                <div className="media">
-                                    <img
-                                        className="mr-3 rounded-circle"
-                                        src={createdBy.avatar}
-                                        alt="Generic placeholder image"
-                                        style={{ maxWidth: '50px' }}
-                                    />
+                                <div className="media d-flex gap-1 align-items-center">
+                                    <FaRegUserCircle className="avatar-icon" />
                                     <div className="media-body">
                                         <h6 className="my-0 text-dark d-block">{createdBy.name}</h6>
                                     </div>

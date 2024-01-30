@@ -5,6 +5,7 @@ import './index.css';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../i18n.js';
 import { HelmetProvider } from 'react-helmet-async';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
@@ -20,6 +21,8 @@ const urls = [
     '/#/demo/kinderGarten',
 ];
 
+const queryClient = new QueryClient();
+
 // console.log(urls.some((url) => window.location.href.includes(url)));
 
 if (window.location.hash && urls.some((url) => window.location.href.includes(url))) {
@@ -32,7 +35,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <React.StrictMode>
             <Provider store={store}>
                 <I18nextProvider i18n={i18n}>
-                    <App />
+                    <QueryClientProvider client={queryClient}>
+                        <App />
+                    </QueryClientProvider>
                 </I18nextProvider>
             </Provider>
         </React.StrictMode>

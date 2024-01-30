@@ -1,15 +1,19 @@
+export interface sectionsType {
+    title: string;
+    caption: string;
+    body: {
+        title?: string;
+        paragraphs?: string[];
+        list?: { title: string; listItems: string[]; orderedList: boolean };
+        order?: string[];
+    }[];
 
-
-export interface sectionsType{
-    title:string;
-    caption:string;
-    body:string | {title:string; list:string[]}[] | {paragraphs:string[],title:string};
-    image:string;
+    image?: string;
 }
 export interface userType {
     name: string;
     email?: string;
-    avatar: string;
+    // avatar: string;
     _id?: string;
 }
 export interface blogType {
@@ -18,13 +22,13 @@ export interface blogType {
     timeOfDay: string;
     tags: string[];
     title: string;
+    caption: string;
     category: string;
-    sections: sectionsType[],
-    slug:string,
-    createdBy:userType
+    mainText?: string;
+    sections: sectionsType[];
+    slug: string;
+    createdBy: userType;
 }
-
-
 
 export interface imageType {
     url: string;
@@ -34,7 +38,7 @@ export interface imageType {
 export interface userType {
     name: string;
     email?: string;
-    avatar: string;
+    // avatar: string;
     _id?: string;
 }
 export interface commentType {
