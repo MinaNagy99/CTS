@@ -3,7 +3,7 @@
 export interface sectionsType{
     title:string;
     caption:string;
-    body:string | {title:string; list:string[]}[];
+    body:string | {title:string; list:string[]}[] | {paragraphs:string[],title:string};
     image:string;
 }
 export interface userType {

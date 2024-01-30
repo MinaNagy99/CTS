@@ -2,13 +2,11 @@ import { ReactNode, createContext, useState } from 'react';
 import slugify from 'slugify';
 import { blogType } from '../../types/BlogsTypes';
 export const blogContext = createContext<valueOfContextType | null>(null);
-// const url_backEnd = 'http://localhost:3003/blog';
 interface propsType {
     children: ReactNode;
 }
 
 export type valueOfContextType = {
-    // getAllBlogs: () => Promise<blogType[]>;
     Blogs: blogType[];
 };
 
@@ -45,6 +43,15 @@ function BlogContextProvider({ children }: propsType) {
                         },
                     ],
                     image: '/assets/blogs/blog1/3.webp',
+                },
+                {
+                    title: ' brand identity',
+                    caption: 'Brand identity',
+                    image: '/assets/blogs/blog',
+                    body: {
+                        title:"asd",
+                        paragraphs:['sadasdasd','asdasdasd']
+                    },
                 },
             ],
         },
