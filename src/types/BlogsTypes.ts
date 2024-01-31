@@ -4,9 +4,9 @@ export interface sectionsType {
     body: {
         title?: string;
         paragraphs?: string[];
-        list?: { title: string; listItems: string[]; orderedList: boolean };
+        list?: { title?: string; listItems: string[]; orderedList: boolean };
         order?: string[];
-    }[];
+    };
 
     image?: string;
 }
@@ -24,7 +24,7 @@ export interface blogType {
     title: string;
     caption: string;
     category: string;
-    mainText?: string;
+    mainText?: string[];
     sections: sectionsType[];
     slug: string;
     createdBy: userType;
