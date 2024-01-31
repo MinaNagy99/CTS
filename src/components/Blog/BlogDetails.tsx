@@ -68,6 +68,7 @@ function BlogDetails() {
                             backgroundRepeat: 'no-repeat',
                         }}
                     >
+                        <img src="" alt="" />
                         <div className=" layer   py-4">
                             <h1 className=" mb-0  text-center typography ">{Blog?.title}</h1>
                             <p id="caption" className="typography ">
@@ -111,24 +112,7 @@ function BlogDetails() {
                                     </>
                                 );
                             })}
-                            <Link to={'/'} className="text-primary text-decoration-none d-inline-block mt-3">
-                                {Blog?.category}
-                            </Link>
-
                         
-                            <h2 className="article-heading ">{Blog?.title}</h2>
-                            <div className="mt-2">
-                                <p className="article-p mb-2 ">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga velit odio aspernatur sunt
-                                    adipisci error saepe impedit ex quae! Labore voluptas animi quis sed harum necessitatibus
-                                    eligendi sunt sapiente fuga?
-                                </p>
-                                <ul className="me-5 ">
-                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </li>
-                                </ul>
-                            </div>
                         </article>
                         {/* 
                     <article className="col-12 col-md-8">

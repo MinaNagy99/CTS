@@ -18,7 +18,10 @@ export default function SectionBody({ body }: props) {
                         </>
                     );
                 })}
-            {list && <ListOfBody list={list} />}
+            {list &&
+                list.map((list) => {
+                    return <ListOfBody list={list} />;
+                })}
         </>
     );
 }

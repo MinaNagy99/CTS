@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { blogType } from '../../types/BlogsTypes';
 import { FaRegUserCircle } from 'react-icons/fa';
+import { Trans } from 'react-i18next';
 
 export default function BlogItem({ blog }: { blog: blogType }) {
     const { mainImg, title, createdBy, slug, timeOfHour, timeOfDay } = blog;
@@ -16,17 +17,17 @@ export default function BlogItem({ blog }: { blog: blogType }) {
     return (
         <>
             <>
-                {console.log(mainImg)}
                 <Link className="col-sm-12 col-md-6 col-lg-4 mb-4" to={`/blog/${slug}`}>
                     <div className="card text-dark  click-col">
                         <img
                             className="card-img  "
                             src={mainImg}
                             alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?"
-                        />
+                        /> 
                         <div className="card-img-overlay d-flex flex-column">
                             <div className="card-body">
-                                <small className="card-meta mb-2">${title}</small>
+                           
+                                <small className="card-meta mb-2"> {<Trans i18nKey={title}></Trans>}</small>
                                 <h4 className="card-title mt-0 ">
                                     <a className="text-dark" href="https://creativemanner.com">
                                         {title}

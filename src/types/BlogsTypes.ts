@@ -8,7 +8,7 @@ export interface sectionsType {
 export interface sectionBodyType {
     title?: string;
     paragraphs?: string[];
-    list?: listType;
+    list?: listType[];
     order?: string[];
 }
 export interface listType {
