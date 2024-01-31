@@ -34,17 +34,19 @@ function BlogContextProvider({ children }: propsType) {
                         paragraphs: [
                             'Designing a professional hotel and flight reservation website requires that your goal be clear, in order to obtain a great return on investment, so you must determine the type of field that you want to target its audience, by taking steps that provide an easy user experience for the visitor, and simple online payment methods, in addition to providing Means of communication with all countries of the world, and the ability to upload photos, to display your company’s and hotels’ services.',
                         ],
-                        list: {
-                            title: 'You can now get an easy hotel reservation website design that provides you with the following:',
-                            listItems: [
-                                'It provides the visitor to search by country, hotel name and city.',
-                                'Through it, the customer can book the room he wants.',
-                                'CTS Company provides you with an easy-to-use control panel in all languages, enabling you to send and receive reservation requests from customers.',
-                                'The design of your website for booking hotels also provides easy and multiple payment methods, whether a bank account or a Visa.',
-                                'It is a suitable site for viewing on all devices, whether mobile or desktop.',
-                            ],
-                            orderedList: true,
-                        },
+                        list: [
+                            {
+                                title: 'You can now get an easy hotel reservation website design that provides you with the following:',
+                                listItems: [
+                                    'It provides the visitor to search by country, hotel name and city.',
+                                    'Through it, the customer can book the room he wants.',
+                                    'CTS Company provides you with an easy-to-use control panel in all languages, enabling you to send and receive reservation requests from customers.',
+                                    'The design of your website for booking hotels also provides easy and multiple payment methods, whether a bank account or a Visa.',
+                                    'It is a suitable site for viewing on all devices, whether mobile or desktop.',
+                                ],
+                                orderedList: true,
+                            },
+                        ],
                         order: ['para', 'list'],
                     },
                 },
@@ -53,20 +55,22 @@ function BlogContextProvider({ children }: propsType) {
                     caption: 'Airline reservation website design specifications',
                     image: '/assets/blogs/Design of a hotel and airline reservation website/sec2.webp',
                     body: {
-                        list: {
-                            title: 'The hotel reservation website design specifications from Injaz Media Company are characterized by professionalism, as they help you communicate well with customers, the most prominent of which are the following:',
-                            listItems: [
-                                'You will get an innovative, professional airline booking website design, which will help you attract customers attention.',
-                                'We will also provide you with a logo design for the company, indicating its commercial identity.',
-                                'You will get a control panel that is easy to control in foreign and Arabic languages.',
-                                'We will provide coding for all pages.',
-                                'We will also allocate a special panel for site members, and special programming.',
-                                'We will also provide multiple payment methods, suitable for all customers, in addition to providing you with professional archiving services.',
-                                'We will also protect your site against electronic attacks, and provide server protection.',
-                                'You can add bank accounts through it, send a message with the amount, deposit and pay.',
-                            ],
-                            orderedList: true,
-                        },
+                        list: [
+                            {
+                                title: 'The hotel reservation website design specifications from Injaz Media Company are characterized by professionalism, as they help you communicate well with customers, the most prominent of which are the following:',
+                                listItems: [
+                                    'You will get an innovative, professional airline booking website design, which will help you attract customers attention.',
+                                    'We will also provide you with a logo design for the company, indicating its commercial identity.',
+                                    'You will get a control panel that is easy to control in foreign and Arabic languages.',
+                                    'We will provide coding for all pages.',
+                                    'We will also allocate a special panel for site members, and special programming.',
+                                    'We will also provide multiple payment methods, suitable for all customers, in addition to providing you with professional archiving services.',
+                                    'We will also protect your site against electronic attacks, and provide server protection.',
+                                    'You can add bank accounts through it, send a message with the amount, deposit and pay.',
+                                ],
+                                orderedList: true,
+                            },
+                        ],
                         // order: ['para', 'list'],
                     },
                 },
@@ -76,15 +80,17 @@ function BlogContextProvider({ children }: propsType) {
                         'Design standards for the flight reservation website Booking website for booking airline tickets and hotels',
                     image: '/assets/blogs/Design of a hotel and airline reservation website/sec3.webp',
                     body: {
-                        list: {
-                            title: 'We present to you the standards for designing a flight reservation website. Booking.com is a distinctive website for booking airline tickets and hotels. It will help you stand out from your competitors and get ahead of them. They are as follows:',
-                            listItems: [
-                                'You must provide high-quality images in the design of the hotel reservation website that you want customers to book, showing all the details within it, and being coordinated in a smooth, sequential manner, while explaining the features of the place.',
-                                'You must provide an easy user experience for the visitor to your site, while browsing your site and viewing images, without facing problems of difficulty loading images, or difficulty browsing, which would cause him to leave your site without returning.',
-                                'Protecting your site from electronic attacks requires providing a valid security certificate for the site, which makes it provide optimal response to customers, on all phones, computers, and tablets.',
-                            ],
-                            orderedList: true,
-                        },
+                        list: [
+                            {
+                                title: 'We present to you the standards for designing a flight reservation website. Booking.com is a distinctive website for booking airline tickets and hotels. It will help you stand out from your competitors and get ahead of them. They are as follows:',
+                                listItems: [
+                                    'You must provide high-quality images in the design of the hotel reservation website that you want customers to book, showing all the details within it, and being coordinated in a smooth, sequential manner, while explaining the features of the place.',
+                                    'You must provide an easy user experience for the visitor to your site, while browsing your site and viewing images, without facing problems of difficulty loading images, or difficulty browsing, which would cause him to leave your site without returning.',
+                                    'Protecting your site from electronic attacks requires providing a valid security certificate for the site, which makes it provide optimal response to customers, on all phones, computers, and tablets.',
+                                ],
+                                orderedList: true,
+                            },
+                        ],
                         // order: ['para', 'list'],
                     },
                 },
@@ -93,18 +99,20 @@ function BlogContextProvider({ children }: propsType) {
                     caption: 'Requirements for creating an airline tickets and hotels website',
                     image: '/assets/blogs/Design of a hotel and airline reservation website/sec4.webp',
                     body: {
-                        list: {
-                            title: 'One of the most important requirements for creating an airline tickets and hotel website is to have a set of skills, in order to have a professional website that motivates customers to request your services. Its steps are as follows:',
-                            listItems: [
-                                'Use modern colors for the website that attract attention and suit your commercial identity.',
-                                'Design a logo for your company that distinguishes it from competing companies.',
-                                'Choosing a wonderful, unique and innovative design for your hotel and flight reservation website will attract customers’ attention.',
-                                'The site design is compatible with all mobile and web devices.',
-                                'There must also be a control panel that makes it easy to manage the site in all languages, with simple payment methods available on the site for booking hotels.',
-                                'Having an account for each user with all his data and all the operations he carried out.',
-                            ],
-                            orderedList: true,
-                        },
+                        list: [
+                            {
+                                title: 'One of the most important requirements for creating an airline tickets and hotel website is to have a set of skills, in order to have a professional website that motivates customers to request your services. Its steps are as follows:',
+                                listItems: [
+                                    'Use modern colors for the website that attract attention and suit your commercial identity.',
+                                    'Design a logo for your company that distinguishes it from competing companies.',
+                                    'Choosing a wonderful, unique and innovative design for your hotel and flight reservation website will attract customers’ attention.',
+                                    'The site design is compatible with all mobile and web devices.',
+                                    'There must also be a control panel that makes it easy to manage the site in all languages, with simple payment methods available on the site for booking hotels.',
+                                    'Having an account for each user with all his data and all the operations he carried out.',
+                                ],
+                                orderedList: true,
+                            },
+                        ],
                         // order: ['para', 'list'],
                     },
                 },
@@ -113,18 +121,20 @@ function BlogContextProvider({ children }: propsType) {
                     caption: 'Create a website for booking airline tickets and hotels with a commission',
                     image: '/assets/blogs/Design of a hotel and airline reservation website/sec5.webp',
                     body: {
-                        list: {
-                            title: 'The specifications for creating a website for booking airline tickets and hotels with a commission from the best website design company in Egypt and the Arab world, are as follows:',
-                            listItems: [
-                                'Providing innovative, unique and easy-to-use specifications for the website owner.',
-                                'The client gets the best hotel and airline reservation website design at a simple price.',
-                                'We also have a team of experts and programmers in the field of design professionally.',
-                                'We also determine the lowest cost for designing the hotel website, provide you with a control panel that is easy for you to use, and communicate with customers in all countries of the world.',
-                                'We also design a professional logo for you, and provide you with technical support services even after the product is delivered, to solve any problems with our hotel website designs.',
-                                'The hotel website design is also compatible with all search engines and exchange systems.',
-                            ],
-                            orderedList: false,
-                        },
+                        list: [
+                            {
+                                title: 'The specifications for creating a website for booking airline tickets and hotels with a commission from the best website design company in Egypt and the Arab world, are as follows:',
+                                listItems: [
+                                    'Providing innovative, unique and easy-to-use specifications for the website owner.',
+                                    'The client gets the best hotel and airline reservation website design at a simple price.',
+                                    'We also have a team of experts and programmers in the field of design professionally.',
+                                    'We also determine the lowest cost for designing the hotel website, provide you with a control panel that is easy for you to use, and communicate with customers in all countries of the world.',
+                                    'We also design a professional logo for you, and provide you with technical support services even after the product is delivered, to solve any problems with our hotel website designs.',
+                                    'The hotel website design is also compatible with all search engines and exchange systems.',
+                                ],
+                                orderedList: false,
+                            },
+                        ],
                         // order: ['para', 'list'],
                     },
                 },
@@ -133,16 +143,18 @@ function BlogContextProvider({ children }: propsType) {
                     caption: 'How to create, program and design a hotel reservation website',
                     image: '/assets/blogs/Design of a hotel and airline reservation website/sec6.webp',
                     body: {
-                        list: {
-                            title: 'A hotel and flight reservations website can be created, programmed, and designed by following the following steps:',
-                            listItems: [
-                                'Define goals clearly.',
-                                'Determine target groups.',
-                                'Site planning.',
-                                'Domain and hosting.',
-                            ],
-                            orderedList: true,
-                        },
+                        list: [
+                            {
+                                title: 'A hotel and flight reservations website can be created, programmed, and designed by following the following steps:',
+                                listItems: [
+                                    'Define goals clearly.',
+                                    'Determine target groups.',
+                                    'Site planning.',
+                                    'Domain and hosting.',
+                                ],
+                                orderedList: true,
+                            },
+                        ],
                         // order: ['para', 'list'],
                     },
                 },
@@ -162,7 +174,6 @@ function BlogContextProvider({ children }: propsType) {
                 {
                     title: 'Programming, design and development of websites',
                     caption: 'Programming, design and development of websites',
-                    image: '/assets/blogs/Design of a hotel and airline reservation website/sec1.webp',
                     body: {
                         paragraphs: [
                             'Website design from AST Solutions is more than just designing a website on the Internet, because the digital world is governed by first impressions, and we work to make an impressive impression from the beginning and designing a distinctive website is the key to success in light of the Internet era that we live in now, where We start working directly with you to transform your ideas into a successful and inspiring website. Website programming and development - programming, design and development of websites.',
@@ -390,20 +401,52 @@ function BlogContextProvider({ children }: propsType) {
                         paragraphs: [
                             'Although the bulk of the SEO we talk about is designed for the web, SEO still plays a role on social media. After all, more and more people these days are using social media as a search engine, especially on TikTok.',
                         ],
-                        list: {
-                            title: 'The general rule for using keywords on a page is as follows:',
-                            listItems: [
-                                'In the page title and URL',
-                                'In at least one title (H1 tags)',
-                                'In at least one subheading (H2 and H3 tags)',
-                                'In the first paragraph',
-                                'In the last paragraph',
-                                'In the meta description*',
-                                'In the alt text of a single image*',
-                            ],
-                            orderedList: false,
-                        },
+                        list: [
+                            {
+                                title: 'The general rule for using keywords on a page is as follows:',
+                                listItems: [
+                                    'In the page title and URL',
+                                    'In at least one title (H1 tags)',
+                                    'In at least one subheading (H2 and H3 tags)',
+                                    'In the first paragraph',
+                                    'In the last paragraph',
+                                    'In the meta description*',
+                                    'In the alt text of a single image*',
+                                ],
+                                orderedList: false,
+                            },
+                            {
+                                title: 'Here are some best practices for using SEO on social media in general:',
+                                listItems: [
+                                    'Quality over quantity',
+                                    'Have a content strategy',
+                                    'Make sharing easy',
+                                    'Improve your profile',
+                                    'Interact with your audience',
+                                    'Create compelling captions',
+                                ],
+                                orderedList: false,
+                            },
+                        ],
                         order: ['list', 'para'],
+                    },
+                },
+                {
+                    title: 'Is search engine optimization necessary for creatives?',
+                    caption: 'Is search engine optimization necessary for creatives?',
+                    body: {
+                        paragraphs: [
+                            'Google recently announced an update to its SEO best practices. This Helpful Content Update may be more confusing than helpful to some.',
+                            "What the update entails is that person-first content (i.e. content designed to please people first and algorithms second) is more important than SEO. Great, so you can't worry about SEO now, right?",
+                            'Not so fast. The update also indicates that SEO is still a useful, if not essential, tool. So, what is it?',
+                            "Let's understand what the takeaway is here.",
+                            'Google is right to highlight the importance of person-focused content. You create content for people, not algorithms.',
+                            "Your content should sound natural, and your voice should shine through. You don't want to look like a robot for the sake of SEO. However, it should still be useful and valuable to people, as they should leave your post or page satisfied.",
+                            "If your intention is to rank for SEO purposes only, you'll need to rethink why you're creating content.",
+                            "However, you don't want to completely ditch SEO either. It still helps your personal brand grow when applied to person-first content.",
+                            'TL;DR: Create content for people first, implement an SEO strategy second.',
+                            "We live in the information age and SEO has become an important part of our daily digital lives. It may be a little daunting at first, but ultimately it's a tool that exists to help your meaningful content cut through the noise and reach the people who matter.",
+                        ],
                     },
                 },
             ],

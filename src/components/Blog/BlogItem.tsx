@@ -18,12 +18,12 @@ export default function BlogItem({ blog }: { blog: blogType }) {
             <>
                 {console.log(mainImg)}
                 <Link className="col-sm-12 col-md-6 col-lg-4 mb-4" to={`/blog/${slug}`}>
-                    <div className="card text-dark card-has-bg click-col" style={{ backgroundImage: "url(" + { mainImg } + ")" }}>
-                        <img
-                            className="card-img d-none"
+                    <div className="card text-dark " style={{ backgroundImage: `url(${mainImg})` }}>
+                        {/* <img
+                            className="card-img"
                             src={mainImg}
                             alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?"
-                        />
+                        /> */}
                         <div className="card-img-overlay d-flex flex-column">
                             <div className="card-body">
                                 <small className="card-meta mb-2">${title}</small>

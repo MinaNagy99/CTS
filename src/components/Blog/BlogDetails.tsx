@@ -68,6 +68,7 @@ function BlogDetails() {
                             backgroundRepeat: 'no-repeat',
                         }}
                     >
+                        <img src="" alt="" />
                         <div className=" layer   py-4">
                             <h1 className=" mb-0  text-center typography ">{Blog?.title}</h1>
                             <p id="caption" className="typography ">
