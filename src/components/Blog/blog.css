@@ -11,12 +11,121 @@
     font-weight: 200;
     text-align: justify;
 }
-.image-blog{
+.image-blog {
     max-height: 60vh;
     background-image: url(Blog?.mainImg);
     background-color: blue;
 }
 
-#blogDetails li{
+#blogDetails li {
     margin: 0px 0px;
+}
+
+#mainImg {
+    background-image: url('/assets/blogs/blog1/1.webp');
+    background-size: cover;
+    background-position: center center;
+}
+
+#blogImg {
+    max-height: 60vh;
+    object-fit: cover;
+}
+.boxShadow {
+    box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.75);
+}
+#suggestedPost #title {
+    font-size: 12px;
+    line-height: 1;
+
+    text-justify:distribute-all-lines;
+}
+#suggestedPost #date {
+    font-size: 12px;
+    color: #05579b;
+}
+
+
+#blogTitle {
+    background-image: url('/assets/blogs/blog1/1.webp');
+}
+
+.typography {
+    font-family: Inter;
+    font-style: normal;
+    line-height: 150%; /* 30px */
+}
+
+#blogTitle .layer {
+    top: 0;
+
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 6;
+    background: linear-gradient(0deg, rgba(22, 68, 114, 0.65) 0%, rgba(22, 68, 114, 0.65) 100%);
+}
+#blogDetails #caption {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#blogTitle h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+}
+#blogTitle p {
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#blogDetails .article-p {
+    color: var(--dark-blue, #12367c);
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+#blogDetails h2 {
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--light-blue, #05579b);
+}
+#leftSection {
+    top: 10%;
+}
+
+@media (max-width: 767.98px) {
+    .custom-width {
+        width: 100%;
+    }
+    #blogDetails .article-p {
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+    #blogDetails h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    #blogTitle h1 {
+        font-size: 30px;
+        font-weight: 800;
+        color: #fff;
+    }
+}
+
+/* For md (medium) screens and larger */
+@media (min-width: 768px) {
+    .custom-width {
+        width: 50%;
+    }
 }
