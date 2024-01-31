@@ -260,18 +260,20 @@ function BlogContextProvider({ children }: propsType) {
                     caption: 'What distinguishes website design from our company:',
                     // image: '/assets/blogs/Design of a hotel and airline reservation website/sec1.webp',
                     body: {
-                        list: {
-                            listItems: [
-                                'What distinguishes us is understanding and realizing the client’s requirements and good planning before starting work.',
-                                'All sites come with a complete control panel to control the site without the need to return to the company.',
-                                'We provide complete and complete protection for websites on our servers.',
-                                'Good planning when designing websites for places to place advertising banners to be more effective.',
-                                'Relying on simplicity in website design to make visitors comfortable and stay on the site for as long as possible.',
-                                'Reducing website loading time by avoiding flash drives and software that may affect the speed of loading the website and archiving it in search engines.',
-                                'We provide all corporate website design services that will bring you more exposure and thus more customers and sales at much lower prices.',
-                            ],
-                            orderedList: false,
-                        },
+                        list: [
+                            {
+                                listItems: [
+                                    'What distinguishes us is understanding and realizing the client’s requirements and good planning before starting work.',
+                                    'All sites come with a complete control panel to control the site without the need to return to the company.',
+                                    'We provide complete and complete protection for websites on our servers.',
+                                    'Good planning when designing websites for places to place advertising banners to be more effective.',
+                                    'Relying on simplicity in website design to make visitors comfortable and stay on the site for as long as possible.',
+                                    'Reducing website loading time by avoiding flash drives and software that may affect the speed of loading the website and archiving it in search engines.',
+                                    'We provide all corporate website design services that will bring you more exposure and thus more customers and sales at much lower prices.',
+                                ],
+                                orderedList: false,
+                            },
+                        ],
                         // order: ['para', 'list'],
                     },
                 },
