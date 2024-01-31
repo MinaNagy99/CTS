@@ -18,9 +18,9 @@ export default function BlogItem({ blog }: { blog: blogType }) {
             <>
                 {console.log(mainImg)}
                 <Link className="col-sm-12 col-md-6 col-lg-4 mb-4" to={`/blog/${slug}`}>
-                    <div className="card text-dark card-has-bg click-col" style={{ backgroundImage: "url(" + { mainImg } + ")" }}>
+                    <div className="card text-dark  click-col">
                         <img
-                            className="card-img d-none"
+                            className="card-img  "
                             src={mainImg}
                             alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?"
                         />

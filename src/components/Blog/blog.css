@@ -16,6 +16,11 @@
     background-image: url(Blog?.mainImg);
     background-color: blue;
 }
+.card-img{
+    object-position: center center;
+    object-fit: cover;
+    height: fit-content ;
+}
 
 #blogDetails li {
     margin: 0px 0px;

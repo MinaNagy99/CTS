@@ -1,4 +1,5 @@
 import { sectionBodyType } from '../../types/BlogsTypes';
+import ListOfBody from './ListOfBody';
 import Paragraph from './Paragraph';
 
 interface props {
@@ -17,7 +18,7 @@ export default function SectionBody({ body }: props) {
                         </>
                     );
                 })}
-            {list && list.listItems}
+            {list && <ListOfBody list={list} />}
         </>
     );
 }

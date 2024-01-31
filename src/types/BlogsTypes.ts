@@ -8,8 +8,13 @@ export interface sectionsType {
 export interface sectionBodyType {
     title?: string;
     paragraphs?: string[];
-    list?: { title?: string; listItems: string[]; orderedList: boolean };
+    list?: listType;
     order?: string[];
+}
+export interface listType {
+    title?: string;
+    listItems: string[];
+    orderedList: boolean;
 }
 export interface userType {
     name: string;
