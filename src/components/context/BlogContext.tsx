@@ -14,7 +14,7 @@ function BlogContextProvider({ children }: propsType) {
     const dataOfBlogs: blogType[] = [
         {
             slug: slugify('Designing a hotel and airline reservation website'),
-            mainImg: './assets/blogs/Design of a hotel and airline reservation website/main.webp',
+            mainImg: 'assets/blogs/Design of a hotel and airline reservation website/main.webp',
             timeOfDay: 'Jan 7, 2024',
             timeOfHour: '11:45 Pm',
             category: 'Articles',
