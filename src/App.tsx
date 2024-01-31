@@ -15,7 +15,7 @@ import Seo from './components/Services/SEO/SEO';
 import MobilApp from './components/Services/MobilApp/MobilApp';
 import WebHosting from './components/Services/WebHosting/WebHosting';
 import Wordpress from './components/Services/WordPress/Wordpress';
-import Register from './components/register/Register';
+// import Register from './components/register/Register';
 import BlogContextProvider from './components/context/BlogContext';
 import BlogDetails from './components/Blog/BlogDetails';
 import AllBlogs from './components/Blog/AllBlogs';
@@ -43,7 +43,7 @@ function App() {
                 { path: '/services/web-hosting', element: <WebHosting /> },
                 { path: '/services/wordpress', element: <Wordpress /> },
                 { path: '/services/seo', element: <Seo /> },
-                { path: '/register', element: <Register /> },
+                // { path: '/register', element: <Register /> },
                 { path: '/blogs', element: <AllBlogs /> },
                 { path: '/blog/:slug', element: <BlogDetails /> },
             ],

@@ -6,7 +6,9 @@ import SuggestedPosts from './SuggestedPosts';
 import SocialShareButtons from './SocialShareButtons';
 import { useContext, useEffect, useMemo, useState } from 'react';
 import { blogContext, valueOfContextType } from '../context/BlogContext';
-import { blogType } from '../../types/BlogsTypes';
+import { blogType, sectionsType } from '../../types/BlogsTypes';
+import BlogSection from './BlogSection';
+import Paragraph from './Paragraph';
 const getBlogBySlug = (Blogs: blogType[], slug: string): blogType | undefined => {
     if (Blogs) {
         return Blogs.find((blog: blogType) => blog.slug === slug);
@@ -56,19 +58,30 @@ function BlogDetails() {
         <>
             <section id="blogDetails" className="typography  blog-page  pt-4     gap-4">
                 <div className="container-fluid">
-                    <div id="blogTitle" className="w-100  boxShadow  mb-4 text-black  ">
+                    <div
+                        id="blogTitle"
+                        className="w-100   boxShadow  mb-4   "
+                        style={{
+                            backgroundImage: `url(${Blog?.mainImg})`,
+                            backgroundPosition: 'center',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                        }}
+                    >
                         <div className=" layer   py-4">
-                            <h1 className=" mb-0  typography ">titititisdlcsdlfsdfksdfksdfkl</h1>
+                            <h1 className=" mb-0  text-center typography ">{Blog?.title}</h1>
                             <p id="caption" className="typography ">
-                                How a professionally designed website can help businesses establish a strong online presence
-                                and attract customers
+                                {Blog?.caption}
                             </p>
                         </div>
                     </div>
                     <div className="row">
                         <article className="col-lg-9 col-12 ">
                             <BreadCrumbs data={BreadCrumbsData} />
-                            <img id="blogImg" className=" w-100  rounded" src={Blog?.mainImg} alt="main image" />
+
+                            {Blog?.mainImg && (
+                                <img id="blogImg" className=" w-100  rounded" src={Blog?.mainImg} alt={Blog?.caption} />
+                            )}
                             {/* Display meta data of blogs  */}
                             <div className=" d-flex  flex-wrap mt-2 justify-content-evenly  ">
                                 {metaDataOfBlog.map((metaData, index) => {
@@ -86,21 +99,18 @@ function BlogDetails() {
                             <Link to={'/'} className="text-primary text-decoration-none d-block mt-3">
                                 {Blog?.category}
                             </Link>
-                            <p id="mainBody" className="typography article-p">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga velit odio aspernatur sunt
-                                adipisci error saepe impedit ex quae! Labore voluptas animi quis sed harum necessitatibus
-                                eligendi sunt sapiente fuga?
-                            </p>
+                            {Blog?.mainText &&
+                                Blog?.mainText.map((paragraph: string, index: number) => (
+                                    <Paragraph key={index} paragraph={paragraph} />
+                                ))}
 
-                            <h2 className=" typography">{Blog?.title}</h2>
-                            <img id="blogImg" className="  rounded" src={Blog?.mainImg} alt="main image" />
-                            <div className="mt-2">
-                                <p className="article-p text">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga velit odio aspernatur sunt
-                                    adipisci error saepe impedit ex quae! Labore voluptas animi quis sed harum necessitatibus
-                                    eligendi sunt sapiente fuga?
-                                </p>
-                            </div>
+                            {Blog?.sections.map((section: sectionsType, index: number) => {
+                                return (
+                                    <>
+                                        <BlogSection key={index} section={section} />
+                                    </>
+                                );
+                            })}
                             <Link to={'/'} className="text-primary text-decoration-none d-inline-block mt-3">
                                 {Blog?.category}
                             </Link>

@@ -1,14 +1,15 @@
 export interface sectionsType {
     title: string;
     caption: string;
-    body: {
-        title?: string;
-        paragraphs?: string[];
-        list?: { title: string; listItems: string[]; orderedList: boolean };
-        order?: string[];
-    }[];
-
+    body: sectionBodyType;
     image?: string;
+}
+
+export interface sectionBodyType {
+    title?: string;
+    paragraphs?: string[];
+    list?: { title?: string; listItems: string[]; orderedList: boolean };
+    order?: string[];
 }
 export interface userType {
     name: string;
@@ -24,7 +25,7 @@ export interface blogType {
     title: string;
     caption: string;
     category: string;
-    mainText?: string;
+    mainText?: string[];
     sections: sectionsType[];
     slug: string;
     createdBy: userType;
