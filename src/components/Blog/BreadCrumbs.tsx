@@ -13,7 +13,7 @@ const BreadCrumbs = ({ data }: propsType) => {
             {data.map((item, index) => (
                 <div key={index} className="">
                     <Link className="text-secondary text-decoration-none" to={item.link}>
-                        {<Trans i18nKey={item.name.substring(0, 15)}></Trans>}
+                        {<Trans i18nKey={item.name}></Trans>}
                     </Link>
                     {index !== data.length - 1 && <span className="px-3">/</span>}
                 </div>
