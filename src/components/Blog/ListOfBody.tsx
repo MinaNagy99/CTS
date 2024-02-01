@@ -12,14 +12,14 @@ export default function ListOfBody({ list }: props) {
             <div className="mt-2">
                 <p className="article-p mb-2 text"> {<Trans i18nKey={title}></Trans>}</p>
                 {orderedList && (
-                    <ol className="me-5 ">
+                    <ol className=" ">
                         {listItems.map((item, index) => {
                             return <li key={index}> {<Trans i18nKey={item}></Trans>}</li>;
                         })}
                     </ol>
                 )}
                 {!orderedList && (
-                    <ul className="me-5 ">
+                    <ul className=" ">
                         {listItems.map((item, index) => {
                             return <li className='typography ' key={index}> {<Trans i18nKey={item}></Trans>}</li>;
                         })}

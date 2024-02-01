@@ -16,7 +16,7 @@ function BlogContextProvider({ children }: propsType) {
             slug: slugify('Designing a hotel and airline reservation website'),
             mainImg: '/assets/blogs/Design of a hotel and airline reservation website/main.webp',
             timeOfDay: 'Jan 7, 2024',
-            timeOfHour: '11:45 Pm',
+            timeOfHour: '02:45pm',
             category: 'Articles',
             title: 'Designing a hotel and airline reservation website, such as Booking, according to the latest updates for the year 2024',
             caption: 'Designing a hotel and airline reservation website',
@@ -57,7 +57,7 @@ function BlogContextProvider({ children }: propsType) {
                     body: {
                         list: [
                             {
-                                title: 'The hotel reservation website design specifications from Injaz Media Company are characterized by professionalism, as they help you communicate well with customers, the most prominent of which are the following:',
+                                title: 'The hotel reservation website design specifications from Core Technology Solutions Company are characterized by professionalism, as they help you communicate well with customers, the most prominent of which are the following:',
                                 listItems: [
                                     'You will get an innovative, professional airline booking website design, which will help you attract customers attention.',
                                     'We will also provide you with a logo design for the company, indicating its commercial identity.',
@@ -161,80 +161,10 @@ function BlogContextProvider({ children }: propsType) {
             ],
         },
         {
-            slug: slugify('Website programming and development'),
-            mainImg: '/assets/blogs/Website programming and development/main.webp',
-            timeOfDay: 'Jan 7, 2024',
-            timeOfHour: '11:45 Pm',
-            category: 'Articles',
-            title: 'Website programming and development - programming, design and development of websites',
-            caption: 'Website programming and development',
-            createdBy: { name: 'Kamel Mamdouh' },
-            tags: ['website'],
-            sections: [
-                {
-                    title: 'Programming, design and development of websites',
-                    caption: 'Programming, design and development of websites',
-                    body: {
-                        paragraphs: [
-                            'Website design from AST Solutions is more than just designing a website on the Internet, because the digital world is governed by first impressions, and we work to make an impressive impression from the beginning and designing a distinctive website is the key to success in light of the Internet era that we live in now, where We start working directly with you to transform your ideas into a successful and inspiring website. Website programming and development - programming, design and development of websites.',
-                            'If you are looking to design a new website for your company project, you can browse our previous work. We work from a standpoint of innovation and experience, as we help companies develop their work by designing a website that presents what they have professionally to reflect the extent of their uniqueness in providing their services and products. We are able to do this through Your site, God willing. Our approach to website design begins with placing your activity and business on the Internet, earning more sales, and discovering more opportunities in this distinguished, fast-paced market.',
-                            'We offer a wide range of different services and options that include website design, electronic marketing, mobile application programming, and online store design. With AST Solutions, you will gain your place in the online and mobile world and build a personality for your brand that will have a long-term impact on your customers. We believe that design makes a difference because the first impression lasts. At EST Solutions, websites must undergo rigorous testing for all types of devices, as well as different browsers and operating systems, before we launch your new website. User tests are conducted periodically to ensure the site is up to date and responsive. Our team develops effective content strategies, and we have a proven track record of success partners that is constantly increasing. We have previous work in Kuwait, Saudi Arabia and Egypt.',
-                        ],
-                        // order: ['para', 'list'],
-                    },
-                },
-            ],
-        },
-        {
-            slug: slugify('importance of creating and designing online stores'),
-            mainImg: '/assets/blogs/Importance of creating and designing online stores/main.webp',
-            timeOfDay: 'Jan 7, 2024',
-            timeOfHour: '11:45 Pm',
-            category: 'Articles',
-            title: 'What is the importance of creating and designing online stores?',
-            caption: 'What is the importance of creating and designing online stores?',
-            mainText: [
-                'Designing electronic stores. You can now benefit from the Internet by designing an electronic store from Core Technology Solutions and displaying all the products that you want to display and market on the Internet. Technological development has made the Internet a large market on which many products can be sold, starting from clothes to real estate. This is why the E-commerce company is interested in ST Solutions provides an online store design service at the best prices.',
-            ],
-            createdBy: { name: 'Kamel Mamdouh' },
-            tags: ['website'],
-            sections: [
-                {
-                    title: 'The importance of creating and designing online stores',
-                    caption: 'The importance of creating and designing online stores',
-                    // image: '/assets/blogs/Design of a hotel and airline reservation website/sec1.webp',
-                    body: {
-                        paragraphs: [
-                            'All young people and adults also now do not go by a single day without connecting to the Internet and browsing everything new. The Internet has become a daily means of communication through social networking sites and has also become a means of communication at work. Every large company has a website through which the company’s employees communicate in addition to publishing an introduction to the company and what it offers. on the Internet.',
-                            'All companies, large institutions and small projects now have their own website, and small business owners market their products on the Internet through it. When you own an online store, you can market your products on it with ease and at much cheaper prices than traditional marketing. It is known that electronic marketing is less expensive and more profitable than traditional marketing. Therefore, I advise you to own an online store with a distinct design that will save you time and effort and help you achieve success.',
-                            'Many people use the Internet to obtain information, shop, or communicate with friends, relatives, and acquaintances. Therefore, you will find many customers on the Internet who are interested in your products and buy them. Here in our company, we also design an online store for you. We will also help you in the electronic marketing process in the first three months of the year. Through our special offers, you can renew the marketing service at any time.',
-                            'You must know that when you have an online store in which you display your products, you will have a gateway to the whole world and through it your business activity will extend from the local scope to the entire world, and this is our mission during the first period of launching your online store.',
-                        ],
-                        // order: ['para', 'list'],
-                    },
-                },
-                {
-                    title: 'After designing an online store, we can help you increase your profits through many methods, including:',
-                    caption:
-                        'After designing an online store, we can help you increase your profits through many methods, including:',
-                    // image: '/assets/blogs/Design of a hotel and airline reservation website/sec1.webp',
-                    body: {
-                        paragraphs: [
-                            'Preparing websites for search engines - SEO - This way you can attract visitors interested in your products from search engines at no cost by preparing your own website and working on it through our work team so that your online store appears at the top of the results.',
-                            'Social media sites - through which you can get visitors from social media sites, such as sponsored advertisements on Facebook and Twitter, by interacting with customers and making ads with very precise targeting by specifying interests and other factors through which you can achieve the highest results from the visits you receive. will come to your site.',
-                            'Paid Google ads - Google Adwords - are ads that you can benefit from to achieve very large profits because through Google campaigns you will pay by click or by views. This means that if you adjust the advertising campaign well, you will get very interested customers.',
-                            'And many other ways that you will learn about us at EST Solutions when you contact us to start designing your own online stores.',
-                        ],
-                        // order: ['para', 'list'],
-                    },
-                },
-            ],
-        },
-        {
             slug: slugify('corporate website design'),
             mainImg: '/assets/blogs/Corporate website design/main.webp',
             timeOfDay: 'Jan 7, 2024',
-            timeOfHour: '11:45 Pm',
+            timeOfHour: '08:55am',
             category: 'Articles',
             title: 'Corporate website design - the best website design company in Egypt',
             caption: 'Corporate website design - the best website design company in Egypt',
@@ -242,7 +172,12 @@ function BlogContextProvider({ children }: propsType) {
                 'Core Technology Solutions provides a website design service for companies and institutions that seek excellence through a sophisticated interface on the Internet. We do not only provide website design for companies, but also integrated solutions and a distinctive identity for your company or organization. We create the website in a way that is compatible with search engines. And all internet browsers, mobile devices, tablets, iPhones, etc., in a manner consistent with international standards in designing and programming corporate websites.',
             ],
             createdBy: { name: 'Kamel Mamdouh' },
-            tags: ['website'],
+            tags: [
+                'Business Web Solutions',
+                'Leading Website Design Egypt',
+                'Top Web Design Services',
+                'Corporate Identity Online',
+            ],
             sections: [
                 {
                     title: 'Website design for companies',
@@ -294,8 +229,8 @@ function BlogContextProvider({ children }: propsType) {
         {
             slug: slugify('understanding seo'),
             mainImg: '/assets/blogs/Understanding SEO/main.webp',
-            timeOfDay: 'Jan 7, 2024',
-            timeOfHour: '11:45 Pm',
+            timeOfDay: 'Dec 5, 2024',
+            timeOfHour: '12:45pm',
             category: 'Articles',
             title: 'Understanding SEO – Is It Really Necessary?',
             caption: 'Understanding SEO – Is It Really Necessary?',
@@ -305,7 +240,7 @@ function BlogContextProvider({ children }: propsType) {
                 "First, let's understand what search engine optimization (SEO) is and how it works.",
             ],
             createdBy: { name: 'Kamel Mamdouh' },
-            tags: ['website'],
+            tags: ['Search Engine Optimization Tips', 'SEO Best Practices', 'SEO Essentials'],
             sections: [
                 {
                     title: 'What is search engine optimization?',
@@ -455,6 +390,83 @@ function BlogContextProvider({ children }: propsType) {
                 },
             ],
         },
+        {
+            slug: slugify('Website programming and development'),
+            mainImg: '/assets/blogs/Website programming and development/main.webp',
+            timeOfDay: 'Oct 11, 2023',
+            timeOfHour: '05:45pm',
+            category: 'Articles',
+            title: 'Website programming and development - programming, design and development of websites',
+            caption: 'Website programming and development',
+            createdBy: { name: 'Kamel Mamdouh' },
+            tags: ['Website Design', 'Web Programming', 'Web Development', 'Programming'],
+            sections: [
+                {
+                    title: 'Programming, design and development of websites',
+                    caption: 'Programming, design and development of websites',
+                    body: {
+                        paragraphs: [
+                            'Website design from AST Solutions is more than just designing a website on the Internet, because the digital world is governed by first impressions, and we work to make an impressive impression from the beginning and designing a distinctive website is the key to success in light of the Internet era that we live in now, where We start working directly with you to transform your ideas into a successful and inspiring website. Website programming and development - programming, design and development of websites.',
+                            'If you are looking to design a new website for your company project, you can browse our previous work. We work from a standpoint of innovation and experience, as we help companies develop their work by designing a website that presents what they have professionally to reflect the extent of their uniqueness in providing their services and products. We are able to do this through Your site, God willing. Our approach to website design begins with placing your activity and business on the Internet, earning more sales, and discovering more opportunities in this distinguished, fast-paced market.',
+                            'We offer a wide range of different services and options that include website design, electronic marketing, mobile application programming, and online store design. With AST Solutions, you will gain your place in the online and mobile world and build a personality for your brand that will have a long-term impact on your customers. We believe that design makes a difference because the first impression lasts. AtCore Technology Solutions, websites must undergo rigorous testing for all types of devices, as well as different browsers and operating systems, before we launch your new website. User tests are conducted periodically to ensure the site is up to date and responsive. Our team develops effective content strategies, and we have a proven track record of success partners that is constantly increasing. We have previous work in Kuwait, Saudi Arabia and Egypt.',
+                        ],
+                        // order: ['para', 'list'],
+                    },
+                },
+            ],
+        },
+        {
+            slug: slugify('importance of creating and designing online stores'),
+            mainImg: '/assets/blogs/Importance of creating and designing online stores/main.webp',
+            timeOfDay: 'Apr 9, 2024',
+            timeOfHour: '11:45pm',
+            category: 'Articles',
+            title: 'What is the importance of creating and designing online stores?',
+            caption: 'What is the importance of creating and designing online stores?',
+            mainText: [
+                'Designing electronic stores. You can now benefit from the Internet by designing an electronic store from Core Technology Solutions and displaying all the products that you want to display and market on the Internet. Technological development has made the Internet a large market on which many products can be sold, starting from clothes to real estate. This is why the E-commerce company is interested in ST Solutions provides an online store design service at the best prices.',
+            ],
+            createdBy: { name: 'Kamel Mamdouh' },
+            tags: [
+                'E-commerce Advantages',
+                'Online Business Opportunities',
+                'Digital Market Presence',
+                'Enhanced Customer Reach',
+            ],
+            sections: [
+                {
+                    title: 'The importance of creating and designing online stores',
+                    caption: 'The importance of creating and designing online stores',
+                    // image: '/assets/blogs/Design of a hotel and airline reservation website/sec1.webp',
+                    body: {
+                        paragraphs: [
+                            'All young people and adults also now do not go by a single day without connecting to the Internet and browsing everything new. The Internet has become a daily means of communication through social networking sites and has also become a means of communication at work. Every large company has a website through which the company’s employees communicate in addition to publishing an introduction to the company and what it offers. on the Internet.',
+                            'All companies, large institutions and small projects now have their own website, and small business owners market their products on the Internet through it. When you own an online store, you can market your products on it with ease and at much cheaper prices than traditional marketing. It is known that electronic marketing is less expensive and more profitable than traditional marketing. Therefore, I advise you to own an online store with a distinct design that will save you time and effort and help you achieve success.',
+                            'Many people use the Internet to obtain information, shop, or communicate with friends, relatives, and acquaintances. Therefore, you will find many customers on the Internet who are interested in your products and buy them. Here in our company, we also design an online store for you. We will also help you in the electronic marketing process in the first three months of the year. Through our special offers, you can renew the marketing service at any time.',
+                            'You must know that when you have an online store in which you display your products, you will have a gateway to the whole world and through it your business activity will extend from the local scope to the entire world, and this is our mission during the first period of launching your online store.',
+                        ],
+                        // order: ['para', 'list'],
+                    },
+                },
+                {
+                    title: 'After designing an online store, we can help you increase your profits through many methods, including:',
+                    caption:
+                        'After designing an online store, we can help you increase your profits through many methods, including:',
+                    // image: '/assets/blogs/Design of a hotel and airline reservation website/sec1.webp',
+                    body: {
+                        paragraphs: [
+                            'Preparing websites for search engines - SEO - This way you can attract visitors interested in your products from search engines at no cost by preparing your own website and working on it through our work team so that your online store appears at the top of the results.',
+                            'Social media sites - through which you can get visitors from social media sites, such as sponsored advertisements on Facebook and Twitter, by interacting with customers and making ads with very precise targeting by specifying interests and other factors through which you can achieve the highest results from the visits you receive. will come to your site.',
+                            'Paid Google ads - Google Adwords - are ads that you can benefit from to achieve very large profits because through Google campaigns you will pay by click or by views. This means that if you adjust the advertising campaign well, you will get very interested customers.',
+                            'And many other ways that you will learn about us atCore Technology Solutions when you contact us to start designing your own online stores.',
+                        ],
+                        // order: ['para', 'list'],
+                    },
+                },
+            ],
+        },
+       
+        
     ];
     const [Blogs] = useState<blogType[]>(dataOfBlogs);
     // const getAllBlogs = async () => {

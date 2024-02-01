@@ -3,7 +3,8 @@
     position: relative;
 }
 
-* {
+* h1 h2 h3 p li ul a link{
+    font-family: "Inter", sans-serif !important;
     margin: 0;
     padding: 0;
 }

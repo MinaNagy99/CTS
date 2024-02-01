@@ -13,7 +13,7 @@ function SuggestedPosts({ className, header, posts, tags }: props) {
     return (
         <>
             <div id="suggestedPost" className={`w-100 shadow-sm rounded p-2 ${className}`}>
-                <h4>{header}</h4>
+                <h4><Trans i18nKey={header}></Trans></h4>
                 <div className="row gap-3">
                     {posts.map((item, index: number) => (
                         <Link

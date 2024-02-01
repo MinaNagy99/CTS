@@ -70,10 +70,7 @@ function BlogDetails() {
                     </div>
                     <div className="row  px-2">
                         <article className="col-lg-9 col-12 ">
-                            {BreadCrumbsData &&
-                                BreadCrumbsData.map((item, index) => {
-                                    return <BreadCrumbs key={index} data={item} />;
-                                })}
+                            <BreadCrumbs data={BreadCrumbsData} />
 
                             {Blog?.mainImg && (
                                 <img id="blogImg" className=" w-100  rounded" src={Blog?.mainImg} alt={Blog?.caption} />

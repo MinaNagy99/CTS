@@ -17,7 +17,7 @@ export default function BlogItem({ blog }: { blog: blogType }) {
     return (
         <>
             <>
-                <Link className="col-sm-12 col-md-6 col-lg-4 mb-4" to={`/blog/${slug}`}>
+                <Link id='blogItem' className="col-sm-12 col-md-6 col-lg-4 mb-4" to={`/blog/${slug}`}>
                     <div className="card text-dark  click-col">
                         <img
                             className="card-img  "

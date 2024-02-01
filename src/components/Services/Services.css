@@ -95,7 +95,6 @@
 }
 .header-services {
     color: #12367c;
-    font-family: Inter;
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
@@ -103,7 +102,6 @@
 }
 .text-services {
     color: #12367c;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -139,7 +137,6 @@
 }
 .text-services2 {
     color: #12367c;
-    font-family: Inter;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
