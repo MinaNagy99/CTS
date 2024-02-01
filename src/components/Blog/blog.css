@@ -140,3 +140,16 @@
         width: 50%;
     }
 }
+
+.text-facebook {
+    color: #3b5998;
+}
+.text-whatsapp {
+    color: #25d366;
+}
+.text-twitter {
+    color: #00acee;
+}
+.text-reddit {
+    color: #ff4500;
+}

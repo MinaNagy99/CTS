@@ -68,9 +68,12 @@ function BlogDetails() {
                             </p>
                         </div>
                     </div>
-                    <div className="row px-2">
+                    <div className="row  px-2">
                         <article className="col-lg-9 col-12 ">
-                            <BreadCrumbs data={BreadCrumbsData} />
+                            {BreadCrumbsData &&
+                                BreadCrumbsData.map((item, index) => {
+                                    return <BreadCrumbs key={index} data={item} />;
+                                })}
 
                             {Blog?.mainImg && (
                                 <img id="blogImg" className=" w-100  rounded" src={Blog?.mainImg} alt={Blog?.caption} />
@@ -92,6 +95,14 @@ function BlogDetails() {
                                 })}
                             </div>
                             {/* ==================================================== */}
+                            {/* Display Share in Social media */}
+                            {Blog && (
+                                <SocialShareButtons
+                                    url={encodeURI(window.location.href)}
+                                    title={encodeURIComponent(Blog?.title)}
+                                />
+                            )}
+                            {/* ==================================================== */}
                             <Link to={'/'} className="text-primary text-decoration-none d-block mt-3">
                                 {<Trans i18nKey={Blog?.category}></Trans>}
                             </Link>
@@ -103,17 +114,12 @@ function BlogDetails() {
                             {Blog?.sections.map((section: sectionsType, index: number) => {
                                 return (
                                     <>
-                                        <BlogSection key={index}  section={section} />
+                                        <BlogSection key={index} section={section} />
                                     </>
                                 );
                             })}
                         </article>
-                        {/* 
-                    <article className="col-12 col-md-8">
-                        <div className='d-flex justify-content-center'>
-                            <img id='blogImg' className="w-75 m-auto" src="/assets/blogs/blog1/1.webp" alt="" />
-                        </div>
-                    </article> */}
+
                         <div className="col-lg-3 suggestion__border position-relative col-sm-9 col-12 col-md-6 ">
                             <div id="leftSection" className="position-sticky">
                                 <SuggestedPosts
@@ -124,16 +130,21 @@ function BlogDetails() {
                                 />
                                 <div className="">
                                     <h2 className="">Share on:</h2>
-                                    <SocialShareButtons
-                                        url={encodeURI('facebook.com')}
-                                        title={encodeURIComponent('Whatever')}
-                                    />
+                                    {Blog && (
+                                        <SocialShareButtons
+                                            url={encodeURI(window.location.href)}
+                                            title={encodeURIComponent(Blog?.title)}
+                                        />
+                                    )}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            {/* <section id="blogsRelated">
+                <h2 className="titleOfRelatedBlogs">Related Blogs</h2>
+            </section> */}
         </>
     );
 }

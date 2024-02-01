@@ -12,7 +12,7 @@ export default function BlogSection({ section }: props) {
         <>
             {console.log(section)}
             <h2 className=" typography"> {<Trans i18nKey={title}></Trans>}</h2>
-            {image && <img id="blogImg" className="  rounded" src={image} alt={caption} />}
+            {image && <img id="blogImg" className="custom-width  rounded" src={image} alt={caption} />}
             <SectionBody  body={body} />
         </>
     );
