@@ -24,7 +24,7 @@ export default function BlogItem({ blog }: { blog: blogType }) {
                             src={mainImg}
                             alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?"
                         />
-                        <div className="card-img-overlay d-flex flex-column">
+                        <div className="card-img-overlay  d-flex flex-column">
                             <div className="card-body">
                                 <small className="card-meta mb-2"> {<Trans i18nKey={caption}></Trans>}</small>
                                 <h4 className="card-title mt-0 ">

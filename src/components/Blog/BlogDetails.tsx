@@ -58,7 +58,7 @@ function BlogDetails() {
     return (
         <>
             <section id="blogDetails" className="typography  blog-page  pt-4     gap-4">
-                <div className="container">
+                <div className="container-fluid">
                     <div id="blogTitle" className="w-100 position-relative   boxShadow  mb-4   ">
                         <img className="layer-1" src={Blog?.mainImg} alt="" />
                         <div className=" layer py-4">
@@ -68,7 +68,7 @@ function BlogDetails() {
                             </p>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row px-2">
                         <article className="col-lg-9 col-12 ">
                             <BreadCrumbs data={BreadCrumbsData} />
 
