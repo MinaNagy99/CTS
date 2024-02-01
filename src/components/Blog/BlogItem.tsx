@@ -4,7 +4,7 @@ import { FaRegUserCircle } from 'react-icons/fa';
 import { Trans } from 'react-i18next';
 
 export default function BlogItem({ blog }: { blog: blogType }) {
-    const { mainImg, title, createdBy, slug, caption, timeOfHour, timeOfDay } = blog;
+    const { mainImg, title, createdBy, slug, caption, timeOfDay } = blog;
 
     // const formatDate = (createdAt: string) => {
     //     const formattedDate = new Date(createdAt).toLocaleDateString('en-US', {
