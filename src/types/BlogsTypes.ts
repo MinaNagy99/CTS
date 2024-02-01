@@ -1,4 +1,3 @@
-import { createContext } from "react";
 
 export interface sectionsType {
     title: string;
@@ -6,7 +5,6 @@ export interface sectionsType {
     body: sectionBodyType;
     image?: string;
 }
-export const blogContext = createContext<valueOfContextType | null>(null);
 
 export type valueOfContextType = {
     Blogs: blogType[];
