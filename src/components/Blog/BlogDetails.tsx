@@ -110,9 +110,7 @@ function BlogDetails() {
 
                             {Blog?.sections.map((section: sectionsType, index: number) => {
                                 return (
-                                    <>
                                         <BlogSection key={index} section={section} />
-                                    </>
                                 );
                             })}
                         </article>
