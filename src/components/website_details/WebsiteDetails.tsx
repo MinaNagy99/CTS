@@ -97,7 +97,6 @@ function WesbiteDetails() {
 
     const data = useContext(PortfolioContext);
     const project = data.find((item) => item.title === title);
-    console.log(project);
     
     const currentIndex = data.findIndex((item) => item.title === title);
 

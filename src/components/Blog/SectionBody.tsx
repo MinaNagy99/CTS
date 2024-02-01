@@ -13,13 +13,9 @@ export default function SectionBody({ body }: props) {
             {order && order[0] == 'para' ? (
                 <>
                     {paragraphs &&
-                        paragraphs.map((paragraph: string, index: number) => {
-                            return (
-                                <>
-                                    <Paragraph key={index} paragraph={paragraph} />
-                                </>
-                            );
-                        })}
+                        paragraphs.map((paragraph: string, index: number) => 
+                            <Paragraph key={index} paragraph={paragraph} />
+                        )}
                     {list &&
                         list.map((list) => {
                             return <ListOfBody list={list} />;

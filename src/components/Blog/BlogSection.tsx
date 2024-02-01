@@ -10,7 +10,6 @@ export default function BlogSection({ section }: props) {
     const { title, image, body, caption  } = section;
     return (
         <>
-            {console.log(section)}
             <h2 className=" typography"> {<Trans i18nKey={title}></Trans>}</h2>
             {image && <img id="blogImg" className="custom-width  rounded" src={image} alt={caption} />}
             <SectionBody  body={body} />

@@ -28,9 +28,9 @@ export default function BlogItem({ blog }: { blog: blogType }) {
                             <div className="card-body">
                                 <small className="card-meta mb-2"> {<Trans i18nKey={caption}></Trans>}</small>
                                 <h4 className="card-title mt-0 ">
-                                    <a className="text-dark" href="https://creativemanner.com">
+                                    <p className="text-dark" >
                                         {<Trans i18nKey={title}></Trans>}{' '}
-                                    </a>
+                                    </p>
                                 </h4>
                                 <small>
                                     <i className="far fa-clock"></i> {timeOfDay}

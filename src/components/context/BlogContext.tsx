@@ -1,17 +1,13 @@
-import { ReactNode, createContext, useState } from 'react';
+import { ReactNode, useState } from 'react';
 import slugify from 'slugify';
-import { blogType } from '../../types/BlogsTypes';
-export const blogContext = createContext<valueOfContextType | null>(null);
+import { blogType, valueOfContextType } from '../../types/BlogsTypes';
+import { blogContext } from './ContextName/Context';
 interface propsType {
     children: ReactNode;
 }
 
-export type valueOfContextType = {
-    Blogs: blogType[];
-};
 
-function BlogContextProvider({ children }: propsType) {
-    const dataOfBlogs: blogType[] = [
+ const dataOfBlogs: blogType[] = [
         {
             slug: slugify('Designing a hotel and airline reservation website'),
             mainImg: '/assets/blogs/Design of a hotel and airline reservation website/main.webp',
@@ -468,16 +464,10 @@ function BlogContextProvider({ children }: propsType) {
        
         
     ];
+function BlogContextProvider({ children }: propsType) {
+   
     const [Blogs] = useState<blogType[]>(dataOfBlogs);
-    // const getAllBlogs = async () => {
-    //     const { data } = await axios.get(url_backEnd);
-    //     setBlogs(data.data);
-    //     return data.data;
-    // };
-
-    // useEffect(() => {
-    //     getAllBlogs();
-    // }, []);
+   
 
     const valueOfContext: valueOfContextType = {
         Blogs,

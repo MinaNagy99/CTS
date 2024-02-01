@@ -1,9 +1,16 @@
+import { createContext } from "react";
+
 export interface sectionsType {
     title: string;
     caption: string;
     body: sectionBodyType;
     image?: string;
 }
+export const blogContext = createContext<valueOfContextType | null>(null);
+
+export type valueOfContextType = {
+    Blogs: blogType[];
+};
 
 export interface sectionBodyType {
     title?: string;

@@ -1,15 +1,14 @@
 import { useContext } from 'react';
-import { blogContext, valueOfContextType } from '../context/BlogContext';
 import './AllBlogs.css';
 import BlogItem from './BlogItem';
-import { blogType } from '../../types/BlogsTypes';
+import { blogType, valueOfContextType } from '../../types/BlogsTypes';
+import { blogContext } from '../context/ContextName/Context';
 
 export default function AllBlogs() {
     const data = useContext(blogContext) as valueOfContextType;
     const { Blogs } = data;
     return (
         <>
-            {console.log(Blogs)}
             <section className="wrapper">
                 <div className="container">
                     <div className="row ">

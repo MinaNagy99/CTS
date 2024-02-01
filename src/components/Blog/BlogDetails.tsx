@@ -5,11 +5,11 @@ import './blog.css';
 import SuggestedPosts from './SuggestedPosts';
 import SocialShareButtons from './SocialShareButtons';
 import { useContext, useEffect, useMemo, useState } from 'react';
-import { blogContext, valueOfContextType } from '../context/BlogContext';
-import { blogType, sectionsType } from '../../types/BlogsTypes';
+import {  blogType, sectionsType, valueOfContextType } from '../../types/BlogsTypes';
 import BlogSection from './BlogSection';
 import Paragraph from './Paragraph';
 import { Trans } from 'react-i18next';
+import { blogContext } from '../context/ContextName/Context';
 const getBlogBySlug = (Blogs: blogType[], slug: string): blogType | undefined => {
     if (Blogs) {
         return Blogs.find((blog: blogType) => blog.slug === slug);
@@ -29,7 +29,7 @@ function BlogDetails() {
     const [Tags, setTags] = useState<string[]>();
 
     const BreadCrumbsData = [
-        { name: Blog?.title, Link: `blog/${Blog?.slug}` },
+        { name: Blog?.title, Link: Blog?.slug },
         { name: 'Home', Link: '/' },
         { name: 'Blog', Link: '/blogs' },
     ];
@@ -70,7 +70,7 @@ function BlogDetails() {
                     </div>
                     <div className="row  px-2">
                         <article className="col-lg-9 col-12 ">
-                            <BreadCrumbs data={BreadCrumbsData} />
+                            {BreadCrumbsData && <BreadCrumbs BreadCrumbsData={BreadCrumbsData} />}
 
                             {Blog?.mainImg && (
                                 <img id="blogImg" className=" w-100  rounded" src={Blog?.mainImg} alt={Blog?.caption} />
@@ -79,7 +79,7 @@ function BlogDetails() {
                             <div className=" d-flex  flex-wrap mt-2 justify-content-evenly  ">
                                 {metaDataOfBlog.map((metaData, index) => {
                                     return (
-                                        <>
+                  
                                             <div key={index} className="d-flex  justify-content-start align-items-center">
                                                 <i className={`fa-solid fs-md-5 fs-6 ${metaData.classOfIcon}`}></i>
                                                 <span className="fs-6 mx-2 fw-semibold">
@@ -87,7 +87,7 @@ function BlogDetails() {
                                                     {<Trans i18nKey={metaData.text}></Trans>}
                                                 </span>
                                             </div>
-                                        </>
+                                     
                                     );
                                 })}
                             </div>

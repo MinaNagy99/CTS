@@ -7,7 +7,6 @@ import { Helmet } from 'react-helmet-async';
 
 export default function Services() {
     const { currentLng } = useContext(MyContext);
-    console.log(currentLng);
     return (
         <>
             <Helmet>
