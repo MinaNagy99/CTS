@@ -240,7 +240,7 @@ function Header() {
                                 className={`nav-link mx-3 ${location.pathname === '/blogs' ? 'active' : ''}`}
                                 to="/blogs"
                             >
-                                <Trans i18nKey="Blog"></Trans>
+                                <Trans i18nKey="Blogs"></Trans>
                             </NavLink>
                         </div>
                         <button onClick={handleLangToggle} className="btn-lang p-3">

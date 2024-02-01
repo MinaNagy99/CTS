@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { suggestedPost } from '../../types/BlogsTypes';
 import './AllBlogs.css';
+import { Trans } from 'react-i18next';
 interface props {
     className: string;
     header: string;
@@ -23,10 +24,10 @@ function SuggestedPosts({ className, header, posts, tags }: props) {
                             <img className="object-fit-fill rounded w-25 m-md-2" src={item.mainImg} alt={item.title} />
                             <div className="fs-6">
                                 <p id="title" className="text-decoration-none fs-6 px-2 text-black">
-                                    {item.title}
+                                {<Trans i18nKey={item.title}></Trans>}
                                 </p>
                                 <p id="date" className="text-decoration-none   px-2 ">
-                                    {item.timeOfDay}
+                                {<Trans i18nKey={item.timeOfDay}></Trans>}
                                 </p>
                             </div>
                         </Link>

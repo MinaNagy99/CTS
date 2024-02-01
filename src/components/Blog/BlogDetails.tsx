@@ -9,6 +9,7 @@ import { blogContext, valueOfContextType } from '../context/BlogContext';
 import { blogType, sectionsType } from '../../types/BlogsTypes';
 import BlogSection from './BlogSection';
 import Paragraph from './Paragraph';
+import { Trans } from 'react-i18next';
 const getBlogBySlug = (Blogs: blogType[], slug: string): blogType | undefined => {
     if (Blogs) {
         return Blogs.find((blog: blogType) => blog.slug === slug);
@@ -57,22 +58,13 @@ function BlogDetails() {
     return (
         <>
             <section id="blogDetails" className="typography  blog-page  pt-4     gap-4">
-                <div className="container-fluid">
-                    <div
-                        id="blogTitle"
-                        className="w-100   boxShadow  mb-4   "
-                        style={{
-                            backgroundImage: `url(${Blog?.mainImg})`,
-                            backgroundPosition: 'center',
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat',
-                        }}
-                    >
-                        <img src="" alt="" />
-                        <div className=" layer   py-4">
-                            <h1 className=" mb-0  text-center typography ">{Blog?.title}</h1>
+                <div className="container">
+                    <div id="blogTitle" className="w-100 position-relative   boxShadow  mb-4   ">
+                        <img className="layer-1" src={Blog?.mainImg} alt="" />
+                        <div className=" layer py-4">
+                            <h1 className=" mb-0  text-center typography "> {<Trans i18nKey={Blog?.title}></Trans>}</h1>
                             <p id="caption" className="typography ">
-                                {Blog?.caption}
+                                {<Trans i18nKey={Blog?.caption}></Trans>}
                             </p>
                         </div>
                     </div>
@@ -90,7 +82,10 @@ function BlogDetails() {
                                         <>
                                             <div key={index} className="d-flex  justify-content-start align-items-center">
                                                 <i className={`fa-solid fs-md-5 fs-6 ${metaData.classOfIcon}`}></i>
-                                                <span className="fs-6 mx-2 fw-semibold">{metaData.text}</span>
+                                                <span className="fs-6 mx-2 fw-semibold">
+                                                    {' '}
+                                                    {<Trans i18nKey={metaData.text}></Trans>}
+                                                </span>
                                             </div>
                                         </>
                                     );
@@ -98,7 +93,7 @@ function BlogDetails() {
                             </div>
                             {/* ==================================================== */}
                             <Link to={'/'} className="text-primary text-decoration-none d-block mt-3">
-                                {Blog?.category}
+                                {<Trans i18nKey={Blog?.category}></Trans>}
                             </Link>
                             {Blog?.mainText &&
                                 Blog?.mainText.map((paragraph: string, index: number) => (
@@ -108,11 +103,10 @@ function BlogDetails() {
                             {Blog?.sections.map((section: sectionsType, index: number) => {
                                 return (
                                     <>
-                                        <BlogSection key={index} section={section} />
+                                        <BlogSection key={index}  section={section} />
                                     </>
                                 );
                             })}
-                        
                         </article>
                         {/* 
                     <article className="col-12 col-md-8">

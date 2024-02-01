@@ -4,7 +4,7 @@ import { FaRegUserCircle } from 'react-icons/fa';
 import { Trans } from 'react-i18next';
 
 export default function BlogItem({ blog }: { blog: blogType }) {
-    const { mainImg, title, createdBy, slug, timeOfHour, timeOfDay } = blog;
+    const { mainImg, title, createdBy, slug, caption, timeOfHour, timeOfDay } = blog;
 
     // const formatDate = (createdAt: string) => {
     //     const formattedDate = new Date(createdAt).toLocaleDateString('en-US', {
@@ -23,14 +23,13 @@ export default function BlogItem({ blog }: { blog: blogType }) {
                             className="card-img  "
                             src={mainImg}
                             alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?"
-                        /> 
+                        />
                         <div className="card-img-overlay d-flex flex-column">
                             <div className="card-body">
-                           
-                                <small className="card-meta mb-2"> {<Trans i18nKey={title}></Trans>}</small>
+                                <small className="card-meta mb-2"> {<Trans i18nKey={caption}></Trans>}</small>
                                 <h4 className="card-title mt-0 ">
                                     <a className="text-dark" href="https://creativemanner.com">
-                                        {title}
+                                        {<Trans i18nKey={title}></Trans>}{' '}
                                     </a>
                                 </h4>
                                 <small>
@@ -41,7 +40,10 @@ export default function BlogItem({ blog }: { blog: blogType }) {
                                 <div className="media d-flex gap-1 align-items-center">
                                     <FaRegUserCircle className="avatar-icon" />
                                     <div className="media-body">
-                                        <h6 className="my-0 text-dark d-block">{createdBy.name}</h6>
+                                        <h6 className="my-0 text-dark d-block">
+                                            {' '}
+                                            {<Trans i18nKey={createdBy.name}></Trans>}
+                                        </h6>
                                     </div>
                                 </div>
                             </div>
