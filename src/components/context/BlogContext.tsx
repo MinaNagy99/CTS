@@ -167,7 +167,7 @@ interface propsType {
             mainText: [
                 'Core Technology Solutions provides a website design service for companies and institutions that seek excellence through a sophisticated interface on the Internet. We do not only provide website design for companies, but also integrated solutions and a distinctive identity for your company or organization. We create the website in a way that is compatible with search engines. And all internet browsers, mobile devices, tablets, iPhones, etc., in a manner consistent with international standards in designing and programming corporate websites.',
             ],
-            createdBy: { name: 'Kamel Mamdouh' },
+            createdBy: { name: 'Khaled Mahrous' },
             tags: [
                 'Business Web Solutions',
                 'Leading Website Design Egypt',
@@ -394,7 +394,7 @@ interface propsType {
             category: 'Articles',
             title: 'Website programming and development - programming, design and development of websites',
             caption: 'Website programming and development',
-            createdBy: { name: 'Kamel Mamdouh' },
+            createdBy: { name: 'Ahmed Salah' },
             tags: ['Website Design', 'Web Programming', 'Web Development', 'Programming'],
             sections: [
                 {
@@ -422,7 +422,7 @@ interface propsType {
             mainText: [
                 'Designing electronic stores. You can now benefit from the Internet by designing an electronic store from Core Technology Solutions and displaying all the products that you want to display and market on the Internet. Technological development has made the Internet a large market on which many products can be sold, starting from clothes to real estate. This is why the E-commerce company is interested in ST Solutions provides an online store design service at the best prices.',
             ],
-            createdBy: { name: 'Kamel Mamdouh' },
+            createdBy: { name: 'Mahfouz Mohamed' },
             tags: [
                 'E-commerce Advantages',
                 'Online Business Opportunities',

@@ -73,9 +73,7 @@ h1 {
             }
         }
     }
-    .card-title {
-        font-weight: 800;
-    }
+
     .card-meta {
         /* color: rgba(0, 0, 0, 0.3); */
         text-transform: uppercase;

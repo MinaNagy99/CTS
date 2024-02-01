@@ -22,7 +22,7 @@ export default function BlogItem({ blog }: { blog: blogType }) {
                         <img
                             className="card-img  "
                             src={mainImg}
-                            alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?"
+                            alt={caption}
                         />
                         <div className="card-img-overlay  d-flex flex-column">
                             <div className="card-body">
