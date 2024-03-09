@@ -6,17 +6,31 @@ import { Trans } from 'react-i18next';
 export default function BlogItem({ blog }: { blog: blogType }) {
     const { mainImg, title, createdBy, slug, caption, timeOfDay } = blog;
 
-    // const formatDate = (createdAt: string) => {
-    //     const formattedDate = new Date(createdAt).toLocaleDateString('en-US', {
-    //         year: 'numeric',
-    //         month: 'long',
-    //         day: 'numeric',
-    //     });
-    //     return formattedDate;
-    // };
+/*
+
+
+design pattern 
+data stracture 
+algorisms 
+advanced topics in react and nodejs and angular 
+problem solving to improve my my thinking way of coding and i will learn english from auc 
+to join with forgen company and 
+how can i help me to improve this pattern and i will be able to continue
+how can i help me to improve this pattern and i will be able to continue
+how can i help me to improve this pattern and i will be able to continue
+how and how can this extension complete with me this words and can i and you can do any things about this pattern 
+and what is my plan and what am i want 
+i'm very bay now and i can't think about any things and what do you want and what do you want 
+i can't think here and i want change my company 
+
+
+
+*/
     return (
         <>
             <>
+            {console.log(slug)
+            }
                 <Link to={`/blog/${slug}`} className="col-sm-12 col-md-6 col-lg-4 mb-4 text-decoration-none">
                     <div className="card text-dark click-col h-100">
                         <div className="ratio-container">
